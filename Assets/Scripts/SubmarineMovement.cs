@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(Rigidbody))]
 public class SubmarineMovement : MonoBehaviour
@@ -16,57 +18,93 @@ public class SubmarineMovement : MonoBehaviour
     [SerializeField] private float YSpeed;
     [SerializeField] private float EngineSpeed;
     [SerializeField] private float RotationSpeed;
+    [SerializeField] private float MaxFuel = 1000;
+    [SerializeField] private float FuelReduceMultiplier = 0.01f;
+    private float Fuel
+    {
+        get => Mathf.Clamp(fuel, 0, MaxFuel);
+        set
+        {
+            fuel = Mathf.Clamp(value, 0, MaxFuel);
+            fuelText.text = Mathf.Round(Fuel).ToString() + " l";
+        }
+    }
+
+    private float fuel;
+    [SerializeField] private TextMeshProUGUI fuelText;
     [SerializeField] private Transform Waterpas;
     private Rigidbody rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Fuel = MaxFuel;
     }
     private void Update()
     {
         Cabine.position = new Vector3(transform.position.x, RightEngine.position.y, Cabine.position.z);
-        if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
-            RightEngineAngle += RotationSpeed;
-        if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
-            RightEngineAngle -= RotationSpeed;
-        RightEngine.localRotation = Quaternion.Euler(new Vector3(RightEngineAngle * 500, 90, -90));
 
-        if (LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
-            LeftEngineAngle += RotationSpeed;
-        if (LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
-            LeftEngineAngle -= RotationSpeed;
-        LeftEngine.localRotation = Quaternion.Euler(new Vector3(-LeftEngineAngle * 500, 90, -90));
+        if (Fuel != 0)
+        {
+            if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
+            {
+                RightEngineAngle += RotationSpeed;
+            }
+            if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
+            {
+                RightEngineAngle -= RotationSpeed;
+            }
+            RightEngine.localRotation = Quaternion.Euler(new Vector3(RightEngineAngle * 500, 90, -90));
+
+            if (LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
+            {
+                LeftEngineAngle += RotationSpeed;
+            }
+            if (LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
+            {
+                LeftEngineAngle -= RotationSpeed;
+            }
+            LeftEngine.localRotation = Quaternion.Euler(new Vector3(-LeftEngineAngle * 500, 90, -90));
+        }
 
         Waterpas.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
     }
     private void FixedUpdate()
     {
-        if (RightEngineLever.CurrentSide != TwoSideMouseTrigger.Side.None)
+        if (Fuel != 0)
         {
-            rb.angularVelocity += Vector3.up * RotationSpeed * (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up ? 1 : -1);
-        }
-        if (LeftEngineLever.CurrentSide != TwoSideMouseTrigger.Side.None)
-        {
-            rb.angularVelocity += Vector3.up * RotationSpeed * (LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up ? -1 : 1);
-        }
+            if (RightEngineLever.CurrentSide != TwoSideMouseTrigger.Side.None)
+            {
+                rb.angularVelocity += Vector3.up * RotationSpeed * (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up ? 1 : -1);
+                Fuel -= RotationSpeed * FuelReduceMultiplier;
+            }
+            if (LeftEngineLever.CurrentSide != TwoSideMouseTrigger.Side.None)
+            {
+                rb.angularVelocity += Vector3.up * RotationSpeed * (LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up ? -1 : 1);
+                Fuel -= RotationSpeed * FuelReduceMultiplier;
+            }
 
-        if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up && LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
-        {
-            rb.velocity -= Cabine.forward * EngineSpeed;
-        }
-        if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down && LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
-        {
-            rb.velocity += Cabine.forward * EngineSpeed;
-        }
+            if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up && LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
+            {
+                rb.velocity -= Cabine.forward * EngineSpeed;
+                Fuel -= EngineSpeed * FuelReduceMultiplier;
+            }
+            if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down && LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
+            {
+                rb.velocity += Cabine.forward * EngineSpeed;
+                Fuel -= EngineSpeed * FuelReduceMultiplier;
+            }
 
-        if (YLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
-        {
-            rb.velocity += Vector3.up * YSpeed;
-        }
-        if (YLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
-        {
-            rb.velocity -= Vector3.up * YSpeed;
+            if (YLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
+            {
+                rb.velocity += Vector3.up * YSpeed;
+                Fuel -= YSpeed * FuelReduceMultiplier;
+            }
+            if (YLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
+            {
+                rb.velocity -= Vector3.up * YSpeed;
+                Fuel -= YSpeed * FuelReduceMultiplier;
+            }
         }
         Quaternion deltaQuat = Quaternion.FromToRotation(rb.transform.up, Vector3.up);
 
@@ -80,7 +118,7 @@ public class SubmarineMovement : MonoBehaviour
         float adjustFactor = 0.1f; // this value requires tuning
         rb.AddTorque(axis.normalized * angle * adjustFactor, ForceMode.Acceleration);
 
-        if (Mathf.Abs(rb.angularVelocity.y) > RotationSpeed*2)
+        if (Mathf.Abs(rb.angularVelocity.y) > RotationSpeed * 2)
             rb.angularVelocity = new Vector3(rb.angularVelocity.x, 0, rb.angularVelocity.z);
         if (Mathf.Sqrt(Mathf.Pow(rb.velocity.x, 2) + Mathf.Pow(rb.velocity.z, 2)) > EngineSpeed * 2)
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
