@@ -12,13 +12,13 @@ public abstract class MouseTrigger : MonoBehaviour
 
     public virtual void Activate()
     {
-        isActivated = true;
         activationEvent?.Invoke();
+        isActivated = true;
     }
     public virtual void Diactivate()
     {
-        isActivated = false;
         diactivationEvent?.Invoke();
+        isActivated = false;
     }
     private void Update()
     {

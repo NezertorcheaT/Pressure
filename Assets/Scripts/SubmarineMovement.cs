@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -9,17 +6,33 @@ public class SubmarineMovement : MonoBehaviour
 {
     [SerializeField] private TwoSidePushTrigger LeftEngineLever;
     [SerializeField] private TwoSidePushTrigger RightEngineLever;
+    [SerializeField] private TwoSidePushTrigger YLever;
+
     [SerializeField] private Transform LeftEngine;
     [SerializeField] private Transform RightEngine;
     [SerializeField] private Transform Cabine;
-    private float LeftEngineAngle;
-    private float RightEngineAngle;
-    [SerializeField] private TwoSidePushTrigger YLever;
+
     [SerializeField] private float YSpeed;
     [SerializeField] private float EngineSpeed;
     [SerializeField] private float RotationSpeed;
     [SerializeField] private float MaxFuel = 1000;
     [SerializeField] private float FuelReduceMultiplier = 0.01f;
+    [SerializeField] private float MaxAir = 1000;
+    [SerializeField] private float AirReduceSpeed = 0.01f;
+
+    [SerializeField] private PressureCanvas AirCanvas;
+    [SerializeField] private PressureCanvas YCanvas;
+    [SerializeField] private PressureCanvas GoYCanvas;
+
+    [SerializeField] private TextMeshProUGUI fuelText;
+    [SerializeField] private Transform Waterpas;
+
+    private Rigidbody rb;
+    private float LeftEngineAngle;
+    private float RightEngineAngle;
+    private float fuel;
+    private float air;
+
     private float Fuel
     {
         get => Mathf.Clamp(fuel, 0, MaxFuel);
@@ -29,19 +42,34 @@ public class SubmarineMovement : MonoBehaviour
             fuelText.text = Mathf.Round(Fuel).ToString() + " l";
         }
     }
-
-    private float fuel;
-    [SerializeField] private TextMeshProUGUI fuelText;
-    [SerializeField] private Transform Waterpas;
-    private Rigidbody rb;
+    private float Air
+    {
+        get => Mathf.Clamp(air, 0, MaxAir);
+        set
+        {
+            air = Mathf.Clamp(value, 0, MaxAir);
+            AirCanvas.Pressure = Air / MaxAir;
+        }
+    }
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         Fuel = MaxFuel;
+        Air = MaxAir;
+
+        GoYCanvas.Pressure = 0.5f;
+        AirCanvas.Pressure = Air / MaxAir;
+        YCanvas.Pressure = (transform.position.y + 500f) / 1000f;
+
+        YLever.onSideUp.AddListener(() => GoYCanvas.Pressure = 0);
+        YLever.onSideNone.AddListener(() => GoYCanvas.Pressure = 0.5f);
+        YLever.onSideDown.AddListener(() => GoYCanvas.Pressure = 1);
+
     }
     private void Update()
     {
+        Air -= AirReduceSpeed * Time.deltaTime;
         Cabine.position = new Vector3(transform.position.x, RightEngine.position.y, Cabine.position.z);
 
         if (Fuel != 0)
@@ -67,10 +95,11 @@ public class SubmarineMovement : MonoBehaviour
             LeftEngine.localRotation = Quaternion.Euler(new Vector3(-LeftEngineAngle * 500, 90, -90));
         }
 
-        Waterpas.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
+        Waterpas.eulerAngles = -transform.eulerAngles;
     }
     private void FixedUpdate()
     {
+        YCanvas.Pressure = (transform.position.y + 500f) / 1000f;
         if (Fuel != 0)
         {
             if (RightEngineLever.CurrentSide != TwoSideMouseTrigger.Side.None)

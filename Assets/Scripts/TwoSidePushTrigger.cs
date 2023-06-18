@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TwoSidePushTrigger : TwoSideMouseTrigger
 {
@@ -24,7 +25,34 @@ public abstract class TwoSideMouseTrigger : MonoBehaviour
     [SerializeField] private MouseTrigger triggerNone;
     public Side CurrentSide;
 
+    public UnityEvent onSideUp;
+    public UnityEvent onSideDown;
+    public UnityEvent onSideNone;
+
     public enum Side { Up, None, Down }
+
+    private void Start()
+    {
+        triggerUp.diactivationEvent.AddListener(OnUp);
+        triggerDown.diactivationEvent.AddListener(OnDown);
+        triggerNone.diactivationEvent.AddListener(OnNone);
+    }
+
+    private void OnUp()
+    {
+        //if (CurrentSide!=Side.Up)
+            onSideUp.Invoke();
+    }
+    private void OnDown()
+    {
+        //if (CurrentSide != Side.Down)
+            onSideDown.Invoke();
+    }
+    private void OnNone()
+    {
+        //if (CurrentSide != Side.None)
+            onSideNone.Invoke();
+    }
 
     protected virtual void Update()
     {
