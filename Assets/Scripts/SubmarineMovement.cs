@@ -99,7 +99,7 @@ public class SubmarineMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        YCanvas.Pressure = (transform.position.y + 500f) / 1000f;
+        YCanvas.Pressure = 1f-((transform.position.y + 500f) / 1000f);
         if (Fuel != 0)
         {
             if (RightEngineLever.CurrentSide != TwoSideMouseTrigger.Side.None)

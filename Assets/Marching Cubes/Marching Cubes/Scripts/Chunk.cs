@@ -100,10 +100,15 @@ public class Chunk
             mesh.SetNormals(processedNormals);
         }
 
+        mesh.uv = Unwrap(mesh);
+        collider.sharedMesh = mesh;
+    }
+    private Vector2[] Unwrap(Mesh mesh)
+    {
         Vector3[] vertices = mesh.vertices;
         int[] tris = mesh.triangles;
         Vector2[] uvs = new Vector2[vertices.Length];
-
+        /*
         for (int i = 0; i < tris.Length; i += 3)
         {
 
@@ -138,9 +143,32 @@ public class Chunk
             }
 
         }
+        return uvs;
+        */
 
-        mesh.uv = uvs;
-        collider.sharedMesh = mesh;
+        /*
+        UnwrapParam paramteters = new();
+
+        int t = 0;
+        foreach (Vector2 uvPerTri in Unwrapping.GeneratePerTriangleUV(mesh, paramteters))
+        {
+
+            uvs[tris[t]] = uvPerTri;
+            ++t;
+        }
+        */
+
+        for (int i = 0; i < vertices.Length; i++)
+        {
+            float y = vertices[i].z > vertices[i].y ? vertices[i].z : vertices[i].y;
+
+            if (vertices[i].z == 0) y = vertices[i].y;
+            if (vertices[i].y == 0) y = vertices[i].z;
+
+            uvs[i] = new Vector2(vertices[i].x, y) / 50f;
+        }
+
+        return uvs;
     }
 
     public struct PointData

@@ -14,12 +14,16 @@ public abstract class AnimatedButtonTrigger : MouseTrigger
     }
     private void Push()
     {
-        animator?.Play("push");
-        animator?.SetBool("activated", true);
+        if(animator != null)
+            animator?.Play("push");
+        if (animator != null)
+            animator?.SetBool("activated", true);
     }
     private void Pull()
     {
-        animator?.SetBool("activated", false);
-        animator?.Play("pull");
+        if (animator != null)
+            animator?.SetBool("activated", false);
+        if (animator != null)
+            animator?.Play("pull");
     }
 }
