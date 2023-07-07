@@ -36,13 +36,13 @@ float calculateDensity(int3 cell)
 
     float fudge = 1;
 
-    float1 density = length(worldPos) / (maxD + fudge) - 0.5;
+    float density = length(worldPos) / (maxD + fudge) - 0.5;
     
-    float noise = fbm(6, 2, 0.5, noiseScale, worldPos) * noiseHeightMultiplier;
-
+    float noise = fbm(2, 2, 0.5, noiseScale/2.5, worldPos) * noiseHeightMultiplier;
+    
     density = max(density, noise);
 
-    return density;
+    return noise;
 }
 
 [numthreads(8, 8, 8)]
@@ -55,7 +55,7 @@ void CSMain(int3 id : SV_DispatchThreadID)
 
     float density = 0;
 
-    const int b = 1;
+    const int b = 2;
     if (id.x >= textureSize - b || id.y >= textureSize - b || id.z >= textureSize - b)
     {
         density = 1;
