@@ -14,6 +14,7 @@ public class FirstPerson : MonoBehaviour
     [SerializeField] private Transform camOrigin;
     [SerializeField] private bool isWorking = false;
     [SerializeField] private bool isUnderWater = false;
+    [SerializeField] private Light FlashLight;
 
     private Rigidbody rb;
     private bool isCursorFree = true;
@@ -75,6 +76,9 @@ public class FirstPerson : MonoBehaviour
         }
         else
         {
+            if (Input.GetKeyUp(KeyCode.F))
+                FlashLight.gameObject.SetActive(!FlashLight.gameObject.activeSelf);
+
             rb.constraints = RigidbodyConstraints.FreezeRotation;
             float inputX = Input.GetAxisRaw("Horizontal");
             float inputY = Input.GetAxisRaw("Vertical");
