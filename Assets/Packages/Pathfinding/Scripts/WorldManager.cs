@@ -32,7 +32,7 @@ public class WorldManager : MonoBehaviour
     private IEnumerator StartDelay()
     {
         yield return new WaitForSeconds(startDelay);
-        InitializeGrid();
+        GenerateGrid();
     }
 
     private void AddNeighbour(Point p, Vector3Int neighbour)
@@ -44,8 +44,43 @@ public class WorldManager : MonoBehaviour
             p.Neighbours.Add(neighbour);
         }
     }
-    [ContextMenu("Regenerate Grid")]
+    [ContextMenu("Initialize Grid")]
     public void InitializeGrid()
+    {
+        startPoint = new Vector3(-GridWidth, -GridHeight, -GridLength) / 2f * PointDistance + transform.position;
+        Grid = new Point[GridWidth][][];
+        for (int i = 0; i < GridWidth; i++)
+        {
+            Grid[i] = new Point[GridHeight][];
+            for (int j = 0; j < GridHeight; j++)
+            {
+                Grid[i][j] = new Point[GridLength];
+                for (int k = 0; k < GridLength; k++)
+                {
+                    Vector3 pos = startPoint + new Vector3(i, j, k) * PointDistance;
+                    Grid[i][j][k] = new Point();
+                    Grid[i][j][k].Coords = new Vector3Int(i, j, k);
+                    Grid[i][j][k].WorldPosition = pos;
+                    for (int p = -1; p <= 1; p++)
+                    {
+                        for (int q = -1; q <= 1; q++)
+                        {
+                            for (int g = -1; g <= 1; g++)
+                            {
+                                if (i == p && g == q && k == g)
+                                {
+                                    continue;
+                                }
+                                AddNeighbour(Grid[i][j][k], new Vector3Int(i + p, j + q, k + g));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    [ContextMenu("Regenerate Grid")]
+    public void GenerateGrid()
     {
         startPoint = new Vector3(-GridWidth, -GridHeight, -GridLength) / 2f * PointDistance + transform.position;
         //GameObject gridParent = new GameObject("Grid");

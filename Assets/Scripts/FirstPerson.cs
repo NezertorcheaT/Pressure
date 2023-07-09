@@ -77,7 +77,7 @@ public class FirstPerson : MonoBehaviour
         else
         {
             if (Input.GetKeyUp(KeyCode.F))
-                FlashLight.gameObject.SetActive(!FlashLight.gameObject.activeSelf);
+                ToggleFlashLight();
 
             rb.constraints = RigidbodyConstraints.FreezeRotation;
             float inputX = Input.GetAxisRaw("Horizontal");
@@ -105,6 +105,10 @@ public class FirstPerson : MonoBehaviour
             }
         }
     }
+
+    public void ToggleFlashLight() => FlashLight.gameObject.SetActive(!FlashLight.gameObject.activeSelf);
+    public void OffFlashLight() => FlashLight.gameObject.SetActive(false);
+    public void OnFlashLight() => FlashLight.gameObject.SetActive(true);
 
     private void FixedUpdate()
     {

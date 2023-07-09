@@ -24,6 +24,7 @@ public class CharacterMoveRandom : MonoBehaviour
             {
                 Point p = freePoints[Random.Range(0, freePoints.Count)];
                 _Agent.Pathfinding(p.WorldPosition);
+                yield return new WaitForSeconds(1f);
             }
             yield return new WaitForSeconds(0.5f);
         }
