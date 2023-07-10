@@ -4670,6 +4670,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1485593232}
+  - {fileID: 857547352}
   - {fileID: 1536424875}
   - {fileID: 1507468416}
   m_Father: {fileID: 2104812336}
@@ -8249,8 +8250,8 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1610288786}
-  m_RootOrder: 3
+  m_Father: {fileID: 605760449}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &864640716
 GameObject:
@@ -10662,7 +10663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1149280667
 Transform:
   m_ObjectHideFlags: 0
@@ -10772,7 +10773,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1629117941}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15075,7 +15076,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 605760449}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1516589602
 PrefabInstance:
@@ -15220,7 +15221,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 605760449}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1581711120
 GameObject:
@@ -15713,7 +15714,6 @@ Transform:
   - {fileID: 1829874073}
   - {fileID: 1149280667}
   - {fileID: 2098503623}
-  - {fileID: 857547352}
   m_Father: {fileID: 2104812336}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
