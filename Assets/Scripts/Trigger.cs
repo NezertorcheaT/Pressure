@@ -8,6 +8,9 @@ public abstract class MouseTrigger : MonoBehaviour
     public UnityEvent diactivationEvent;
     public UnityEvent stillActivatedEvent;
     [SerializeField] private bool isActivated;
+    [SerializeField] private string TodoText;
+    public string todoString => TodoText;
+
     public bool IsActivated => isActivated;
 
     public virtual void Activate()

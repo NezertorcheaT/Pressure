@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class UISwither : MonoBehaviour
     [SerializeField] private MouseTrigger nextButton;
     [SerializeField] private MouseTrigger prevButton;
     [SerializeField] private Transform forSlides;
+    public event Action<int, string> onSlideChanged;
 
     private void Start()
     {
@@ -35,7 +37,13 @@ public class UISwither : MonoBehaviour
         {
             forSlides.GetChild(i).gameObject.SetActive(false);
         }
-        forSlides.GetChild((int)Mathf.Repeat(indx, forSlides.childCount)).gameObject.SetActive(true);
+
+        int childIndx = (int)Mathf.Repeat(indx, forSlides.childCount);
+        GameObject currentSlide = forSlides.GetChild(childIndx).gameObject;
+
+        currentSlide.SetActive(true);
+
+        onSlideChanged(childIndx, currentSlide.name);
     }
 
     private void Next()

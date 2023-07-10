@@ -5,7 +5,9 @@ public class MouseIteractor : MonoBehaviour
     [SerializeField] private KeyCode iteractionKey;
     [SerializeField] private LayerMask iteractionLayer;
     [SerializeField] private bool isWork;
+    [SerializeField] private bool showTips = true;
     [SerializeField, Min(0.1f)] private float distance;
+    [SerializeField] private CursorText cursorText;
 
     private MouseTrigger trigger;
     private NothingMouseTrigger Ntrigger;
@@ -18,8 +20,24 @@ public class MouseIteractor : MonoBehaviour
 
     private void Update()
     {
+        cursorText.ClearText();
         if (IsWork)
         {
+            if (showTips)
+            {
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit[] hits = Physics.RaycastAll(ray, distance, iteractionLayer);
+                foreach (var hit in hits)
+                {
+                    trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
+                    if (trigger != null)
+                    {
+                        cursorText.SetText(trigger.todoString);
+                        break;
+                    }
+                }
+            }
+
             if (Input.GetKeyDown(iteractionKey))
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
