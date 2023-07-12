@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Torpedo : MonoBehaviour
 {
@@ -19,8 +21,10 @@ public class Torpedo : MonoBehaviour
     private IEnumerator Start()
     {
         rb.velocity -= transform.up * startVelocity;
+
         yield return new WaitForSeconds(startDelay);
         started = true;
+
         yield return new WaitForSeconds(lifeTime);
         Destroy(gameObject);
     }
@@ -42,6 +46,7 @@ public class Torpedo : MonoBehaviour
         if (terrain == null) return;
 
         terrain.Terraform(transform.position, weight, radius);
+
         Destroy(gameObject);
     }
 }

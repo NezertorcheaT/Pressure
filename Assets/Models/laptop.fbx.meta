@@ -3,7 +3,17 @@ guid: 989317bbb029430488ecc01778b224c3
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MonitorMetal
+    second: {fileID: 2100000, guid: 00057af426d4c2343af8eda40d3e4899, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wire
+    second: {fileID: 2100000, guid: cdd5135ff4c9046459a696f9c4b91bc5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
