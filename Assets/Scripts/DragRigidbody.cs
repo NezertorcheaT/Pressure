@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 // Script created by https://youtube.com/c/Boxply
 
@@ -12,8 +13,9 @@ public class DragRigidbody : MonoBehaviour
     public LineRenderer lr;
     public Transform lineRenderLocation;
 
-    Transform jointTrans;
-    float dragDepth;
+    private ConfigurableJoint joint;
+    private float dragDepth;
+    private Transform hitTransform;
 
     private void OnMouseDown()
     {
@@ -33,13 +35,18 @@ public class DragRigidbody : MonoBehaviour
     public void HandleInputBegin(Vector3 screenPosition)
     {
         var ray = Camera.main.ScreenPointToRay(screenPosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, distance))
+        if (Physics.Raycast(ray, out RaycastHit hit, distance))
         {
             if (hit.transform.gameObject.layer == LayerMask.NameToLayer("DragAndDrop"))
             {
+                var go = new GameObject("Drag Hit Point");
+                go.hideFlags = HideFlags.HideInHierarchy;
+                go.transform.position = hit.point;
+                go.transform.SetParent(hit.rigidbody.transform);
+                hitTransform = go.transform;
+
                 dragDepth = CameraPlane.CameraToPointDepth(Camera.main, hit.point);
-                jointTrans = AttachJoint(hit.rigidbody, hit.point);
+                joint = AttachJoint(hit.rigidbody, hit.point);
             }
         }
 
@@ -48,10 +55,10 @@ public class DragRigidbody : MonoBehaviour
 
     public void HandleInput(Vector3 screenPosition)
     {
-        if (jointTrans == null)
+        if (joint == null)
             return;
         var worldPos = Camera.main.ScreenToWorldPoint(screenPosition);
-        jointTrans.position = CameraPlane.ScreenToWorldPlanePoint(Camera.main, dragDepth, screenPosition);
+        joint.transform.position = CameraPlane.ScreenToWorldPlanePoint(Camera.main, dragDepth, screenPosition);
 
         DrawRope();
     }
@@ -59,11 +66,16 @@ public class DragRigidbody : MonoBehaviour
     public void HandleInputEnd(Vector3 screenPosition)
     {
         DestroyRope();
-        if(jointTrans != null)
-            Destroy(jointTrans.gameObject);
+        if (hitTransform)
+        {
+            Destroy(hitTransform.gameObject);
+            hitTransform = null;
+        }
+        if (joint)
+            Destroy(joint.gameObject);
     }
 
-    Transform AttachJoint(Rigidbody rb, Vector3 attachmentPosition)
+    ConfigurableJoint AttachJoint(Rigidbody rb, Vector3 attachmentPosition)
     {
         GameObject go = new GameObject("Attachment Point");
         go.hideFlags = HideFlags.HideInHierarchy;
@@ -81,7 +93,7 @@ public class DragRigidbody : MonoBehaviour
         joint.slerpDrive = NewJointDrive(force, damping);
         joint.rotationDriveMode = RotationDriveMode.Slerp;
 
-        return go.transform;
+        return joint;
     }
 
     private JointDrive NewJointDrive(float force, float damping)
@@ -96,13 +108,13 @@ public class DragRigidbody : MonoBehaviour
 
     private void DrawRope()
     {
-        if (jointTrans == null)
+        if (joint == null)
         {
             return;
         }
 
         lr.SetPosition(0, lineRenderLocation.position);
-        lr.SetPosition(1, this.transform.position);
+        lr.SetPosition(1, hitTransform.position);
     }
 
     private void DestroyRope()

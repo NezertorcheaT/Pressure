@@ -18,7 +18,8 @@ public class Radar : MonoBehaviour
     [SerializeField] private Color color = Color.yellow;
     [SerializeField, Min(2)] private int textureSize = 128;
     [SerializeField] private float speed = 0.1f;
-    [SerializeField, Min(0)] private float cleanDelay = 3;
+    [SerializeField, Min(0)] private float cleanDelay = 3f;
+    [SerializeField, Min(0.000001f)] private float cleanTickTime = 0.1f;
     [SerializeField] private Transform origin;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Collider[] colliders;
@@ -82,11 +83,13 @@ public class Radar : MonoBehaviour
         texture.SetPixel(x, y, color);
         texture.Apply(false);
 
-        yield return new WaitForSeconds(cleanDelay / 2);
-        texture.SetPixel(x, y, new Color(color.r / 2f, color.g / 2f, color.b / 2f));
-        texture.Apply(false);
+        for (float sec = 0; sec <= cleanDelay; sec += 0.1f)
+        {
+            yield return new WaitForSeconds(0.1f);
+            texture.SetPixel(x, y, color * (1 - sec / cleanDelay));
+            texture.Apply(false);
+        }
 
-        yield return new WaitForSeconds(cleanDelay / 2);
         texture.SetPixel(x, y, Color.black);
         texture.Apply(false);
     }

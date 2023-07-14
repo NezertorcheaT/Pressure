@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4624246076510959907, guid: 11bc98a008f10ef4194a2dffd20e09a0, type: 3}
+      propertyPath: m_TagString
+      value: Torpedo
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 11bc98a008f10ef4194a2dffd20e09a0, type: 3}
       propertyPath: m_Name
       value: Torpedo RB Variant
@@ -85,6 +89,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bc98a008f10ef4194a2dffd20e09a0, type: 3}
+--- !u!1 &4715035007847635399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4624246076510959907, guid: 11bc98a008f10ef4194a2dffd20e09a0, type: 3}
+  m_PrefabInstance: {fileID: 9132257613564092186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3928986015856663459
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4715035007847635399}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2182389305602124370, guid: 11bc98a008f10ef4194a2dffd20e09a0, type: 3}
 --- !u!1 &8249787732597219915 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 11bc98a008f10ef4194a2dffd20e09a0, type: 3}
@@ -115,7 +138,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 8249787732597219915}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.63
   m_Height: 7.8048096
   m_Direction: 2

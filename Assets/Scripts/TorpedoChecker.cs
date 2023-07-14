@@ -12,7 +12,7 @@ public class TorpedoChecker : MonoBehaviour
     {
         if (other.CompareTag("Torpedo"))
         {
-            torpedo = other.gameObject;
+            torpedo = other.transform.parent.gameObject;
             hasTorpedo = true;
         }
         else
@@ -25,7 +25,7 @@ public class TorpedoChecker : MonoBehaviour
     {
         if (other.CompareTag("Torpedo"))
         {
-            torpedo = other.gameObject;
+            torpedo = other.transform.parent.gameObject;
             hasTorpedo = true;
         }
     }
@@ -40,6 +40,10 @@ public class TorpedoChecker : MonoBehaviour
     public void DestroyCurrentTorpedo()
     {
         if (hasTorpedo && torpedo)
+        {
+            hasTorpedo = false;
             Destroy(torpedo);
+            torpedo = null;
+        }
     }
 }

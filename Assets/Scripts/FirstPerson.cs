@@ -41,11 +41,16 @@ public class FirstPerson : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        InternalLockUpdate();
+        Cursor.visible = isCursorFree;
+        Cursor.lockState = isCursorFree ? CursorLockMode.None : (IsWorking ? CursorLockMode.Locked : CursorLockMode.None);
+
         if (!IsWorking)
         {
             isCursorFree = false;
+            rb.velocity = Vector3.zero;
             return;
         }
 
@@ -110,13 +115,6 @@ public class FirstPerson : MonoBehaviour
     public void OffFlashLight() => FlashLight.gameObject.SetActive(false);
     public void OnFlashLight() => FlashLight.gameObject.SetActive(true);
 
-    private void FixedUpdate()
-    {
-        InternalLockUpdate();
-
-        Cursor.visible = isCursorFree;
-        Cursor.lockState = isCursorFree ? CursorLockMode.None : (IsWorking ? CursorLockMode.Locked : CursorLockMode.None);
-    }
     public void Teleport(Transform target)
     {
         transform.position = target.position;
