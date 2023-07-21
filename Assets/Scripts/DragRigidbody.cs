@@ -1,21 +1,25 @@
 using UnityEngine;
-using UnityEngine.UIElements;
+using Zenject;
 
 // Script created by https://youtube.com/c/Boxply
 
 [RequireComponent(typeof(Rigidbody))]
 public class DragRigidbody : MonoBehaviour
 {
-    public float force = 600;
-    public float damping = 6;
-    public float distance = 15;
+    [SerializeField] private float force = 600;
+    [SerializeField] private float damping = 6;
+    [SerializeField] private float distance = 15;
 
-    public LineRenderer lr;
-    public Transform lineRenderLocation;
-
+    private DragLine dragLine;
     private ConfigurableJoint joint;
     private float dragDepth;
     private Transform hitTransform;
+
+    [Inject]
+    private void Construct(DragLine dragLine)
+    {
+        this.dragLine = dragLine;
+    }
 
     private void OnMouseDown()
     {
@@ -50,7 +54,7 @@ public class DragRigidbody : MonoBehaviour
             }
         }
 
-        lr.positionCount = 2;
+        dragLine.lr.positionCount = 2;
     }
 
     public void HandleInput(Vector3 screenPosition)
@@ -113,12 +117,12 @@ public class DragRigidbody : MonoBehaviour
             return;
         }
 
-        lr.SetPosition(0, lineRenderLocation.position);
-        lr.SetPosition(1, hitTransform.position);
+        dragLine.lr.SetPosition(0, dragLine.lineRenderLocation.position);
+        dragLine.lr.SetPosition(1, hitTransform.position);
     }
 
     private void DestroyRope()
     {
-        lr.positionCount = 0;
+        dragLine.lr.positionCount = 0;
     }
 }

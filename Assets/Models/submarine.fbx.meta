@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 804863fdac16bfe4b972589e719ef0b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: DarkMetal
     second: {fileID: 2100000, guid: 301eac5d0af95c540b99857e77e63433, type: 2}
   - first:
