@@ -12,7 +12,10 @@ public class TorpedoChecker : MonoBehaviour
     {
         if (other.CompareTag("Torpedo"))
         {
-            torpedo = other.transform.parent.gameObject;
+            if (other.transform.parent != null)
+                torpedo = other.transform.parent.gameObject;
+            else
+                torpedo = other.gameObject;
             hasTorpedo = true;
         }
         else

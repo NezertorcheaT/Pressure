@@ -11,11 +11,12 @@ public class CollisionTeleporter : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.layer == layer)
         {
-            Debug.Log(pos.position);
-            Debug.Log(collision.transform.position);
             collision.transform.position = pos.position;
-            Debug.Log(collision.transform.position);
             collision.transform.rotation = pos.rotation;
+
+            var dr = collision.gameObject.GetComponent<DragRigidbody>();
+            if (dr != null)
+                dr.HandleInputEnd(Input.mousePosition);
         }
     }
 }
