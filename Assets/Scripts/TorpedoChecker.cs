@@ -3,50 +3,47 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class TorpedoChecker : MonoBehaviour
 {
-    [SerializeField] private bool hasTorpedo = false;
-    private GameObject torpedo = null;
+    [SerializeField] private bool hasTorpedo;
+    private GameObject _torpedo;
     public bool HasTorpedo => hasTorpedo;
-    public GameObject CurrentTorpedo => torpedo;
+    public GameObject CurrentTorpedo => _torpedo;
 
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Torpedo"))
         {
-            if (other.transform.parent != null)
-                torpedo = other.transform.parent.gameObject;
-            else
-                torpedo = other.gameObject;
+            _torpedo = other.transform.parent != null ? other.transform.parent.gameObject : other.gameObject;
             hasTorpedo = true;
         }
         else
         {
-            torpedo = null;
+            _torpedo = null;
             hasTorpedo = false;
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Torpedo"))
-        {
-            torpedo = other.transform.parent.gameObject;
-            hasTorpedo = true;
-        }
+        if (!other.CompareTag("Torpedo")) return;
+
+        _torpedo = other.transform.parent != null ? other.transform.parent.gameObject : other.gameObject;
+        hasTorpedo = true;
     }
+
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Torpedo"))
-        {
-            torpedo = null;
-            hasTorpedo = false;
-        }
+        if (!other.CompareTag("Torpedo")) return;
+
+        _torpedo = null;
+        hasTorpedo = false;
     }
+
     public void DestroyCurrentTorpedo()
     {
-        if (hasTorpedo && torpedo)
-        {
-            hasTorpedo = false;
-            Destroy(torpedo);
-            torpedo = null;
-        }
+        if (!hasTorpedo || !_torpedo) return;
+
+        hasTorpedo = false;
+        Destroy(_torpedo);
+        _torpedo = null;
     }
 }

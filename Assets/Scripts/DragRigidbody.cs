@@ -11,15 +11,15 @@ public class DragRigidbody : MonoBehaviour
     [SerializeField] private float damping = 6;
     [SerializeField] private float distance = 15;
 
-    private DragLine dragLine;
-    private ConfigurableJoint joint;
-    private float dragDepth;
-    private Transform hitTransform;
+    private DragLine _dragLine;
+    private ConfigurableJoint _joint;
+    private float _dragDepth;
+    private Transform _hitTransform;
 
     [Inject]
     private void Construct(DragLine dragLine)
     {
-        this.dragLine = dragLine;
+        this._dragLine = dragLine;
     }
 
     private void OnMouseDown()
@@ -48,22 +48,22 @@ public class DragRigidbody : MonoBehaviour
                 go.hideFlags = HideFlags.HideInHierarchy;
                 go.transform.position = hit.point;
                 go.transform.SetParent(hit.rigidbody.transform);
-                hitTransform = go.transform;
+                _hitTransform = go.transform;
 
-                dragDepth = CameraPlane.CameraToPointDepth(Camera.main, hit.point);
-                joint = AttachJoint(hit.rigidbody, hit.point);
+                _dragDepth = CameraPlane.CameraToPointDepth(Camera.main, hit.point);
+                _joint = AttachJoint(hit.rigidbody, hit.point);
             }
         }
 
-        dragLine.lr.positionCount = 2;
+        _dragLine.LineRenderer.positionCount = 2;
     }
 
     public void HandleInput(Vector3 screenPosition)
     {
-        if (joint == null)
+        if (_joint == null)
             return;
         var worldPos = Camera.main.ScreenToWorldPoint(screenPosition);
-        joint.transform.position = CameraPlane.ScreenToWorldPlanePoint(Camera.main, dragDepth, screenPosition);
+        _joint.transform.position = CameraPlane.ScreenToWorldPlanePoint(Camera.main, _dragDepth, screenPosition);
 
         DrawRope();
     }
@@ -71,13 +71,13 @@ public class DragRigidbody : MonoBehaviour
     public void HandleInputEnd(Vector3 screenPosition)
     {
         DestroyRope();
-        if (hitTransform)
+        if (_hitTransform)
         {
-            Destroy(hitTransform.gameObject);
-            hitTransform = null;
+            Destroy(_hitTransform.gameObject);
+            _hitTransform = null;
         }
-        if (joint)
-            Destroy(joint.gameObject);
+        if (_joint)
+            Destroy(_joint.gameObject);
     }
 
     ConfigurableJoint AttachJoint(Rigidbody rb, Vector3 attachmentPosition)
@@ -101,9 +101,9 @@ public class DragRigidbody : MonoBehaviour
         return joint;
     }
 
-    private JointDrive NewJointDrive(float force, float damping)
+    private static JointDrive NewJointDrive(float force, float damping)
     {
-        JointDrive drive = new JointDrive();
+        var drive = new JointDrive();
         drive.mode = JointDriveMode.Position;
         drive.positionSpring = force;
         drive.positionDamper = damping;
@@ -113,17 +113,17 @@ public class DragRigidbody : MonoBehaviour
 
     private void DrawRope()
     {
-        if (joint == null)
+        if (_joint == null)
         {
             return;
         }
 
-        dragLine.lr.SetPosition(0, dragLine.lineRenderLocation.position);
-        dragLine.lr.SetPosition(1, hitTransform.position);
+        _dragLine.LineRenderer.SetPosition(0, _dragLine.LineRenderLocation.position);
+        _dragLine.LineRenderer.SetPosition(1, _hitTransform.position);
     }
 
     private void DestroyRope()
     {
-        dragLine.lr.positionCount = 0;
+        _dragLine.LineRenderer.positionCount = 0;
     }
 }

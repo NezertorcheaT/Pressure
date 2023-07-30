@@ -9,8 +9,8 @@ public class MouseIteractor : MonoBehaviour
     [SerializeField, Min(0.1f)] private float distance;
     [SerializeField] private CursorText cursorText;
 
-    private MouseTrigger trigger;
-    private NothingMouseTrigger Ntrigger;
+    private MouseTrigger _trigger;
+    private NothingMouseTrigger _ntrigger;
 
     public bool IsWork
     {
@@ -26,15 +26,15 @@ public class MouseIteractor : MonoBehaviour
             if (showTips)
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit[] hits = Physics.RaycastAll(ray, distance, iteractionLayer);
+                var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
                 foreach (var hit in hits)
                 {
-                    trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
-                    if (trigger != null)
-                    {
-                        cursorText.SetText(trigger.todoString);
-                        break;
-                    }
+                    _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
+                    
+                    if (_trigger == null) continue;
+                    
+                    cursorText.SetText(_trigger.TodoString);
+                    break;
                 }
             }
 
@@ -44,27 +44,28 @@ public class MouseIteractor : MonoBehaviour
                 RaycastHit[] hits = Physics.RaycastAll(ray, distance, iteractionLayer);
                 foreach (var hit in hits)
                 {
-                    trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
-                    if (trigger != null)
-                    {
-                        trigger.Activate();
-                        break;
-                    }
+                    _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
+                    
+                    if (_trigger == null) continue;
+                    
+                    _trigger.Activate();
+                    break;
                 }
             }
+
             if (Input.GetKeyUp(iteractionKey))
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit[] hits = Physics.RaycastAll(ray, distance, iteractionLayer);
                 foreach (var hit in hits)
                 {
-                    trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
-                    if (trigger != null)
-                    {
-                        trigger.Diactivate();
-                        trigger = null;
-                        break;
-                    }
+                    _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
+                    
+                    if (_trigger == null) continue;
+                    
+                    _trigger.Diactivate();
+                    _trigger = null;
+                    break;
                 }
             }
 
@@ -74,25 +75,26 @@ public class MouseIteractor : MonoBehaviour
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 Debug.DrawRay(ray.origin, ray.direction * distance, Color.yellow);
-                if (trigger != null)
+                
+                if (_trigger == null) return;
+                
+                RaycastHit[] hits = Physics.RaycastAll(ray, distance, iteractionLayer);
+                if (hits.Length == 0)
                 {
-                    RaycastHit[] hits = Physics.RaycastAll(ray, distance, iteractionLayer);
-                    if (hits.Length == 0)
-                    {
-                        trigger?.Diactivate();
-                        trigger = null;
-                    }
-                    foreach (var hit in hits)
-                    {
-                        Ntrigger = hit.collider.gameObject.GetComponent<NothingMouseTrigger>();
-                        if (Ntrigger != null)
-                        {
-                            Ntrigger.Activate();
-                            Ntrigger.TwoSideTrigger.CurrentSide = Ntrigger.side;
-                            Ntrigger = null;
-                            break;
-                        }
-                    }
+                    _trigger?.Diactivate();
+                    _trigger = null;
+                }
+
+                foreach (var hit in hits)
+                {
+                    _ntrigger = hit.collider.gameObject.GetComponent<NothingMouseTrigger>();
+                        
+                    if (_ntrigger == null) continue;
+                        
+                    _ntrigger.Activate();
+                    _ntrigger.TwoSideTrigger.currentSide = _ntrigger.side;
+                    _ntrigger = null;
+                    break;
                 }
             }
         }

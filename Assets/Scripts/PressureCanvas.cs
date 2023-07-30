@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PressureCanvas : MonoBehaviour
 {
     [SerializeField, Min(0)] private float pressure;
     [SerializeField, Min(0)] private float pressureDelay;
-    [SerializeField, Min(0)] private float ClampAngle;
-    [SerializeField] private Transform Arrow;
+
+    [FormerlySerializedAs("ClampAngle")] [SerializeField, Min(0)]
+    private float clampAngle;
+
+    [FormerlySerializedAs("Arrow")] [SerializeField]
+    private Transform arrow;
+
     [SerializeField] private List<float> pressureQueue;
 
     public float Pressure
@@ -22,7 +28,7 @@ public class PressureCanvas : MonoBehaviour
 
     private IEnumerator Start()
     {
-        for (; ; )
+        for (;;)
         {
             if (pressureQueue.Count != 0)
             {
@@ -30,16 +36,20 @@ public class PressureCanvas : MonoBehaviour
                 {
                     if (pressureDelay == 0)
                     {
-                        Arrow.localEulerAngles = new Vector3(0, 0, pressureQueue[0] * (360f - ClampAngle * 2) + ClampAngle);
+                        arrow.localEulerAngles =
+                            new Vector3(0, 0, pressureQueue[0] * (360f - clampAngle * 2) + clampAngle);
                     }
                     else
                     {
                         for (float delay = 0; delay < pressureDelay; delay += Time.deltaTime)
                         {
-                            Arrow.localEulerAngles = Vector3.Lerp(Arrow.localEulerAngles, new Vector3(0, 0, pressureQueue[0] * (360f - ClampAngle * 2) + ClampAngle), delay / pressureDelay);
+                            arrow.localEulerAngles = Vector3.Lerp(arrow.localEulerAngles,
+                                new Vector3(0, 0, pressureQueue[0] * (360f - clampAngle * 2) + clampAngle),
+                                delay / pressureDelay);
                             yield return new WaitForEndOfFrame();
                         }
                     }
+
                     pressureQueue.RemoveAt(0);
                 }
             }

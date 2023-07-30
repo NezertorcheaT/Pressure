@@ -7,27 +7,27 @@ public class Chunks : MonoBehaviour
     [SerializeField]
     private GameObject meshGeneratorPrefab;
     [SerializeField]
-    private Vector3Int size;
-    private List<GameObject> chuncs;
+    private Vector3Int _size;
+    private List<GameObject> _chuncs;
 
     [ContextMenu("Update")]
     private void Start()
     {
-        if (chuncs != null && chuncs.Count != 0)
+        if (_chuncs != null && _chuncs.Count != 0)
         {
-            foreach (var chunc in chuncs)
+            foreach (var chunc in _chuncs)
             {
                 Destroy(chunc);
             }
         }
 
-        chuncs = new List<GameObject>();
+        _chuncs = new List<GameObject>();
 
-        for (int x = 0; x < size.x; x++)
+        for (int x = 0; x < _size.x; x++)
         {
-            for (int y = 0; y < size.y; y++)
+            for (int y = 0; y < _size.y; y++)
             {
-                for (int z = 0; z < size.z; z++)
+                for (int z = 0; z < _size.z; z++)
                 {
                     GameObject meshGenerator = Instantiate(meshGeneratorPrefab);
                     meshGenerator.layer = gameObject.layer;
@@ -40,8 +40,8 @@ public class Chunks : MonoBehaviour
                     meshGenerator.transform.position = new Vector3(x * data.DataSize.x, y * data.DataSize.y, z * data.DataSize.z);
 
                     data.UpdateBox();
-                    generator.update();
-                    chuncs.Add(meshGenerator);
+                    generator.Update();
+                    _chuncs.Add(meshGenerator);
                 }
             }
         }

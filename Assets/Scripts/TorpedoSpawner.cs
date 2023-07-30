@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,7 +14,7 @@ public class TorpedoSpawner : MonoBehaviour
 
         onStart.Invoke();
 
-        Torpedo torpedo = Instantiate(torpedoPrefab);
+        var torpedo = Instantiate(torpedoPrefab);
 
         torpedo.transform.SetParent(null);
         torpedo.transform.position = torpedoPosition.position;

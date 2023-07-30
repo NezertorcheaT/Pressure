@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using Zenject;
 
-public class DragLineInstaller : MonoInstaller
+namespace Installers
 {
-    [SerializeField] private LineRenderer lr;
-    [SerializeField] private Transform lineRenderLocation;
-
-    public override void InstallBindings()
+    public class DragLineInstaller : MonoInstaller
     {
-        Container.Bind<DragLine>().FromInstance(new DragLine(lr, lineRenderLocation)).AsSingle().NonLazy();
+        [SerializeField] private LineRenderer lr;
+        [SerializeField] private Transform lineRenderLocation;
+
+        public override void InstallBindings()
+        {
+            Container.Bind<DragLine>().FromInstance(new DragLine(lr, lineRenderLocation)).AsSingle().NonLazy();
+        }
     }
 }

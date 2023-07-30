@@ -17,7 +17,7 @@ float fbm(int numLayers, float lacunarity, float persistence, float scale, float
     for (int i = 0; i < numLayers; i++)
     {
         float n = 1 - abs(snoise(pos * frequency) * 2 - 1);
-		//n*=n;
+        //n*=n;
         noise += n * amplitude;
 
         amplitude *= persistence;
@@ -25,6 +25,21 @@ float fbm(int numLayers, float lacunarity, float persistence, float scale, float
     }
 
     return noise;
+}
+
+float intersectSDF(float distA, float distB)
+{
+    return max(distA, distB);
+}
+
+float unionSDF(float distA, float distB)
+{
+    return min(distA, distB);
+}
+
+float differenceSDF(float distA, float distB)
+{
+    return max(distA, -distB);
 }
 
 float calculateDensity(int3 cell)
@@ -36,13 +51,14 @@ float calculateDensity(int3 cell)
 
     float fudge = 1;
 
-    float density = length(worldPos) / (maxD + fudge) - 0.5;
-    
-    float noise = fbm(2, 2, 0.5, noiseScale/2.5, worldPos) * noiseHeightMultiplier;
-    
-    density = max(density, noise);
+    float density = length(worldPos) / (maxD + fudge) - 0.6;
+    float density2 = length(worldPos) / (maxD + fudge) - 0.5;
 
-    return noise;
+    float noise = fbm(2, 2, 0.5, noiseScale / 2.5, worldPos) * noiseHeightMultiplier;
+
+    density = unionSDF(differenceSDF(density, density2), intersectSDF(noise, density));
+
+    return density;
 }
 
 [numthreads(8, 8, 8)]

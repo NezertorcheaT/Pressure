@@ -1,61 +1,61 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class UISwither : MonoBehaviour
+public class UISwitcher : MonoBehaviour
 {
     [SerializeField] private MouseTrigger nextButton;
     [SerializeField] private MouseTrigger prevButton;
     [SerializeField] private Transform forSlides;
-    public event Action<int, string> onSlideChanged;
+    public event Action<int, string> OnSlideChanged;
 
     private void Start()
     {
-        ActivateOnIndx(0);
+        ActivateOnIndex(0);
 
         nextButton.activationEvent.AddListener(Next);
         prevButton.activationEvent.AddListener(Prev);
     }
 
-    private int GetIndx()
+    private int GetIndex()
     {
-        int n = 0;
-        for (int i = 0; i < forSlides.childCount; i++)
+        var n = 0;
+        for (var i = 0; i < forSlides.childCount; i++)
         {
             if (forSlides.GetChild(i).gameObject.activeSelf)
                 return i;
         }
+
         return n;
     }
-    private void ActivateOnIndx(int indx)
+
+    private void ActivateOnIndex(int index)
     {
         if (forSlides.childCount == 0) return;
 
-        for (int i = 0; i < forSlides.childCount; i++)
+        for (var i = 0; i < forSlides.childCount; i++)
         {
             forSlides.GetChild(i).gameObject.SetActive(false);
         }
 
-        int childIndx = (int)Mathf.Repeat(indx, forSlides.childCount);
-        GameObject currentSlide = forSlides.GetChild(childIndx).gameObject;
+        var childIndex = (int) Mathf.Repeat(index, forSlides.childCount);
+        var currentSlide = forSlides.GetChild(childIndex).gameObject;
 
         currentSlide.SetActive(true);
 
-        onSlideChanged(childIndx, currentSlide.name);
+        OnSlideChanged?.Invoke(childIndex, currentSlide.name);
     }
 
     private void Next()
     {
         if (forSlides.childCount == 0) return;
-        if (forSlides.childCount == 1) ActivateOnIndx(0);
-        else ActivateOnIndx(GetIndx() + 1);
+        if (forSlides.childCount == 1) ActivateOnIndex(0);
+        else ActivateOnIndex(GetIndex() + 1);
     }
+
     private void Prev()
     {
         if (forSlides.childCount == 0) return;
-        if (forSlides.childCount == 1) ActivateOnIndx(0);
-        else ActivateOnIndx(GetIndx() - 1);
+        if (forSlides.childCount == 1) ActivateOnIndex(0);
+        else ActivateOnIndex(GetIndex() - 1);
     }
 }

@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class TwoSidePushTrigger : TwoSideMouseTrigger
 {
@@ -10,26 +10,32 @@ public class TwoSidePushTrigger : TwoSideMouseTrigger
     {
         base.Update();
 
-        if(animator != null)
+        if (animator != null)
         {
-            if (CurrentSide == Side.Up) animator.SetInteger("side", 1);
-            if (CurrentSide == Side.None) animator.SetInteger("side", 0);
-            if (CurrentSide == Side.Down) animator.SetInteger("side", -1);
+            if (currentSide == Side.Up) animator.SetInteger("side", 1);
+            if (currentSide == Side.None) animator.SetInteger("side", 0);
+            if (currentSide == Side.Down) animator.SetInteger("side", -1);
         }
     }
 }
+
 public abstract class TwoSideMouseTrigger : MonoBehaviour
 {
+    public enum Side
+    {
+        Up,
+        None,
+        Down
+    }
+
     [SerializeField] private MouseTrigger triggerUp;
     [SerializeField] private MouseTrigger triggerDown;
     [SerializeField] private MouseTrigger triggerNone;
-    public Side CurrentSide;
+    [FormerlySerializedAs("CurrentSide")] public Side currentSide;
 
     public UnityEvent onSideUp;
     public UnityEvent onSideDown;
     public UnityEvent onSideNone;
-
-    public enum Side { Up, None, Down }
 
     private void Start()
     {
@@ -38,26 +44,28 @@ public abstract class TwoSideMouseTrigger : MonoBehaviour
         triggerNone.diactivationEvent.AddListener(OnNone);
     }
 
-    private void OnUp()
-    {
-        //if (CurrentSide!=Side.Up)
-            onSideUp.Invoke();
-    }
-    private void OnDown()
-    {
-        //if (CurrentSide != Side.Down)
-            onSideDown.Invoke();
-    }
-    private void OnNone()
-    {
-        //if (CurrentSide != Side.None)
-            onSideNone.Invoke();
-    }
-
     protected virtual void Update()
     {
         //if (triggerUp.IsActivated) CurrentSide = Side.Up;
         //else if (triggerDown.IsActivated) CurrentSide = Side.Down;
         //else CurrentSide = Side.None;
+    }
+
+    private void OnUp()
+    {
+        //if (CurrentSide!=Side.Up)
+        onSideUp.Invoke();
+    }
+
+    private void OnDown()
+    {
+        //if (CurrentSide != Side.Down)
+        onSideDown.Invoke();
+    }
+
+    private void OnNone()
+    {
+        //if (CurrentSide != Side.None)
+        onSideNone.Invoke();
     }
 }

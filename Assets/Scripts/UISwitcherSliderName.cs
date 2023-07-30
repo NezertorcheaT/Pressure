@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class UISwitherSliderName : MonoBehaviour
+public class UISwitcherSliderName : MonoBehaviour
 {
-    [SerializeField] private UISwither swither;
+    [FormerlySerializedAs("swither")] [SerializeField]
+    private UISwitcher switcher;
+
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private string left;
     [SerializeField] private string right;
@@ -15,21 +16,24 @@ public class UISwitherSliderName : MonoBehaviour
         text.text = left + name + right;
     }
 
-    private void Subscribe() => swither.onSlideChanged += UpdateText;
-    private void UnSubscribe() => swither.onSlideChanged -= UpdateText;
+    private void Subscribe() => switcher.OnSlideChanged += UpdateText;
+    private void UnSubscribe() => switcher.OnSlideChanged -= UpdateText;
 
     private void OnDestroy()
     {
         UnSubscribe();
     }
+
     private void OnDisable()
     {
         UnSubscribe();
     }
+
     private void OnEnable()
     {
         Subscribe();
     }
+
     private void Start()
     {
         Subscribe();

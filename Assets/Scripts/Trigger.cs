@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Collider))]
 public abstract class MouseTrigger : MonoBehaviour
@@ -8,8 +9,8 @@ public abstract class MouseTrigger : MonoBehaviour
     public UnityEvent diactivationEvent;
     public UnityEvent stillActivatedEvent;
     [SerializeField] private bool isActivated;
-    [SerializeField] private string TodoText;
-    public string todoString => TodoText;
+    [FormerlySerializedAs("TodoText")] [SerializeField] private string todoText;
+    public string TodoString => todoText;
 
     public bool IsActivated => isActivated;
 

@@ -1,157 +1,206 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody))]
 public class SubmarineMovement : MonoBehaviour
 {
-    [SerializeField] private TwoSidePushTrigger LeftEngineLever;
-    [SerializeField] private TwoSidePushTrigger RightEngineLever;
-    [SerializeField] private TwoSidePushTrigger YLever;
+    [FormerlySerializedAs("LeftEngineLever")] [SerializeField]
+    private TwoSidePushTrigger leftEngineLever;
 
-    [SerializeField] private Transform LeftEngine;
-    [SerializeField] private Transform RightEngine;
-    [SerializeField] private Transform Cabine;
+    [FormerlySerializedAs("RightEngineLever")] [SerializeField]
+    private TwoSidePushTrigger rightEngineLever;
 
-    [SerializeField] private float YSpeed;
-    [SerializeField] private float EngineSpeed;
-    [SerializeField] private float RotationSpeed;
-    [SerializeField] private float MaxFuel = 1000;
-    [SerializeField] private float FuelReduceMultiplier = 0.01f;
-    [SerializeField] private float MaxAir = 1000;
-    [SerializeField] private float AirReduceSpeed = 0.01f;
+    [FormerlySerializedAs("YLever")] [SerializeField]
+    private TwoSidePushTrigger yLever;
 
-    [SerializeField] private PressureCanvas AirCanvas;
-    [SerializeField] private PressureCanvas YCanvas;
-    [SerializeField] private PressureCanvas GoYCanvas;
+    [FormerlySerializedAs("LeftEngine")] [SerializeField]
+    private Transform leftEngine;
+
+    [FormerlySerializedAs("RightEngine")] [SerializeField]
+    private Transform rightEngine;
+
+    [FormerlySerializedAs("Cabine")] [SerializeField]
+    private Transform cabine;
+
+    [FormerlySerializedAs("YSpeed")] [SerializeField]
+    private float ySpeed;
+
+    [FormerlySerializedAs("EngineSpeed")] [SerializeField]
+    private float engineSpeed;
+
+    [FormerlySerializedAs("RotationSpeed")] [SerializeField]
+    private float rotationSpeed;
+
+    [FormerlySerializedAs("MaxFuel")] [SerializeField]
+    private float maxFuel = 1000;
+
+    [FormerlySerializedAs("FuelReduceMultiplier")] [SerializeField]
+    private float fuelReduceMultiplier = 0.01f;
+
+    [FormerlySerializedAs("MaxAir")] [SerializeField]
+    private float maxAir = 1000;
+
+    [FormerlySerializedAs("AirReduceSpeed")] [SerializeField]
+    private float airReduceSpeed = 0.01f;
+
+    [FormerlySerializedAs("AirCanvas")] [SerializeField]
+    private PressureCanvas airCanvas;
+
+    [FormerlySerializedAs("YCanvas")] [SerializeField]
+    private PressureCanvas yCanvas;
+
+    [FormerlySerializedAs("GoYCanvas")] [SerializeField]
+    private PressureCanvas goYCanvas;
 
     [SerializeField] private TextMeshProUGUI fuelText;
-    [SerializeField] private Transform Waterpas;
 
-    private Rigidbody rb;
-    private float LeftEngineAngle;
-    private float RightEngineAngle;
-    private float fuel;
-    private float air;
+    [FormerlySerializedAs("Waterpas")] [SerializeField]
+    private Transform waterpas;
+
+    private Rigidbody _rb;
+    private float _leftEngineAngle;
+    private float _rightEngineAngle;
+    private float _fuel;
+    private float _air;
 
     private float Fuel
     {
-        get => Mathf.Clamp(fuel, 0, MaxFuel);
+        get => Mathf.Clamp(_fuel, 0, maxFuel);
         set
         {
-            fuel = Mathf.Clamp(value, 0, MaxFuel);
+            _fuel = Mathf.Clamp(value, 0, maxFuel);
             fuelText.text = Mathf.Round(Fuel).ToString() + " l";
         }
     }
+
     private float Air
     {
-        get => Mathf.Clamp(air, 0, MaxAir);
+        get => Mathf.Clamp(_air, 0, maxAir);
         set
         {
-            air = Mathf.Clamp(value, 0, MaxAir);
-            AirCanvas.Pressure = Air / MaxAir;
+            _air = Mathf.Clamp(value, 0, maxAir);
+            airCanvas.Pressure = Air / maxAir;
         }
     }
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        Fuel = MaxFuel;
-        Air = MaxAir;
+        _rb = GetComponent<Rigidbody>();
+        Fuel = maxFuel;
+        Air = maxAir;
 
-        GoYCanvas.Pressure = 0.5f;
-        AirCanvas.Pressure = Air / MaxAir;
-        YCanvas.Pressure = (transform.position.y + 500f) / 1000f;
+        goYCanvas.Pressure = 0.5f;
+        airCanvas.Pressure = Air / maxAir;
+        yCanvas.Pressure = (transform.position.y + 500f) / 1000f;
 
-        YLever.onSideUp.AddListener(() => GoYCanvas.Pressure = 0);
-        YLever.onSideNone.AddListener(() => GoYCanvas.Pressure = 0.5f);
-        YLever.onSideDown.AddListener(() => GoYCanvas.Pressure = 1);
-
+        yLever.onSideUp.AddListener(() => goYCanvas.Pressure = 0);
+        yLever.onSideNone.AddListener(() => goYCanvas.Pressure = 0.5f);
+        yLever.onSideDown.AddListener(() => goYCanvas.Pressure = 1);
     }
+
     private void Update()
     {
-        Air -= AirReduceSpeed * Time.deltaTime;
-        Cabine.position = new Vector3(transform.position.x, RightEngine.position.y, Cabine.position.z);
+        Air -= airReduceSpeed * Time.deltaTime;
+        cabine.position = new Vector3(transform.position.x, rightEngine.position.y, cabine.position.z);
 
         if (Fuel != 0)
         {
-            if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
+            if (rightEngineLever.currentSide == TwoSideMouseTrigger.Side.Up)
             {
-                RightEngineAngle += RotationSpeed;
+                _rightEngineAngle += rotationSpeed;
             }
-            if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
-            {
-                RightEngineAngle -= RotationSpeed;
-            }
-            RightEngine.localRotation = Quaternion.Euler(new Vector3(RightEngineAngle * 500, 90, -90));
 
-            if (LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
+            if (rightEngineLever.currentSide == TwoSideMouseTrigger.Side.Down)
             {
-                LeftEngineAngle += RotationSpeed;
+                _rightEngineAngle -= rotationSpeed;
             }
-            if (LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
+
+            rightEngine.localRotation = Quaternion.Euler(new Vector3(_rightEngineAngle * 500, 90, -90));
+
+            if (leftEngineLever.currentSide == TwoSideMouseTrigger.Side.Up)
             {
-                LeftEngineAngle -= RotationSpeed;
+                _leftEngineAngle += rotationSpeed;
             }
-            LeftEngine.localRotation = Quaternion.Euler(new Vector3(-LeftEngineAngle * 500, 90, -90));
+
+            if (leftEngineLever.currentSide == TwoSideMouseTrigger.Side.Down)
+            {
+                _leftEngineAngle -= rotationSpeed;
+            }
+
+            leftEngine.localRotation = Quaternion.Euler(new Vector3(-_leftEngineAngle * 500, 90, -90));
         }
 
-        Waterpas.eulerAngles = -transform.eulerAngles;
+        waterpas.eulerAngles = -transform.eulerAngles;
     }
+
     private void FixedUpdate()
     {
-        YCanvas.Pressure = 1f-((transform.position.y + 500f) / 1000f);
+        yCanvas.Pressure = 1f - ((transform.position.y + 500f) / 1000f);
         if (Fuel != 0)
         {
-            if (RightEngineLever.CurrentSide != TwoSideMouseTrigger.Side.None)
+            if (rightEngineLever.currentSide != TwoSideMouseTrigger.Side.None)
             {
-                rb.angularVelocity += Vector3.up * RotationSpeed * (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up ? 1 : -1);
-                Fuel -= RotationSpeed * FuelReduceMultiplier;
-            }
-            if (LeftEngineLever.CurrentSide != TwoSideMouseTrigger.Side.None)
-            {
-                rb.angularVelocity += Vector3.up * RotationSpeed * (LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up ? -1 : 1);
-                Fuel -= RotationSpeed * FuelReduceMultiplier;
+                _rb.angularVelocity += Vector3.up *
+                                       (rotationSpeed * (rightEngineLever.currentSide == TwoSideMouseTrigger.Side.Up
+                                           ? 1
+                                           : -1));
+                Fuel -= rotationSpeed * fuelReduceMultiplier;
             }
 
-            if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up && LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
+            if (leftEngineLever.currentSide != TwoSideMouseTrigger.Side.None)
             {
-                rb.velocity -= Cabine.forward * EngineSpeed;
-                Fuel -= EngineSpeed * FuelReduceMultiplier;
-            }
-            if (RightEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down && LeftEngineLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
-            {
-                rb.velocity += Cabine.forward * EngineSpeed;
-                Fuel -= EngineSpeed * FuelReduceMultiplier;
+                _rb.angularVelocity += Vector3.up *
+                                       (rotationSpeed * (leftEngineLever.currentSide == TwoSideMouseTrigger.Side.Up
+                                           ? -1
+                                           : 1));
+                Fuel -= rotationSpeed * fuelReduceMultiplier;
             }
 
-            if (YLever.CurrentSide == TwoSideMouseTrigger.Side.Up)
+            if (rightEngineLever.currentSide == TwoSideMouseTrigger.Side.Up &&
+                leftEngineLever.currentSide == TwoSideMouseTrigger.Side.Up)
             {
-                rb.velocity += Vector3.up * YSpeed;
-                Fuel -= YSpeed * FuelReduceMultiplier;
+                _rb.velocity -= cabine.forward * engineSpeed;
+                Fuel -= engineSpeed * fuelReduceMultiplier;
             }
-            if (YLever.CurrentSide == TwoSideMouseTrigger.Side.Down)
+
+            if (rightEngineLever.currentSide == TwoSideMouseTrigger.Side.Down &&
+                leftEngineLever.currentSide == TwoSideMouseTrigger.Side.Down)
             {
-                rb.velocity -= Vector3.up * YSpeed;
-                Fuel -= YSpeed * FuelReduceMultiplier;
+                _rb.velocity += cabine.forward * engineSpeed;
+                Fuel -= engineSpeed * fuelReduceMultiplier;
+            }
+
+            if (yLever.currentSide == TwoSideMouseTrigger.Side.Up)
+            {
+                _rb.velocity += Vector3.up * ySpeed;
+                Fuel -= ySpeed * fuelReduceMultiplier;
+            }
+
+            if (yLever.currentSide == TwoSideMouseTrigger.Side.Down)
+            {
+                _rb.velocity -= Vector3.up * ySpeed;
+                Fuel -= ySpeed * fuelReduceMultiplier;
             }
         }
-        Quaternion deltaQuat = Quaternion.FromToRotation(rb.transform.up, Vector3.up);
+
+        Quaternion deltaQuat = Quaternion.FromToRotation(_rb.transform.up, Vector3.up);
 
         Vector3 axis;
         float angle;
         deltaQuat.ToAngleAxis(out angle, out axis);
 
         float dampenFactor = 0.8f; // this value requires tuning
-        rb.AddTorque(-rb.angularVelocity * dampenFactor, ForceMode.Acceleration);
+        _rb.AddTorque(-_rb.angularVelocity * dampenFactor, ForceMode.Acceleration);
 
         float adjustFactor = 0.1f; // this value requires tuning
-        rb.AddTorque(axis.normalized * angle * adjustFactor, ForceMode.Acceleration);
+        _rb.AddTorque(axis.normalized * (angle * adjustFactor), ForceMode.Acceleration);
 
-        if (Mathf.Abs(rb.angularVelocity.y) > RotationSpeed * 2)
-            rb.angularVelocity = new Vector3(rb.angularVelocity.x, 0, rb.angularVelocity.z);
-        if (Mathf.Sqrt(Mathf.Pow(rb.velocity.x, 2) + Mathf.Pow(rb.velocity.z, 2)) > EngineSpeed * 2)
-            rb.velocity = new Vector3(0, rb.velocity.y, 0);
-        if (Mathf.Abs(rb.velocity.y) > YSpeed)
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        if (Mathf.Abs(_rb.angularVelocity.y) > rotationSpeed * 2)
+            _rb.angularVelocity = new Vector3(_rb.angularVelocity.x, 0, _rb.angularVelocity.z);
+        if (Mathf.Sqrt(Mathf.Pow(_rb.velocity.x, 2) + Mathf.Pow(_rb.velocity.z, 2)) > engineSpeed * 2)
+            _rb.velocity = new Vector3(0, _rb.velocity.y, 0);
+        if (Mathf.Abs(_rb.velocity.y) > ySpeed)
+            _rb.velocity = new Vector3(_rb.velocity.x, 0, _rb.velocity.z);
     }
 }

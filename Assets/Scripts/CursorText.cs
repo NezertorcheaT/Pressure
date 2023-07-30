@@ -7,11 +7,11 @@ public class CursorText : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Image cursor;
 
-    public void SetText(string text)
+    public void SetText(string s)
     {
-        if (text != "")
+        if (s != "")
         {
-            this.text.text = text;
+            text.text = s;
             cursor.enabled = false;
         }
         else

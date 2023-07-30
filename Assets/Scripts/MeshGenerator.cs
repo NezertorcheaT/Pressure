@@ -7,11 +7,11 @@ using mattatz.MeshSmoothingSystem;
 [RequireComponent(typeof(MeshRenderer)), RequireComponent(typeof(MeshFilter)), RequireComponent(typeof(VoxelData)), RequireComponent(typeof(MeshCollider))]
 public class MeshGenerator : MonoBehaviour
 {
-    private List<Vector3> vertices = new List<Vector3>();
-    private List<Vector3> unuseVertices = new List<Vector3>();
-    private List<int> triangles = new List<int>();
-    private Mesh mesh;
-    private MeshFilter meshFilter;
+    private List<Vector3> _vertices = new List<Vector3>();
+    private List<Vector3> _unuseVertices = new List<Vector3>();
+    private List<int> _triangles = new List<int>();
+    private Mesh _mesh;
+    private MeshFilter _meshFilter;
     [SerializeField]
     private bool noise = false;
     [SerializeField]
@@ -28,16 +28,16 @@ public class MeshGenerator : MonoBehaviour
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.sharedMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit"));
 
-        meshFilter = GetComponent<MeshFilter>();
+        _meshFilter = GetComponent<MeshFilter>();
 
-        mesh = new Mesh();
-        meshFilter.mesh = mesh;
+        _mesh = new Mesh();
+        _meshFilter.mesh = _mesh;
 
         CreateShape();
         UpdateMesh();
     }
     [ContextMenu("Update")]
-    public void update()
+    public void Update()
     {
         CreateShape();
         UpdateMesh();
@@ -45,9 +45,9 @@ public class MeshGenerator : MonoBehaviour
 
     private void CreateShape()
     {
-        vertices = new List<Vector3>();
-        unuseVertices = new List<Vector3>();
-        triangles = new List<int>();
+        _vertices = new List<Vector3>();
+        _unuseVertices = new List<Vector3>();
+        _triangles = new List<int>();
         #region cube :)
         /*vertices = new Vector3[]
         {
@@ -137,22 +137,22 @@ public class MeshGenerator : MonoBehaviour
             switch (direction)
             {
                 case Direction.Up:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+0, vertices.Count+1, vertices.Count+2,
-                    vertices.Count+1, vertices.Count+3, vertices.Count+2,
+                    _vertices.Count+0, _vertices.Count+1, _vertices.Count+2,
+                    _vertices.Count+1, _vertices.Count+3, _vertices.Count+2,
 
-                    vertices.Count+4, vertices.Count+5, vertices.Count+6,
-                    vertices.Count+5, vertices.Count+7, vertices.Count+6,
+                    _vertices.Count+4, _vertices.Count+5, _vertices.Count+6,
+                    _vertices.Count+5, _vertices.Count+7, _vertices.Count+6,
 
-                    vertices.Count+8, vertices.Count+9, vertices.Count+10,
-                    vertices.Count+9, vertices.Count+11, vertices.Count+10,
+                    _vertices.Count+8, _vertices.Count+9, _vertices.Count+10,
+                    _vertices.Count+9, _vertices.Count+11, _vertices.Count+10,
 
-                    vertices.Count+12, vertices.Count+13, vertices.Count+14,
-                    vertices.Count+13, vertices.Count+15, vertices.Count+14,
+                    _vertices.Count+12, _vertices.Count+13, _vertices.Count+14,
+                    _vertices.Count+13, _vertices.Count+15, _vertices.Count+14,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x + 0, position.y + 1, position.z + 0),
                     new Vector3(position.x + 0, position.y + 1, position.z + 0.5f),
@@ -176,22 +176,22 @@ public class MeshGenerator : MonoBehaviour
                 }).ToList();
                     break;
                 case Direction.Down:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+0, vertices.Count+2, vertices.Count+1,
-                    vertices.Count+1, vertices.Count+2, vertices.Count+3,
+                    _vertices.Count+0, _vertices.Count+2, _vertices.Count+1,
+                    _vertices.Count+1, _vertices.Count+2, _vertices.Count+3,
 
-                    vertices.Count+4, vertices.Count+6, vertices.Count+5,
-                    vertices.Count+5, vertices.Count+6, vertices.Count+7,
+                    _vertices.Count+4, _vertices.Count+6, _vertices.Count+5,
+                    _vertices.Count+5, _vertices.Count+6, _vertices.Count+7,
 
-                    vertices.Count+8, vertices.Count+10, vertices.Count+9,
-                    vertices.Count+9, vertices.Count+10, vertices.Count+11,
+                    _vertices.Count+8, _vertices.Count+10, _vertices.Count+9,
+                    _vertices.Count+9, _vertices.Count+10, _vertices.Count+11,
 
-                    vertices.Count+12, vertices.Count+14, vertices.Count+13,
-                    vertices.Count+13, vertices.Count+14, vertices.Count+15,
+                    _vertices.Count+12, _vertices.Count+14, _vertices.Count+13,
+                    _vertices.Count+13, _vertices.Count+14, _vertices.Count+15,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x+0, position.y +0, position.z +0),
                     new Vector3(position.x+0, position.y +0, position.z +0.5f),
@@ -215,22 +215,22 @@ public class MeshGenerator : MonoBehaviour
                 }).ToList();
                     break;
                 case Direction.Forward:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+1, vertices.Count+3, vertices.Count+0,
-                    vertices.Count+3, vertices.Count+2, vertices.Count+0,
+                    _vertices.Count+1, _vertices.Count+3, _vertices.Count+0,
+                    _vertices.Count+3, _vertices.Count+2, _vertices.Count+0,
 
-                    vertices.Count+5, vertices.Count+7, vertices.Count+4,
-                    vertices.Count+7, vertices.Count+6, vertices.Count+4,
+                    _vertices.Count+5, _vertices.Count+7, _vertices.Count+4,
+                    _vertices.Count+7, _vertices.Count+6, _vertices.Count+4,
 
-                    vertices.Count+9, vertices.Count+11, vertices.Count+8,
-                    vertices.Count+11, vertices.Count+10, vertices.Count+8,
+                    _vertices.Count+9, _vertices.Count+11, _vertices.Count+8,
+                    _vertices.Count+11, _vertices.Count+10, _vertices.Count+8,
 
-                    vertices.Count+13, vertices.Count+15, vertices.Count+12,
-                    vertices.Count+15, vertices.Count+14, vertices.Count+12,
+                    _vertices.Count+13, _vertices.Count+15, _vertices.Count+12,
+                    _vertices.Count+15, _vertices.Count+14, _vertices.Count+12,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x + 0, position.y + 0, position.z + 1),
                     new Vector3(position.x + 0.5f, position.y + 0, position.z + 1),
@@ -254,22 +254,22 @@ public class MeshGenerator : MonoBehaviour
                 }).ToList();
                     break;
                 case Direction.Backward:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+0, vertices.Count+2, vertices.Count+1,
-                    vertices.Count+2, vertices.Count+3, vertices.Count+1,
+                    _vertices.Count+0, _vertices.Count+2, _vertices.Count+1,
+                    _vertices.Count+2, _vertices.Count+3, _vertices.Count+1,
 
-                    vertices.Count+4, vertices.Count+6, vertices.Count+5,
-                    vertices.Count+6, vertices.Count+7, vertices.Count+5,
+                    _vertices.Count+4, _vertices.Count+6, _vertices.Count+5,
+                    _vertices.Count+6, _vertices.Count+7, _vertices.Count+5,
 
-                    vertices.Count+8, vertices.Count+10, vertices.Count+9,
-                    vertices.Count+10, vertices.Count+11, vertices.Count+9,
+                    _vertices.Count+8, _vertices.Count+10, _vertices.Count+9,
+                    _vertices.Count+10, _vertices.Count+11, _vertices.Count+9,
 
-                    vertices.Count+12, vertices.Count+14, vertices.Count+13,
-                    vertices.Count+14, vertices.Count+15, vertices.Count+13,
+                    _vertices.Count+12, _vertices.Count+14, _vertices.Count+13,
+                    _vertices.Count+14, _vertices.Count+15, _vertices.Count+13,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x + 0, position.y + 0, position.z + 0),
                     new Vector3(position.x + 0.5f, position.y + 0, position.z + 0),
@@ -294,22 +294,22 @@ public class MeshGenerator : MonoBehaviour
                 }).ToList();
                     break;
                 case Direction.Right:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+0, vertices.Count+2, vertices.Count+1,
-                    vertices.Count+2, vertices.Count+3, vertices.Count+1,
+                    _vertices.Count+0, _vertices.Count+2, _vertices.Count+1,
+                    _vertices.Count+2, _vertices.Count+3, _vertices.Count+1,
 
-                    vertices.Count+4, vertices.Count+6, vertices.Count+5,
-                    vertices.Count+6, vertices.Count+7, vertices.Count+5,
+                    _vertices.Count+4, _vertices.Count+6, _vertices.Count+5,
+                    _vertices.Count+6, _vertices.Count+7, _vertices.Count+5,
 
-                    vertices.Count+8, vertices.Count+10, vertices.Count+9,
-                    vertices.Count+10, vertices.Count+11, vertices.Count+9,
+                    _vertices.Count+8, _vertices.Count+10, _vertices.Count+9,
+                    _vertices.Count+10, _vertices.Count+11, _vertices.Count+9,
 
-                    vertices.Count+12, vertices.Count+14, vertices.Count+13,
-                    vertices.Count+14, vertices.Count+15, vertices.Count+13,
+                    _vertices.Count+12, _vertices.Count+14, _vertices.Count+13,
+                    _vertices.Count+14, _vertices.Count+15, _vertices.Count+13,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x + 1, position.y + 0, position.z + 0),
                     new Vector3(position.x + 1, position.y + 0, position.z + 0.5f),
@@ -333,22 +333,22 @@ public class MeshGenerator : MonoBehaviour
                 }).ToList();
                     break;
                 case Direction.Left:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+1, vertices.Count+3, vertices.Count+0,
-                    vertices.Count+3, vertices.Count+2, vertices.Count+0,
+                    _vertices.Count+1, _vertices.Count+3, _vertices.Count+0,
+                    _vertices.Count+3, _vertices.Count+2, _vertices.Count+0,
 
-                    vertices.Count+5, vertices.Count+7, vertices.Count+4,
-                    vertices.Count+7, vertices.Count+6, vertices.Count+4,
+                    _vertices.Count+5, _vertices.Count+7, _vertices.Count+4,
+                    _vertices.Count+7, _vertices.Count+6, _vertices.Count+4,
 
-                    vertices.Count+9, vertices.Count+11, vertices.Count+8,
-                    vertices.Count+11, vertices.Count+10, vertices.Count+8,
+                    _vertices.Count+9, _vertices.Count+11, _vertices.Count+8,
+                    _vertices.Count+11, _vertices.Count+10, _vertices.Count+8,
 
-                    vertices.Count+13, vertices.Count+15, vertices.Count+12,
-                    vertices.Count+15, vertices.Count+14, vertices.Count+12,
+                    _vertices.Count+13, _vertices.Count+15, _vertices.Count+12,
+                    _vertices.Count+15, _vertices.Count+14, _vertices.Count+12,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x + 0, position.y + 0, position.z + 0),
                     new Vector3(position.x + 0, position.y + 0, position.z + 0.5f),
@@ -377,42 +377,42 @@ public class MeshGenerator : MonoBehaviour
         }
         else
         {
-            if (!data.CheckPositionCorrectness(position + new Vector3(-1, 0, 0))) unuseVertices = unuseVertices.Concat(new List<Vector3>()
+            if (!data.CheckPositionCorrectness(position + new Vector3(-1, 0, 0))) _unuseVertices = _unuseVertices.Concat(new List<Vector3>()
             {
                     new Vector3(position.x + 0, position.y + 0, position.z + 0),
                     new Vector3(position.x + 0, position.y + 0, position.z + 1),
                     new Vector3(position.x + 0, position.y + 1, position.z + 0),
                     new Vector3(position.x + 0, position.y + 1, position.z + 1),
             }).ToList();
-            if (!data.CheckPositionCorrectness(position + new Vector3(1, 0, 0))) unuseVertices = unuseVertices.Concat(new List<Vector3>()
+            if (!data.CheckPositionCorrectness(position + new Vector3(1, 0, 0))) _unuseVertices = _unuseVertices.Concat(new List<Vector3>()
             {
                     new Vector3(position.x + 1, position.y + 0, position.z + 0),
                     new Vector3(position.x + 1, position.y + 0, position.z + 1),
                     new Vector3(position.x + 1, position.y + 1, position.z + 0),
                     new Vector3(position.x + 1, position.y + 1, position.z + 1),
             }).ToList();
-            if (!data.CheckPositionCorrectness(position + new Vector3(0, 1, 0))) unuseVertices = unuseVertices.Concat(new List<Vector3>()
+            if (!data.CheckPositionCorrectness(position + new Vector3(0, 1, 0))) _unuseVertices = _unuseVertices.Concat(new List<Vector3>()
             {
                     new Vector3(position.x + 0, position.y + 1, position.z + 0),
                     new Vector3(position.x + 0, position.y + 1, position.z + 1),
                     new Vector3(position.x + 1, position.y + 1, position.z + 0),
                     new Vector3(position.x + 1, position.y + 1, position.z + 1),
             }).ToList();
-            if (!data.CheckPositionCorrectness(position + new Vector3(0, -1, 0))) unuseVertices = unuseVertices.Concat(new List<Vector3>()
+            if (!data.CheckPositionCorrectness(position + new Vector3(0, -1, 0))) _unuseVertices = _unuseVertices.Concat(new List<Vector3>()
             {
                     new Vector3(position.x + 0, position.y + 0, position.z + 0),
                     new Vector3(position.x + 0, position.y + 0, position.z + 1),
                     new Vector3(position.x + 1, position.y + 0, position.z + 0),
                     new Vector3(position.x + 1, position.y + 0, position.z + 1),
             }).ToList();
-            if (!data.CheckPositionCorrectness(position + new Vector3(0, 0, 1))) unuseVertices = unuseVertices.Concat(new List<Vector3>()
+            if (!data.CheckPositionCorrectness(position + new Vector3(0, 0, 1))) _unuseVertices = _unuseVertices.Concat(new List<Vector3>()
             {
                     new Vector3(position.x + 0, position.y + 0, position.z + 1),
                     new Vector3(position.x + 1, position.y + 0, position.z + 1),
                     new Vector3(position.x + 0, position.y + 1, position.z + 1),
                     new Vector3(position.x + 1, position.y + 1, position.z + 1),
             }).ToList();
-            if (!data.CheckPositionCorrectness(position + new Vector3(0, 0, -1))) unuseVertices = unuseVertices.Concat(new List<Vector3>()
+            if (!data.CheckPositionCorrectness(position + new Vector3(0, 0, -1))) _unuseVertices = _unuseVertices.Concat(new List<Vector3>()
             {
                     new Vector3(position.x + 0, position.y + 0, position.z + 0),
                     new Vector3(position.x + 1, position.y + 0, position.z + 0),
@@ -423,13 +423,13 @@ public class MeshGenerator : MonoBehaviour
             switch (direction)
             {
                 case Direction.Up:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+0, vertices.Count+1, vertices.Count+2,
-                    vertices.Count+1, vertices.Count+3, vertices.Count+2,
+                    _vertices.Count+0, _vertices.Count+1, _vertices.Count+2,
+                    _vertices.Count+1, _vertices.Count+3, _vertices.Count+2,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x + 0, position.y + 1, position.z + 0),
                     new Vector3(position.x + 0, position.y + 1, position.z + 1),
@@ -438,13 +438,13 @@ public class MeshGenerator : MonoBehaviour
                 }).ToList();
                     break;
                 case Direction.Down:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+0, vertices.Count+2, vertices.Count+1,
-                    vertices.Count+1, vertices.Count+2, vertices.Count+3,
+                    _vertices.Count+0, _vertices.Count+2, _vertices.Count+1,
+                    _vertices.Count+1, _vertices.Count+2, _vertices.Count+3,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x + 0, position.y + 0, position.z + 0),
                     new Vector3(position.x + 0, position.y + 0, position.z + 1),
@@ -453,13 +453,13 @@ public class MeshGenerator : MonoBehaviour
                 }).ToList();
                     break;
                 case Direction.Forward:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+1, vertices.Count+3, vertices.Count+0,
-                    vertices.Count+3, vertices.Count+2, vertices.Count+0,
+                    _vertices.Count+1, _vertices.Count+3, _vertices.Count+0,
+                    _vertices.Count+3, _vertices.Count+2, _vertices.Count+0,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x + 0, position.y + 0, position.z + 1),
                     new Vector3(position.x + 1, position.y + 0, position.z + 1),
@@ -468,13 +468,13 @@ public class MeshGenerator : MonoBehaviour
                 }).ToList();
                     break;
                 case Direction.Backward:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+0, vertices.Count+2, vertices.Count+1,
-                    vertices.Count+2, vertices.Count+3, vertices.Count+1,
+                    _vertices.Count+0, _vertices.Count+2, _vertices.Count+1,
+                    _vertices.Count+2, _vertices.Count+3, _vertices.Count+1,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x + 0, position.y + 0, position.z + 0),
                     new Vector3(position.x + 1, position.y + 0, position.z + 0),
@@ -484,13 +484,13 @@ public class MeshGenerator : MonoBehaviour
                 }).ToList();
                     break;
                 case Direction.Right:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+0, vertices.Count+2, vertices.Count+1,
-                    vertices.Count+2, vertices.Count+3, vertices.Count+1,
+                    _vertices.Count+0, _vertices.Count+2, _vertices.Count+1,
+                    _vertices.Count+2, _vertices.Count+3, _vertices.Count+1,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x + 1, position.y + 0, position.z + 0),
                     new Vector3(position.x + 1, position.y + 0, position.z + 1),
@@ -499,13 +499,13 @@ public class MeshGenerator : MonoBehaviour
                 }).ToList();
                     break;
                 case Direction.Left:
-                    triangles = triangles.Concat(new List<int>()
+                    _triangles = _triangles.Concat(new List<int>()
                 {
-                    vertices.Count+1, vertices.Count+3, vertices.Count+0,
-                    vertices.Count+3, vertices.Count+2, vertices.Count+0,
+                    _vertices.Count+1, _vertices.Count+3, _vertices.Count+0,
+                    _vertices.Count+3, _vertices.Count+2, _vertices.Count+0,
                 }).ToList();
 
-                    vertices = vertices.Concat(new List<Vector3>()
+                    _vertices = _vertices.Concat(new List<Vector3>()
                 {
                     new Vector3(position.x + 0, position.y + 0, position.z + 0),
                     new Vector3(position.x + 0, position.y + 0, position.z + 1),
@@ -520,23 +520,23 @@ public class MeshGenerator : MonoBehaviour
     }
     private void AddCube(Vector3 position)
     {
-        triangles = triangles.Concat(new List<int>()
+        _triangles = _triangles.Concat(new List<int>()
         {
-             vertices.Count+0, vertices.Count+2, vertices.Count+1
-            ,vertices.Count+1, vertices.Count+2, vertices.Count+3
-            ,vertices.Count+4, vertices.Count+5, vertices.Count+6
-            ,vertices.Count+5, vertices.Count+7, vertices.Count+6
-            ,vertices.Count+0, vertices.Count+4, vertices.Count+2
-            ,vertices.Count+4, vertices.Count+6, vertices.Count+2
-            ,vertices.Count+2, vertices.Count+6, vertices.Count+3
-            ,vertices.Count+6, vertices.Count+7, vertices.Count+3
-            ,vertices.Count+3, vertices.Count+7, vertices.Count+1
-            ,vertices.Count+7, vertices.Count+5, vertices.Count+1
-            ,vertices.Count+1, vertices.Count+5, vertices.Count+0
-            ,vertices.Count+5, vertices.Count+4, vertices.Count+0
+             _vertices.Count+0, _vertices.Count+2, _vertices.Count+1
+            ,_vertices.Count+1, _vertices.Count+2, _vertices.Count+3
+            ,_vertices.Count+4, _vertices.Count+5, _vertices.Count+6
+            ,_vertices.Count+5, _vertices.Count+7, _vertices.Count+6
+            ,_vertices.Count+0, _vertices.Count+4, _vertices.Count+2
+            ,_vertices.Count+4, _vertices.Count+6, _vertices.Count+2
+            ,_vertices.Count+2, _vertices.Count+6, _vertices.Count+3
+            ,_vertices.Count+6, _vertices.Count+7, _vertices.Count+3
+            ,_vertices.Count+3, _vertices.Count+7, _vertices.Count+1
+            ,_vertices.Count+7, _vertices.Count+5, _vertices.Count+1
+            ,_vertices.Count+1, _vertices.Count+5, _vertices.Count+0
+            ,_vertices.Count+5, _vertices.Count+4, _vertices.Count+0
         }).ToList();
 
-        vertices = vertices.Concat(new List<Vector3>()
+        _vertices = _vertices.Concat(new List<Vector3>()
         {
             new Vector3(position.x+0, position.y +0, position.z +0), new Vector3(position.x+0, position.y +0, position.z +1), new Vector3(position.x+1, position.y +0, position.z +0), new Vector3(position.x+1, position.y +0, position.z +1),
             new Vector3(position.x+0, position.y +1,position.z + 0), new Vector3(position.x+0, position.y +1, position.z +1), new Vector3(position.x+1, position.y +1, position.z +0), new Vector3(position.x+1, position.y + 1, position.z +1)
@@ -545,22 +545,22 @@ public class MeshGenerator : MonoBehaviour
 
     private void UpdateMesh()
     {
-        mesh = new Mesh();
-        mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
-        GetComponent<MeshFilter>().sharedMesh = mesh;
+        _mesh = new Mesh();
+        _mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
+        GetComponent<MeshFilter>().sharedMesh = _mesh;
 
-        mesh.vertices = vertices.ToArray();
-        mesh.triangles = triangles.ToArray();
-        mesh.RecalculateNormals();
+        _mesh.vertices = _vertices.ToArray();
+        _mesh.triangles = _triangles.ToArray();
+        _mesh.RecalculateNormals();
 
-        if (merge) mesh.WeldVertices();
-        if (smooth) mesh.LaplacianFilter(1);
-        if (noise) mesh.Randomise(noiseTreshold);
+        if (merge) _mesh.WeldVertices();
+        if (smooth) _mesh.LaplacianFilter(1);
+        if (noise) _mesh.Randomise(noiseTreshold);
         //if (smooth) mesh.LaplacianFilter(1);
 
-        mesh.RecalculateNormals();
-        mesh.RecalculateBounds();
-        GetComponent<MeshCollider>().sharedMesh = mesh;
+        _mesh.RecalculateNormals();
+        _mesh.RecalculateBounds();
+        GetComponent<MeshCollider>().sharedMesh = _mesh;
     }
 }
 public static class MeshWelder

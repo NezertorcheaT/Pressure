@@ -23,25 +23,27 @@ public class Radar : MonoBehaviour
     [SerializeField] private Transform origin;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Collider[] colliders;
-    private Bounds bounds;
-    private float angle;
-    private Texture2D texture;
+
+    private Bounds _bounds;
+    private float _angle;
+    private Texture2D _texture;
 
     private void Start()
     {
-        texture = new Texture2D(textureSize, textureSize, TextureFormat.RGBA32, false);
-        texture.Apply(false);
+        _texture = new Texture2D(textureSize, textureSize, TextureFormat.RGBA32, false);
+        _texture.Apply(false);
         distance = maxDistance;
 
         Fill();
         CalculateBounds();
     }
+
     private void CalculateBounds()
     {
-        bounds = new Bounds();
+        _bounds = new Bounds();
         foreach (var collider in colliders)
         {
-            bounds.Encapsulate(collider.bounds);
+            _bounds.Encapsulate(collider.bounds);
         }
     }
 
@@ -52,50 +54,55 @@ public class Radar : MonoBehaviour
     {
         return new Vector3(Mathf.Cos(a * Mathf.Deg2Rad), 0, Mathf.Sin(a * Mathf.Deg2Rad)).normalized;
     }
+
     private void FixedUpdate()
     {
-        angle = Mathf.Repeat(angle + speed, 360);
-        arrow.localRotation = Quaternion.Euler(0, 0, -angle + 90);
+        _angle = Mathf.Repeat(_angle + speed, 360);
+        arrow.localRotation = Quaternion.Euler(0, 0, -_angle + 90);
         boat.localRotation = Quaternion.Euler(0, 0, origin.rotation.eulerAngles.y);
-        boat.localScale = new Vector3(bounds.size.x * 2f / 16.862f, bounds.size.z * 2f / 29.14999f) / distance;
+        boat.localScale = new Vector3(_bounds.size.x * 2f / 16.862f, _bounds.size.z * 2f / 29.14999f) / distance;
 
         boat.localScale = new Vector3(boat.localScale.x, boat.localScale.y, 1);
 
-        for (float i = -height / 2; i < height / 2; i += bounds.size.y / (float)textureSize * heightOffsetMultiplier)
+        for (float i = -height / 2; i < height / 2; i += _bounds.size.y / (float) textureSize * heightOffsetMultiplier)
         {
             DrawRayPoint(i);
         }
 
-        image.texture = texture;
+        image.texture = _texture;
     }
+
     private void Fill()
     {
-        var fillColorArray = texture.GetPixels();
+        var fillColorArray = _texture.GetPixels();
         for (var i = 0; i < fillColorArray.Length; ++i)
         {
             fillColorArray[i] = Color.black;
         }
-        texture.SetPixels(fillColorArray);
-        texture.Apply(false);
+
+        _texture.SetPixels(fillColorArray);
+        _texture.Apply(false);
     }
+
     private IEnumerator Draw(int x, int y)
     {
-        texture.SetPixel(x, y, color);
-        texture.Apply(false);
+        _texture.SetPixel(x, y, color);
+        _texture.Apply(false);
 
         for (float sec = 0; sec <= cleanDelay; sec += 0.1f)
         {
             yield return new WaitForSeconds(0.1f);
-            texture.SetPixel(x, y, color * (1 - sec / cleanDelay));
-            texture.Apply(false);
+            _texture.SetPixel(x, y, color * (1 - sec / cleanDelay));
+            _texture.Apply(false);
         }
 
-        texture.SetPixel(x, y, Color.black);
-        texture.Apply(false);
+        _texture.SetPixel(x, y, Color.black);
+        _texture.Apply(false);
     }
+
     private void DrawRayPoint(float yOffset)
     {
-        var rotate = Angle2Vec3(angle);
+        var rotate = Angle2Vec3(_angle);
         //var rotate = Angle2Vec3(angle - origin.rotation.eulerAngles.y);
         Debug.DrawRay(origin.position + new Vector3(0, yOffset, 0), rotate * distance, Color.yellow);
 
@@ -104,12 +111,13 @@ public class Radar : MonoBehaviour
         {
             var position = ((origin.position - hit[0].point) / distance);
             //position = Quaternion.Euler(0, origin.rotation.eulerAngles.y, 0) * position;
-            position *= ((float)textureSize / 2);
-            position += new Vector3(((float)textureSize / 2), 0, ((float)textureSize / 2));
-            StartCoroutine(Draw((int)position.x, (int)position.z));
+            position *= ((float) textureSize / 2);
+            position += new Vector3(((float) textureSize / 2), 0, ((float) textureSize / 2));
+            StartCoroutine(Draw((int) position.x, (int) position.z));
         }
     }
 }
+
 static class Float2Vec
 {
     public static Vector3 ToVector3(this float f) => new Vector3(f, f, f);

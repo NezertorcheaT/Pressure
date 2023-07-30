@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody))]
 public class FirstPerson : MonoBehaviour
@@ -14,14 +15,15 @@ public class FirstPerson : MonoBehaviour
     [SerializeField] private Transform camOrigin;
     [SerializeField] private bool isWorking = false;
     [SerializeField] private bool isUnderWater = false;
-    [SerializeField] private Light FlashLight;
+    [FormerlySerializedAs("FlashLight")] [SerializeField] private Light flashLight;
 
-    private Rigidbody rb;
-    private bool isCursorFree = true;
+    private Rigidbody _rb;
+    private bool _isCursorFree = true;
+
     public bool IsCursorFree
     {
-        get => isCursorFree;
-        set => isCursorFree = value;
+        get => _isCursorFree;
+        set => _isCursorFree = value;
     }
 
     public bool IsWorking
@@ -29,34 +31,37 @@ public class FirstPerson : MonoBehaviour
         get => isWorking;
         set => isWorking = value;
     }
+
     public bool IsUnderWater
     {
         get => isUnderWater;
         set => isUnderWater = value;
     }
+
     public Transform CamOrigin => camOrigin;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
     {
         InternalLockUpdate();
-        Cursor.visible = isCursorFree;
-        Cursor.lockState = isCursorFree ? CursorLockMode.None : (IsWorking ? CursorLockMode.Locked : CursorLockMode.None);
+        Cursor.visible = _isCursorFree;
+        Cursor.lockState =
+            _isCursorFree ? CursorLockMode.None : (IsWorking ? CursorLockMode.Locked : CursorLockMode.None);
 
         if (!IsWorking)
         {
-            isCursorFree = false;
-            rb.velocity = Vector3.zero;
+            _isCursorFree = false;
+            _rb.velocity = Vector3.zero;
             return;
         }
 
         if (!isUnderWater)
         {
-            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
+            _rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
             float inputX = Input.GetAxisRaw("Horizontal");
             float inputY = Input.GetAxisRaw("Vertical");
 
@@ -67,11 +72,11 @@ public class FirstPerson : MonoBehaviour
             Vector3 cameraRotation = new Vector3(Input.GetAxisRaw("Mouse Y"), 0, 0) * sensitivity;
 
 
-            rb.velocity = velocity;
+            _rb.velocity = velocity;
 
             if (rotation != Vector3.zero)
             {
-                rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
+                _rb.MoveRotation(_rb.rotation * Quaternion.Euler(rotation));
             }
 
             if (cam != null)
@@ -84,24 +89,24 @@ public class FirstPerson : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.F))
                 ToggleFlashLight();
 
-            rb.constraints = RigidbodyConstraints.FreezeRotation;
+            _rb.constraints = RigidbodyConstraints.FreezeRotation;
             float inputX = Input.GetAxisRaw("Horizontal");
             float inputY = Input.GetAxisRaw("Vertical");
             float inputJump = Input.GetKey(KeyCode.Space) ? 1 : 0;
 
-            Vector3 velocity = (transform.right * inputX + transform.forward * inputY).normalized * speed + inputJump * jumpForce * Vector3.up;
+            Vector3 velocity = (transform.right * inputX + transform.forward * inputY).normalized * speed +
+                               inputJump * jumpForce * Vector3.up;
 
             Vector3 rotation = new Vector3(0, Input.GetAxisRaw("Mouse X"), 0) * sensitivity;
 
             Vector3 cameraRotation = new Vector3(Input.GetAxisRaw("Mouse Y"), 0, 0) * sensitivity;
 
 
-
-            rb.velocity = velocity - Vector3.up * gravity;
+            _rb.velocity = velocity - Vector3.up * gravity;
 
             if (rotation != Vector3.zero)
             {
-                rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
+                _rb.MoveRotation(_rb.rotation * Quaternion.Euler(rotation));
             }
 
             if (cam != null)
@@ -111,9 +116,9 @@ public class FirstPerson : MonoBehaviour
         }
     }
 
-    public void ToggleFlashLight() => FlashLight.gameObject.SetActive(!FlashLight.gameObject.activeSelf);
-    public void OffFlashLight() => FlashLight.gameObject.SetActive(false);
-    public void OnFlashLight() => FlashLight.gameObject.SetActive(true);
+    public void ToggleFlashLight() => flashLight.gameObject.SetActive(!flashLight.gameObject.activeSelf);
+    public void OffFlashLight() => flashLight.gameObject.SetActive(false);
+    public void OnFlashLight() => flashLight.gameObject.SetActive(true);
 
     public void Teleport(Transform target)
     {
@@ -125,11 +130,11 @@ public class FirstPerson : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            isCursorFree = true;
+            _isCursorFree = true;
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            isCursorFree = false;
+            _isCursorFree = false;
         }
     }
 }

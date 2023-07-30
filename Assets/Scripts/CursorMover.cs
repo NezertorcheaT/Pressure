@@ -1,16 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CursorMover : MonoBehaviour
 {
-    [SerializeField] private Transform CursorImage;
+    [FormerlySerializedAs("CursorImage")] [SerializeField]
+    private Transform cursorImage;
 
     private void Update()
     {
         if (Cursor.lockState == CursorLockMode.Locked)
-            CursorImage.transform.localPosition = new Vector3(0, 0, 0);
+            cursorImage.transform.localPosition = new Vector3(0, 0, 0);
         else
-            CursorImage.transform.position = Input.mousePosition;
+            cursorImage.transform.position = Input.mousePosition;
     }
 }

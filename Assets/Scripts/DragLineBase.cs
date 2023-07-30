@@ -2,12 +2,12 @@
 
 public class DragLine
 {
-    public LineRenderer lr;
-    public Transform lineRenderLocation;
+    public readonly LineRenderer LineRenderer;
+    public readonly Transform LineRenderLocation;
 
-    public DragLine(LineRenderer lr, Transform lineRenderLocation)
+    public DragLine(LineRenderer lineRenderer, Transform lineRenderLocation)
     {
-        this.lr = lr;
-        this.lineRenderLocation = lineRenderLocation;
+        LineRenderer = lineRenderer;
+        LineRenderLocation = lineRenderLocation;
     }
 }

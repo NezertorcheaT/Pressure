@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class SubmarineCamerasCanvas : MonoBehaviour
@@ -12,8 +11,9 @@ public class SubmarineCamerasCanvas : MonoBehaviour
         submarineCameras.onChanged.AddListener(ChangeText);
         ChangeText();
     }
+
     private void ChangeText()
     {
-        txt.text = submarineCameras.currentId.ToString();
+        txt.text = submarineCameras.CurrentId.ToString();
     }
 }

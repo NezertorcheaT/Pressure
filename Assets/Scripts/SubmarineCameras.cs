@@ -1,41 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class SubmarineCameras : MonoBehaviour
 {
-    [SerializeField]
-    private Camera[] cameras;
-    private int cameraId = 0;
-    [SerializeField]
-    private RenderTexture texture;
+    [SerializeField] private Camera[] cameras;
+    [SerializeField] private RenderTexture texture;
 
-    public Camera current => cameras[cameraId];
-    public int currentId
+    private int _cameraId = 0;
+
+    public Camera Current => cameras[_cameraId];
+
+    public int CurrentId
     {
-        get => cameraId;
+        get => _cameraId;
         private set
         {
-            cameraId = value;
+            _cameraId = value;
             onChanged.Invoke();
         }
     }
+
     public UnityEvent onChanged;
 
     private void Update()
     {
         for (int i = 0; i < cameras.Length; i++)
         {
-            if (i != currentId)
+            if (i != CurrentId)
             {
                 cameras[i].gameObject.SetActive(false);
                 cameras[i].targetTexture = null;
             }
         }
-        cameras[currentId].gameObject.SetActive(true);
-        cameras[currentId].targetTexture = texture;
+
+        cameras[CurrentId].gameObject.SetActive(true);
+        cameras[CurrentId].targetTexture = texture;
     }
-    public void NextCamera() => currentId = (int)Mathf.Repeat(cameraId + 1, cameras.Length);
-    public void PrevCamera() => currentId = (int)Mathf.Repeat(cameraId - 1, cameras.Length);
+
+    public void NextCamera() => CurrentId = (int) Mathf.Repeat(_cameraId + 1, cameras.Length);
+    public void PrevCamera() => CurrentId = (int) Mathf.Repeat(_cameraId - 1, cameras.Length);
 }

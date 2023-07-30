@@ -5,8 +5,8 @@ using UnityEngine.Events;
 public class CameraMoveTrigger : MouseTrigger
 {
     [SerializeField] private Transform target;
-    [SerializeField] MouseIteractor cam;
-    [SerializeField,Min(0)] private float moveDelay;
+    [SerializeField] private MouseIteractor cam;
+    [SerializeField, Min(0)] private float moveDelay;
     public UnityEvent onMoveStart;
     public UnityEvent onMoveEnd;
 
@@ -17,6 +17,7 @@ public class CameraMoveTrigger : MouseTrigger
         onMoveStart.AddListener(() => cam.IsWork = false);
         onMoveEnd.AddListener(() => cam.IsWork = true);
     }
+
     private IEnumerator Move()
     {
         yield return null;
@@ -42,6 +43,7 @@ public class CameraMoveTrigger : MouseTrigger
             cam.transform.position = Vector3.Lerp(cam.transform.position, target.position, i / moveDelay);
             cam.transform.rotation = Quaternion.Lerp(cam.transform.rotation, target.rotation, i / moveDelay);
         }
+
         onMoveEnd.Invoke();
     }
 }

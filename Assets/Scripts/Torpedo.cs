@@ -16,14 +16,14 @@ public class Torpedo : MonoBehaviour
     [SerializeField] private float weight;
     [SerializeField] private float radius;
 
-    private bool started = false;
+    private bool _started = false;
 
     private IEnumerator Start()
     {
         rb.velocity -= transform.up * startVelocity;
 
         yield return new WaitForSeconds(startDelay);
-        started = true;
+        _started = true;
 
         yield return new WaitForSeconds(lifeTime);
         Destroy(gameObject);
@@ -31,7 +31,7 @@ public class Torpedo : MonoBehaviour
 
     private void Update()
     {
-        if (!started) return;
+        if (!_started) return;
 
         fan.localEulerAngles += new Vector3(fanSpeed, 90, 90);
         rb.velocity += transform.forward * speed;
@@ -41,7 +41,7 @@ public class Torpedo : MonoBehaviour
     {
         if (collision.transform.parent == null) return;
 
-        GenTest terrain = collision.transform.parent.GetComponent<GenTest>();
+        var terrain = collision.transform.parent.GetComponent<GenTest>();
 
         if (terrain == null) return;
 

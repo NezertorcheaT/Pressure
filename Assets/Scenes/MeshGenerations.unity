@@ -178,9 +178,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Close
-  _animator: {fileID: 882798577}
-  _animation: TorpedosDoorUpClose
+  todoText: Close
+  animator: {fileID: 882798577}
+  animation: TorpedosDoorUpClose
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -356,6 +356,10 @@ PrefabInstance:
       propertyPath: TodoText
       value: Down
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186655737784986, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: todoText
+      value: Down
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186656909912424, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: m_Size.y
       value: 0.080094814
@@ -368,8 +372,16 @@ PrefabInstance:
       propertyPath: TodoText
       value: Middle
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186656909912439, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: todoText
+      value: Middle
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: TodoText
+      value: Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: todoText
       value: Up
       objectReference: {fileID: 0}
     - target: {fileID: 4430186657572151180, guid: 5950b52081183974c98f2ab260510abf, type: 3}
@@ -676,9 +688,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Open
-  _animator: {fileID: 1040665616}
-  _animation: BackDoorOpen
+  todoText: Open
+  animator: {fileID: 1040665616}
+  animation: BackDoorOpen
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -811,6 +823,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7029012733658849711, guid: b246124e483eafd48936f4c69526e5ae, type: 3}
       propertyPath: TodoText
+      value: Torpedo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029012733658849711, guid: b246124e483eafd48936f4c69526e5ae, type: 3}
+      propertyPath: todoText
       value: Torpedo
       objectReference: {fileID: 0}
     - target: {fileID: 7029012733658849711, guid: b246124e483eafd48936f4c69526e5ae, type: 3}
@@ -1061,7 +1077,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Go Down
+  todoText: Go Down
   target: {fileID: 1355477990}
   cam: {fileID: 1848938622}
   moveDelay: 1
@@ -1575,9 +1591,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: 
-  _animator: {fileID: 410031895}
-  _animation: OutSubmarineTorpedoOpen
+  todoText: 
+  animator: {fileID: 410031895}
+  animation: OutSubmarineTorpedoOpen
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -2058,7 +2074,7 @@ MonoBehaviour:
   camOrigin: {fileID: 1585280182}
   isWorking: 0
   isUnderWater: 0
-  FlashLight: {fileID: 2126790058}
+  flashLight: {fileID: 2126790058}
 --- !u!1 &159336919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,7 +2154,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Return To Submarine
+  todoText: Return To Submarine
   target: {fileID: 887849398}
   cam: {fileID: 1848938622}
   moveDelay: 1
@@ -3147,7 +3163,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Leave Submarine
+  todoText: Leave Submarine
   target: {fileID: 223903951}
   cam: {fileID: 1848938622}
   moveDelay: 1
@@ -3249,9 +3265,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Open Laptop
-  _animator: {fileID: 1610203072}
-  _animation: open laptop
+  todoText: Open Laptop
+  animator: {fileID: 1610203072}
+  animation: open laptop
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -3650,7 +3666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &321188484
 Transform:
   m_ObjectHideFlags: 0
@@ -4027,12 +4043,24 @@ PrefabInstance:
       propertyPath: TodoText
       value: Down
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186655737784986, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: todoText
+      value: Down
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186656909912439, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: TodoText
       value: Middle
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186656909912439, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: todoText
+      value: Middle
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: TodoText
+      value: Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: todoText
       value: Up
       objectReference: {fileID: 0}
     - target: {fileID: 6698891818000886244, guid: 5950b52081183974c98f2ab260510abf, type: 3}
@@ -4444,9 +4472,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Close Laptop
-  _animator: {fileID: 1610203072}
-  _animation: close laptop
+  todoText: Close Laptop
+  animator: {fileID: 1610203072}
+  animation: close laptop
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -5347,7 +5375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d98fcd88dc9f0a4faba54f101d4e1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swither: {fileID: 1682837136}
+  switcher: {fileID: 1682837136}
   text: {fileID: 864640718}
   left: '<= '
   right: ' =>'
@@ -8474,7 +8502,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Sit Down
+  todoText: Sit Down
   target: {fileID: 1210461295}
   cam: {fileID: 1848938622}
   moveDelay: 1
@@ -9255,7 +9283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771293701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -142, y: 5, z: 209}
+  m_LocalPosition: {x: -162, y: 18.299995, z: 118.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9289,24 +9317,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44ea496901299a4abe6fa29ef1d71e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftEngineLever: {fileID: 14420194}
-  RightEngineLever: {fileID: 1770683998}
-  YLever: {fileID: 395748811}
-  LeftEngine: {fileID: 957721092}
-  RightEngine: {fileID: 2122850810}
-  Cabine: {fileID: 1351599699}
-  YSpeed: 1
-  EngineSpeed: 1
-  RotationSpeed: 0.1
-  MaxFuel: 1000
-  FuelReduceMultiplier: 0.005
-  MaxAir: 1000
-  AirReduceSpeed: 0.1
-  AirCanvas: {fileID: 148188243}
-  YCanvas: {fileID: 1176318729}
-  GoYCanvas: {fileID: 433267099}
+  leftEngineLever: {fileID: 14420194}
+  rightEngineLever: {fileID: 1770683998}
+  yLever: {fileID: 395748811}
+  leftEngine: {fileID: 957721092}
+  rightEngine: {fileID: 2122850810}
+  cabine: {fileID: 1351599699}
+  ySpeed: 1
+  engineSpeed: 1
+  rotationSpeed: 0.1
+  maxFuel: 1000
+  fuelReduceMultiplier: 0.005
+  maxAir: 1000
+  airReduceSpeed: 0.1
+  airCanvas: {fileID: 148188243}
+  yCanvas: {fileID: 1176318729}
+  goYCanvas: {fileID: 433267099}
   fuelText: {fileID: 914319873}
-  Waterpas: {fileID: 341360649}
+  waterpas: {fileID: 341360649}
 --- !u!54 &771293707
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9322,7 +9350,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &771293708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10015,9 +10043,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: 
-  _animator: {fileID: 2104812337}
-  _animation: SubmarineExitSea
+  todoText: 
+  animator: {fileID: 2104812337}
+  animation: SubmarineExitSea
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -11029,9 +11057,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: 
-  _animator: {fileID: 2104812337}
-  _animation: SubmarineHatchIn
+  todoText: 
+  animator: {fileID: 2104812337}
+  animation: SubmarineHatchIn
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -11398,9 +11426,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Close
-  _animator: {fileID: 1040665616}
-  _animation: BackDoorClose
+  todoText: Close
+  animator: {fileID: 1040665616}
+  animation: BackDoorClose
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -11925,7 +11953,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Next
+  todoText: Next
   animator: {fileID: 0}
 --- !u!65 &978894326
 BoxCollider:
@@ -12644,7 +12672,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049812828}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f0c4aa42784f9f41a5308e8d4528b60, type: 3}
   m_Name: 
@@ -13100,7 +13128,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: 
+  todoText: 
   target: {fileID: 597030581}
   cam: {fileID: 1848938622}
   moveDelay: 0
@@ -13733,9 +13761,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Drop Aqualung
-  _animator: {fileID: 240695858}
-  _animation: AqualungDrop
+  todoText: Drop Aqualung
+  animator: {fileID: 240695858}
+  animation: AqualungDrop
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -15869,7 +15897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123f7c90aff336a4eb011f84aebd8efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CursorImage: {fileID: 2016716387}
+  cursorImage: {fileID: 2016716387}
 --- !u!114 &1360827685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16098,7 +16126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384425186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.163364, y: 2.4390411, z: -32.791256}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16415,7 +16443,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: 
+  todoText: 
   target: {fileID: 909657947}
   cam: {fileID: 1848938622}
   moveDelay: 0
@@ -16729,7 +16757,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: 
+  todoText: 
   target: {fileID: 442219796}
   cam: {fileID: 1848938622}
   moveDelay: 0
@@ -18538,7 +18566,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: 
+  todoText: 
   target: {fileID: 1536424875}
   cam: {fileID: 1848938622}
   moveDelay: 0
@@ -18827,9 +18855,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: 
-  _animator: {fileID: 2104812337}
-  _animation: SubmarineHatchOut
+  todoText: 
+  animator: {fileID: 2104812337}
+  animation: SubmarineHatchOut
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -20559,7 +20587,7 @@ RectTransform:
   m_GameObject: {fileID: 1744991505}
   m_LocalRotation: {x: 0.0000000083670955, y: -0, z: -0.70710653, w: 0.7071071}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.007363441, y: 0.0073634405, z: 0.23987}
+  m_LocalScale: {x: 0.007363441, y: 0.0073634405, z: 0.00736344}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1442726076}
@@ -20955,6 +20983,10 @@ PrefabInstance:
       propertyPath: TodoText
       value: Down
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186655737784986, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: todoText
+      value: Down
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186656909912424, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: m_Size.y
       value: 0.107278824
@@ -20967,8 +20999,16 @@ PrefabInstance:
       propertyPath: TodoText
       value: Middle
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186656909912439, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: todoText
+      value: Middle
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: TodoText
+      value: Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: todoText
       value: Up
       objectReference: {fileID: 0}
     - target: {fileID: 4430186657572151180, guid: 5950b52081183974c98f2ab260510abf, type: 3}
@@ -21100,9 +21140,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Open
-  _animator: {fileID: 882798577}
-  _animation: TorpedosDoorUpOpen
+  todoText: Open
+  animator: {fileID: 882798577}
+  animation: TorpedosDoorUpOpen
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -21444,9 +21484,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: 
-  _animator: {fileID: 240695858}
-  _animation: AqualungOn
+  todoText: 
+  animator: {fileID: 240695858}
+  animation: AqualungOn
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -21592,9 +21632,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Aqualung
-  _animator: {fileID: 240695858}
-  _animation: AqualungGearUp
+  todoText: Aqualung
+  animator: {fileID: 240695858}
+  animation: AqualungGearUp
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
@@ -23029,7 +23069,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Stand Up
+  todoText: Stand Up
   target: {fileID: 1585280182}
   cam: {fileID: 1848938622}
   moveDelay: 1
@@ -23609,7 +23649,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Prev
+  todoText: Prev
   animator: {fileID: 0}
 --- !u!65 &2001494889
 BoxCollider:
@@ -23857,7 +23897,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: Go Up
+  todoText: Go Up
   target: {fileID: 1001708819}
   cam: {fileID: 1848938622}
   moveDelay: 1
@@ -24219,9 +24259,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
-  TodoText: 
-  _animator: {fileID: 2104812337}
-  _animation: SubmarineEnterSea
+  todoText: 
+  animator: {fileID: 2104812337}
+  animation: SubmarineEnterSea
   isAnimating: 0
   onAnimationStart:
     m_PersistentCalls:
