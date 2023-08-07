@@ -26,27 +26,78 @@ namespace Installers
         [SerializeField] private ComputeShader editCompute;
         [Space] [SerializeField] private Material material;
 
+        [Space] [SerializeField, Min(0)] private int torpedoesCount;
+        [SerializeField] private GameObject torpedoPrefab;
+        [SerializeField, Min(0)] private int stalagtiteCount;
+        [SerializeField] private GameObject stalagtitePrefab;
+
+        private GenTest _terrain;
+
         public override void InstallBindings()
         {
-            var genTest = Container.InstantiateComponentOnNewGameObject<GenTest>("Terrain");
+            _terrain = Container.InstantiateComponentOnNewGameObject<GenTest>("Terrain");
 
-            genTest.gameObject.layer = layer;
-            genTest.numChunks = numChunks;
-            genTest.numPointsPerAxis = numPointsPerAxis;
-            genTest.boundsSize = boundsSize;
-            genTest.isoLevel = isoLevel;
-            genTest.useFlatShading = useFlatShading;
-            genTest.noiseScale = noiseScale;
-            genTest.noiseHeightMultiplier = noiseHeightMultiplier;
-            genTest.blurMap = blurMap;
-            genTest.blurRadius = blurRadius;
-            genTest.meshCompute = meshCompute;
-            genTest.densityCompute = densityCompute;
-            genTest.blurCompute = blurCompute;
-            genTest.editCompute = editCompute;
-            genTest.material = material;
+            _terrain.gameObject.layer = layer;
+            _terrain.numChunks = numChunks;
+            _terrain.numPointsPerAxis = numPointsPerAxis;
+            _terrain.boundsSize = boundsSize;
+            _terrain.isoLevel = isoLevel;
+            _terrain.useFlatShading = useFlatShading;
+            _terrain.noiseScale = noiseScale;
+            _terrain.noiseHeightMultiplier = noiseHeightMultiplier;
+            _terrain.blurMap = blurMap;
+            _terrain.blurRadius = blurRadius;
+            _terrain.meshCompute = meshCompute;
+            _terrain.densityCompute = densityCompute;
+            _terrain.blurCompute = blurCompute;
+            _terrain.editCompute = editCompute;
+            _terrain.material = material;
+            _terrain.OnGenerationEnd += PlaceObjects;
 
-            Container.Bind<GenTest>().FromInstance(genTest).AsSingle().NonLazy();
+            Container.Bind<GenTest>().FromInstance(_terrain).AsSingle().NonLazy();
+        }
+
+        private void PlaceObjects()
+        {
+            PlaceRandom(stalagtitePrefab, stalagtiteCount);
+            PlaceRandom(torpedoPrefab, torpedoesCount, true);
+            
+            _terrain.OnGenerationEnd -= PlaceObjects;
+        }
+
+        private void PlaceRandom(Object prefab, int count, bool normalOffset = false)
+        {
+            for (var i = 0; i < count; i++)
+            {
+                RaycastHit rh;
+                while (true)
+                {
+                    var hit = Physics.RaycastAll(
+                        new Vector3(
+                            Random.Range(-boundsSize, boundsSize),
+                            Random.Range(-boundsSize, boundsSize),
+                            Random.Range(-boundsSize, boundsSize)
+                        ),
+                        new Vector3(
+                            Random.Range(-1.0f, 1.0f),
+                            Random.Range(-1.0f, 1.0f),
+                            Random.Range(-1.0f, 1.0f)
+                        ).normalized,
+                        boundsSize
+                    );
+
+                    var ind = Random.Range(0, hit.Length - 1);
+                    if (hit.Length <= 3 || hit[ind].distance <= 0.1f ||
+                        hit[ind].collider.gameObject.CompareTag("Submarine")) continue;
+
+                    rh = hit[ind];
+                    break;
+                }
+
+                Container.InstantiatePrefab(prefab, rh.point + (normalOffset ? rh.normal : Vector3.zero),
+                    Quaternion.LookRotation(rh.normal),
+                    null);
+            }
         }
     }
 }

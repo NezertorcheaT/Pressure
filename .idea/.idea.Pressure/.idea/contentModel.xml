@@ -462,6 +462,7 @@
         <e p="Scripts" t="Include">
           <e p="AnimatedButtonTrigger.cs" t="Include" />
           <e p="AnimationTrigger.cs" t="Include" />
+          <e p="BackHachTeleportable.cs" t="Include" />
           <e p="CameraMoveTrigger.cs" t="Include" />
           <e p="CameraPlane.cs" t="Include" />
           <e p="Chunks.cs" t="Include" />
@@ -474,6 +475,7 @@
           <e p="FirstPerson.cs" t="Include" />
           <e p="Installers" t="Include">
             <e p="DragLineInstaller.cs" t="Include" />
+            <e p="GenerationInstaller.cs" t="Include" />
             <e p="TerrainGenerationInstaller.cs" t="Include" />
           </e>
           <e p="MeshGenerator.cs" t="Include" />

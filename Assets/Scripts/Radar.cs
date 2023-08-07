@@ -60,7 +60,7 @@ public class Radar : MonoBehaviour
         _angle = Mathf.Repeat(_angle + speed, 360);
         arrow.localRotation = Quaternion.Euler(0, 0, -_angle + 90);
         boat.localRotation = Quaternion.Euler(0, 0, origin.rotation.eulerAngles.y);
-        boat.localScale = new Vector3(_bounds.size.x * 2f / 16.862f, _bounds.size.z * 2f / 29.14999f) / distance;
+        boat.localScale = new Vector3(_bounds.size.z * 2f / 29.14999f, _bounds.size.z * 2f / 29.14999f) / distance;
 
         boat.localScale = new Vector3(boat.localScale.x, boat.localScale.y, 1);
 

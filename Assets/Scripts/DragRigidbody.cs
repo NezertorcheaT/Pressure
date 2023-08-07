@@ -1,4 +1,3 @@
-using System.ComponentModel;
 using UnityEngine;
 using Zenject;
 
@@ -29,7 +28,7 @@ public class DragRigidbody : MonoBehaviour
 
     private void OnMouseUp()
     {
-        HandleInputEnd(Input.mousePosition);
+        HandleInputEnd();
     }
 
     private void OnMouseDrag()
@@ -62,13 +61,12 @@ public class DragRigidbody : MonoBehaviour
     {
         if (_joint == null)
             return;
-        var worldPos = Camera.main.ScreenToWorldPoint(screenPosition);
         _joint.transform.position = CameraPlane.ScreenToWorldPlanePoint(Camera.main, _dragDepth, screenPosition);
 
         DrawRope();
     }
 
-    public void HandleInputEnd(Vector3 screenPosition)
+    public void HandleInputEnd()
     {
         DestroyRope();
         if (_hitTransform)
@@ -76,13 +74,14 @@ public class DragRigidbody : MonoBehaviour
             Destroy(_hitTransform.gameObject);
             _hitTransform = null;
         }
+
         if (_joint)
             Destroy(_joint.gameObject);
     }
 
     ConfigurableJoint AttachJoint(Rigidbody rb, Vector3 attachmentPosition)
     {
-        GameObject go = new GameObject("Attachment Point");
+        var go = new GameObject("Attachment Point");
         go.hideFlags = HideFlags.HideInHierarchy;
         go.transform.position = attachmentPosition;
 
@@ -113,10 +112,7 @@ public class DragRigidbody : MonoBehaviour
 
     private void DrawRope()
     {
-        if (_joint == null)
-        {
-            return;
-        }
+        if (_joint == null) return;
 
         _dragLine.LineRenderer.SetPosition(0, _dragLine.LineRenderLocation.position);
         _dragLine.LineRenderer.SetPosition(1, _hitTransform.position);
@@ -124,6 +120,11 @@ public class DragRigidbody : MonoBehaviour
 
     private void DestroyRope()
     {
+        if (_dragLine == null) return;
+
         _dragLine.LineRenderer.positionCount = 0;
     }
+
+    private void OnDestroy() => HandleInputEnd();
+    private void OnDisable() => HandleInputEnd();
 }

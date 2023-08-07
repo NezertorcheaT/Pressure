@@ -1,27 +1,25 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 public class GenTest : MonoBehaviour
 {
-    [Header("Init Settings")]
-    public int numChunks = 4;
-    [Space]
-    public int numPointsPerAxis = 10;
+    [Header("Init Settings")] public int numChunks = 4;
+    [Space] public int numPointsPerAxis = 10;
     public float boundsSize = 10;
     public float isoLevel = 0f;
     public bool useFlatShading;
-    [Space]
-    public float noiseScale;
+    [Space] public float noiseScale;
     public float noiseHeightMultiplier;
     public bool blurMap;
     public int blurRadius = 3;
 
-    [Header("References")]
-    public ComputeShader meshCompute;
+    [Header("References")] public ComputeShader meshCompute;
     public ComputeShader densityCompute;
     public ComputeShader blurCompute;
     public ComputeShader editCompute;
-    [Space]
-    public Material material;
+    [Space] public Material material;
 
 
     // Private
@@ -40,9 +38,10 @@ public class GenTest : MonoBehaviour
     System.Diagnostics.Stopwatch timer_processVertexData;
     RenderTexture originalMap;
 
+    public event Action OnGenerationEnd;
+
     void Start()
     {
-        
         InitTextures();
         CreateBuffers();
 
@@ -58,7 +57,6 @@ public class GenTest : MonoBehaviour
 
     void InitTextures()
     {
-
         // Explanation of texture size:
         // Each pixel maps to one point.
         // Each chunk has "numPointsPerAxis" points along each axis
@@ -95,14 +93,15 @@ public class GenTest : MonoBehaviour
         {
             GenerateChunk(chunks[i]);
         }
+
         Debug.Log("Total verts " + totalVerts);
 
+        OnGenerationEnd?.Invoke();
         // Print timers:
         Debug.Log("Fetch vertex data: " + timer_fetchVertexData.ElapsedMilliseconds + " ms");
         Debug.Log("Process vertex data: " + timer_processVertexData.ElapsedMilliseconds + " ms");
         Debug.Log("Sum: " + (timer_fetchVertexData.ElapsedMilliseconds + timer_processVertexData.ElapsedMilliseconds));
-
-
+        Debug.Log(vertexDataArray.Length);
     }
 
     void ComputeDensity()
@@ -123,20 +122,17 @@ public class GenTest : MonoBehaviour
 
     void ProcessDensityMap()
     {
-        if (blurMap)
-        {
-            int size = rawDensityTexture.width;
-            blurCompute.SetInts("brushCentre", 0, 0, 0);
-            blurCompute.SetInt("blurRadius", blurRadius);
-            blurCompute.SetInt("textureSize", rawDensityTexture.width);
-            ComputeHelper.Dispatch(blurCompute, size, size, size);
-        }
+        if (!blurMap) return;
+        
+        int size = rawDensityTexture.width;
+        blurCompute.SetInts("brushCentre", 0, 0, 0);
+        blurCompute.SetInt("blurRadius", blurRadius);
+        blurCompute.SetInt("textureSize", rawDensityTexture.width);
+        ComputeHelper.Dispatch(blurCompute, size, size, size);
     }
 
     void GenerateChunk(Chunk chunk)
     {
-
-
         // Marching cubes
         int numVoxelsPerAxis = numPointsPerAxis - 1;
         int marchKernel = 0;
@@ -149,7 +145,7 @@ public class GenTest : MonoBehaviour
         triangleBuffer.SetCounterValue(0);
         meshCompute.SetBuffer(marchKernel, "triangles", triangleBuffer);
 
-        Vector3 chunkCoord = (Vector3)chunk.id * (numPointsPerAxis - 1);
+        Vector3 chunkCoord = (Vector3) chunk.id * (numPointsPerAxis - 1);
         meshCompute.SetVector("chunkCoord", chunkCoord);
 
         ComputeHelper.Dispatch(meshCompute, numVoxelsPerAxis, numVoxelsPerAxis, numVoxelsPerAxis, marchKernel);
@@ -172,13 +168,13 @@ public class GenTest : MonoBehaviour
 
         //CreateMesh(vertices);
         timer_processVertexData.Start();
+
         chunk.CreateMesh(vertexDataArray, numVertices, useFlatShading);
         timer_processVertexData.Stop();
     }
 
     void Update()
     {
-
         // TODO: move somewhere more sensible
         material.SetTexture("DensityTex", originalMap);
         material.SetFloat("oceanRadius", 0);
@@ -194,7 +190,6 @@ public class GenTest : MonoBehaviour
     }
 
 
-
     void CreateBuffers()
     {
         int numPoints = numPointsPerAxis * numPointsPerAxis * numPointsPerAxis;
@@ -204,7 +199,8 @@ public class GenTest : MonoBehaviour
         int maxVertexCount = maxTriangleCount * 3;
 
         triCountBuffer = new ComputeBuffer(1, sizeof(int), ComputeBufferType.Raw);
-        triangleBuffer = new ComputeBuffer(maxVertexCount, ComputeHelper.GetStride<VertexData>(), ComputeBufferType.Append);
+        triangleBuffer =
+            new ComputeBuffer(maxVertexCount, ComputeHelper.GetStride<VertexData>(), ComputeBufferType.Append);
         vertexDataArray = new VertexData[maxVertexCount];
     }
 
@@ -257,7 +253,6 @@ public class GenTest : MonoBehaviour
 
     public void Terraform(Vector3 point, float weight, float radius)
     {
-
         int editTextureSize = rawDensityTexture.width;
         float editPixelWorldSize = boundsSize / editTextureSize;
         int editRadius = Mathf.CeilToInt(radius / editPixelWorldSize);
@@ -285,7 +280,8 @@ public class GenTest : MonoBehaviour
         if (blurMap)
         {
             blurCompute.SetInt("textureSize", rawDensityTexture.width);
-            blurCompute.SetInts("brushCentre", editX - blurRadius - editRadius, editY - blurRadius - editRadius, editZ - blurRadius - editRadius);
+            blurCompute.SetInts("brushCentre", editX - blurRadius - editRadius, editY - blurRadius - editRadius,
+                editZ - blurRadius - editRadius);
             blurCompute.SetInt("blurRadius", blurRadius);
             blurCompute.SetInt("brushRadius", editRadius);
             int k = (editRadius + blurRadius) * 2;
@@ -300,10 +296,8 @@ public class GenTest : MonoBehaviour
             Chunk chunk = chunks[i];
             if (MathUtility.SphereIntersectsBox(point, worldRadius, chunk.centre, Vector3.one * chunk.size))
             {
-
                 chunk.terra = true;
                 GenerateChunk(chunk);
-
             }
         }
     }
@@ -312,13 +306,15 @@ public class GenTest : MonoBehaviour
     {
         //
         var format = UnityEngine.Experimental.Rendering.GraphicsFormat.R32_SFloat;
-        if (texture == null || !texture.IsCreated() || texture.width != size || texture.height != size || texture.volumeDepth != size || texture.graphicsFormat != format)
+        if (texture == null || !texture.IsCreated() || texture.width != size || texture.height != size ||
+            texture.volumeDepth != size || texture.graphicsFormat != format)
         {
             //Debug.Log ("Create tex: update noise: " + updateNoise);
             if (texture != null)
             {
                 texture.Release();
             }
+
             const int numBitsInDepthBuffer = 0;
             texture = new RenderTexture(size, size, numBitsInDepthBuffer);
             texture.graphicsFormat = format;
@@ -329,11 +325,9 @@ public class GenTest : MonoBehaviour
 
             texture.Create();
         }
+
         texture.wrapMode = TextureWrapMode.Repeat;
         texture.filterMode = FilterMode.Bilinear;
         texture.name = name;
     }
-
-
-
 }
