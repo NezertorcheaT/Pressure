@@ -1,5 +1,7 @@
 using UnityEngine;
 using Zenject;
+using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 namespace Installers
 {
@@ -26,10 +28,7 @@ namespace Installers
         [SerializeField] private ComputeShader editCompute;
         [Space] [SerializeField] private Material material;
 
-        [Space] [SerializeField, Min(0)] private int torpedoesCount;
-        [SerializeField] private GameObject torpedoPrefab;
-        [SerializeField, Min(0)] private int stalagtiteCount;
-        [SerializeField] private GameObject stalagtitePrefab;
+        [Space] [SerializeField] private GenerationBuildable[] generations;
 
         private GenTest _terrain;
 
@@ -59,45 +58,57 @@ namespace Installers
 
         private void PlaceObjects()
         {
-            PlaceRandom(stalagtitePrefab, stalagtiteCount);
-            PlaceRandom(torpedoPrefab, torpedoesCount, true);
-            
+            foreach (var buildable in generations)
+            {
+                for (var i = 0; i < buildable.count; i++)
+                {
+                    var gb = PlaceRandom(buildable.prefab, buildable.normalOffset, buildable.normalRotate);
+                    if (buildable.prefab.Immerse)
+                        ImmerseTerrain(gb);
+                }
+            }
+
             _terrain.OnGenerationEnd -= PlaceObjects;
         }
 
-        private void PlaceRandom(Object prefab, int count, bool normalOffset = false)
+        private void ImmerseTerrain(GenerationBounds bounds)
         {
-            for (var i = 0; i < count; i++)
+            foreach (var dot in bounds.Dots)
             {
-                RaycastHit rh;
-                while (true)
-                {
-                    var hit = Physics.RaycastAll(
-                        new Vector3(
-                            Random.Range(-boundsSize, boundsSize),
-                            Random.Range(-boundsSize, boundsSize),
-                            Random.Range(-boundsSize, boundsSize)
-                        ),
-                        new Vector3(
-                            Random.Range(-1.0f, 1.0f),
-                            Random.Range(-1.0f, 1.0f),
-                            Random.Range(-1.0f, 1.0f)
-                        ).normalized,
-                        boundsSize
-                    );
-
-                    var ind = Random.Range(0, hit.Length - 1);
-                    if (hit.Length <= 3 || hit[ind].distance <= 0.1f ||
-                        hit[ind].collider.gameObject.CompareTag("Submarine")) continue;
-
-                    rh = hit[ind];
-                    break;
-                }
-
-                Container.InstantiatePrefab(prefab, rh.point + (normalOffset ? rh.normal : Vector3.zero),
-                    Quaternion.LookRotation(rh.normal),
-                    null);
+                _terrain.Terraform(dot.Position, 15, dot.Diameter * 0.75f);
             }
+        }
+
+        private GenerationBounds PlaceRandom(GenerationBounds prefab, float normalOffset, bool normalRotate)
+        {
+            RaycastHit rh;
+            while (true)
+            {
+                var hit = Physics.RaycastAll(
+                    new Vector3(
+                        Random.Range(-boundsSize, boundsSize),
+                        Random.Range(-boundsSize, boundsSize),
+                        Random.Range(-boundsSize, boundsSize)
+                    ),
+                    new Vector3(
+                        Random.Range(-1.0f, 1.0f),
+                        Random.Range(-1.0f, 1.0f),
+                        Random.Range(-1.0f, 1.0f)
+                    ).normalized,
+                    boundsSize
+                );
+
+                var ind = Random.Range(0, hit.Length - 1);
+                if (hit.Length <= 3 || hit[ind].distance <= 0.1f ||
+                    hit[ind].collider.gameObject.CompareTag("Submarine")) continue;
+
+                rh = hit[ind];
+                break;
+            }
+
+            return Container.InstantiatePrefab(prefab, rh.point + rh.normal * normalOffset,
+                normalRotate ? Quaternion.LookRotation(rh.normal) : Quaternion.identity,
+                null).GetComponent<GenerationBounds>();
         }
     }
 }

@@ -121,6 +121,7 @@ public class DragRigidbody : MonoBehaviour
     private void DestroyRope()
     {
         if (_dragLine == null) return;
+        if (_dragLine.LineRenderer == null) return;
 
         _dragLine.LineRenderer.positionCount = 0;
     }

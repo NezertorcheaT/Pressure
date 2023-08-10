@@ -12670,10 +12670,19 @@ MonoBehaviour:
   blurCompute: {fileID: 7200000, guid: a1dfefa5af6fea6428bec38832b86d07, type: 3}
   editCompute: {fileID: 7200000, guid: 865b82eeee4482a4eae431180e801a76, type: 3}
   material: {fileID: 2100000, guid: b5a577f90ca0c524bad0a231a9a46370, type: 2}
-  torpedoesCount: 50
-  torpedoPrefab: {fileID: 6091637397606260644, guid: 56c4cff32ba3fc942912d28765c68ec4, type: 3}
-  stalagtiteCount: 1000
-  stalagtitePrefab: {fileID: 2494546756229747625, guid: 0a312208b5ef3394abdcd106c2a39f78, type: 3}
+  generations:
+  - count: 5
+    prefab: {fileID: 8280988764392599105, guid: 65d376cbcd6333b4d90a3363596432df, type: 3}
+    normalOffset: 0
+    normalRotate: 0
+  - count: 50
+    prefab: {fileID: 1691360078493923336, guid: 56c4cff32ba3fc942912d28765c68ec4, type: 3}
+    normalOffset: 1
+    normalRotate: 1
+  - count: 1000
+    prefab: {fileID: 7390583574570136846, guid: 0a312208b5ef3394abdcd106c2a39f78, type: 3}
+    normalOffset: 0
+    normalRotate: 1
 --- !u!114 &1049812830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22137,7 +22146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854893397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.444, z: 3.202}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

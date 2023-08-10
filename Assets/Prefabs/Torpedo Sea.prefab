@@ -41,15 +41,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8734435259084798193, guid: 44dc54a11bfe46d4293bb40b44f06c43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -164.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8734435259084798193, guid: 44dc54a11bfe46d4293bb40b44f06c43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8734435259084798193, guid: 44dc54a11bfe46d4293bb40b44f06c43, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 119.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8734435259084798193, guid: 44dc54a11bfe46d4293bb40b44f06c43, type: 3}
       propertyPath: m_LocalRotation.w
@@ -87,6 +87,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8249787732597219915, guid: 44dc54a11bfe46d4293bb40b44f06c43, type: 3}
   m_PrefabInstance: {fileID: 2807138724165156335}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1691360078493923336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6091637397606260644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de26d97d1404dac930c74d531dfa669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  immerse: 0
+  showImmerse: 0
+  size: {x: 0.63, y: 0.63, z: 3.902405}
+  offset: {x: 0, y: 0, z: 0.26}
+  distribution: 5
 --- !u!114 &1902967511115313620
 MonoBehaviour:
   m_ObjectHideFlags: 0

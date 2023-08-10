@@ -473,6 +473,8 @@
           <e p="DragLineBase.cs" t="Include" />
           <e p="DragRigidbody.cs" t="Include" />
           <e p="FirstPerson.cs" t="Include" />
+          <e p="GenerationBounds.cs" t="Include" />
+          <e p="GenerationBuildable.cs" t="Include" />
           <e p="Installers" t="Include">
             <e p="DragLineInstaller.cs" t="Include" />
             <e p="GenerationInstaller.cs" t="Include" />
