@@ -12675,13 +12675,13 @@ MonoBehaviour:
     prefab: {fileID: 8280988764392599105, guid: 65d376cbcd6333b4d90a3363596432df, type: 3}
     normalOffset: 0
     normalRotate: 0
-  - count: 50
-    prefab: {fileID: 1691360078493923336, guid: 56c4cff32ba3fc942912d28765c68ec4, type: 3}
-    normalOffset: 1
-    normalRotate: 1
   - count: 1000
     prefab: {fileID: 7390583574570136846, guid: 0a312208b5ef3394abdcd106c2a39f78, type: 3}
     normalOffset: 0
+    normalRotate: 1
+  - count: 50
+    prefab: {fileID: 1691360078493923336, guid: 56c4cff32ba3fc942912d28765c68ec4, type: 3}
+    normalOffset: 1
     normalRotate: 1
 --- !u!114 &1049812830
 MonoBehaviour:

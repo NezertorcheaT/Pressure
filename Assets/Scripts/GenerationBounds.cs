@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GenerationBounds : MonoBehaviour
 {
     [SerializeField] private bool immerse;
     [SerializeField] private bool showImmerse;
-    [SerializeField] private Vector3 size;
-    [SerializeField] private Vector3 offset;
-    [SerializeField, Min(0.01f)] private float distribution = 1;
+    [SerializeField] private List<Region> regions;
     public bool Immerse => immerse;
     public DotData[] Dots => GenerateDots();
 
@@ -22,155 +22,158 @@ public class GenerationBounds : MonoBehaviour
         var pos = transform.position;
         var rot = transform.rotation;
 
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                size.x,
-                size.y,
-                size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                -size.x,
-                size.y,
-                size.z
-            ) + offset
-        );
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                size.x,
-                -size.y,
-                size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                -size.x,
-                -size.y,
-                size.z
-            ) + offset
-        );
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                size.x,
-                size.y,
-                -size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                -size.x,
-                size.y,
-                -size.z
-            ) + offset
-        );
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                size.x,
-                -size.y,
-                -size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                -size.x,
-                -size.y,
-                -size.z
-            ) + offset
-        );
+        foreach (var region in regions)
+        {
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    region.size.x,
+                    region.size.y,
+                    region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    region.size.y,
+                    region.size.z
+                ) + region.offset
+            );
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    region.size.x,
+                    -region.size.y,
+                    region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    -region.size.y,
+                    region.size.z
+                ) + region.offset
+            );
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    region.size.x,
+                    region.size.y,
+                    -region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    region.size.y,
+                    -region.size.z
+                ) + region.offset
+            );
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    region.size.x,
+                    -region.size.y,
+                    -region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    -region.size.y,
+                    -region.size.z
+                ) + region.offset
+            );
 
 
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                size.x,
-                size.y,
-                size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                size.x,
-                -size.y,
-                size.z
-            ) + offset
-        );
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                -size.x,
-                size.y,
-                size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                -size.x,
-                -size.y,
-                size.z
-            ) + offset
-        );
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                -size.x,
-                size.y,
-                -size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                -size.x,
-                -size.y,
-                -size.z
-            ) + offset
-        );
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                size.x,
-                size.y,
-                -size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                size.x,
-                -size.y,
-                -size.z
-            ) + offset
-        );
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    region.size.x,
+                    region.size.y,
+                    region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    region.size.x,
+                    -region.size.y,
+                    region.size.z
+                ) + region.offset
+            );
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    region.size.y,
+                    region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    -region.size.y,
+                    region.size.z
+                ) + region.offset
+            );
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    region.size.y,
+                    -region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    -region.size.y,
+                    -region.size.z
+                ) + region.offset
+            );
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    region.size.x,
+                    region.size.y,
+                    -region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    region.size.x,
+                    -region.size.y,
+                    -region.size.z
+                ) + region.offset
+            );
 
 
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                size.x,
-                size.y,
-                size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                size.x,
-                size.y,
-                -size.z
-            ) + offset
-        );
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                -size.x,
-                size.y,
-                size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                -size.x,
-                size.y,
-                -size.z
-            ) + offset
-        );
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                size.x,
-                -size.y,
-                size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                size.x,
-                -size.y,
-                -size.z
-            ) + offset
-        );
-        Gizmos.DrawLine(
-            pos + rot * new Vector3(
-                -size.x,
-                -size.y,
-                size.z
-            ) + offset,
-            pos + rot * new Vector3(
-                -size.x,
-                -size.y,
-                -size.z
-            ) + offset
-        );
-
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    region.size.x,
+                    region.size.y,
+                    region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    region.size.x,
+                    region.size.y,
+                    -region.size.z
+                ) + region.offset
+            );
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    region.size.y,
+                    region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    region.size.y,
+                    -region.size.z
+                ) + region.offset
+            );
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    region.size.x,
+                    -region.size.y,
+                    region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    region.size.x,
+                    -region.size.y,
+                    -region.size.z
+                ) + region.offset
+            );
+            Gizmos.DrawLine(
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    -region.size.y,
+                    region.size.z
+                ) + region.offset,
+                pos + rot * new Vector3(
+                    -region.size.x,
+                    -region.size.y,
+                    -region.size.z
+                ) + region.offset
+            );
+        }
+        return;
         if (!showImmerse) return;
 
         foreach (var p in Dots)
@@ -185,21 +188,39 @@ public class GenerationBounds : MonoBehaviour
         var rot = transform.rotation;
         var dots = new List<DotData>();
 
-        for (var x = -size.x; x < size.x; x += distribution)
+        foreach (var region in regions)
         {
-            for (var y = -size.y; y < size.y; y += distribution)
+            for (var x = -region.size.x; x < region.size.x; x += region.diameter)
             {
-                for (var z = -size.z; z < size.z; z += distribution)
+                for (var y = -region.size.y; y < region.size.y; y += region.diameter)
                 {
-                    dots.Add(new DotData()
+                    for (var z = -region.size.z; z < region.size.z; z += region.diameter)
                     {
-                        Position = pos + offset + rot * new Vector3(x, y, z) + (distribution/2f).ToVector3(),
-                        Diameter = distribution
-                    });
+                        var dot = new DotData
+                        {
+                            Position = pos + region.offset + rot * new Vector3(x, y, z) +
+                                       (region.diameter / 2f).ToVector3(),
+                            Diameter = region.diameter
+                        };
+
+                        //if (dots.Where(v => Vector3.Distance(v.Position, dot.Position) <= (region.diameter<v.Diameter?v.Diameter:region.diameter)-(region.diameter<v.Diameter?v.Diameter:region.diameter)*0.01f).ToArray()
+                        //    .Length > 0)
+                        //    continue;
+
+                        dots.Add(dot);
+                    }
                 }
             }
         }
 
         return dots.ToArray();
+    }
+
+    [Serializable]
+    private struct Region
+    {
+        public Vector3 size;
+        public Vector3 offset;
+        [Min(0.1f)] public float diameter;
     }
 }

@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   immerse: 1
   showImmerse: 0
-  size: {x: 10, y: 10, z: 10}
-  offset: {x: 0, y: 0, z: 0}
-  distribution: 5
+  regions:
+  - size: {x: 10, y: 10, z: 10}
+    offset: {x: 0, y: 0, z: 0}
+    diameter: 5
