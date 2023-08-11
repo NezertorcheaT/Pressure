@@ -24,12 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stalactite.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stalactite.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Torpedo Sea.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Torpedo Sea.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Radar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Radar.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,13 +73,13 @@
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/EditTexture.compute" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Radar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BackHachTeleportable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CollisionTeleport.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationBuildable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DragRigidbody.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Radar.cs" />
       </list>
     </option>
   </component>
@@ -160,6 +157,7 @@
       <workItem from="1691408873051" duration="1252000" />
       <workItem from="1691684902885" duration="13416000" />
       <workItem from="1691767410125" duration="8576000" />
+      <workItem from="1691787796417" duration="1339000" />
     </task>
     <servers />
   </component>

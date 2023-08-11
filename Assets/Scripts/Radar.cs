@@ -15,6 +15,7 @@ public class Radar : MonoBehaviour
     [SerializeField] private float distance;
     [SerializeField] private float height;
     [SerializeField] private float heightOffsetMultiplier = 5f;
+    [SerializeField] private float boatSizeMultiplyer = 29.14999f;
     [SerializeField] private Color color = Color.yellow;
     [SerializeField, Min(2)] private int textureSize = 128;
     [SerializeField] private float speed = 0.1f;
@@ -60,7 +61,7 @@ public class Radar : MonoBehaviour
         _angle = Mathf.Repeat(_angle + speed, 360);
         arrow.localRotation = Quaternion.Euler(0, 0, -_angle + 90);
         boat.localRotation = Quaternion.Euler(0, 0, origin.rotation.eulerAngles.y);
-        boat.localScale = new Vector3(_bounds.size.z * 2f / 29.14999f, _bounds.size.z * 2f / 29.14999f) / distance;
+        boat.localScale = new Vector3(_bounds.size.x * 2f / boatSizeMultiplyer, _bounds.size.x * 2f / boatSizeMultiplyer) / distance;
 
         boat.localScale = new Vector3(boat.localScale.x, boat.localScale.y, 1);
 

@@ -9327,6 +9327,7 @@ MonoBehaviour:
   distance: 0
   height: 15
   heightOffsetMultiplier: 4
+  boatSizeMultiplyer: 15.9
   color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   textureSize: 64
   speed: 2

@@ -98,7 +98,7 @@ namespace Installers
                     boundsSize
                 );
 
-                var ind = Random.Range(0, hit.Length - 1);
+                var ind = Random.Range(1, hit.Length - 2);
                 if (hit.Length <= 3 || hit[ind].distance <= 0.1f ||
                     hit[ind].collider.gameObject.CompareTag("Submarine")) continue;
 
