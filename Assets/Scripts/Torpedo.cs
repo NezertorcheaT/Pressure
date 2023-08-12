@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
 
 public class Torpedo : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Torpedo : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float weight;
     [SerializeField] private float radius;
+    [SerializeField] private GameObject particles;
 
     private bool _started = false;
 
@@ -46,7 +48,7 @@ public class Torpedo : MonoBehaviour
         if (terrain == null) return;
 
         terrain.Terraform(transform.position, weight, radius);
-
+        Instantiate(particles, transform.position, Quaternion.identity, null);
         Destroy(gameObject);
     }
 }
