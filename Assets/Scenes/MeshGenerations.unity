@@ -2293,7 +2293,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 75
   orthographic: 0
   orthographic size: 5
   m_Depth: 2
@@ -3813,7 +3813,7 @@ Light:
   m_InnerSpotAngle: 46.964813
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -4029,8 +4029,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.856022
-  m_fontSizeBase: 22.856022
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8375,6 +8375,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7660445410152547117, guid: 7f17a732d40a0fb459c68c13676d9985, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 156450634}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f17a732d40a0fb459c68c13676d9985, type: 3}
 --- !u!4 &631532619 stripped
@@ -9534,7 +9538,7 @@ Light:
   m_InnerSpotAngle: 46.964813
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -11542,7 +11546,7 @@ Light:
   m_InnerSpotAngle: 46.964813
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -14054,7 +14058,7 @@ Light:
   m_InnerSpotAngle: 46.964813
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -16367,7 +16371,7 @@ Light:
   m_InnerSpotAngle: 46.964813
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -19727,6 +19731,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7660445410152547117, guid: 7f17a732d40a0fb459c68c13676d9985, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 156450634}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f17a732d40a0fb459c68c13676d9985, type: 3}
 --- !u!4 &1629117940 stripped
@@ -22210,14 +22218,14 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: 0
+  m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
-  m_Antialiasing: 2
+  m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -22279,7 +22287,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 75
   orthographic: 0
   orthographic size: 5
   m_Depth: 1
@@ -25362,7 +25370,7 @@ Light:
   m_InnerSpotAngle: 43.95565
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
