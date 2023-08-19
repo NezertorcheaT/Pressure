@@ -586,12 +586,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 898975956}
     m_Modifications:
     - target: {fileID: 290900921, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0188
+      objectReference: {fileID: 0}
+    - target: {fileID: 290900921, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 290900921, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.25
+      value: -0.1847
       objectReference: {fileID: 0}
     - target: {fileID: 4915785600389857842, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_Name
@@ -11844,6 +11848,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 898975956}
     m_Modifications:
+    - target: {fileID: 290900919, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4915785600389857842, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_Name
       value: lamp
@@ -12744,6 +12752,7 @@ MonoBehaviour:
   _monoInstallers:
   - {fileID: 1049812832}
   - {fileID: 1049812833}
+  - {fileID: 1049812829}
   _installerPrefabs: []
   _findSiblingMonoInstallers: 0
   _autoRun: 1
@@ -12947,6 +12956,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 898975956}
     m_Modifications:
+    - target: {fileID: 290900921, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0188
+      objectReference: {fileID: 0}
     - target: {fileID: 4915785600389857842, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_Name
       value: lamp (1)
@@ -22286,7 +22299,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 75
   orthographic: 0
   orthographic size: 5
@@ -23924,7 +23937,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 5}
+  m_SizeDelta: {x: 6.96, y: 6.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2016716388
 MonoBehaviour:
