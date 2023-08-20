@@ -5,6 +5,7 @@ Shader "Custom/PSX Lit"
         [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
         _BaseColor("Base Color", color) = (1,1,1,1)
         _VertexJittering("Vertex Jittering", float) = 0.07
+        _Cull("Cull", float) = 0
     }
     SubShader
     {
@@ -14,6 +15,8 @@ Shader "Custom/PSX Lit"
         }
         LOD 100
         Blend SrcAlpha OneMinusSrcAlpha
+        Cull[_Cull]
+
         Pass
         {
             HLSLPROGRAM
@@ -94,24 +97,26 @@ Shader "Custom/PSX Lit"
                 //return UniversalFragmentPBR(inputdata, surfacedata);
                 //return col * _BaseColor;
                 Light l;
+                float a = 2;
+                float3 dd;
                 for (int ii = 0; ii < GetAdditionalLightsCount(); ii++)
                 {
                     Light nl = GetAdditionalLight(ii, i.positionWS);
-
                     l.color += nl.color;
                     l.direction += nl.direction;
+                    dd+=cross(nl.direction, i.normal);
+                    a += dot(nl.direction, i.normal);
                     l.distanceAttenuation += nl.distanceAttenuation;
                     //l.shadowAttenuation += GetAdditionalLightShadowParams(ii).x;
                     l.shadowAttenuation *= AdditionalLightRealtimeShadow(ii, i.positionWS, l.direction);
                 }
-                float3 dd=(l.direction-i.normal);
-                
-                half4 color = col * _BaseColor * (float)(true)
-                    * l.distanceAttenuation * clamp(l.color.xyzz, 0, 1);
-                color.a = col.a * _BaseColor.a;
-                //return  l.distanceAttenuation;
-                //return half4(i.normal.x,i.normal.y,i.normal.z,1);
-                return color;
+
+                half4 color = col * _BaseColor;
+                //return float4(clamp(length(dd)*a,0,1).xxx, 1);
+                float intencity = 0.299 * l.color.r + 0.587 * l.color.g + 0.114 * l.color.b;
+                return float4(
+                    l.color / 8.71 * l.distanceAttenuation *clamp(length(dd)*a,0,1),
+                    1) * color;
             }
             ENDHLSL
         }

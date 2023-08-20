@@ -4248,7 +4248,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.4
   far clip plane: 200
   field of view: 60
   orthographic: 0
@@ -7045,7 +7045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4111274361340717827, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_RootOrder
-      value: 76
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: -4020843551068275489, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_CastShadows
@@ -12137,6 +12137,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cdd5135ff4c9046459a696f9c4b91bc5, type: 2}
+    - target: {fileID: -2797199260181621570, guid: ca34ca8b3f61f5d48b59074e3a5546c9, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -2320837432811593386, guid: ca34ca8b3f61f5d48b59074e3a5546c9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -18226,6 +18230,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 9e55ab5f7f0df434686aeae6522dde22, type: 2}
     - target: {fileID: 4210965255248954314, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210965255248954314, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7ac964b209ef20849bb3392426e3d650, type: 2}
@@ -21631,7 +21639,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804770468}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22838,7 +22846,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 410031894}
-  m_RootOrder: 77
+  m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
 --- !u!23 &1907302818
 MeshRenderer:
@@ -25259,7 +25267,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.4
   far clip plane: 200
   field of view: 60
   orthographic: 0
@@ -25414,7 +25422,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 383
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -25518,7 +25526,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.4
   far clip plane: 200
   field of view: 60
   orthographic: 0
