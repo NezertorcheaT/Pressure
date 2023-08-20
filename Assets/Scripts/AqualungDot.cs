@@ -18,7 +18,7 @@ public class AqualungDot : MonoBehaviour
 
     private void Update()
     {
-        var rot = Quaternion.LookRotation(_submarine.position,player.position);
-        
+        //var rot = player.rotation*
+        //dot.localRotation = Quaternion.Euler(new Vector3(0, 0, rot));
     }
 }
