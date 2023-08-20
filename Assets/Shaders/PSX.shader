@@ -5,6 +5,7 @@ Shader "Custom/PSX Lit"
         [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
         _BaseColor("Base Color", color) = (1,1,1,1)
         _VertexJittering("Vertex Jittering", float) = 0.07
+        _Emmiter("Emmiter", Range(0,1)) = 0
         _Cull("Cull", float) = 0
     }
     SubShader
@@ -58,6 +59,7 @@ Shader "Custom/PSX Lit"
 
             sampler2D _BaseMap;
             float _VertexJittering;
+            float _Emmiter;
             float4 _BaseMap_ST;
 
             float4 _BaseColor;
@@ -82,7 +84,7 @@ Shader "Custom/PSX Lit"
 
             half4 frag(v2f i) : SV_Target
             {
-                half4 col = tex2D(_BaseMap, i.uv / i.normalWS.r);
+                half4 col = tex2D(_BaseMap, i.uv / i.normalWS);
                 half4 color = col * _BaseColor;
                 /*InputData inputdata = (InputData)0;
                 inputdata.positionWS = i.positionWS;
@@ -113,7 +115,7 @@ Shader "Custom/PSX Lit"
                     diffuseColor += LightingLambert(attenuatedLightColor, light.direction, i.normal);
                     //specularColor += LightingSpecular(attenuatedLightColor, light.direction, i.normal, i.viewDir, half4((1.0).xxx, 0), 0.5);
                 }
-                return float4(diffuseColor, 1) * color;
+                return max(float4(diffuseColor, 1),_Emmiter) * color;
                 /*Light l;
                 float a = 2;
                 float3 dd;

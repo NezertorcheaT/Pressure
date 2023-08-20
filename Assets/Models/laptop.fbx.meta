@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 804863fdac16bfe4b972589e719ef0b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: MonitorMetal
     second: {fileID: 2100000, guid: 00057af426d4c2343af8eda40d3e4899, type: 2}
   - first:
@@ -14,6 +19,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Wire
     second: {fileID: 2100000, guid: cdd5135ff4c9046459a696f9c4b91bc5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: laptop_keybourd
+    second: {fileID: 2100000, guid: 3965dec0b1ae2674d9db34134e735cfd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

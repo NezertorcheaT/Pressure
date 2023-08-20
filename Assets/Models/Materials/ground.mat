@@ -90,6 +90,7 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Emmiter: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -106,7 +107,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _UVSec: 0
-    - _VertexJittering: 0.09
+    - _VertexJittering: 0.04
     - _WorkflowMode: 0
     - _ZWrite: 1
     m_Colors:
