@@ -23,35 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/close laptop.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/close laptop.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/closed laptop.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/closed laptop.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/open laptop.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/open laptop.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/opened laptop.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/opened laptop.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Black.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/CleanWood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/CleanWood.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Lamp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Lamp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/PressurePad.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/PressurePad.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair4.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/green_metal_rust_diff_4k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/green_metal_rust_diff_4k.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/light_metal_rust_diff_4k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/light_metal_rust_diff_4k.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/monitor_metal_rust_diff_4k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/monitor_metal_rust_diff_4k.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/pipe.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/pipe.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/rust_coarse_01_diff_2k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/rust_coarse_01_diff_2k.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/wire.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/wire.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/wood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/wood.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/lamp.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/lamp.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/laptop.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/laptop.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/laptop.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/laptop.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/stalactite.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/stalactite.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/button_arrow.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/button_arrow.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/lever.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/lever.fbx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/submarine.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/submarine.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AqualungDot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AqualungDot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/DragLineInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/DragLineInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +55,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/Lighting.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/Shaders/SimpleLitInput.hlsl" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.9/ShaderLibrary/EntityLighting.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@8495d61ceb/Runtime/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/AmbientOcclusion.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BackHachTeleportable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/Shadows.hlsl" root0="SKIP_HIGHLIGHTING" />
@@ -101,7 +86,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UISwither.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UISwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/VoxelData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/DragLineInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TorpedoSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TorpedoChecker.cs" />
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/PlanetMap.compute" />
@@ -115,10 +99,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Radar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Torpedo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AqualungDot.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AqualungDot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/DragLineInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/PayerInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/PlayerInstaller.cs" />
       </list>
     </option>
   </component>
@@ -137,7 +124,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -215,6 +202,7 @@
       <workItem from="1692544595581" duration="5987000" />
       <workItem from="1692551575198" duration="3321000" />
       <workItem from="1692562691795" duration="2419000" />
+      <workItem from="1692611970046" duration="5554000" />
     </task>
     <servers />
   </component>
@@ -251,10 +239,10 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="707" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1034@0.0.1920.1034" timestamp="1690575099359" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1690573051864">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1692617766888">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1034@0.0.1920.1034" timestamp="1690573051864" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1034@0.0.1920.1034" timestamp="1692617766888" />
     <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog" timestamp="1691768793741">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
@@ -267,9 +255,9 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="616" y="239" key="run.anything.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1691402030263" />
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1690575030430">
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1692617263854">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1690575030430" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1692617263854" />
   </component>
 </project>

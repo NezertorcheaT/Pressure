@@ -3,6 +3,7 @@ using Zenject;
 
 namespace Installers
 {
+    [AddComponentMenu("Installers/DragLine")]
     public class DragLineInstaller : MonoInstaller
     {
         [SerializeField] private LineRenderer lr;

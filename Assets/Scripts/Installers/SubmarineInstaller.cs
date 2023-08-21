@@ -3,6 +3,7 @@ using Zenject;
 
 namespace Installers
 {
+    [AddComponentMenu("Installers/Submarine")]
     public class SubmarineInstaller : MonoInstaller
     {
         [SerializeField] private SubmarineMovement submarineMovement;
@@ -11,7 +12,8 @@ namespace Installers
 
         public override void InstallBindings()
         {
-            Container.BindInstance(new Submarine(submarineMovement, radar, submarineCameras));
+            Container.Bind<Submarine>().FromInstance(new Submarine(submarineMovement, radar, submarineCameras))
+                .AsSingle().NonLazy();
         }
     }
 }

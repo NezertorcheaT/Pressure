@@ -4,6 +4,7 @@ using Random = UnityEngine.Random;
 
 namespace Installers
 {
+    [AddComponentMenu("Installers/Terrain")]
     public class TerrainGenerationInstaller : MonoInstaller
     {
         [Header("Init Settings")] [SerializeField]
@@ -52,7 +53,7 @@ namespace Installers
             _terrain.material = material;
             _terrain.OnGenerationEnd += PlaceObjects;
 
-            Container.Bind<GenTest>().FromInstance(_terrain).AsSingle().NonLazy();
+            
         }
 
         private void PlaceObjects()
@@ -68,6 +69,7 @@ namespace Installers
             }
 
             _terrain.OnGenerationEnd -= PlaceObjects;
+            Container.Bind<GenTest>().FromInstance(_terrain).AsSingle().NonLazy();
         }
 
         private void ImmerseTerrain(GenerationBounds bounds)
