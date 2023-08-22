@@ -1,4 +1,6 @@
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 using Zenject;
 using Random = UnityEngine.Random;
 
@@ -29,6 +31,7 @@ namespace Installers
         [Space] [SerializeField] private Material material;
 
         [Space] [SerializeField] private GenerationBuildable[] generations;
+        [Space] [SerializeField] private UnityEvent allGenerationEnded;
 
         private GenTest _terrain;
 
@@ -52,24 +55,22 @@ namespace Installers
             _terrain.editCompute = editCompute;
             _terrain.material = material;
             _terrain.OnGenerationEnd += PlaceObjects;
-
-            
         }
 
-        private void PlaceObjects()
+        private async void PlaceObjects()
         {
             foreach (var buildable in generations)
             {
                 for (var i = 0; i < buildable.count; i++)
                 {
-                    var gb = PlaceRandom(buildable.prefab, buildable.normalOffset, buildable.normalRotate);
-                    if (buildable.prefab.Immerse)
-                        ImmerseTerrain(gb);
+                    await PlaceRandom(buildable);
                 }
             }
 
-            _terrain.OnGenerationEnd -= PlaceObjects;
+            Debug.Log("Ass");
+            allGenerationEnded.Invoke();
             Container.Bind<GenTest>().FromInstance(_terrain).AsSingle().NonLazy();
+            //_terrain.OnGenerationEnd -= PlaceObjects;
         }
 
         private void ImmerseTerrain(GenerationBounds bounds)
@@ -80,8 +81,9 @@ namespace Installers
             }
         }
 
-        private GenerationBounds PlaceRandom(GenerationBounds prefab, float normalOffset, bool normalRotate)
+        private async Task PlaceRandom(GenerationBuildable buildable)
         {
+            await Task.Delay(1);
             RaycastHit rh;
             while (true)
             {
@@ -107,9 +109,11 @@ namespace Installers
                 break;
             }
 
-            return Container.InstantiatePrefab(prefab, rh.point + rh.normal * normalOffset,
-                normalRotate ? Quaternion.LookRotation(rh.normal) : Quaternion.identity,
+            var gb = Container.InstantiatePrefab(buildable.prefab, rh.point + rh.normal * buildable.normalOffset,
+                buildable.normalRotate ? Quaternion.LookRotation(rh.normal) : Quaternion.identity,
                 null).GetComponent<GenerationBounds>();
+
+            if (buildable.prefab.Immerse) ImmerseTerrain(gb);
         }
     }
 }
