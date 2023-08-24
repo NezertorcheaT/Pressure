@@ -54,6 +54,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: glass
     second: {fileID: 2100000, guid: 6b8e72a7fad22e04ca7ea465e3333a0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: poster
+    second: {fileID: 2100000, guid: b1495fa5fda447c48994ad95fef670c4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

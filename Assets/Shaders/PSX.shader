@@ -49,11 +49,9 @@ Shader "Custom/PSX Lit"
             struct v2f
             {
                 float4 vertex : SV_POSITION;
-                float2 uv : TEXCOORD0;
+                noperspective float2 uv : TEXCOORD0;
                 float3 positionWS : TEXCOORD1;
-                float3 normalWS : TEXCOORD2;
-                float3 viewDir : TEXCOORD3;
-                float3 normal : NORMAL;
+                float3 normalWS : NORMAL;
                 DECLARE_LIGHTMAP_OR_SH(lightmapUV, vertexSH, 4);
             };
 
@@ -70,13 +68,11 @@ Shader "Custom/PSX Lit"
                 v2f o;
                 float d = length(mul(UNITY_MATRIX_MV, v.vertex));
                 o.positionWS = TransformObjectToWorld(v.vertex.xyz);
-                o.normal = TransformObjectToWorldNormal(v.normal.xyz);
-                o.normalWS = d + (mul(UNITY_MATRIX_MVP, v.vertex).w * (UNITY_LIGHTMODEL_AMBIENT.a * 8)) / d / 2;
-                o.viewDir = normalize(_WorldSpaceCameraPos - o.positionWS);
+                o.normalWS = TransformObjectToWorldNormal(v.normal);
                 o.uv = TRANSFORM_TEX(v.uv, _BaseMap);
-                o.uv *= d + (mul(UNITY_MATRIX_MVP, v.vertex).w * (UNITY_LIGHTMODEL_AMBIENT.a * 8)) / d / 2;
                 o.vertex = TransformWorldToHClip(o.positionWS);
-                o.vertex += float4(0, 0, 0, (o.vertex % _VertexJittering).w);
+                //o.vertex += float4(0, 0, 0, (o.vertex % _VertexJittering).w);
+                o.vertex -= float4((o.vertex % _VertexJittering).xyz,0);
                 OUTPUT_LIGHTMAP_UV(v.texcoord1, unity_LightmapST, o.lightmapUV);
                 OUTPUT_SH(o.normalWS.xyz, o.vertexSH);
                 return o;
@@ -84,67 +80,17 @@ Shader "Custom/PSX Lit"
 
             half4 frag(v2f i) : SV_Target
             {
-                half4 col = tex2D(_BaseMap, i.uv / i.normalWS);
+                half4 col = tex2D(_BaseMap, i.uv);
                 half4 color = col * _BaseColor;
-                /*InputData inputdata = (InputData)0;
-                inputdata.positionWS = i.positionWS;
-                inputdata.normalWS = normalize(i.normal);
-                inputdata.viewDirectionWS = i.viewDir;
-                inputdata.bakedGI = SAMPLE_GI(i.lightmapUV, i.vertexSH, inputdata.normalWS);
-
-                SurfaceData surfacedata;
-                surfacedata.albedo = (_BaseColor * col).rgb;
-                surfacedata.specular = 0;
-                surfacedata.metallic = 0;
-                surfacedata.smoothness = 0;
-                surfacedata.normalTS = 0;
-                surfacedata.emission = 0;
-                surfacedata.occlusion = 1;
-                surfacedata.alpha = _BaseColor.a * col.a;
-                surfacedata.clearCoatMask = 0;
-                surfacedata.clearCoatSmoothness = 0;
-
-                return UniversalFragmentPBR(inputdata, surfacedata);*/
                 half3 diffuseColor = 0;
-                //half3 specularColor = 0;
 
                 for (int j = 0; j < GetAdditionalLightsCount(); ++j)
                 {
                     Light light = GetAdditionalLight(j, i.positionWS);
                     half3 attenuatedLightColor = light.color * (light.distanceAttenuation * light.shadowAttenuation);
-                    diffuseColor += LightingLambert(attenuatedLightColor, light.direction, i.normal);
-                    //specularColor += LightingSpecular(attenuatedLightColor, light.direction, i.normal, i.viewDir, half4((1.0).xxx, 0), 0.5);
+                    diffuseColor += LightingLambert(attenuatedLightColor, light.direction, i.normalWS);
                 }
-                return max(float4(diffuseColor, 1),_Emmiter) * color;
-                /*Light l;
-                float a = 2;
-                float3 dd;
-                float3 c = 0;
-                for (int ii = 0; ii < GetAdditionalLightsCount(); ii++)
-                {
-                    Light nl = GetAdditionalLight(ii, i.positionWS);
-                    l.color += nl.color;
-                    l.direction += nl.direction;
-                    dd += cross(nl.direction, i.normal);
-                    a += dot(nl.direction, i.normal);
-                    l.distanceAttenuation += nl.distanceAttenuation;
-                    //l.shadowAttenuation += GetAdditionalLightShadowParams(ii).x;
-                    l.shadowAttenuation *= AdditionalLightRealtimeShadow(ii, i.positionWS, l.direction);
-                    float NdotL = saturate(dot(normalize(_AdditionalLightsPosition[ii]), i.normal));
-                    float3 ambient = SampleSH(i.normalWS);
-
-                    float receiveshadow = AdditionalLightRealtimeShadow(ii, i.positionWS);
-                    c += nl.color * receiveshadow * nl.shadowAttenuation + ambient;
-
-                    //c += NdotL * nl.color * nl.shadowAttenuation + ambient;
-                }
-
-                //return float4(clamp(length(dd)*a,0,1).xxx, 1);
-                //return float4(atten.xyz, 1);
-                float intencity = 0.299 * l.color.r + 0.587 * l.color.g + 0.114 * l.color.b;
-                return float4(
-                    l.color / 8.71 * l.distanceAttenuation / clamp(length(dd), 0, 1),
-                    1) * color;*/
+                return max(float4(diffuseColor, 1), _Emmiter) * color;
             }
             ENDHLSL
         }

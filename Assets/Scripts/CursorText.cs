@@ -7,6 +7,11 @@ public class CursorText : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Image cursor;
 
+    public void SetCursorText(TextMeshProUGUI text)
+    {
+        this.text = text == null ? this.text : text;
+    }
+
     public void SetText(string s)
     {
         if (s != "")
