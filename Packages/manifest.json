@@ -3,6 +3,7 @@
     "com.coffee.ui-effect": "file:D:/Desktop/UIEffect-upm",
     "com.glairedaggers.retrotvfx": "https://github.com/GlaireDaggers/RetroTVFX.git",
     "com.svermeulen.extenject": "https://github.com/Mathijs-Bakker/Extenject.git?path=UnityProject/Assets/Plugins/Zenject/Source#9.3.1",
+    "com.unity.2d.psdimporter": "6.0.7",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.collab-proxy": "1.17.7",
     "com.unity.feature.development": "1.0.1",
