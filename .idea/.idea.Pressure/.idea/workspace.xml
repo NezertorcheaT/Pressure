@@ -23,32 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Black.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/CleanWood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/CleanWood.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Lamp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Lamp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/PressurePad.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/PressurePad.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair4.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/green_metal_rust_diff_4k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/green_metal_rust_diff_4k.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/laptop_keybourd.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/laptop_keybourd.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/light_metal_rust_diff_4k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/light_metal_rust_diff_4k.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/monitor_metal_rust_diff_4k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/monitor_metal_rust_diff_4k.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/pipe.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/pipe.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/rust_coarse_01_diff_2k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/rust_coarse_01_diff_2k.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/wire.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/wire.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/wood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/wood.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/submarine.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/submarine.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/submarine.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/submarine.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/submarine_camera.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/submarine_camera.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/submarine_camera.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/submarine_camera.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CursorText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +105,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Huimachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CursorText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
         <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
       </list>
     </option>
@@ -226,6 +207,7 @@
       <workItem from="1692700402629" duration="3596000" />
       <workItem from="1692801799816" duration="1513000" />
       <workItem from="1692896672044" duration="5598000" />
+      <workItem from="1692966950002" duration="2582000" />
     </task>
     <servers />
   </component>

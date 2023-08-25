@@ -504,6 +504,7 @@
           <e p="GPUVoronoiNoise2D.cginc" t="Include" />
           <e p="GPUVoronoiNoise3D.cginc" t="Include" />
           <e p="GPUVoronoiNoise4D.cginc" t="Include" />
+          <e p="PSX normal uv.shader" t="Include" />
           <e p="PSX.shader" t="Include" />
           <e p="VoronoiNoise2D.shader" t="Include" />
           <e p="VoronoiNoise3D.shader" t="Include" />
