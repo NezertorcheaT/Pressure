@@ -12501,6 +12501,10 @@ MonoBehaviour:
     normalOffset: 0
     normalRotate: 0
   - count: 50
+    prefab: {fileID: -217563284260400252, guid: 9b98278bbf49f2c489f0a1016d0b7113, type: 3}
+    normalOffset: 0
+    normalRotate: 1
+  - count: 50
     prefab: {fileID: 1691360078493923336, guid: 56c4cff32ba3fc942912d28765c68ec4, type: 3}
     normalOffset: 1
     normalRotate: 1
