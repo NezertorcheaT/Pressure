@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,6 +10,8 @@ namespace Installers
     [AddComponentMenu("Installers/Terrain")]
     public class TerrainGenerationInstaller : MonoInstaller
     {
+        public event Action<long> OnObjectPlaced;
+        
         [Header("Init Settings")] [SerializeField]
         private int numChunks = 10;
 
@@ -34,6 +37,7 @@ namespace Installers
         [Space] [SerializeField] private UnityEvent allGenerationEnded;
 
         private GenTest _terrain;
+        private System.Diagnostics.Stopwatch ObjectPlacementTimer;
 
         public override void InstallBindings()
         {
@@ -59,16 +63,20 @@ namespace Installers
 
         private async void PlaceObjects()
         {
+            ObjectPlacementTimer = new System.Diagnostics.Stopwatch();
+            ObjectPlacementTimer.Start();
             foreach (var buildable in generations)
             {
                 for (var i = 0; i < buildable.count; i++)
                 {
                     await PlaceRandom(buildable);
+                    OnObjectPlaced(ObjectPlacementTimer.ElapsedMilliseconds);
                 }
             }
 
-            Debug.Log("Ass");
             allGenerationEnded.Invoke();
+            ObjectPlacementTimer.Stop();
+            Debug.Log("Object placement time: " + ObjectPlacementTimer.ElapsedMilliseconds + " ms");
             Container.Bind<GenTest>().FromInstance(_terrain).AsSingle().NonLazy();
             //_terrain.OnGenerationEnd -= PlaceObjects;
         }

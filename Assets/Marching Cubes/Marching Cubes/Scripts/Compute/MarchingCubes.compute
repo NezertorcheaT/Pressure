@@ -80,7 +80,7 @@ Vertex createVertex(int3 coordA, int3 coordB) {
 	return vertex;
 }
 
-[numthreads(8,8,8)]
+[numthreads(10,10,10)]
 void ProcessCube (int3 id : SV_DispatchThreadID)
 {   
 	int numCubesPerAxis = numPointsPerAxis - 1;
@@ -119,7 +119,7 @@ void ProcessCube (int3 id : SV_DispatchThreadID)
 	int edgeIndices[] = triangulation[cubeConfiguration];
 
 	// Create triangles for the current cube configuration
-	for (i = 0; i < 16; i += 3) {
+	for (int i = 0; i < 16; i += 3) {
 		// If edge index is -1, then no further vertices exist in this configuration
 		if (edgeIndices[i] == -1) { break; }
 

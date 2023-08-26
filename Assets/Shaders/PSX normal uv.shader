@@ -52,6 +52,7 @@ Shader "Custom/PSX Lit No UV Distort"
                 float2 uv : TEXCOORD0;
                 float3 positionWS : TEXCOORD1;
                 float3 normalWS : NORMAL;
+                float4 shadowCoord : TEXCOORD3;
                 DECLARE_LIGHTMAP_OR_SH(lightmapUV, vertexSH, 4);
             };
 
@@ -68,9 +69,10 @@ Shader "Custom/PSX Lit No UV Distort"
                 v2f o;
                 float d = length(mul(UNITY_MATRIX_MV, v.vertex));
                 o.positionWS = TransformObjectToWorld(v.vertex.xyz);
-                o.normalWS = TransformObjectToWorldNormal(v.normal.xyz);
+                o.normalWS = TransformObjectToWorldNormal(v.normal);
                 o.uv = TRANSFORM_TEX(v.uv, _BaseMap);
                 o.vertex = TransformWorldToHClip(o.positionWS);
+                o.shadowCoord = TransformWorldToShadowCoord(o.positionWS);
                 //o.vertex += float4(0, 0, 0, (o.vertex % _VertexJittering).w);
                 o.vertex -= float4((o.vertex % _VertexJittering).xyz,0);
                 OUTPUT_LIGHTMAP_UV(v.texcoord1, unity_LightmapST, o.lightmapUV);
@@ -90,7 +92,11 @@ Shader "Custom/PSX Lit No UV Distort"
                     half3 attenuatedLightColor = light.color * (light.distanceAttenuation * light.shadowAttenuation);
                     diffuseColor += LightingLambert(attenuatedLightColor, light.direction, i.normalWS);
                 }
-                return max(float4(diffuseColor, 1), _Emmiter) * color;
+                Light mainLight = GetMainLight(i.shadowCoord);
+                half3 attenuatedLightColor = mainLight.color * (mainLight.distanceAttenuation * mainLight.shadowAttenuation);
+                diffuseColor+=LightingLambert(attenuatedLightColor, mainLight.direction, i.normalWS);
+                
+                return max(float4(diffuseColor, 1), _Emmiter) * color; 
             }
             ENDHLSL
         }

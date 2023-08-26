@@ -101,7 +101,6 @@ public class GenTest : MonoBehaviour
         Debug.Log("Fetch vertex data: " + timer_fetchVertexData.ElapsedMilliseconds + " ms");
         Debug.Log("Process vertex data: " + timer_processVertexData.ElapsedMilliseconds + " ms");
         Debug.Log("Sum: " + (timer_fetchVertexData.ElapsedMilliseconds + timer_processVertexData.ElapsedMilliseconds));
-        Debug.Log(vertexDataArray.Length);
     }
 
     void ComputeDensity()

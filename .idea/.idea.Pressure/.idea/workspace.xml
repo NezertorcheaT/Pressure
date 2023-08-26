@@ -24,11 +24,17 @@
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/submarine_camera.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/submarine_camera.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/submarine_camera.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/submarine_camera.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/MarchingCubes.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/MarchingCubes.compute" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +45,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadingScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7B2A272E-5121-4E2F-91BB-C4FB4F28EFF8/b5/b0cf92d8/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Editor/2021.3.17f1/Editor/Data/CGIncludes/AutoLight.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Editor/2021.3.17f1/Editor/Data/CGIncludes/UnityShadowLibrary.cginc" root0="SKIP_HIGHLIGHTING" />
@@ -57,7 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DragLineBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DebugButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraMoveTrigger.cs" />
@@ -81,7 +87,6 @@
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/PlanetMap.compute" />
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/EditTexture.compute" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BackHachTeleportable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CollisionTeleport.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationBuildable.cs" />
@@ -93,7 +98,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/PayerInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/PlayerInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Chunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Slot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/IInventory.cs" />
@@ -105,8 +109,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Huimachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CursorText.cs" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
         <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
+        <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/MarchingCubes.compute" />
       </list>
     </option>
   </component>
@@ -208,6 +216,9 @@
       <workItem from="1692801799816" duration="1513000" />
       <workItem from="1692896672044" duration="5598000" />
       <workItem from="1692966950002" duration="2582000" />
+      <workItem from="1693064099998" duration="3057000" />
+      <workItem from="1693067554162" duration="1141000" />
+      <workItem from="1693081040782" duration="490000" />
     </task>
     <servers />
   </component>

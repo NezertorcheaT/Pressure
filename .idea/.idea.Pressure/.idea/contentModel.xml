@@ -482,6 +482,7 @@
             <e p="SubmarineInstaller.cs" t="Include" />
             <e p="TerrainGenerationInstaller.cs" t="Include" />
           </e>
+          <e p="LoadingScreen.cs" t="Include" />
           <e p="MeshGenerator.cs" t="Include" />
           <e p="MouseIteractor.cs" t="Include" />
           <e p="NothingMouseTrigger.cs" t="Include" />
