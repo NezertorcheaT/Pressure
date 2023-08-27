@@ -35,4 +35,14 @@ public static class Vec
     public static Vector3 yxx(this Vector2 t) => new Vector3(t.y, t.x, t.x);
     public static Vector3 xxx(this Vector2 t) => new Vector3(t.x, t.x, t.x);
     public static Vector3 yyy(this Vector2 t) => new Vector3(t.y, t.y, t.y);
+
+    public static float x(this float t) => t;
+    public static Vector2 xx(this float t) => new Vector2(t, t);
+    public static Vector3 xxx(this float t) => new Vector3(t, t, t);
+    public static int x(this int t) => t;
+    public static Vector2 xx(this int t) => new Vector2(t, t);
+    public static Vector3 xxx(this int t) => new Vector3(t, t, t);
+    public static float x(this bool t) => t ? 1f : 0f;
+    public static Vector2 xx(this bool t) => new Vector2(t ? 1 : 0, t ? 1 : 0);
+    public static Vector3 xxx(this bool t) => new Vector3(t ? 1 : 0, t ? 1 : 0, t ? 1 : 0);
 }

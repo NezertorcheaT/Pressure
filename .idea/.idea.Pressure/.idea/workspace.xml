@@ -25,16 +25,15 @@
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/MarchingCubes.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/MarchingCubes.compute" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/laptop_keybourd.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/laptop_keybourd.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations/Global Volume Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vec.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vec.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +54,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/Shaders/SimpleLitInput.hlsl" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.9/ShaderLibrary/EntityLighting.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@8495d61ceb/Runtime/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/ResolutionInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/AmbientOcclusion.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BackHachTeleportable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/Shadows.hlsl" root0="SKIP_HIGHLIGHTING" />
@@ -64,11 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/DragLineBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DebugButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraMoveTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraPlane.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CursorMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimationTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimatedButtonTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NothingMouseTrigger.cs" />
@@ -84,8 +79,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/VoxelData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TorpedoSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TorpedoChecker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/PlanetMap.compute" />
-        <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/EditTexture.compute" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BackHachTeleportable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CollisionTeleport.cs" />
@@ -109,12 +102,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Huimachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CursorText.cs" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/MarchingCubes.compute" />
+        <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/EditTexture.compute" />
+        <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/Blur.compute" />
+        <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/PlanetMap.compute" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Vec.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ResolutionInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ResolutionInstaller.cs" />
       </list>
     </option>
   </component>
@@ -219,6 +219,7 @@
       <workItem from="1693064099998" duration="3057000" />
       <workItem from="1693067554162" duration="1141000" />
       <workItem from="1693081040782" duration="490000" />
+      <workItem from="1693124273139" duration="6038000" />
     </task>
     <servers />
   </component>

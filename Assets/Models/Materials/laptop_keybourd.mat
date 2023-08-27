@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: laptop_keybourd
-  m_Shader: {fileID: 4800000, guid: ab2f7cd7cac172343802c37f635f3ff8, type: 3}
+  m_Shader: {fileID: 4800000, guid: d78c79659f75c484e8e4f9ee91f7d64a, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -116,7 +116,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _VertexJittering: 0.02
+    - _VertexJittering: 0.03
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:

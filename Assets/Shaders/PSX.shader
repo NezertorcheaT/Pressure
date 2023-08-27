@@ -71,10 +71,18 @@ Shader "Custom/PSX Lit"
                 o.positionWS = TransformObjectToWorld(v.vertex.xyz);
                 o.normalWS = TransformObjectToWorldNormal(v.normal);
                 o.uv = TRANSFORM_TEX(v.uv, _BaseMap);
+                /*
+                v.vertex = mul(unity_ObjectToWorld, v.vertex);
+                v.vertex /= _VertexJittering;
+                v.vertex = round(v.vertex);
+                v.vertex *= _VertexJittering;
+                v.vertex = mul(unity_WorldToObject, v.vertex);
+                */
                 o.vertex = TransformWorldToHClip(o.positionWS);
                 o.shadowCoord = TransformWorldToShadowCoord(o.positionWS);
                 //o.vertex += float4(0, 0, 0, (o.vertex % _VertexJittering).w);
                 o.vertex -= float4((o.vertex % _VertexJittering).xyz,0);
+                
                 OUTPUT_LIGHTMAP_UV(v.texcoord1, unity_LightmapST, o.lightmapUV);
                 OUTPUT_SH(o.normalWS.xyz, o.vertexSH);
                 return o;

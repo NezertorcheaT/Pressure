@@ -34,6 +34,7 @@ namespace Installers
         [Space] [SerializeField] private Material material;
 
         [Space] [SerializeField] private GenerationBuildable[] generations;
+        [SerializeField] private bool generate=true;
         [Space] [SerializeField] private UnityEvent allGenerationEnded;
 
         private GenTest _terrain;
@@ -65,12 +66,15 @@ namespace Installers
         {
             ObjectPlacementTimer = new System.Diagnostics.Stopwatch();
             ObjectPlacementTimer.Start();
-            foreach (var buildable in generations)
+            if (generate)
             {
-                for (var i = 0; i < buildable.count; i++)
+                foreach (var buildable in generations)
                 {
-                    await PlaceRandom(buildable);
-                    OnObjectPlaced(ObjectPlacementTimer.ElapsedMilliseconds);
+                    for (var i = 0; i < buildable.count; i++)
+                    {
+                        await PlaceRandom(buildable);
+                        OnObjectPlaced(ObjectPlacementTimer.ElapsedMilliseconds);
+                    }
                 }
             }
 

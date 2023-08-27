@@ -108,7 +108,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _UVSec: 0
-    - _VertexJittering: 0.02
+    - _VertexJittering: 0.03
     - _WorkflowMode: 0
     - _ZWrite: 1
     m_Colors:

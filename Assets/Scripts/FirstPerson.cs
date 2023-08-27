@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,9 @@ public class FirstPerson : MonoBehaviour
     [SerializeField] private Transform camOrigin;
     [SerializeField] private bool isWorking = false;
     [SerializeField] private bool isUnderWater = false;
-    [FormerlySerializedAs("FlashLight")] [SerializeField] private Light flashLight;
+
+    [FormerlySerializedAs("FlashLight")] [SerializeField]
+    private Light flashLight;
 
     private Rigidbody _rb;
     private bool _isCursorFree = true;
@@ -45,6 +48,11 @@ public class FirstPerson : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        if (IsWorking && isUnderWater && Input.GetKeyUp(KeyCode.F)) ToggleFlashLight();
+    }
+
     private void FixedUpdate()
     {
         InternalLockUpdate();
@@ -59,60 +67,30 @@ public class FirstPerson : MonoBehaviour
             return;
         }
 
-        if (!isUnderWater)
+
+        _rb.constraints = RigidbodyConstraints.FreezeRotation;
+        var inputX = Input.GetAxisRaw("Horizontal");
+        var inputY = Input.GetAxisRaw("Vertical");
+        var inputJump = Input.GetKey(KeyCode.Space).x();
+
+        var velocity = (transform.right * inputX + transform.forward * inputY).normalized * speed +
+                       isUnderWater.x() * inputJump * jumpForce * Vector3.up;
+
+        var rotation = new Vector3(0, Input.GetAxisRaw("Mouse X"), 0) * sensitivity;
+
+        var cameraRotation = new Vector3(Input.GetAxisRaw("Mouse Y"), 0, 0) * sensitivity;
+
+
+        _rb.velocity = velocity - isUnderWater.x() * gravity * Vector3.up;
+
+        if (rotation != Vector3.zero)
         {
-            _rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
-            float inputX = Input.GetAxisRaw("Horizontal");
-            float inputY = Input.GetAxisRaw("Vertical");
-
-            Vector3 velocity = (transform.right * inputX + transform.forward * inputY).normalized * speed;
-
-            Vector3 rotation = new Vector3(0, Input.GetAxisRaw("Mouse X"), 0) * sensitivity;
-
-            Vector3 cameraRotation = new Vector3(Input.GetAxisRaw("Mouse Y"), 0, 0) * sensitivity;
-
-
-            _rb.velocity = velocity;
-
-            if (rotation != Vector3.zero)
-            {
-                _rb.MoveRotation(_rb.rotation * Quaternion.Euler(rotation));
-            }
-
-            if (cam != null)
-            {
-                cam.transform.Rotate(-cameraRotation);
-            }
+            _rb.MoveRotation(_rb.rotation * Quaternion.Euler(rotation));
         }
-        else
+
+        if (cam)
         {
-            if (Input.GetKeyUp(KeyCode.F))
-                ToggleFlashLight();
-
-            _rb.constraints = RigidbodyConstraints.FreezeRotation;
-            float inputX = Input.GetAxisRaw("Horizontal");
-            float inputY = Input.GetAxisRaw("Vertical");
-            float inputJump = Input.GetKey(KeyCode.Space) ? 1 : 0;
-
-            Vector3 velocity = (transform.right * inputX + transform.forward * inputY).normalized * speed +
-                               inputJump * jumpForce * Vector3.up;
-
-            Vector3 rotation = new Vector3(0, Input.GetAxisRaw("Mouse X"), 0) * sensitivity;
-
-            Vector3 cameraRotation = new Vector3(Input.GetAxisRaw("Mouse Y"), 0, 0) * sensitivity;
-
-
-            _rb.velocity = velocity - Vector3.up * gravity;
-
-            if (rotation != Vector3.zero)
-            {
-                _rb.MoveRotation(_rb.rotation * Quaternion.Euler(rotation));
-            }
-
-            if (cam != null)
-            {
-                cam.transform.Rotate(-cameraRotation);
-            }
+            cam.transform.Rotate(-cameraRotation);
         }
     }
 
