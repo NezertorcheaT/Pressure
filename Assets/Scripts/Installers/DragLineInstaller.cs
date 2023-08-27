@@ -11,6 +11,7 @@ namespace Installers
 
         public override void InstallBindings()
         {
+            Debug.Log("DragLine Installed");
             Container.Bind<DragLine>().FromInstance(new DragLine(lr, lineRenderLocation)).AsSingle().NonLazy();
         }
     }

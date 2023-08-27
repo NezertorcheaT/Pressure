@@ -10,8 +10,6 @@ namespace Installers
     [AddComponentMenu("Installers/Terrain")]
     public class TerrainGenerationInstaller : MonoInstaller
     {
-        public event Action<long> OnObjectPlaced;
-        
         [Header("Init Settings")] [SerializeField]
         private int numChunks = 10;
 
@@ -33,12 +31,7 @@ namespace Installers
         [SerializeField] private ComputeShader editCompute;
         [Space] [SerializeField] private Material material;
 
-        [Space] [SerializeField] private GenerationBuildable[] generations;
-        [SerializeField] private bool generate=true;
-        [Space] [SerializeField] private UnityEvent allGenerationEnded;
-
         private GenTest _terrain;
-        private System.Diagnostics.Stopwatch ObjectPlacementTimer;
 
         public override void InstallBindings()
         {
@@ -59,73 +52,14 @@ namespace Installers
             _terrain.blurCompute = blurCompute;
             _terrain.editCompute = editCompute;
             _terrain.material = material;
-            _terrain.OnGenerationEnd += PlaceObjects;
+            _terrain.OnGenerationEnd += GenerationEnded;
+            _terrain.Initialize();
         }
 
-        private async void PlaceObjects()
+        private void GenerationEnded()
         {
-            ObjectPlacementTimer = new System.Diagnostics.Stopwatch();
-            ObjectPlacementTimer.Start();
-            if (generate)
-            {
-                foreach (var buildable in generations)
-                {
-                    for (var i = 0; i < buildable.count; i++)
-                    {
-                        await PlaceRandom(buildable);
-                        OnObjectPlaced(ObjectPlacementTimer.ElapsedMilliseconds);
-                    }
-                }
-            }
-
-            allGenerationEnded.Invoke();
-            ObjectPlacementTimer.Stop();
-            Debug.Log("Object placement time: " + ObjectPlacementTimer.ElapsedMilliseconds + " ms");
+            Debug.Log("Terrain Installed");
             Container.Bind<GenTest>().FromInstance(_terrain).AsSingle().NonLazy();
-            //_terrain.OnGenerationEnd -= PlaceObjects;
-        }
-
-        private void ImmerseTerrain(GenerationBounds bounds)
-        {
-            foreach (var dot in bounds.Dots)
-            {
-                _terrain.Terraform(dot.Position, 15, dot.Diameter * 0.75f);
-            }
-        }
-
-        private async Task PlaceRandom(GenerationBuildable buildable)
-        {
-            await Task.Delay(1);
-            RaycastHit rh;
-            while (true)
-            {
-                var hit = Physics.RaycastAll(
-                    new Vector3(
-                        Random.Range(-boundsSize, boundsSize),
-                        Random.Range(-boundsSize, boundsSize),
-                        Random.Range(-boundsSize, boundsSize)
-                    ),
-                    new Vector3(
-                        Random.Range(-1.0f, 1.0f),
-                        Random.Range(-1.0f, 1.0f),
-                        Random.Range(-1.0f, 1.0f)
-                    ).normalized,
-                    boundsSize
-                );
-
-                var ind = Random.Range(1, hit.Length - 2);
-                if (hit.Length <= 3 || hit[ind].distance <= 0.1f ||
-                    hit[ind].collider.gameObject.CompareTag("Submarine")) continue;
-
-                rh = hit[ind];
-                break;
-            }
-
-            var gb = Container.InstantiatePrefab(buildable.prefab, rh.point + rh.normal * buildable.normalOffset,
-                buildable.normalRotate ? Quaternion.LookRotation(rh.normal) : Quaternion.identity,
-                null).GetComponent<GenerationBounds>();
-
-            if (buildable.prefab.Immerse) ImmerseTerrain(gb);
         }
     }
 }

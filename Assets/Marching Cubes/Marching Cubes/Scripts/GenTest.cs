@@ -40,7 +40,7 @@ public class GenTest : MonoBehaviour
 
     public event Action OnGenerationEnd;
 
-    void Start()
+    public void Initialize()
     {
         InitTextures();
         CreateBuffers();
@@ -171,23 +171,6 @@ public class GenTest : MonoBehaviour
         chunk.CreateMesh(vertexDataArray, numVertices, useFlatShading);
         timer_processVertexData.Stop();
     }
-
-    void Update()
-    {
-        // TODO: move somewhere more sensible
-        material.SetTexture("DensityTex", originalMap);
-        material.SetFloat("oceanRadius", 0);
-        material.SetFloat("planetBoundsSize", boundsSize);
-
-        /*
-		if (Input.GetKeyDown(KeyCode.G))
-		{
-			Debug.Log("Generate");
-			GenerateAllChunks();
-		}
-		*/
-    }
-
 
     void CreateBuffers()
     {

@@ -10,6 +10,7 @@ namespace Installers
 
         public override void InstallBindings()
         {
+            Debug.Log("Player Installed");
             Container.Bind<FirstPerson>().FromInstance(player).AsSingle().NonLazy();
         }
     }

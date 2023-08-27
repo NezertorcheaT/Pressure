@@ -12,6 +12,7 @@ namespace Installers
         {
             //Screen.SetResolution(640, 480, FullScreenMode.ExclusiveFullScreen, new RefreshRate() { numerator = 60, denominator = 1 });
             Screen.SetResolution(resolution.x, resolution.y, true);
+            Debug.Log("Resolution Installed");
         }
     }
 }

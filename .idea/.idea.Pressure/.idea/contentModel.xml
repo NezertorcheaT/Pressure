@@ -391,6 +391,21 @@
           <e p="Materials" t="Include" />
         </e>
         <e p="Packages" t="Include">
+          <e p="Boids" t="Include">
+            <e p="Materials" t="Include" />
+            <e p="Models" t="Include" />
+            <e p="Prefabs" t="Include" />
+            <e p="Scenes" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Boid.cs" t="Include" />
+              <e p="BoidCompute.compute" t="Include" />
+              <e p="BoidHelper.cs" t="Include" />
+              <e p="BoidManager.cs" t="Include" />
+              <e p="BoidSettings.cs" t="Include" />
+              <e p="Spawner.cs" t="Include" />
+            </e>
+            <e p="Settings" t="Include" />
+          </e>
           <e p="MeshSmoothing" t="Include">
             <e p="Scripts" t="Include">
               <e p="MeshSmoothing.cs" t="Include" />
@@ -477,7 +492,9 @@
           <e p="GenerationBounds.cs" t="Include" />
           <e p="GenerationBuildable.cs" t="Include" />
           <e p="Installers" t="Include">
+            <e p="BoidsInstaller.cs" t="Include" />
             <e p="DragLineInstaller.cs" t="Include" />
+            <e p="GenerationInstaller.cs" t="Include" />
             <e p="PlayerInstaller.cs" t="Include" />
             <e p="ResolutionInstaller.cs" t="Include" />
             <e p="SubmarineInstaller.cs" t="Include" />

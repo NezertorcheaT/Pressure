@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LoadingScreen : MonoBehaviour
 {
-    [SerializeField] private TerrainGenerationInstaller tg;
+    [SerializeField] private GenerationInstaller tg;
     [SerializeField] private TextMeshProUGUI text;
 
     private void Awake()
@@ -14,6 +14,6 @@ public class LoadingScreen : MonoBehaviour
 
     private void Change(long ms)
     {
-        text.text = "Generation Time: " + ms + " ms";
+        text.text = $"Generation Time: {ms} ms";
     }
 }

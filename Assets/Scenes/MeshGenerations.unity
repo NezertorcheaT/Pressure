@@ -8731,6 +8731,10 @@ PrefabInstance:
       value: wings_collider (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c7c85ebaa20954042a9d4d0611adc9d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7c85ebaa20954042a9d4d0611adc9d6, type: 3}
       propertyPath: m_TagString
       value: Submarine
       objectReference: {fileID: 0}
@@ -12599,6 +12603,8 @@ GameObject:
   - component: {fileID: 1049812833}
   - component: {fileID: 1049812834}
   - component: {fileID: 1049812835}
+  - component: {fileID: 1049812836}
+  - component: {fileID: 1049812837}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -12633,63 +12639,6 @@ MonoBehaviour:
   blurCompute: {fileID: 7200000, guid: a1dfefa5af6fea6428bec38832b86d07, type: 3}
   editCompute: {fileID: 7200000, guid: 865b82eeee4482a4eae431180e801a76, type: 3}
   material: {fileID: 2100000, guid: b5a577f90ca0c524bad0a231a9a46370, type: 2}
-  generations:
-  - count: 500
-    prefab: {fileID: -217563284260400252, guid: 44a8c994c3e2b9c499b5f4fc57321d9f, type: 3}
-    normalOffset: 0
-    normalRotate: 1
-  - count: 500
-    prefab: {fileID: 2549114025627095781, guid: 570c7e9aa02d8374e8052253312214a6, type: 3}
-    normalOffset: 0
-    normalRotate: 1
-  - count: 500
-    prefab: {fileID: -5674086616591581984, guid: 605c7581adad1f246abc1eae1f7f81b0, type: 3}
-    normalOffset: 0
-    normalRotate: 1
-  - count: 1000
-    prefab: {fileID: 7390583574570136846, guid: 0a312208b5ef3394abdcd106c2a39f78, type: 3}
-    normalOffset: 0
-    normalRotate: 1
-  - count: 5
-    prefab: {fileID: 8280988764392599105, guid: 65d376cbcd6333b4d90a3363596432df, type: 3}
-    normalOffset: 0
-    normalRotate: 0
-  - count: 50
-    prefab: {fileID: -217563284260400252, guid: 9b98278bbf49f2c489f0a1016d0b7113, type: 3}
-    normalOffset: 0
-    normalRotate: 1
-  - count: 50
-    prefab: {fileID: 1691360078493923336, guid: 56c4cff32ba3fc942912d28765c68ec4, type: 3}
-    normalOffset: 1
-    normalRotate: 1
-  generate: 1
-  allGenerationEnded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1529263887}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Loading
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1848938622}
-        m_TargetAssemblyTypeName: MouseIteractor, Assembly-CSharp
-        m_MethodName: set_IsWork
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &1049812830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12707,6 +12656,8 @@ MonoBehaviour:
   - {fileID: 1049812835}
   - {fileID: 1049812832}
   - {fileID: 1049812829}
+  - {fileID: 1049812837}
+  - {fileID: 1049812836}
   - {fileID: 1049812833}
   - {fileID: 1049812834}
   _installerPrefabs: []
@@ -12797,6 +12748,100 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolution: {x: 640, y: 480}
+--- !u!114 &1049812836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049812828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1844bfa1e6cb2f648bad763d90c2e750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managerPrefab: {fileID: 4118923600410654855, guid: 80d9bfac54ae2fa4e968d82f3b831108, type: 3}
+--- !u!114 &1049812837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049812828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abda4e2ab5b20be4485c3d222d7c15a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generations:
+  - process: 1
+    count: 500
+    prefab: {fileID: -217563284260400252, guid: 44a8c994c3e2b9c499b5f4fc57321d9f, type: 3}
+    normalOffset: 0
+    normalRotate: 1
+  - process: 1
+    count: 500
+    prefab: {fileID: 2549114025627095781, guid: 570c7e9aa02d8374e8052253312214a6, type: 3}
+    normalOffset: 0
+    normalRotate: 1
+  - process: 1
+    count: 500
+    prefab: {fileID: -5674086616591581984, guid: 605c7581adad1f246abc1eae1f7f81b0, type: 3}
+    normalOffset: 0
+    normalRotate: 1
+  - process: 1
+    count: 1000
+    prefab: {fileID: 7390583574570136846, guid: 0a312208b5ef3394abdcd106c2a39f78, type: 3}
+    normalOffset: 0
+    normalRotate: 1
+  - process: 1
+    count: 5
+    prefab: {fileID: 8280988764392599105, guid: 65d376cbcd6333b4d90a3363596432df, type: 3}
+    normalOffset: 0
+    normalRotate: 0
+  - process: 1
+    count: 50
+    prefab: {fileID: -217563284260400252, guid: 9b98278bbf49f2c489f0a1016d0b7113, type: 3}
+    normalOffset: 0
+    normalRotate: 1
+  - process: 1
+    count: 50
+    prefab: {fileID: 1691360078493923336, guid: 56c4cff32ba3fc942912d28765c68ec4, type: 3}
+    normalOffset: 1
+    normalRotate: 1
+  - process: 1
+    count: 100
+    prefab: {fileID: 6502381502502679123, guid: cc09a25f1a284ee43a52ce828f282ac8, type: 3}
+    normalOffset: 2
+    normalRotate: 1
+  generate: 1
+  allGenerationEnded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1529263887}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Loading
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1848938622}
+        m_TargetAssemblyTypeName: MouseIteractor, Assembly-CSharp
+        m_MethodName: set_IsWork
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &1050699627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16964,7 +17009,7 @@ GameObject:
   - component: {fileID: 1416534087}
   - component: {fileID: 1416534086}
   - component: {fileID: 1416534085}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Colliders
   m_TagString: Submarine
   m_Icon: {fileID: 0}
@@ -19404,7 +19449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6616aa8e04b46cc47b9daf6b8f37a7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tg: {fileID: 1049812829}
+  tg: {fileID: 1049812837}
   text: {fileID: 1914730282}
 --- !u!1 &1536424874
 GameObject:
