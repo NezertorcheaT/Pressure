@@ -81,7 +81,7 @@ public class FirstPerson : MonoBehaviour
         var cameraRotation = new Vector3(Input.GetAxisRaw("Mouse Y"), 0, 0) * sensitivity;
 
 
-        _rb.velocity = velocity - isUnderWater.x() * gravity * Vector3.up;
+        _rb.velocity = velocity - gravity * Vector3.up;
 
         if (rotation != Vector3.zero)
         {

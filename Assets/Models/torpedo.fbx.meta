@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Fan
+    second: {fileID: 2100000, guid: e9cca092fdaed8541889e259898d0618, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Metal
     second: {fileID: 2100000, guid: 7ac964b209ef20849bb3392426e3d650, type: 2}
   materials:

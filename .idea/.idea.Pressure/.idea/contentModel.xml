@@ -335,58 +335,6 @@
       <e p="Assets" t="Include">
         <e p="Animations" t="Include" />
         <e p="Fonts" t="Include" />
-        <e p="Marching Cubes" t="Include">
-          <e p="Game" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="MathUtility.cs" t="Include" />
-            </e>
-            <e p="Shaders" t="Include">
-              <e p="Terrain.shader" t="Include" />
-            </e>
-          </e>
-          <e p="Helper" t="Include">
-            <e p="Compute Helper" t="Include">
-              <e p="Channel.cs" t="Include" />
-              <e p="ComputeHelper.cs" t="Include" />
-              <e p="Processing" t="Include">
-                <e p="GaussianBlur.cs" t="Include" />
-              </e>
-              <e p="Resources" t="Include">
-                <e p="ClearTexture.compute" t="Include" />
-                <e p="Copy3D.compute" t="Include" />
-                <e p="GaussianBlur.compute" t="Include" />
-                <e p="NormalizeTexture.compute" t="Include" />
-                <e p="Swizzle.compute" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="Marching Cubes" t="Include">
-            <e p="Materials" t="Include" />
-            <e p="Scripts" t="Include">
-              <e p="Chunk.cs" t="Include" />
-              <e p="Compute" t="Include">
-                <e p="Blur.compute" t="Include" />
-                <e p="EditTexture.compute" t="Include" />
-                <e p="Includes" t="Include">
-                  <e p="GPUVoronoiNoise2D.cginc" t="Include" />
-                  <e p="GPUVoronoiNoise3D.cginc" t="Include" />
-                  <e p="GPUVoronoiNoise4D.cginc" t="Include" />
-                  <e p="MarchTables.compute" t="Include" />
-                  <e p="Noise.compute" t="Include" />
-                </e>
-                <e p="MarchingCubes.compute" t="Include" />
-                <e p="PlanetMap.compute" t="Include" />
-              </e>
-              <e p="GenTest.cs" t="Include" />
-              <e p="MeshBaker.cs" t="Include" />
-              <e p="TextureViewer" t="Include">
-                <e p="TextureViewer3D.cs" t="Include" />
-                <e p="TextureViewer3D.shader" t="Include" />
-              </e>
-              <e p="VertexData.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Models" t="Include">
           <e p="Materials" t="Include" />
         </e>
@@ -405,6 +353,58 @@
               <e p="Spawner.cs" t="Include" />
             </e>
             <e p="Settings" t="Include" />
+          </e>
+          <e p="Marching Cubes" t="Include">
+            <e p="Game" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="MathUtility.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="Terrain.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Helper" t="Include">
+              <e p="Compute Helper" t="Include">
+                <e p="Channel.cs" t="Include" />
+                <e p="ComputeHelper.cs" t="Include" />
+                <e p="Processing" t="Include">
+                  <e p="GaussianBlur.cs" t="Include" />
+                </e>
+                <e p="Resources" t="Include">
+                  <e p="ClearTexture.compute" t="Include" />
+                  <e p="Copy3D.compute" t="Include" />
+                  <e p="GaussianBlur.compute" t="Include" />
+                  <e p="NormalizeTexture.compute" t="Include" />
+                  <e p="Swizzle.compute" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Marching Cubes" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="Chunk.cs" t="Include" />
+                <e p="Compute" t="Include">
+                  <e p="Blur.compute" t="Include" />
+                  <e p="EditTexture.compute" t="Include" />
+                  <e p="Includes" t="Include">
+                    <e p="GPUVoronoiNoise2D.cginc" t="Include" />
+                    <e p="GPUVoronoiNoise3D.cginc" t="Include" />
+                    <e p="GPUVoronoiNoise4D.cginc" t="Include" />
+                    <e p="MarchTables.compute" t="Include" />
+                    <e p="Noise.compute" t="Include" />
+                  </e>
+                  <e p="MarchingCubes.compute" t="Include" />
+                  <e p="PlanetMap.compute" t="Include" />
+                </e>
+                <e p="GenTest.cs" t="Include" />
+                <e p="MeshBaker.cs" t="Include" />
+                <e p="TextureViewer" t="Include">
+                  <e p="TextureViewer3D.cs" t="Include" />
+                  <e p="TextureViewer3D.shader" t="Include" />
+                </e>
+                <e p="VertexData.cs" t="Include" />
+              </e>
+            </e>
           </e>
           <e p="MeshSmoothing" t="Include">
             <e p="Scripts" t="Include">
