@@ -1,4 +1,7 @@
 ﻿#pragma kernel ProcessCube
+#pragma target 4.6
+#define PI 3.1415926535897932384626433
+#define UV_SCALE 0.02
 #include "Includes/MarchTables.compute"
 
 struct Vertex
@@ -6,6 +9,7 @@ struct Vertex
     float3 position;
     float3 normal;
     int2 id;
+    float2 uv;
 };
 
 struct Triangle
@@ -54,6 +58,34 @@ float3 calculateNormal(int3 coord)
     return normalize(float3(dx, dy, dz));
 }
 
+float2 calculateSphereUV(float3 position, float3 normal)
+{
+    normal=-normal;
+    return float2(0.5 + atan2(normal.z, normal.x) / (2.0 * PI), 0.5 + asin(normal.y) / PI);
+}
+
+float2 calculateSpizgenoUV(float3 position, float3 normal)
+{
+    float y = position.z > position.y ? position.z : position.y;
+
+    if (position.z == 0) y = position.y;
+    if (position.y == 0) y = position.z;
+
+    return float2(position.x, y);
+}
+
+float2 calculateShitUV(float3 position, float3 normal)
+{
+    float2 UV;
+    if (normal.x > normal.y && normal.x > normal.z)
+        UV = float2(position.y, position.z);
+    else if (normal.y > normal.x && normal.y > normal.z)
+        UV = float2(position.z, position.x);
+    else
+        UV = float2(position.x, position.y);
+    return UV;
+}
+
 // Calculate the position of the vertex
 // The position lies somewhere along the edge defined by the two corner points.
 // Where exactly along the edge is determined by the values of each corner point.
@@ -81,6 +113,7 @@ Vertex createVertex(int3 coordA, int3 coordB)
     Vertex vertex;
     vertex.position = position;
     vertex.normal = normal;
+    vertex.uv = calculateSpizgenoUV(position, normal) * UV_SCALE;
     vertex.id = int2(min(indexA, indexB), max(indexA, indexB));
 
     return vertex;

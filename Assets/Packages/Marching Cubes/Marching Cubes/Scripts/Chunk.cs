@@ -6,7 +6,6 @@ using Unity.VisualScripting;
 
 public class Chunk
 {
-
     public Vector3 centre;
     public float size;
     public Mesh mesh;
@@ -23,6 +22,7 @@ public class Chunk
     Dictionary<int2, int> vertexIndexMap;
     List<Vector3> processedVertices;
     List<Vector3> processedNormals;
+    List<Vector2> processedUVs;
     List<int> processedTriangles;
 
 
@@ -50,16 +50,17 @@ public class Chunk
         vertexIndexMap = new Dictionary<int2, int>();
         processedVertices = new List<Vector3>();
         processedNormals = new List<Vector3>();
+        processedUVs = new List<Vector2>();
         processedTriangles = new List<int>();
     }
 
     public void CreateMesh(VertexData[] vertexData, int numVertices, bool useFlatShading)
     {
-
         vertexIndexMap.Clear();
         processedVertices.Clear();
         processedNormals.Clear();
         processedTriangles.Clear();
+        processedUVs.Clear();
 
         int triangleIndex = 0;
 
@@ -78,8 +79,10 @@ public class Chunk
                 {
                     vertexIndexMap.Add(data.id, triangleIndex);
                 }
+
                 processedVertices.Add(data.position);
                 processedNormals.Add(data.normal);
+                processedUVs.Add(data.uv);
                 processedTriangles.Add(triangleIndex);
                 triangleIndex++;
             }
@@ -90,6 +93,7 @@ public class Chunk
         mesh.Clear();
         mesh.SetVertices(processedVertices);
         mesh.SetTriangles(processedTriangles, 0, true);
+        mesh.SetUVs(0, processedUVs);
 
         if (useFlatShading)
         {
@@ -100,75 +104,7 @@ public class Chunk
             mesh.SetNormals(processedNormals);
         }
 
-        mesh.uv = Unwrap(mesh);
         collider.sharedMesh = mesh;
-    }
-    private Vector2[] Unwrap(Mesh mesh)
-    {
-        Vector3[] vertices = mesh.vertices;
-        int[] tris = mesh.triangles;
-        Vector2[] uvs = new Vector2[vertices.Length];
-        /*
-        for (int i = 0; i < tris.Length; i += 3)
-        {
-
-            Vector3 a = vertices[tris[i]];
-            Vector3 b = vertices[tris[i + 1]];
-            Vector3 c = vertices[tris[i + 2]];
-            Vector3 side1 = b - a;
-            Vector3 side2 = c - a;
-            Vector3 N = Vector3.Cross(side1, side2);
-
-            N = new Vector3(Mathf.Abs(N.normalized.x), Mathf.Abs(N.normalized.y), Mathf.Abs(N.normalized.z));
-
-
-
-            if (N.x > N.y && N.x > N.z)
-            {
-                uvs[tris[i]] = new Vector2(vertices[tris[i]].z, vertices[tris[i]].y)/50;
-                uvs[tris[i + 1]] = new Vector2(vertices[tris[i + 1]].z, vertices[tris[i + 1]].y) / 50;
-                uvs[tris[i + 2]] = new Vector2(vertices[tris[i + 2]].z, vertices[tris[i + 2]].y) / 50;
-            }
-            else if (N.y > N.x && N.y > N.z)
-            {
-                uvs[tris[i]] = new Vector2(vertices[tris[i]].x, vertices[tris[i]].z) / 50;
-                uvs[tris[i + 1]] = new Vector2(vertices[tris[i + 1]].x, vertices[tris[i + 1]].z) / 50;
-                uvs[tris[i + 2]] = new Vector2(vertices[tris[i + 2]].x, vertices[tris[i + 2]].z) / 50;
-            }
-            else if (N.z > N.x && N.z > N.y)
-            {
-                uvs[tris[i]] = new Vector2(vertices[tris[i]].x, vertices[tris[i]].y) / 50;
-                uvs[tris[i + 1]] = new Vector2(vertices[tris[i + 1]].x, vertices[tris[i + 1]].y) / 50;
-                uvs[tris[i + 2]] = new Vector2(vertices[tris[i + 2]].x, vertices[tris[i + 2]].y) / 50;
-            }
-
-        }
-        return uvs;
-        */
-
-        /*
-        UnwrapParam paramteters = new();
-
-        int t = 0;
-        foreach (Vector2 uvPerTri in Unwrapping.GeneratePerTriangleUV(mesh, paramteters))
-        {
-
-            uvs[tris[t]] = uvPerTri;
-            ++t;
-        }
-        */
-
-        for (int i = 0; i < vertices.Length; i++)
-        {
-            float y = vertices[i].z > vertices[i].y ? vertices[i].z : vertices[i].y;
-
-            if (vertices[i].z == 0) y = vertices[i].y;
-            if (vertices[i].y == 0) y = vertices[i].z;
-
-            uvs[i] = new Vector2(vertices[i].x, y) / 50f;
-        }
-
-        return uvs;
     }
 
     public struct PointData

@@ -12625,14 +12625,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numChunks: 8
-  numPointsPerAxis: 35
+  numPointsPerAxis: 8
   boundsSize: 500
   isoLevel: 0
-  useFlatShading: 0
+  useFlatShading: 1
   noiseScale: 1.7
   noiseHeightMultiplier: 0.9
   blurMap: 0
-  blurRadius: 7
+  blurRadius: 3
   layer: 6
   meshCompute: {fileID: 7200000, guid: a673d46038c7549d0ab1ffa38907c8c2, type: 3}
   densityCompute: {fileID: 7200000, guid: fdcbc69751eaad74faeb564239fdeb4c, type: 3}
