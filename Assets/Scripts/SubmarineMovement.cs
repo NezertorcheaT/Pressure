@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -57,6 +59,8 @@ public class SubmarineMovement : MonoBehaviour
 
     [FormerlySerializedAs("Waterpas")] [SerializeField]
     private Transform waterpas;
+
+    public UnityEvent OnHit;
 
     private Rigidbody _rb;
     private float _leftEngineAngle;
@@ -202,5 +206,11 @@ public class SubmarineMovement : MonoBehaviour
             _rb.velocity = new Vector3(0, _rb.velocity.y, 0);
         if (Mathf.Abs(_rb.velocity.y) > ySpeed)
             _rb.velocity = new Vector3(_rb.velocity.x, 0, _rb.velocity.z);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.layer != 0)
+            OnHit.Invoke();
     }
 }

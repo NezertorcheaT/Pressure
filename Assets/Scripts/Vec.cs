@@ -2,6 +2,38 @@
 
 public static class Vec
 {
+    public static Vector3Int xyz(this Vector3Int t) => new Vector3Int(t.x, t.y, t.z);
+    public static Vector3Int xzy(this Vector3Int t) => new Vector3Int(t.x, t.z, t.y);
+    public static Vector3Int yxz(this Vector3Int t) => new Vector3Int(t.y, t.x, t.z);
+    public static Vector3Int zxy(this Vector3Int t) => new Vector3Int(t.z, t.x, t.y);
+    public static Vector3Int xxx(this Vector3Int t) => new Vector3Int(t.x, t.x, t.x);
+    public static Vector3Int yyy(this Vector3Int t) => new Vector3Int(t.y, t.y, t.y);
+    public static Vector3Int zzz(this Vector3Int t) => new Vector3Int(t.z, t.z, t.z);
+    public static Vector3Int xxy(this Vector3Int t) => new Vector3Int(t.x, t.x, t.y);
+    public static Vector3Int xxz(this Vector3Int t) => new Vector3Int(t.x, t.x, t.z);
+    public static Vector3Int yyx(this Vector3Int t) => new Vector3Int(t.y, t.y, t.x);
+    public static Vector3Int yyz(this Vector3Int t) => new Vector3Int(t.y, t.y, t.z);
+    public static Vector3Int zzx(this Vector3Int t) => new Vector3Int(t.z, t.z, t.x);
+    public static Vector3Int zzy(this Vector3Int t) => new Vector3Int(t.z, t.z, t.y);
+    public static Vector2Int xy(this Vector3Int t) => new Vector2Int(t.x, t.y);
+    public static Vector2Int xz(this Vector3Int t) => new Vector2Int(t.x, t.z);
+    public static Vector2Int yx(this Vector3Int t) => new Vector2Int(t.y, t.x);
+    public static Vector2Int zx(this Vector3Int t) => new Vector2Int(t.z, t.x);
+    public static Vector2Int xx(this Vector3Int t) => new Vector2Int(t.x, t.x);
+    public static Vector2Int yy(this Vector3Int t) => new Vector2Int(t.y, t.y);
+    public static Vector2Int zz(this Vector3Int t) => new Vector2Int(t.z, t.z);
+    public static Vector2Int zy(this Vector3Int t) => new Vector2Int(t.z, t.y);
+    public static Vector2Int yz(this Vector3Int t) => new Vector2Int(t.y, t.z);
+    public static Vector2Int xx(this Vector2Int t) => new Vector2Int(t.x, t.x);
+    public static Vector2Int yy(this Vector2Int t) => new Vector2Int(t.y, t.y);
+    public static Vector2Int yx(this Vector2Int t) => new Vector2Int(t.y, t.x);
+    public static Vector2Int xy(this Vector2Int t) => new Vector2Int(t.x, t.y);
+    public static Vector3Int xyy(this Vector2Int t) => new Vector3Int(t.x, t.y, t.y);
+    public static Vector3Int yxx(this Vector2Int t) => new Vector3Int(t.y, t.x, t.x);
+    public static Vector3Int xxx(this Vector2Int t) => new Vector3Int(t.x, t.x, t.x);
+    public static Vector3Int yyy(this Vector2Int t) => new Vector3Int(t.y, t.y, t.y);
+
+
     public static Vector3 xyz(this Vector3 t) => new Vector3(t.x, t.y, t.z);
     public static Vector3 xzy(this Vector3 t) => new Vector3(t.x, t.z, t.y);
     public static Vector3 yxz(this Vector3 t) => new Vector3(t.y, t.x, t.z);
