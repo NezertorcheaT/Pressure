@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,7 +8,7 @@ public class FirstPerson : MonoBehaviour
     [SerializeField, Min(0)] private float gravity = 0.1f;
     [SerializeField, Min(0)] private float jumpForce = 1f;
     [SerializeField] private float sensitivity = 3.0f;
-    [SerializeField, Range(0f, 90f)] private float clampAngle = 60f;
+    [SerializeField, Range(0f, 90f)] private float clampAngle = 80f;
     [SerializeField] private Camera cam;
     [SerializeField] private Transform camOrigin;
     [SerializeField] private bool isWorking = false;
@@ -21,6 +18,7 @@ public class FirstPerson : MonoBehaviour
     private Light flashLight;
 
     private Rigidbody _rb;
+    private float _xRotaion = 0;
     private bool _isCursorFree = true;
 
     public bool IsCursorFree
@@ -32,7 +30,11 @@ public class FirstPerson : MonoBehaviour
     public bool IsWorking
     {
         get => isWorking;
-        set => isWorking = value;
+        set
+        {
+            isWorking = value;
+            _xRotaion = Mathf.Clamp(cam.transform.localRotation.eulerAngles.x.NormalizeAngle(), -clampAngle, clampAngle);
+        }
     }
 
     public bool IsUnderWater
@@ -64,6 +66,8 @@ public class FirstPerson : MonoBehaviour
         {
             _isCursorFree = false;
             _rb.velocity = Vector3.zero;
+            Debug.Log(cam.transform.localRotation.eulerAngles.x.NormalizeAngle());
+            _xRotaion = Mathf.Clamp(cam.transform.localRotation.eulerAngles.x.NormalizeAngle(), -clampAngle, clampAngle);
             return;
         }
 
@@ -73,13 +77,23 @@ public class FirstPerson : MonoBehaviour
         var inputY = Input.GetAxisRaw("Vertical");
         var inputJump = Input.GetKey(KeyCode.Space).x();
 
-        var velocity = (transform.right * inputX + transform.forward * inputY).normalized * speed +
-                       isUnderWater.x() * inputJump * jumpForce * Vector3.up;
+        Vector3 velocity;
+        if (IsUnderWater)
+        {
+            velocity = (transform.right * inputX + cam.transform.forward * inputY).normalized * speed +
+                       inputJump * jumpForce * Vector3.up;
+        }
+        else
+        {
+            velocity = (transform.right * inputX + transform.forward * inputY).normalized * speed;
+        }
 
         var rotation = new Vector3(0, Input.GetAxisRaw("Mouse X"), 0) * sensitivity;
 
-        var cameraRotation = new Vector3(Input.GetAxisRaw("Mouse Y"), 0, 0) * sensitivity;
-
+        _xRotaion -= Input.GetAxisRaw("Mouse Y") * sensitivity;
+        _xRotaion = Mathf.Clamp(_xRotaion, -clampAngle, clampAngle);
+        //_xRotaion = Mathf.Clamp(_xRotaion.NormalizeAngle(), -clampAngle, clampAngle);
+        //_xRotaion = (_xRotaion).ModularClamp(-clampAngle, clampAngle);
 
         _rb.velocity = velocity - gravity * Vector3.up;
 
@@ -90,7 +104,7 @@ public class FirstPerson : MonoBehaviour
 
         if (cam)
         {
-            cam.transform.Rotate(-cameraRotation);
+            cam.transform.localRotation = Quaternion.Euler(_xRotaion, 0, 0);
         }
     }
 

@@ -77,4 +77,13 @@ public static class Vec
     public static float x(this bool t) => t ? 1f : 0f;
     public static Vector2 xx(this bool t) => new Vector2(t ? 1 : 0, t ? 1 : 0);
     public static Vector3 xxx(this bool t) => new Vector3(t ? 1 : 0, t ? 1 : 0, t ? 1 : 0);
+    
+    public static float NormalizeAngle(this float a) => a > 180f ? -(a - 180f) : (a < -180f ? a + 180f : a);
+    public static float ModularClamp(this float val, float min, float max, float rangemin = -180f,
+        float rangemax = 180f)
+    {
+        var modulus = Mathf.Abs(rangemax - rangemin);
+        if ((val %= modulus) < 0f) val += modulus;
+        return Mathf.Clamp(val + Mathf.Min(rangemin, rangemax), min, max);
+    }
 }

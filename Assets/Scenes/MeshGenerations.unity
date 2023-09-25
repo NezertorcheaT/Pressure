@@ -1652,7 +1652,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3cc54d1064557a04f8fa639d42983388, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3cc54d1064557a04f8fa639d42983388, type: 3}
       propertyPath: m_LocalScale.x
@@ -2024,7 +2024,7 @@ MonoBehaviour:
   gravity: 2
   jumpForce: 4
   sensitivity: 3
-  clampAngle: 60
+  clampAngle: 80
   cam: {fileID: 1848938624}
   camOrigin: {fileID: 1585280182}
   isWorking: 0
@@ -3499,7 +3499,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 771293704}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &303481186
 AudioSource:
@@ -5224,7 +5224,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3cc54d1064557a04f8fa639d42983388, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3cc54d1064557a04f8fa639d42983388, type: 3}
       propertyPath: m_LocalScale.x
@@ -5716,7 +5716,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -6.897999, z: -9.179993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 909657947}
   m_Father: {fileID: 771293704}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9530,7 +9531,6 @@ Transform:
   - {fileID: 1416534083}
   - {fileID: 927393774}
   - {fileID: 522770984}
-  - {fileID: 909657947}
   - {fileID: 1461657831}
   - {fileID: 1804770469}
   - {fileID: 135013335}
@@ -11036,14 +11036,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909657946}
-  m_LocalRotation: {x: -0.7069834, y: -0, z: -0, w: 0.7072302}
-  m_LocalPosition: {x: 0, y: -5.369999, z: -9.179993}
+  m_LocalRotation: {x: -0.6427876, y: 0, z: 0, w: 0.7660445}
+  m_LocalPosition: {x: 0, y: 1.5279995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 771293704}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 522770984}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -80, y: 0, z: 0}
 --- !u!1001 &912620147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14096,7 +14096,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3cc54d1064557a04f8fa639d42983388, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3cc54d1064557a04f8fa639d42983388, type: 3}
       propertyPath: m_LocalScale.x
@@ -15257,7 +15257,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3cc54d1064557a04f8fa639d42983388, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3cc54d1064557a04f8fa639d42983388, type: 3}
       propertyPath: m_LocalScale.x
@@ -17819,7 +17819,7 @@ Transform:
   - {fileID: 1167005030}
   - {fileID: 1826694728}
   m_Father: {fileID: 771293704}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1472367841
 PrefabInstance:
@@ -19653,7 +19653,7 @@ Transform:
   - {fileID: 321188484}
   - {fileID: 1040665615}
   m_Father: {fileID: 771293704}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1516589602
 PrefabInstance:
@@ -20773,7 +20773,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3cc54d1064557a04f8fa639d42983388, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3cc54d1064557a04f8fa639d42983388, type: 3}
       propertyPath: m_LocalScale.x
@@ -22656,7 +22656,7 @@ Transform:
   - {fileID: 887849398}
   - {fileID: 159336920}
   m_Father: {fileID: 771293704}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1814424190
 GameObject:
@@ -25661,6 +25661,30 @@ MonoBehaviour:
   onAnimationStart:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 168276668}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 156450639}
+        m_TargetAssemblyTypeName: FirstPerson, Assembly-CSharp
+        m_MethodName: Teleport
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 522770984}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 156450639}
         m_TargetAssemblyTypeName: FirstPerson, Assembly-CSharp
         m_MethodName: set_IsWorking
@@ -25685,34 +25709,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 156450639}
-        m_TargetAssemblyTypeName: FirstPerson, Assembly-CSharp
-        m_MethodName: Teleport
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 522770984}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1411939538}
         m_TargetAssemblyTypeName: MouseTrigger, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 168276668}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -25760,18 +25760,6 @@ MonoBehaviour:
   onAnimationEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631532620}
-        m_TargetAssemblyTypeName: AqualungOxigen, Assembly-CSharp
-        m_MethodName: StartOx
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 156450639}
         m_TargetAssemblyTypeName: FirstPerson, Assembly-CSharp
         m_MethodName: Teleport
@@ -25783,6 +25771,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1411939538}
+        m_TargetAssemblyTypeName: MouseTrigger, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 156450639}
         m_TargetAssemblyTypeName: FirstPerson, Assembly-CSharp
@@ -25807,18 +25807,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 168276668}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 156450639}
         m_TargetAssemblyTypeName: FirstPerson, Assembly-CSharp
@@ -25871,6 +25859,30 @@ MonoBehaviour:
       - m_Target: {fileID: 1814424192}
         m_TargetAssemblyTypeName: MouseTrigger, Assembly-CSharp
         m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 168276668}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 631532620}
+        m_TargetAssemblyTypeName: AqualungOxigen, Assembly-CSharp
+        m_MethodName: StartOx
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -9,41 +9,50 @@ public class CameraMoveTrigger : MouseTrigger
     [SerializeField, Min(0)] private float moveDelay;
     public UnityEvent onMoveStart;
     public UnityEvent onMoveEnd;
+    private bool camState;
 
     private void Start()
     {
-        activationEvent.AddListener(() => StartCoroutine(Move()));
-
-        onMoveStart.AddListener(() => cam.IsWork = false);
-        onMoveEnd.AddListener(() => cam.IsWork = true);
+        activationEvent.AddListener(Move);
     }
 
-    private IEnumerator Move()
+    private void Move()
     {
-        yield return null;
+        camState = cam.IsWork;
+        cam.IsWork = false;
         onMoveStart.Invoke();
-
-        if (target.position == cam.transform.position && target.rotation == cam.transform.rotation)
-        {
-            onMoveEnd.Invoke();
-            yield break;
-        }
-
         if (moveDelay == 0)
         {
             cam.transform.position = target.position;
             cam.transform.rotation = target.rotation;
+            cam.IsWork = camState;
             onMoveEnd.Invoke();
+            return;
+        }
+
+        StartCoroutine(DoMove());
+    }
+    private IEnumerator DoMove()
+    {
+        yield return null;
+
+        if (target.position == cam.transform.position && target.rotation == cam.transform.rotation)
+        {
+            onMoveEnd.Invoke();
+            cam.IsWork = camState;
             yield break;
         }
 
         for (float i = 0; i < moveDelay; i += Time.deltaTime)
         {
             yield return new WaitForSeconds(Time.deltaTime);
-            cam.transform.position = Vector3.Lerp(cam.transform.position, target.position, i / moveDelay);
-            cam.transform.rotation = Quaternion.Lerp(cam.transform.rotation, target.rotation, i / moveDelay);
+            cam.transform.position = Vector3.Lerp(cam.transform.position, target.position,
+                Mathf.Clamp(i, 0, moveDelay) / moveDelay);
+            cam.transform.rotation = Quaternion.Lerp(cam.transform.rotation, target.rotation,
+                Mathf.Clamp(i, 0, moveDelay) / moveDelay);
         }
 
+        cam.IsWork = camState;
         onMoveEnd.Invoke();
     }
 }
