@@ -66,7 +66,6 @@ public class FirstPerson : MonoBehaviour
         {
             _isCursorFree = false;
             _rb.velocity = Vector3.zero;
-            Debug.Log(cam.transform.localRotation.eulerAngles.x.NormalizeAngle());
             _xRotaion = Mathf.Clamp(cam.transform.localRotation.eulerAngles.x.NormalizeAngle(), -clampAngle, clampAngle);
             return;
         }

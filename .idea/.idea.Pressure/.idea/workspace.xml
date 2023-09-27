@@ -24,11 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/SubmarineEnterSea.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/SubmarineEnterSea.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMoveTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraMoveTrigger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vec.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vec.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,6 @@
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/Blur.compute" />
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/PlanetMap.compute" />
         <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ResolutionInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Packages/Boids/Scripts/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" />
@@ -112,8 +109,9 @@
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Chunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraMoveTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Vec.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
       </list>
     </option>
   </component>
@@ -230,6 +228,7 @@
       <workItem from="1695149377095" duration="2404000" />
       <workItem from="1695571249142" duration="1447000" />
       <workItem from="1695659292292" duration="10720000" />
+      <workItem from="1695839376254" duration="1851000" />
     </task>
     <servers />
   </component>
