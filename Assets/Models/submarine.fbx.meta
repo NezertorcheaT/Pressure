@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: DarkMetalUV
+    second: {fileID: 2100000, guid: 77fb744ea226ea646b3f6394eb510b91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Fan
     second: {fileID: 2100000, guid: e9cca092fdaed8541889e259898d0618, type: 2}
   - first:

@@ -37,7 +37,7 @@ Material:
     m_TexEnvs:
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 80c79c37877bfc740a65a800a97a9b7e, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -105,6 +105,7 @@ Material:
     - _DstBlend: 0
     - _Emmiter: 0
     - _EnvironmentReflections: 1
+    - _Exposure: 1.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1

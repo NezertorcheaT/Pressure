@@ -1035,6 +1035,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 771293708}
+        m_TargetAssemblyTypeName: Radar, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   diactivationEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6835,7 +6847,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8962619939209199400, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_RootOrder
-      value: 72
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: -8938977814687258182, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_DynamicOccludee
@@ -7159,7 +7171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5682988905218123748, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_RootOrder
-      value: 70
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: -5642154799200460604, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_CastShadows
@@ -7291,7 +7303,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 301eac5d0af95c540b99857e77e63433, type: 2}
     - target: {fileID: -4437828826925232354, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_RootOrder
-      value: 74
+      value: 73
       objectReference: {fileID: 0}
     - target: {fileID: -4230727100672419548, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_IsActive
@@ -7299,7 +7311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4111274361340717827, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_RootOrder
-      value: 76
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: -4020843551068275489, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_CastShadows
@@ -7447,7 +7459,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e83a60aab33d65d469bbbb721afc4ed2, type: 2}
     - target: {fileID: -2693449863508718301, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_RootOrder
-      value: 71
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: -2599441823703887504, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_IsActive
@@ -7715,7 +7727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -133434527814724563, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_RootOrder
-      value: 75
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 157698403184773314, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_CastShadows
@@ -8675,25 +8687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f0490060684fb45b6c56632c73923f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &631765272 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3973379678163162331, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
-  m_PrefabInstance: {fileID: 1472367841}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &631765276
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631765272}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1261266300607980928, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
 --- !u!4 &634618576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a89c892c3171a2e438f5ff69b2774bfa, type: 3}
@@ -9637,7 +9630,7 @@ MonoBehaviour:
   maxDistance: 100
   distance: 0
   height: 15
-  heightOffsetMultiplier: 4
+  heightOffsetMultiplier: 17
   boatSizeMultiplyer: 15.9
   color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   textureSize: 64
@@ -13205,7 +13198,7 @@ MonoBehaviour:
     prefab: {fileID: 6502381502502679123, guid: cc09a25f1a284ee43a52ce828f282ac8, type: 3}
     normalOffset: 2
     normalRotate: 1
-  generate: 0
+  generate: 1
   allGenerationEnded:
     m_PersistentCalls:
       m_Calls:
@@ -13225,6 +13218,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: MouseIteractor, Assembly-CSharp
         m_MethodName: set_IsWork
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 771293708}
+        m_TargetAssemblyTypeName: Radar, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18807,7 +18812,7 @@ PrefabInstance:
     - target: {fileID: 2330115986007698318, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 301eac5d0af95c540b99857e77e63433, type: 2}
+      objectReference: {fileID: 2100000, guid: 77fb744ea226ea646b3f6394eb510b91, type: 2}
     - target: {fileID: 2392468169884478153, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_DynamicOccludee
       value: 0
@@ -23879,7 +23884,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 410031894}
-  m_RootOrder: 73
+  m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
 --- !u!23 &1907302818
 MeshRenderer:
@@ -23980,7 +23985,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 14.599976, y: 28}
+  m_AnchoredPosition: {x: 14.599976, y: 53.64}
   m_SizeDelta: {x: 484.17932, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1914730282
@@ -24003,7 +24008,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Generation Time: 0 ms'
+  m_text: '69%
+
+    Generation Time: 69911 ms'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db5d85a315ecc7242934211b8439d56d, type: 2}
   m_sharedMaterial: {fileID: 6989741740031333166, guid: db5d85a315ecc7242934211b8439d56d, type: 2}
@@ -25210,6 +25217,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 771293708}
+        m_TargetAssemblyTypeName: Radar, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

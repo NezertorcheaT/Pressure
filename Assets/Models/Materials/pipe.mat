@@ -104,6 +104,7 @@ Material:
     - _DstBlend: 0
     - _Emmiter: 0
     - _EnvironmentReflections: 1
+    - _Exposure: 1.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1

@@ -12,8 +12,8 @@ public class LoadingScreen : MonoBehaviour
         tg.OnObjectPlaced += Change;
     }
 
-    private void Change(long ms)
+    private void Change(long ms, int iter)
     {
-        text.text = $"Generation Time: {ms} ms";
+        text.text = $"{(int) ((float) iter / (float) tg.MaxIterations * 100f)}%\nGeneration Time: {ms} ms";
     }
 }

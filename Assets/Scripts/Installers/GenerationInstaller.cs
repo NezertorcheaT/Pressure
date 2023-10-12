@@ -10,7 +10,8 @@ namespace Installers
     [AddComponentMenu("Installers/Generation")]
     public class GenerationInstaller : MonoInstaller
     {
-        public event Action<long> OnObjectPlaced;
+        public event Action<long,int> OnObjectPlaced;
+        public int MaxIterations { get; private set; }
         [Space] [SerializeField] private GenerationBuildable[] generations;
         [SerializeField] private bool generate = true;
         [Space] [SerializeField] private UnityEvent allGenerationEnded;
@@ -26,17 +27,26 @@ namespace Installers
 
         private async Task PlaceObjects()
         {
+            MaxIterations = 0;
+            foreach (var buildable in generations)
+            {
+                if (buildable.process)
+                    MaxIterations += buildable.count;
+            }
+
             ObjectPlacementTimer = new System.Diagnostics.Stopwatch();
             ObjectPlacementTimer.Start();
             if (generate)
             {
+                var iter = 0;
                 foreach (var buildable in generations)
                 {
                     if (!buildable.process) continue;
                     for (var i = 0; i < buildable.count; i++)
                     {
+                        iter++;
                         await PlaceRandom(buildable);
-                        OnObjectPlaced(ObjectPlacementTimer.ElapsedMilliseconds);
+                        OnObjectPlaced(ObjectPlacementTimer.ElapsedMilliseconds, iter);
                     }
                 }
             }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -27,17 +28,21 @@ public class Radar : MonoBehaviour
 
     private Bounds _bounds;
     private float _angle;
+    private bool _enable;
     private Texture2D _texture;
 
     private void Start()
     {
         _texture = new Texture2D(textureSize, textureSize, TextureFormat.RGBA32, false);
+        _texture.filterMode = FilterMode.Point;
         _texture.Apply(false);
         distance = maxDistance;
 
         Fill();
         CalculateBounds();
     }
+
+    public void Toggle() => _enable = !_enable;
 
     private void CalculateBounds()
     {
@@ -58,10 +63,12 @@ public class Radar : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(!_enable) return;
         _angle = Mathf.Repeat(_angle + speed, 360);
         arrow.localRotation = Quaternion.Euler(0, 0, -_angle + 90);
         boat.localRotation = Quaternion.Euler(0, 0, origin.rotation.eulerAngles.y);
-        boat.localScale = new Vector3(_bounds.size.x * 2f / boatSizeMultiplyer, _bounds.size.x * 2f / boatSizeMultiplyer) / distance;
+        boat.localScale =
+            new Vector3(_bounds.size.x * 2f / boatSizeMultiplyer, _bounds.size.x * 2f / boatSizeMultiplyer) / distance;
 
         boat.localScale = new Vector3(boat.localScale.x, boat.localScale.y, 1);
 
@@ -85,18 +92,21 @@ public class Radar : MonoBehaviour
         _texture.Apply(false);
     }
 
-    private IEnumerator Draw(int x, int y)
+    private async void Draw(int x, int y)
     {
+        if (!_texture) return;
         _texture.SetPixel(x, y, color);
         _texture.Apply(false);
 
-        for (float sec = 0; sec <= cleanDelay; sec += 0.1f)
+        for (var sec = 0f; sec <= cleanDelay; sec += cleanTickTime)
         {
-            yield return new WaitForSeconds(0.1f);
-            _texture.SetPixel(x, y, color * (1 - sec / cleanDelay));
+            await Task.Delay((int) (1000f * cleanTickTime));
+            if (!_texture) return;
+            _texture.SetPixel(x, y, color * (1f - sec / cleanDelay));
             _texture.Apply(false);
         }
 
+        if (!_texture) return;
         _texture.SetPixel(x, y, Color.black);
         _texture.Apply(false);
     }
@@ -104,18 +114,18 @@ public class Radar : MonoBehaviour
     private void DrawRayPoint(float yOffset)
     {
         var rotate = Angle2Vec3(_angle);
-        //var rotate = Angle2Vec3(angle - origin.rotation.eulerAngles.y);
+
         Debug.DrawRay(origin.position + new Vector3(0, yOffset, 0), rotate * distance, Color.yellow);
 
         var hit = Physics.RaycastAll(origin.position + new Vector3(0, yOffset, 0), rotate, distance, layer);
-        if (hit.Length != 0)
-        {
-            var position = ((origin.position - hit[0].point) / distance);
-            //position = Quaternion.Euler(0, origin.rotation.eulerAngles.y, 0) * position;
-            position *= ((float) textureSize / 2);
-            position += new Vector3(((float) textureSize / 2), 0, ((float) textureSize / 2));
-            StartCoroutine(Draw((int) position.x, (int) position.z));
-        }
+
+        if (hit.Length == 0) return;
+
+        var position = (origin.position - hit[0].point) / distance;
+
+        position *= ((float) textureSize) / 2f;
+        position += new Vector3(((float) textureSize) / 2f, 0, ((float) textureSize) / 2f);
+        Draw((int) position.x, (int) position.z);
     }
 }
 
