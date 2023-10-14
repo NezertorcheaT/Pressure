@@ -49,6 +49,19 @@ public class Torpedo : MonoBehaviour
 
         terrain.Terraform(transform.position, weight, radius);
         Instantiate(particles, transform.position, Quaternion.identity, null);
+
+        foreach (var hit in Physics.OverlapSphere(transform.position, radius))
+        {
+            if (hit.gameObject.CompareTag("TorpedoDestructive"))
+            {
+                Destroy(hit.gameObject);
+            }
+            if (hit.gameObject.transform.parent && hit.gameObject.transform.parent.gameObject.CompareTag("TorpedoDestructive"))
+            {
+                Destroy(hit.gameObject.transform.parent.gameObject);
+            }
+        }
+        
         Destroy(gameObject);
     }
 }

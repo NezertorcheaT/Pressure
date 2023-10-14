@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3185018350499206569}
   - component: {fileID: -5674086616591581984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock 3
-  m_TagString: Untagged
+  m_TagString: TorpedoDestructive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,6 +105,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5bc3a781e5db25f43a8524a046450525, type: 3}
       propertyPath: m_Name
       value: rock3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5bc3a781e5db25f43a8524a046450525, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5bc3a781e5db25f43a8524a046450525, type: 3}
+      propertyPath: m_TagString
+      value: TorpedoDestructive
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bc3a781e5db25f43a8524a046450525, type: 3}
