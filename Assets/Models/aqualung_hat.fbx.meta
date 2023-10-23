@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ca34ca8b3f61f5d48b59074e3a5546c9
+guid: ed68daca1cfc23341a51d3947d4125a4
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -17,27 +17,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wire
-    second: {fileID: 2100000, guid: cdd5135ff4c9046459a696f9c4b91bc5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: aqualung_clothes
-    second: {fileID: 2100000, guid: 5c437f823d73fd246a869fb518a754bc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: glass
     second: {fileID: 2100000, guid: 6b8e72a7fad22e04ca7ea465e3333a0e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lamb
-    second: {fileID: 2100000, guid: f1b30ae6f6aa3744797277fe99d2d2d8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
     second: {fileID: 2100000, guid: f1b30ae6f6aa3744797277fe99d2d2d8, type: 2}
   materials:
     materialImportMode: 2

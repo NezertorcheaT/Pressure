@@ -23,13 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/PlayerInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/PlayerInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemsShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemsShow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +238,7 @@
       <workItem from="1697137276547" duration="1864000" />
       <workItem from="1697139572372" duration="4513000" />
       <workItem from="1697275732154" duration="1565000" />
-      <workItem from="1698063123510" duration="9646000" />
+      <workItem from="1698063123510" duration="10844000" />
     </task>
     <servers />
   </component>
