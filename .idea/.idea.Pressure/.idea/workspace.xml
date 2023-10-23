@@ -23,25 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold.otf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/perfoc_bold.otf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/rust_coarse_01_diff_2k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/rust_coarse_01_diff_2k.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/stalactite.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/stalactite.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Wrench.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Wrench.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/submarine.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/submarine.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/torpedo.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/torpedo.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boid.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boid.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rock 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rock 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rock 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rock 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rock 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rock 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stalactite.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stalactite.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Torpedo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Torpedo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vec.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vec.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/chair1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/chair1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/chair2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/chair2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/chair3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/chair3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/chair4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/chair4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/light_metal_rust_diff_4k.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/light_metal_rust_diff_4k.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/light_metal_rust_diff_4k.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/light_metal_rust_diff_4k.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/monitor_metal_rust_diff_4k.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/monitor_metal_rust_diff_4k.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/monitor_metal_rust_diff_4k.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/monitor_metal_rust_diff_4k.jpg.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,33 +47,31 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BackHachTeleportable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadingScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7B2A272E-5121-4E2F-91BB-C4FB4F28EFF8/b5/b0cf92d8/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Editor/2021.3.17f1/Editor/Data/CGIncludes/AutoLight.cginc" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Editor/2021.3.17f1/Editor/Data/CGIncludes/UnityShadowLibrary.cginc" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAB4CD49-4110-4705-846E-3433671ECD50/2d/9df02862/Void.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/BoidsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Packages/Boids/Scripts/BoidManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/RealtimeLights.hlsl" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/Lighting.hlsl" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/Shaders/SimpleLitInput.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAB4CD49-4110-4705-846E-3433671ECD50/2d/9df02862/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.9/ShaderLibrary/EntityLighting.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@8495d61ceb/Runtime/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/ResolutionInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/BoidsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/AmbientOcclusion.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/Shaders/SimpleLitInput.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/Lighting.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/RealtimeLights.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Editor/2021.3.17f1/Editor/Data/CGIncludes/UnityShadowLibrary.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Editor/2021.3.17f1/Editor/Data/CGIncludes/AutoLight.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7B2A272E-5121-4E2F-91BB-C4FB4F28EFF8/74/db9138ab/ComputeShader.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BackHachTeleportable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/Shadows.hlsl" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/Runtime/ScriptableRendererData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/GlobalIllumination.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/Runtime/ScriptableRendererData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/ResolutionInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/Shadows.hlsl" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/CollisionTeleport.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationBuildable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DragRigidbody.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AqualungDot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/PayerInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Chunk.cs" />
@@ -117,7 +110,6 @@
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Chunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraMoveTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Vec.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
@@ -127,6 +119,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Torpedo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Vec.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemsShow.cs" />
       </list>
     </option>
   </component>
@@ -249,6 +245,7 @@
       <workItem from="1697137276547" duration="1864000" />
       <workItem from="1697139572372" duration="4513000" />
       <workItem from="1697275732154" duration="1565000" />
+      <workItem from="1698063123510" duration="4689000" />
     </task>
     <servers />
   </component>
@@ -301,10 +298,10 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="627" y="116" width="666" height="801" key="find.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1692440286104" />
-    <state x="616" y="239" key="run.anything.popup" timestamp="1691402030263">
+    <state x="616" y="239" key="run.anything.popup" timestamp="1698068483312">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="616" y="239" key="run.anything.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1691402030263" />
+    <state x="616" y="239" key="run.anything.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1698068483312" />
     <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1692617263854">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
