@@ -3,7 +3,7 @@ using Zenject;
 
 public class ItemAdder : MouseTrigger
 {
-    [SerializeField] private Item itemPrefab;
+    [SerializeField] private GameObject itemPrefab;
     private ItemsShow _inventory;
 
     [Inject]

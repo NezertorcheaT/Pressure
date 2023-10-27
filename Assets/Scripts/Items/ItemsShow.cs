@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Items;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -15,10 +16,17 @@ public class ItemsShow : MonoBehaviour
 
     public bool IsWork => enbld;
     public event Action OnChange;
-    public event Action<int> OnSelectionChange;
+    public event Action<IItem> OnSelectionChange;
     public List<IItem> Items { get; private set; }
 
     public void AddItem(IItem item)
+    {
+        Items.Add(Instantiate(item.gameObject, spawnPos).GetComponent<IItem>());
+        selection = Items.Count - 1;
+        OnChange?.Invoke();
+    }
+
+    public void AddItem(GameObject item)
     {
         Items.Add(Instantiate(item.gameObject, spawnPos).GetComponent<IItem>());
         selection = Items.Count - 1;
@@ -34,18 +42,37 @@ public class ItemsShow : MonoBehaviour
         OnChange?.Invoke();
     }
 
+    private void UseUpdateItemOnSlot(int i)
+    {
+        if (i >= Items.Count) return;
+        if (Items[i] == null)
+        {
+            if (i != 0)
+                Items.RemoveAt(i);
+            return;
+        }
+
+        if ((Items[i] as IUpdateUsableItem) == null)
+            return;
+
+        ((IUpdateUsableItem) Items[i]).UpdateUse(() => { Pop(i); });
+        OnChange?.Invoke();
+    }
+
     public void UseItemOnSlot(int i)
     {
         if (i >= Items.Count) return;
         if (Items[i] == null)
         {
-            if (selection != 0)
+            if (i != 0)
                 Items.RemoveAt(i);
             return;
         }
 
-        Items[i].Use(() => { Pop(i); });
-        selection = 0;
+        if ((Items[i] as IUsableItem) == null)
+            return;
+
+        ((IUsableItem) Items[i]).Use(() => { Pop(i); });
         OnChange?.Invoke();
     }
 
@@ -81,6 +108,9 @@ public class ItemsShow : MonoBehaviour
 
     private void Update()
     {
+        if (Items.Count == 1)
+            return;
+
         if (Input.GetAxis("Mouse ScrollWheel") != 0)
         {
             selection += +(int) (Input.GetAxis("Mouse ScrollWheel") * 10);
@@ -93,6 +123,8 @@ public class ItemsShow : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
             UseItemOnSlot(selection);
+        if (Input.GetKey(KeyCode.Mouse1))
+            UseUpdateItemOnSlot(selection);
     }
 
     private void FixedUpdate()
@@ -114,7 +146,7 @@ public class ItemsShow : MonoBehaviour
 
     private void UpdateSelector()
     {
-        OnSelectionChange.Invoke(selection);
+        OnSelectionChange.Invoke(Items[selection]);
         for (var i = 0; i < Items.Count; i++)
         {
             if (Items[i] != null)

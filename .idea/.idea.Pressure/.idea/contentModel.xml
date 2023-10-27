@@ -504,10 +504,16 @@
             <e p="SubmarineInstaller.cs" t="Include" />
             <e p="TerrainGenerationInstaller.cs" t="Include" />
           </e>
-          <e p="Item.cs" t="Include" />
-          <e p="ItemAdder.cs" t="Include" />
-          <e p="ItemsShow.cs" t="Include" />
-          <e p="ItemsUI.cs" t="Include" />
+          <e p="Items" t="Include">
+            <e p="Item.cs" t="Include" />
+            <e p="ItemAdder.cs" t="Include" />
+            <e p="Items.cs" t="Include" />
+            <e p="ItemsShow.cs" t="Include" />
+            <e p="ItemsUI.cs" t="Include" />
+            <e p="UpdateUsableByItem.cs" t="Include" />
+            <e p="UpdateUsableItem.cs" t="Include" />
+            <e p="UsableByItem.cs" t="Include" />
+          </e>
           <e p="LoadingScreen.cs" t="Include" />
           <e p="MeshGenerator.cs" t="Include" />
           <e p="MouseIteractor.cs" t="Include" />

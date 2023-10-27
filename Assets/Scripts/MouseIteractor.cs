@@ -30,9 +30,9 @@ public class MouseIteractor : MonoBehaviour
                 foreach (var hit in hits)
                 {
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
-                    
+
                     if (_trigger == null) continue;
-                    
+
                     cursorText.SetText(_trigger.TodoString);
                     break;
                 }
@@ -41,13 +41,13 @@ public class MouseIteractor : MonoBehaviour
             if (Input.GetKeyDown(iteractionKey))
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit[] hits = Physics.RaycastAll(ray, distance, iteractionLayer);
+                var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
                 foreach (var hit in hits)
                 {
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
-                    
+
                     if (_trigger == null) continue;
-                    
+
                     _trigger.Activate();
                     break;
                 }
@@ -56,13 +56,13 @@ public class MouseIteractor : MonoBehaviour
             if (Input.GetKeyUp(iteractionKey))
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit[] hits = Physics.RaycastAll(ray, distance, iteractionLayer);
+                var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
                 foreach (var hit in hits)
                 {
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
-                    
+
                     if (_trigger == null) continue;
-                    
+
                     _trigger.Diactivate();
                     _trigger = null;
                     break;
@@ -75,10 +75,10 @@ public class MouseIteractor : MonoBehaviour
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 Debug.DrawRay(ray.origin, ray.direction * distance, Color.yellow);
-                
+
                 if (_trigger == null) return;
-                
-                RaycastHit[] hits = Physics.RaycastAll(ray, distance, iteractionLayer);
+
+                var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
                 if (hits.Length == 0)
                 {
                     _trigger?.Diactivate();
@@ -88,9 +88,9 @@ public class MouseIteractor : MonoBehaviour
                 foreach (var hit in hits)
                 {
                     _ntrigger = hit.collider.gameObject.GetComponent<NothingMouseTrigger>();
-                        
+
                     if (_ntrigger == null) continue;
-                        
+
                     _ntrigger.Activate();
                     _ntrigger.TwoSideTrigger.currentSide = _ntrigger.side;
                     _ntrigger = null;

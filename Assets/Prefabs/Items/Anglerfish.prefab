@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3421956187004345254}
-  - component: {fileID: 3421956187004345255}
+  - component: {fileID: -5631148884793691905}
   m_Layer: 0
   m_Name: Anglerfish
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3421956187004345255
+--- !u!114 &-5631148884793691905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,10 +42,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3421956187004345253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c274fb95520e40b685c8d55d48acd6da, type: 3}
+  m_Script: {fileID: 11500000, guid: f9af171173894d68a341edc1195cde30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Fish
+  maxUses: 1000
 --- !u!1001 &3421956186894416737
 PrefabInstance:
   m_ObjectHideFlags: 0

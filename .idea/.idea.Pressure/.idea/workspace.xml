@@ -23,11 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/aqualung_ground.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Anglerfish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Anglerfish.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations/Global Volume Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemAdder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemAdder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemAdder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemAdder.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemsShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemsShow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemsUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,14 +53,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7B2A272E-5121-4E2F-91BB-C4FB4F28EFF8/b5/b0cf92d8/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/BoidsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Packages/Boids/Scripts/BoidManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemAdder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/ItemAdder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAB4CD49-4110-4705-846E-3433671ECD50/2d/9df02862/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.9/ShaderLibrary/EntityLighting.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@8495d61ceb/Runtime/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/AmbientOcclusion.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/Shaders/SimpleLitInput.hlsl" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/Lighting.hlsl" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemsUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/RealtimeLights.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Editor/2021.3.17f1/Editor/Data/CGIncludes/UnityShadowLibrary.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Editor/2021.3.17f1/Editor/Data/CGIncludes/AutoLight.cginc" root0="SKIP_HIGHLIGHTING" />
@@ -65,16 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Chunk.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Slot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/IInventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/IItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/IUsableItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemPickaxe.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Huimachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CursorText.cs" />
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/MarchingCubes.compute" />
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/EditTexture.compute" />
         <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/Blur.compute" />
@@ -112,10 +111,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Vec.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/PlayerInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemAdder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ItemsShow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemsUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemsShow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UpdateUsableItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemAdder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/UsableByItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableByItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Items.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" />
       </list>
     </option>
   </component>
@@ -238,7 +247,8 @@
       <workItem from="1697137276547" duration="1864000" />
       <workItem from="1697139572372" duration="4513000" />
       <workItem from="1697275732154" duration="1565000" />
-      <workItem from="1698063123510" duration="10844000" />
+      <workItem from="1698063123510" duration="11246000" />
+      <workItem from="1698404986862" duration="4889000" />
     </task>
     <servers />
   </component>
