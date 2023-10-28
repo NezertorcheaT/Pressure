@@ -145,16 +145,18 @@ public class SubmarineMovement : MonoBehaviour
             if (rightEngineLever.currentSide != TwoSideMouseTrigger.Side.None)
             {
                 _rb.angularVelocity += Vector3.up *
-                                       (rotationSpeed *
-                                           (rightEngineLever.currentSide == TwoSideMouseTrigger.Side.Up).x() * 2f - 1f);
+                                       (rotationSpeed * (rightEngineLever.currentSide == TwoSideMouseTrigger.Side.Up
+                                           ? 1
+                                           : -1));
                 Fuel -= rotationSpeed * fuelReduceMultiplier;
             }
 
             if (leftEngineLever.currentSide != TwoSideMouseTrigger.Side.None)
             {
                 _rb.angularVelocity += Vector3.up *
-                                       (rotationSpeed *
-                                           (leftEngineLever.currentSide == TwoSideMouseTrigger.Side.Up).x() * 2f - 1f);
+                                       (rotationSpeed * (leftEngineLever.currentSide == TwoSideMouseTrigger.Side.Up
+                                           ? -1
+                                           : 1));
                 Fuel -= rotationSpeed * fuelReduceMultiplier;
             }
 
