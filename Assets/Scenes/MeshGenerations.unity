@@ -9983,6 +9983,8 @@ GameObject:
   - component: {fileID: 771293707}
   - component: {fileID: 771293706}
   - component: {fileID: 771293708}
+  - component: {fileID: 771293709}
+  - component: {fileID: 771293710}
   m_Layer: 6
   m_Name: Submarine
   m_TagString: Submarine
@@ -10050,33 +10052,6 @@ MonoBehaviour:
   goYCanvas: {fileID: 433267099}
   fuelText: {fileID: 914319873}
   waterpas: {fileID: 341360649}
-  OnHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 303481186}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 524224243}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!54 &771293707
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10131,6 +10106,32 @@ MonoBehaviour:
   - {fileID: 1416534087}
   - {fileID: 1416534086}
   - {fileID: 1416534085}
+--- !u!114 &771293709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771293701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4101e5e20c9715e40b6528628a635ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &771293710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771293701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798da6925c9c43e894a80f2116a0a89b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inSound: {fileID: 524224243}
+  outSound: {fileID: 303481186}
 --- !u!4 &780837225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e78aeb3a370d8e14082542127b5d7793, type: 3}
@@ -13540,6 +13541,7 @@ GameObject:
   - component: {fileID: 1049812834}
   - component: {fileID: 1049812835}
   - component: {fileID: 1049812836}
+  - component: {fileID: 1049812838}
   - component: {fileID: 1049812837}
   m_Layer: 0
   m_Name: SceneContext
@@ -13595,6 +13597,7 @@ MonoBehaviour:
   - {fileID: 1049812837}
   - {fileID: 1049812836}
   - {fileID: 1049812833}
+  - {fileID: 1049812838}
   - {fileID: 1049812834}
   _installerPrefabs: []
   _findSiblingMonoInstallers: 0
@@ -13751,7 +13754,7 @@ MonoBehaviour:
     prefab: {fileID: 6502381502502679123, guid: cc09a25f1a284ee43a52ce828f282ac8, type: 3}
     normalOffset: 2
     normalRotate: 1
-  generate: 0
+  generate: 1
   allGenerationEnded:
     m_PersistentCalls:
       m_Calls:
@@ -13791,6 +13794,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1049812838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049812828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe09a7e0b5214f5e8e65e77b92bdba4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hit: {fileID: 771293709}
 --- !u!1001 &1050699627
 PrefabInstance:
   m_ObjectHideFlags: 0

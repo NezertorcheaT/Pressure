@@ -499,6 +499,7 @@
             <e p="BoidsInstaller.cs" t="Include" />
             <e p="DragLineInstaller.cs" t="Include" />
             <e p="GenerationInstaller.cs" t="Include" />
+            <e p="OnHitInstaller.cs" t="Include" />
             <e p="PlayerInstaller.cs" t="Include" />
             <e p="ResolutionInstaller.cs" t="Include" />
             <e p="SubmarineInstaller.cs" t="Include" />
@@ -522,6 +523,8 @@
           <e p="Radar.cs" t="Include" />
           <e p="SubmarineCameras.cs" t="Include" />
           <e p="SubmarineCamerasCanvas.cs" t="Include" />
+          <e p="SubmarineHit.cs" t="Include" />
+          <e p="SubmarineHitSounds.cs" t="Include" />
           <e p="SubmarineMovement.cs" t="Include" />
           <e p="Torpedo.cs" t="Include" />
           <e p="TorpedoChecker.cs" t="Include" />

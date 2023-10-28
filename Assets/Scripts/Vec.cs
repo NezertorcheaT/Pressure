@@ -89,4 +89,18 @@ public static class Vec
     }
 
     public static bool Toggle(this ref bool b) => b = !b;
+    
+    public static Vector3 xyz(this Vector4 t) => new Vector3(t.x, t.y, t.z);
+    public static Vector3 xzy(this Vector4 t) => new Vector3(t.x, t.z, t.y);
+    public static Vector3 yxz(this Vector4 t) => new Vector3(t.y, t.x, t.z);
+    public static Vector3 zxy(this Vector4 t) => new Vector3(t.z, t.x, t.y);
+    public static Vector3 xxx(this Vector4 t) => new Vector3(t.x, t.x, t.x);
+    public static Vector3 yyy(this Vector4 t) => new Vector3(t.y, t.y, t.y);
+    public static Vector3 zzz(this Vector4 t) => new Vector3(t.z, t.z, t.z);
+    public static Vector3 xxy(this Vector4 t) => new Vector3(t.x, t.x, t.y);
+    public static Vector3 xxz(this Vector4 t) => new Vector3(t.x, t.x, t.z);
+    public static Vector3 yyx(this Vector4 t) => new Vector3(t.y, t.y, t.x);
+    public static Vector3 yyz(this Vector4 t) => new Vector3(t.y, t.y, t.z);
+    public static Vector3 zzx(this Vector4 t) => new Vector3(t.z, t.z, t.x);
+    public static Vector3 zzy(this Vector4 t) => new Vector3(t.z, t.z, t.y);
 }
