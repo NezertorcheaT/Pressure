@@ -23,9 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/mainScene.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/mainScene.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/mainScene.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/mainScene.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubmarineMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SubmarineMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations/New Lighting Settings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations/New Lighting Settings.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset_Renderer.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +66,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/ResolutionInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/Shadows.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/Runtime/UniversalAdditionalLightData.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/Compute/PlanetMap.compute" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ResolutionInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Packages/Boids/Scripts/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ResolutionInstaller.cs" />
@@ -86,8 +93,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraMoveTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Radar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScreen.cs" />
@@ -113,6 +118,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/OnHitInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Vec.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WorldLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LightOcculusion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
       </list>
     </option>
   </component>
@@ -237,7 +246,9 @@
       <workItem from="1697275732154" duration="1565000" />
       <workItem from="1698063123510" duration="11246000" />
       <workItem from="1698404986862" duration="4889000" />
-      <workItem from="1698492295678" duration="5640000" />
+      <workItem from="1698492295678" duration="6254000" />
+      <workItem from="1698504804578" duration="802000" />
+      <workItem from="1698507730010" duration="1821000" />
     </task>
     <servers />
   </component>

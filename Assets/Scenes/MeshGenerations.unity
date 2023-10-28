@@ -33,7 +33,7 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 16
   m_ReflectionBounces: 2
   m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
@@ -2070,9 +2070,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 1
-  m_Height: 2.1190276
+  m_Height: 2.2364411
   m_Direction: 1
-  m_Center: {x: 0, y: 0.059513807, z: 0}
+  m_Center: {x: 0, y: 0.11822013, z: -0}
 --- !u!54 &156450638
 Rigidbody:
   m_ObjectHideFlags: 0

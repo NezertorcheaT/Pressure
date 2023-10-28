@@ -47,6 +47,7 @@ Shader "Custom/PSX Lit"
                 float2 uv : TEXCOORD0;
                 float4 normal : NORMAL;
                 float4 texcoord1 : TEXCOORD1;
+                float4 vertex_color : COLOR;
             };
 
             struct v2f
@@ -57,6 +58,7 @@ Shader "Custom/PSX Lit"
                 float3 normalWS : NORMAL;
                 float4 shadowCoord : TEXCOORD3;
                 DECLARE_LIGHTMAP_OR_SH(lightmapUV, vertexSH, 4);
+                float4 vertex_color : COLOR;
             };
 
             sampler2D _BaseMap;
@@ -74,6 +76,7 @@ Shader "Custom/PSX Lit"
                 o.positionWS = TransformObjectToWorld(v.vertex.xyz);
                 o.normalWS = TransformObjectToWorldNormal(v.normal);
                 o.uv = TRANSFORM_TEX(v.uv, _BaseMap);
+                o.vertex_color = v.vertex_color;
                 /*
                 v.vertex = mul(unity_ObjectToWorld, v.vertex);
                 v.vertex /= _VertexJittering;
@@ -108,7 +111,7 @@ Shader "Custom/PSX Lit"
                     shadowAttenuation);
                 diffuseColor += LightingLambert(attenuatedLightColor, mainLight.direction, i.normalWS);
 
-                return float4(max(min(pow(diffuseColor, Exposure), diffuseColor), _Emmiter), 1) * color;
+                return float4(max(min(pow(diffuseColor * i.vertex_color, Exposure), diffuseColor), _Emmiter), 1) * color;
                 //return max(float4(diffuseColor-(diffuseColor%(0.125/2)), 1), _Emmiter) * color; 
             }
             ENDHLSL
