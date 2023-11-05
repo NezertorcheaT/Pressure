@@ -10,11 +10,12 @@ namespace Installers
     [AddComponentMenu("Installers/Generation")]
     public class GenerationInstaller : MonoInstaller
     {
-        public event Action<long,int> OnObjectPlaced;
+        public event Action<long, int> OnObjectPlaced;
         public int MaxIterations { get; private set; }
         [Space] [SerializeField] private GenerationBuildable[] generations;
         [SerializeField] private bool generate = true;
         [Space] [SerializeField] private UnityEvent allGenerationEnded;
+        private int _endedChunks = 0;
 
         private System.Diagnostics.Stopwatch ObjectPlacementTimer;
         private GenTest _terrain;
@@ -54,8 +55,7 @@ namespace Installers
             allGenerationEnded.Invoke();
             ObjectPlacementTimer.Stop();
 
-            Debug.Log("Generation Installed.\n Object placement time: " + ObjectPlacementTimer.ElapsedMilliseconds +
-                      " ms");
+            //Debug.Log("Generation Installed.\n Object placement time: " + ObjectPlacementTimer.ElapsedMilliseconds + " ms");
             Container.Bind();
         }
 
