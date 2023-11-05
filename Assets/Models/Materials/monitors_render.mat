@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pomp
-  m_Shader: {fileID: 4800000, guid: d78c79659f75c484e8e4f9ee91f7d64a, type: 3}
+  m_Name: monitors_render
+  m_Shader: {fileID: 4800000, guid: ab2f7cd7cac172343802c37f635f3ff8, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 0de44debe87a95f4c8a560cd3722f0cc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7d9b1291a89e2084db82d04ba262d89c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -96,12 +96,12 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Cull: 0
+    - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Emmiter: 0
+    - _Emmiter: 0.5
     - _EnvironmentReflections: 1
     - _Exposure: 1.5
     - _GlossMapScale: 0

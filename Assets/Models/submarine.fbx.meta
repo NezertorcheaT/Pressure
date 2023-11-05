@@ -42,6 +42,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: MonitorMetalRender
+    second: {fileID: 2100000, guid: e66391db8705b734aa21e9d52c9a7d27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Pipe
     second: {fileID: 2100000, guid: ad4c043fce83df3499c17a52bbe2dfbd, type: 2}
   - first:
