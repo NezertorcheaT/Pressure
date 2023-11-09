@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: aqualung_in
+  m_Name: wood_table_render
   m_Shader: {fileID: 4800000, guid: ab2f7cd7cac172343802c37f635f3ff8, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: fbf66420bc5b6c74e9b93dc23a6952a8, type: 3}
+        m_Texture: {fileID: 2800000, guid: f94ce404a3d2f2b4f8f49972ed260382, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -101,7 +101,7 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Emmiter: 1
+    - _Emmiter: 0.304
     - _EnvironmentReflections: 1
     - _Exposure: 1.5
     - _GlossMapScale: 0

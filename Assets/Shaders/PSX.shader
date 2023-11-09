@@ -103,15 +103,15 @@ Shader "Custom/PSX Lit"
                 for (int j = 0; j < GetAdditionalLightsCount(); ++j)
                 {
                     Light light = GetAdditionalLight(j, i.positionWS);
-                    half3 attenuatedLightColor = light.color * (light.distanceAttenuation * light.shadowAttenuation);
+                    half3 attenuatedLightColor = light.color * (light.distanceAttenuation);
                     diffuseColor += LightingLambert(attenuatedLightColor, light.direction, i.normalWS);
                 }
                 Light mainLight = GetMainLight(i.shadowCoord);
-                half3 attenuatedLightColor = mainLight.color * (mainLight.distanceAttenuation * mainLight.
-                    shadowAttenuation);
+                half3 attenuatedLightColor = mainLight.color * (mainLight.distanceAttenuation);
                 diffuseColor += LightingLambert(attenuatedLightColor, mainLight.direction, i.normalWS);
-
-                return float4(max(min(pow(diffuseColor * i.vertex_color, Exposure), diffuseColor), _Emmiter), 1) * color;
+                
+                half4 fullColor=float4(max(min(pow(diffuseColor * i.vertex_color, Exposure), diffuseColor), _Emmiter), 1) * color;
+                return round(fullColor*64)/64;
                 //return max(float4(diffuseColor-(diffuseColor%(0.125/2)), 1), _Emmiter) * color; 
             }
             ENDHLSL

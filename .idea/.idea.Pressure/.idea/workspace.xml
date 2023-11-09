@@ -23,11 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AqualungDrop.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AqualungDrop.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AqualungGearUp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AqualungGearUp.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SubmarineHatchIn.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/SubmarineHatchIn.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SubmarineHatchOut.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/SubmarineHatchOut.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_clothes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_clothes.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_in.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_in.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_out.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_out.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/mainScene.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/mainScene.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/mainScene.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/mainScene.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/submarine.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/submarine.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/submarine.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/submarine.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Torpedo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Torpedo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset_Renderer.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +55,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadingScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7B2A272E-5121-4E2F-91BB-C4FB4F28EFF8/b5/b0cf92d8/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/BoidsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../Projects/Console Engine/Scene.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Projects/Console Engine/Scene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Packages/Boids/Scripts/BoidManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/ItemAdder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAB4CD49-4110-4705-846E-3433671ECD50/2d/9df02862/Void.cs" root0="SKIP_HIGHLIGHTING" />
@@ -113,10 +126,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WorldLight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LightOcculusion.cs" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Torpedo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
       </list>
     </option>
   </component>
@@ -245,6 +258,9 @@
       <workItem from="1698504804578" duration="802000" />
       <workItem from="1698507730010" duration="1821000" />
       <workItem from="1699210999632" duration="1866000" />
+      <workItem from="1699266646602" duration="1848000" />
+      <workItem from="1699275412896" duration="4709000" />
+      <workItem from="1699553013367" duration="710000" />
     </task>
     <servers />
   </component>
