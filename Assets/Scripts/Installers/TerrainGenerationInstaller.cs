@@ -58,8 +58,8 @@ namespace Installers
 
         private void GenerationEnded()
         {
-            Debug.Log("Terrain Installed");
             Container.Bind<GenTest>().FromInstance(_terrain).AsSingle().NonLazy();
+            Debug.Log("Terrain Installed");
         }
     }
 }

@@ -11,8 +11,8 @@ namespace Installers
         public override void InstallBindings()
         {
             var manager = Container.InstantiatePrefabForComponent<BoidManager>(managerPrefab);
-            Debug.Log("BoidManager Installed");
             Container.Bind<BoidManager>().FromInstance(manager).AsSingle().NonLazy();
+            Debug.Log("BoidManager Installed");
         }
     }
 }

@@ -12,9 +12,9 @@ namespace Installers
 
         public override void InstallBindings()
         {
-            Debug.Log("Submarine Installed");
             Container.Bind<Submarine>().FromInstance(new Submarine(submarineMovement, radar, submarineCameras))
                 .AsSingle().NonLazy();
+            Debug.Log("Submarine Installed");
         }
     }
 }

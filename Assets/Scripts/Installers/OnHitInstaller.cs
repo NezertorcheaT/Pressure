@@ -11,6 +11,7 @@ namespace Installers
         public override void InstallBindings()
         {
             Container.Bind<SubmarineHit>().FromInstance(hit).AsSingle().NonLazy();
+            Debug.Log("OnSubmarineHit Installed");
         }
     }
 }

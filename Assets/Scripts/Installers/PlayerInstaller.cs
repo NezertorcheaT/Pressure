@@ -11,9 +11,9 @@ namespace Installers
 
         public override void InstallBindings()
         {
-            Debug.Log("Player Installed");
             Container.Bind<FirstPerson>().FromInstance(player).AsSingle().NonLazy();
             Container.Bind<ItemsShow>().FromInstance(itemsShow).AsSingle().NonLazy();
+            Debug.Log("Player Installed");
         }
     }
 }
