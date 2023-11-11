@@ -178,7 +178,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Close
+  outlines:
+  - {fileID: 602818338}
+  outlineSize: 1.1
   animator: {fileID: 882798577}
   animation: TorpedosDoorUpClose
   isAnimating: 0
@@ -309,6 +313,10 @@ PrefabInstance:
       propertyPath: todoText
       value: Down
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186655737784986, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: outlineSize
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186656909912424, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: m_Size.y
       value: 0.080094814
@@ -325,6 +333,10 @@ PrefabInstance:
       propertyPath: todoText
       value: Middle
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186656909912439, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: outlineSize
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: TodoText
       value: Up
@@ -332,6 +344,10 @@ PrefabInstance:
     - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: todoText
       value: Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: outlineSize
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4430186657572151180, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: m_Size.y
@@ -641,7 +657,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Open
+  outlines:
+  - {fileID: 623252814}
+  - {fileID: 169810760}
+  outlineSize: 1.1
   animator: {fileID: 1040665616}
   animation: BackDoorOpen
   isAnimating: 0
@@ -1066,7 +1087,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Go Down
+  outlines:
+  - {fileID: 1109444425}
+  outlineSize: 1.1
   target: {fileID: 1355477990}
   cam: {fileID: 1848938622}
   moveDelay: 1
@@ -1566,7 +1591,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: 
+  outlines: []
+  outlineSize: 0
   animator: {fileID: 410031895}
   animation: OutSubmarineTorpedoOpen
   isAnimating: 0
@@ -1724,6 +1752,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114426746}
   m_CullTransparentMesh: 1
+--- !u!23 &134017389 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1860641818344424419, guid: ca34ca8b3f61f5d48b59074e3a5546c9, type: 3}
+  m_PrefabInstance: {fileID: 986465734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &135013334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2190,7 +2223,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Return To Submarine
+  outlines:
+  - {fileID: 1907302818}
+  outlineSize: 1.1
   target: {fileID: 887849398}
   cam: {fileID: 1848938622}
   moveDelay: 1
@@ -3254,7 +3291,7 @@ Transform:
   - {fileID: 1373737067}
   - {fileID: 1322222820}
   m_Father: {fileID: 2104812336}
-  m_RootOrder: 21
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &273014867
 GameObject:
@@ -3323,7 +3360,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Leave Submarine
+  outlines:
+  - {fileID: 545183428}
+  outlineSize: 1.1
   target: {fileID: 223903951}
   cam: {fileID: 1848938622}
   moveDelay: 1
@@ -3425,7 +3466,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Open Laptop
+  outlines: []
+  outlineSize: 0
   animator: {fileID: 1610203072}
   animation: open laptop
   isAnimating: 0
@@ -3470,18 +3514,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 273979918}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1615421132}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -3568,6 +3600,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 350364112}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 273979918}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -3992,7 +4036,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Fish
+  outlines:
+  - {fileID: 528402802}
+  outlineSize: 1.1
   itemPrefab: {fileID: 3421956187004345253, guid: f3fd6d95102adf246829ca17a6c2ab50, type: 3}
 --- !u!65 &312907192
 BoxCollider:
@@ -4445,6 +4493,10 @@ PrefabInstance:
       propertyPath: todoText
       value: Down
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186655737784986, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: outlineSize
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186656909912439, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: TodoText
       value: Middle
@@ -4453,6 +4505,10 @@ PrefabInstance:
       propertyPath: todoText
       value: Middle
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186656909912439, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: outlineSize
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: TodoText
       value: Up
@@ -4460,6 +4516,10 @@ PrefabInstance:
     - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: todoText
       value: Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: outlineSize
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6698891818000886244, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: m_RootOrder
@@ -4870,7 +4930,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Close Laptop
+  outlines: []
+  outlineSize: 0
   animator: {fileID: 1610203072}
   animation: close laptop
   isAnimating: 0
@@ -5182,7 +5245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5983752566818949919, guid: d443da2be9fab624e8bdc48b68b7a900, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5983752566818949919, guid: d443da2be9fab624e8bdc48b68b7a900, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6076,6 +6139,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497706824}
   m_CullTransparentMesh: 1
+--- !u!23 &516276254 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2320837432811593386, guid: ca34ca8b3f61f5d48b59074e3a5546c9, type: 3}
+  m_PrefabInstance: {fileID: 986465734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &522770983
 GameObject:
   m_ObjectHideFlags: 0
@@ -6240,6 +6308,16 @@ AudioSource:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eb50f0e01c312f54093c4af9fbcb61fe, type: 3}
   m_PrefabInstance: {fileID: 79554516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &528402802 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: eb50f0e01c312f54093c4af9fbcb61fe, type: 3}
+  m_PrefabInstance: {fileID: 79554516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &545183428 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -305091885687274788, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
+  m_PrefabInstance: {fileID: 1472367841}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &548075865
 GameObject:
@@ -9357,20 +9435,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  diactivationEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stillActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  isActivated: 0
-  todoText: Sit Down
-  target: {fileID: 1210461295}
-  cam: {fileID: 1848938622}
-  moveDelay: 1
-  onMoveStart:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 1199749532}
         m_TargetAssemblyTypeName: ItemsShow, Assembly-CSharp
         m_MethodName: OffAll
@@ -9381,8 +9445,50 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1848938622}
+        m_TargetAssemblyTypeName: MouseIteractor, Assembly-CSharp
+        m_MethodName: set_IsWork
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 655091044}
+        m_TargetAssemblyTypeName: MouseTrigger, Assembly-CSharp
+        m_MethodName: ManualOffOutline
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  diactivationEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stillActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  isActivated: 0
+  isOutline: 0
+  todoText: Sit Down
+  outlines:
+  - {fileID: 1360790326}
+  outlineSize: 1.1
+  target: {fileID: 1210461295}
+  cam: {fileID: 1848938622}
+  moveDelay: 1
+  onMoveStart:
+    m_PersistentCalls:
+      m_Calls: []
   onMoveEnd:
     m_PersistentCalls:
       m_Calls:
@@ -9425,6 +9531,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2001494886}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1848938622}
+        m_TargetAssemblyTypeName: MouseIteractor, Assembly-CSharp
+        m_MethodName: set_IsWork
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10960,7 +11078,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: 
+  outlines: []
+  outlineSize: 0
   animator: {fileID: 2104812337}
   animation: SubmarineExitSea
   isAnimating: 0
@@ -12084,7 +12205,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: 
+  outlines: []
+  outlineSize: 0
   animator: {fileID: 2104812337}
   animation: SubmarineHatchIn
   isAnimating: 0
@@ -12489,7 +12613,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Close
+  outlines:
+  - {fileID: 623252814}
+  - {fileID: 169810760}
+  outlineSize: 1.1
   animator: {fileID: 1040665616}
   animation: BackDoorClose
   isAnimating: 0
@@ -13032,7 +13161,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Next
+  outlines: []
+  outlineSize: 0
   animator: {fileID: 0}
 --- !u!65 &978894326
 BoxCollider:
@@ -13998,7 +14130,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Play!
+          m_StringArgument: Play - main
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1529263887}
@@ -14484,7 +14616,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: 
+  outlines: []
+  outlineSize: 0
   target: {fileID: 597030581}
   cam: {fileID: 1848938622}
   moveDelay: 0
@@ -15340,7 +15475,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Drop Aqualung
+  outlines: []
+  outlineSize: 1.1
   animator: {fileID: 240695858}
   animation: AqualungDrop
   isAnimating: 0
@@ -15829,7 +15967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5983752566818949919, guid: d443da2be9fab624e8bdc48b68b7a900, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5983752566818949919, guid: d443da2be9fab624e8bdc48b68b7a900, type: 3}
       propertyPath: m_AnchorMax.x
@@ -17686,6 +17824,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c6a9db3ceed51454e8bb233cc529c146, type: 3}
   m_PrefabInstance: {fileID: 1360790324}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1360790326 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c6a9db3ceed51454e8bb233cc529c146, type: 3}
+  m_PrefabInstance: {fileID: 1360790324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &1360790328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18302,6 +18445,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401061977}
   m_CullTransparentMesh: 1
+--- !u!23 &1405541363 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 024c9a8b32946084e8a2c7c3876f8695, type: 3}
+  m_PrefabInstance: {fileID: 1936033324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1408632881 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7258882875392569286, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
@@ -18362,7 +18510,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: 
+  outlines: []
+  outlineSize: 0
   target: {fileID: 909657947}
   cam: {fileID: 1848938622}
   moveDelay: 0
@@ -18676,7 +18827,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: 
+  outlines: []
+  outlineSize: 0
   target: {fileID: 442219796}
   cam: {fileID: 1848938622}
   moveDelay: 0
@@ -20621,7 +20775,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: 
+  outlines: []
+  outlineSize: 0
   target: {fileID: 1536424875}
   cam: {fileID: 1848938622}
   moveDelay: 0
@@ -20983,7 +21140,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: 
+  outlines: []
+  outlineSize: 0
   animator: {fileID: 2104812337}
   animation: SubmarineHatchOut
   isAnimating: 0
@@ -21860,6 +22020,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647848211}
   m_CullTransparentMesh: 1
+--- !u!23 &1649241552 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: a89c892c3171a2e438f5ff69b2774bfa, type: 3}
+  m_PrefabInstance: {fileID: 673908671}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1651007396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23385,6 +23550,10 @@ PrefabInstance:
       propertyPath: todoText
       value: Down
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186655737784986, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: outlineSize
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186656909912424, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: m_Size.y
       value: 0.107278824
@@ -23401,6 +23570,10 @@ PrefabInstance:
       propertyPath: todoText
       value: Middle
       objectReference: {fileID: 0}
+    - target: {fileID: 4430186656909912439, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: outlineSize
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: TodoText
       value: Up
@@ -23408,6 +23581,10 @@ PrefabInstance:
     - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: todoText
       value: Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430186657572151179, guid: 5950b52081183974c98f2ab260510abf, type: 3}
+      propertyPath: outlineSize
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4430186657572151180, guid: 5950b52081183974c98f2ab260510abf, type: 3}
       propertyPath: m_Size.y
@@ -23543,7 +23720,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Open
+  outlines:
+  - {fileID: 602818338}
+  outlineSize: 1.1
   animator: {fileID: 882798577}
   animation: TorpedosDoorUpOpen
   isAnimating: 0
@@ -23887,7 +24068,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: 
+  outlines: []
+  outlineSize: 0
   animator: {fileID: 240695858}
   animation: AqualungOn
   isAnimating: 0
@@ -24035,7 +24219,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Aqualung
+  outlines:
+  - {fileID: 134017389}
+  - {fileID: 516276254}
+  - {fileID: 1649241552}
+  outlineSize: 1.1
   animator: {fileID: 240695858}
   animation: AqualungGearUp
   isAnimating: 0
@@ -25770,21 +25960,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationEvent:
     m_PersistentCalls:
-      m_Calls: []
-  diactivationEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stillActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  isActivated: 0
-  todoText: Stand Up
-  target: {fileID: 1585280182}
-  cam: {fileID: 1848938622}
-  moveDelay: 1
-  onMoveStart:
-    m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1848938622}
+        m_TargetAssemblyTypeName: MouseIteractor, Assembly-CSharp
+        m_MethodName: set_IsWork
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 273979918}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -25833,6 +26021,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  diactivationEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stillActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  isActivated: 0
+  isOutline: 0
+  todoText: Stand Up
+  outlines: []
+  outlineSize: 0
+  target: {fileID: 1585280182}
+  cam: {fileID: 1848938622}
+  moveDelay: 1
+  onMoveStart:
+    m_PersistentCalls:
+      m_Calls: []
   onMoveEnd:
     m_PersistentCalls:
       m_Calls:
@@ -25883,6 +26088,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1848938622}
+        m_TargetAssemblyTypeName: MouseIteractor, Assembly-CSharp
+        m_MethodName: set_IsWork
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 655091044}
+        m_TargetAssemblyTypeName: MouseTrigger, Assembly-CSharp
+        m_MethodName: ManualOffOutline
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!65 &1956564250
 BoxCollider:
@@ -26382,7 +26611,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Prev
+  outlines: []
+  outlineSize: 0
   animator: {fileID: 0}
 --- !u!65 &2001494889
 BoxCollider:
@@ -26654,7 +26886,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Go Up
+  outlines:
+  - {fileID: 2100056887}
+  outlineSize: 1.1
   target: {fileID: 1001708819}
   cam: {fileID: 1848938622}
   moveDelay: 1
@@ -27083,7 +27319,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: 
+  outlines: []
+  outlineSize: 0
   animator: {fileID: 2104812337}
   animation: SubmarineEnterSea
   isAnimating: 0
@@ -27504,7 +27743,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActivated: 0
+  isOutline: 0
   todoText: Wrench
+  outlines:
+  - {fileID: 1405541363}
+  outlineSize: 1.1
   itemPrefab: {fileID: 6672754545323583507, guid: cf8b9b432ef21cd4ea03bee84a81a628, type: 3}
 --- !u!65 &2075456640
 BoxCollider:
@@ -27788,6 +28031,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca34ca8b3f61f5d48b59074e3a5546c9, type: 3}
   m_PrefabInstance: {fileID: 986465734}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &2100056887 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4210965255248954314, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
+  m_PrefabInstance: {fileID: 1472367841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2104812334
 GameObject:
   m_ObjectHideFlags: 0
@@ -27838,10 +28086,10 @@ Transform:
   - {fileID: 1770683997}
   - {fileID: 14420193}
   - {fileID: 395748810}
-  - {fileID: 264711669}
   - {fileID: 148188239}
   - {fileID: 1176318728}
   - {fileID: 433267098}
+  - {fileID: 264711669}
   - {fileID: 1082201335}
   - {fileID: 1610203071}
   - {fileID: 758345754}
@@ -28372,7 +28620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5983752566818949919, guid: d443da2be9fab624e8bdc48b68b7a900, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 5983752566818949919, guid: d443da2be9fab624e8bdc48b68b7a900, type: 3}
       propertyPath: m_AnchorMax.x

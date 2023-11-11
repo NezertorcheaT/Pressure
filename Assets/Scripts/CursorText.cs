@@ -14,7 +14,7 @@ public class CursorText : MonoBehaviour
 
     public void SetText(string s)
     {
-        if (s != "")
+        if (s.Replace(" ", string.Empty) != string.Empty)
         {
             text.text = s;
             cursor.enabled = false;
@@ -26,6 +26,7 @@ public class CursorText : MonoBehaviour
     public void ClearText()
     {
         cursor.enabled = true;
-        text.text = "";
+        if (text.text.Replace(" ", string.Empty) != string.Empty)
+            text.text = string.Empty;
     }
 }

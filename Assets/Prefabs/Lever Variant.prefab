@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.14754009
       objectReference: {fileID: 0}
+    - target: {fileID: 4161345844865545905, guid: cddec14dec268a44282374dc2f87b6a0, type: 3}
+      propertyPath: outlines.Array.data[0]
+      value: 
+      objectReference: {fileID: 5732402316946567007}
     - target: {fileID: 4161345844865545906, guid: cddec14dec268a44282374dc2f87b6a0, type: 3}
       propertyPath: m_Controller
       value: 
@@ -159,3 +163,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b65ca04601914047b3bc74130892e10, type: 3}
+--- !u!23 &5732402316946567007 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9b65ca04601914047b3bc74130892e10, type: 3}
+  m_PrefabInstance: {fileID: 6362460549419856859}
+  m_PrefabAsset: {fileID: 0}

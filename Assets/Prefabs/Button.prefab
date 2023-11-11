@@ -53,7 +53,14 @@ MonoBehaviour:
   diactivationEvent:
     m_PersistentCalls:
       m_Calls: []
+  stillActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   isActivated: 0
+  todoText: 
+  outlines:
+  - {fileID: 3315076340562932079}
+  outlineSize: 1.1
   animator: {fileID: 4161345844865545906}
 --- !u!65 &4161345844865545904
 BoxCollider:
@@ -165,6 +172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3cdb02bf1499c44f8bdefcb0c00441f, type: 3}
+--- !u!23 &3315076340562932079 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: b3cdb02bf1499c44f8bdefcb0c00441f, type: 3}
+  m_PrefabInstance: {fileID: 4161345846634130923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4488585257319254528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b3cdb02bf1499c44f8bdefcb0c00441f, type: 3}

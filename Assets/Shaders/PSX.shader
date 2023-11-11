@@ -7,6 +7,8 @@ Shader "Custom/PSX Lit"
         _VertexJittering("Vertex Jittering", float) = 0.07
         _Emmiter("Emmiter", Range(0,1)) = 0
         _Cull("Cull", float) = 0
+        _Outline("Outline", Range(0,10)) = 0.1
+        _OutlineColor("Outline Color", color) = (1,1,1,1)
     }
     SubShader
     {
@@ -40,13 +42,14 @@ Shader "Custom/PSX Lit"
 
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 
-
             struct appdata
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
                 float4 normal : NORMAL;
+                float4 tangentWS : TANGENT;
                 float4 texcoord1 : TEXCOORD1;
+                float4 bitangentWS : TEXCOORD5;
                 float4 vertex_color : COLOR;
             };
 
@@ -57,6 +60,7 @@ Shader "Custom/PSX Lit"
                 float3 positionWS : TEXCOORD1;
                 float3 normalWS : NORMAL;
                 float4 shadowCoord : TEXCOORD3;
+                half3 viewDir : TEXCOORD5;
                 DECLARE_LIGHTMAP_OR_SH(lightmapUV, vertexSH, 4);
                 float4 vertex_color : COLOR;
             };
@@ -64,10 +68,17 @@ Shader "Custom/PSX Lit"
             sampler2D _BaseMap;
             float _VertexJittering;
             float _Emmiter;
+            half _Outline;
             float4 _BaseMap_ST;
 
             float4 _BaseColor;
+            float4 _OutlineColor;
             float _Smoothness, _Metallic;
+
+            inline half StepFeatherToon(half value, half step, half feather)
+            {
+                return saturate((value - step + feather) / feather);
+            }
 
             v2f vert(appdata v)
             {
@@ -77,20 +88,13 @@ Shader "Custom/PSX Lit"
                 o.normalWS = TransformObjectToWorldNormal(v.normal);
                 o.uv = TRANSFORM_TEX(v.uv, _BaseMap);
                 o.vertex_color = v.vertex_color;
-                /*
-                v.vertex = mul(unity_ObjectToWorld, v.vertex);
-                v.vertex /= _VertexJittering;
-                v.vertex = round(v.vertex);
-                v.vertex *= _VertexJittering;
-                v.vertex = mul(unity_WorldToObject, v.vertex);
-                */
                 o.vertex = TransformWorldToHClip(o.positionWS);
-                o.shadowCoord = TransformWorldToShadowCoord(o.positionWS);
-                //o.vertex += float4(0, 0, 0, (o.vertex % _VertexJittering).w);
                 o.vertex -= float4((o.vertex % _VertexJittering).xyz, 0);
+                o.shadowCoord = TransformWorldToShadowCoord(o.positionWS);
 
                 OUTPUT_LIGHTMAP_UV(v.texcoord1, unity_LightmapST, o.lightmapUV);
                 OUTPUT_SH(o.normalWS.xyz, o.vertexSH);
+                o.viewDir = GetWorldSpaceViewDir(o.positionWS);
                 return o;
             }
 
@@ -109,10 +113,24 @@ Shader "Custom/PSX Lit"
                 Light mainLight = GetMainLight(i.shadowCoord);
                 half3 attenuatedLightColor = mainLight.color * (mainLight.distanceAttenuation);
                 diffuseColor += LightingLambert(attenuatedLightColor, mainLight.direction, i.normalWS);
-                
-                half4 fullColor=float4(max(min(pow(diffuseColor * i.vertex_color, Exposure), diffuseColor), _Emmiter), 1) * color;
-                return round(fullColor*64)/64;
-                //return max(float4(diffuseColor-(diffuseColor%(0.125/2)), 1), _Emmiter) * color; 
+
+                half4 fullColor = float4(max(min(pow(diffuseColor * i.vertex_color, Exposure), diffuseColor), _Emmiter),
+                                         1) * color;
+                fullColor = round(fullColor * 64) / 64;
+
+                if (_Outline != 0)
+                {
+                    float alphaOutline = ceil(color.aaa - (1 - min(1 - color.aaa, 1 / _Outline) / (1 / _Outline)));
+                    alphaOutline = 1 - alphaOutline;
+                    float edgeNormal = sqrt(dot(i.viewDir, i.normalWS)) > _Outline ? 1 : 0;
+                    float outlines = min(alphaOutline, edgeNormal);
+                    //outlines = alphaOutline*edgeNormal;
+                    fullColor = fullColor * float4(outlines.xxx, 1);
+                    fullColor = fullColor + float4(1 - outlines.xxx, 1) * _OutlineColor;
+                }
+                fullColor.a = color.a;
+
+                return fullColor;
             }
             ENDHLSL
         }

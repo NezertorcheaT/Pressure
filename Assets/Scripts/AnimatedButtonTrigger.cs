@@ -7,8 +7,9 @@ public abstract class AnimatedButtonTrigger : MouseTrigger
     [SerializeField] private Animator animator;
     private static readonly int Activated = Animator.StringToHash("activated");
 
-    protected virtual void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         activationEvent.AddListener(Push);
         diactivationEvent.AddListener(Pull);
     }

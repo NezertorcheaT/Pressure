@@ -24,14 +24,55 @@
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Black.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/CleanWood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/CleanWood.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Fan.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Fan.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Lamp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Lamp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Pomp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Pomp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/PressurePad.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/PressurePad.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/SubmarineBaseUV.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/SubmarineBaseUV.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Wrench.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Wrench.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/anglerfish.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/anglerfish.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_clothes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_clothes.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_in.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_in.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_out.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/aqualung_out.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/barrel cap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/barrel cap.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/barrel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/barrel.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/boat1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/boat1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/boat2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/boat2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/chair4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/chair4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/fencing.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/fencing.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/gas tank.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/gas tank.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/generator.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/generator.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/green_metal_rust_diff_4k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/green_metal_rust_diff_4k.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/laptop_keybourd.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/laptop_keybourd.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/light_metal_rust_diff_4k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/light_metal_rust_diff_4k.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/monitor_metal_rust_diff_4k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/monitor_metal_rust_diff_4k.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/monitors_render.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/monitors_render.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/pipe.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/pipe.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/poster.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/poster.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/rust_coarse_01_diff_2k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/rust_coarse_01_diff_2k.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/sky.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/sky.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/wire.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/wire.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/wood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/wood.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/wood_table_render.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/wood_table_render.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lever Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lever Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TwoSideLever.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TwoSideLever.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/BoidsInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/BoidsInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/DragLineInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/DragLineInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/OnHitInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/OnHitInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/PlayerInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/PlayerInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimatedButtonTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AnimatedButtonTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CursorText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Trigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Trigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +101,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/ItemAdder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAB4CD49-4110-4705-846E-3433671ECD50/2d/9df02862/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@8495d61ceb/Runtime/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.9/ShaderLibrary/UnityInstancing.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F20F1EBC-8C81-4BDA-991D-5122AD38AB9B/2B/RichPresence.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Editor/2021.3.17f1/Editor/Data/CGIncludes/AutoLight.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/GlobalIllumination.hlsl" root0="SKIP_HIGHLIGHTING" />
@@ -73,10 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Packages/Boids/Scripts/BoidManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Packages/Boids/Scripts/Boid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GenerationBuildable.cs" />
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/VertexData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AqualungOxigen.cs" />
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Compute/PlanetMap.compute" />
@@ -93,7 +131,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemAdder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemsUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemsShow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UpdateUsableItem.cs" />
@@ -113,8 +150,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LightOcculusion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Torpedo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/DiscordRPCInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/OnHitInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/PlayerInstaller.cs" />
@@ -124,6 +159,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/BoidsInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DRPC.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F20F1EBC-8C81-4BDA-991D-5122AD38AB9B/2B/RichPresence.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/Toon.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AnimatedButtonTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Trigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CursorText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
       </list>
     </option>
   </component>
@@ -256,6 +298,7 @@
       <workItem from="1699275412896" duration="4709000" />
       <workItem from="1699553013367" duration="1309000" />
       <workItem from="1699641707644" duration="5052000" />
+      <workItem from="1699703416311" duration="23498000" />
     </task>
     <servers />
   </component>
@@ -280,18 +323,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="736" y="363" width="766" height="578" key="#Code_Cleanup_Options" timestamp="1690575096552">
-      <screen x="0" y="0" width="1920" height="1034" />
-    </state>
-    <state x="736" y="363" width="766" height="578" key="#Code_Cleanup_Options/0.0.1920.1034@0.0.1920.1034" timestamp="1690575096552" />
     <state x="708" y="342" key="#Notifications" timestamp="1693652678961">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="708" y="342" key="#Notifications/0.0.1920.1034@0.0.1920.1034" timestamp="1693652678961" />
-    <state x="707" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1690575099359">
-      <screen x="0" y="0" width="1920" height="1034" />
-    </state>
-    <state x="707" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1034@0.0.1920.1034" timestamp="1690575099359" />
     <state x="727" y="241" key="RiderGenerateDialog" timestamp="1693652715061">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
@@ -304,14 +339,14 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1691768793741" />
-    <state x="627" y="116" width="666" height="801" key="find.popup" timestamp="1692440286104">
+    <state x="1061" y="180" width="701" height="801" key="find.popup" timestamp="1699716900747">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="627" y="116" width="666" height="801" key="find.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1692440286104" />
-    <state x="616" y="239" key="run.anything.popup" timestamp="1698068483312">
+    <state x="1061" y="180" width="701" height="801" key="find.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1699716900747" />
+    <state x="616" y="239" key="run.anything.popup" timestamp="1699727057562">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="616" y="239" key="run.anything.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1698068483312" />
+    <state x="616" y="239" key="run.anything.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1699727057562" />
     <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1692617263854">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>

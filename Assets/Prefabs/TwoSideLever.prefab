@@ -64,7 +64,14 @@ MonoBehaviour:
   diactivationEvent:
     m_PersistentCalls:
       m_Calls: []
+  stillActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   isActivated: 0
+  todoText: 
+  outlines:
+  - {fileID: 2355642167191347835}
+  outlineSize: 1.1
   twoSideTrigger: {fileID: 6698891818000886246}
   side: 2
 --- !u!1 &4430186656909912437
@@ -131,7 +138,14 @@ MonoBehaviour:
   diactivationEvent:
     m_PersistentCalls:
       m_Calls: []
+  stillActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   isActivated: 0
+  todoText: 
+  outlines:
+  - {fileID: 2355642167191347835}
+  outlineSize: 1.1
   twoSideTrigger: {fileID: 6698891818000886246}
   side: 1
 --- !u!1 &4430186657572151178
@@ -198,7 +212,14 @@ MonoBehaviour:
   diactivationEvent:
     m_PersistentCalls:
       m_Calls: []
+  stillActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   isActivated: 0
+  todoText: 
+  outlines:
+  - {fileID: 2355642167191347835}
+  outlineSize: 1.1
   twoSideTrigger: {fileID: 6698891818000886246}
   side: 0
 --- !u!1 &6698891818000886245
@@ -273,7 +294,16 @@ MonoBehaviour:
   triggerUp: {fileID: 4430186657572151179}
   triggerDown: {fileID: 4430186655737784986}
   triggerNone: {fileID: 4430186656909912439}
-  CurrentSide: 1
+  currentSide: 1
+  onSideUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSideDown:
+    m_PersistentCalls:
+      m_Calls: []
+  onSideNone:
+    m_PersistentCalls:
+      m_Calls: []
   animator: {fileID: 6698891818000886241}
 --- !u!1001 &3995108157717069567
 PrefabInstance:
@@ -336,6 +366,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b65ca04601914047b3bc74130892e10, type: 3}
+--- !u!23 &2355642167191347835 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9b65ca04601914047b3bc74130892e10, type: 3}
+  m_PrefabInstance: {fileID: 3995108157717069567}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3529626726877419796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9b65ca04601914047b3bc74130892e10, type: 3}

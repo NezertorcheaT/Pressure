@@ -11,6 +11,7 @@ public class MouseIteractor : MonoBehaviour
 
     private MouseTrigger _trigger;
     private NothingMouseTrigger _ntrigger;
+    private static readonly int Outline = Shader.PropertyToID("_Outline");
 
     public bool IsWork
     {
@@ -27,6 +28,7 @@ public class MouseIteractor : MonoBehaviour
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
+                _trigger = null;
                 foreach (var hit in hits)
                 {
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
@@ -34,6 +36,12 @@ public class MouseIteractor : MonoBehaviour
                     if (_trigger == null) continue;
 
                     cursorText.SetText(_trigger.TodoString);
+
+                    if (_trigger.OutlineSize == 0) continue;
+                    if (_trigger.isOutline) continue;
+
+                    _trigger.ManualOnOutline();
+
                     break;
                 }
             }
@@ -42,6 +50,7 @@ public class MouseIteractor : MonoBehaviour
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
+                _trigger = null;
                 foreach (var hit in hits)
                 {
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
@@ -57,6 +66,7 @@ public class MouseIteractor : MonoBehaviour
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
+                _trigger = null;
                 foreach (var hit in hits)
                 {
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
@@ -82,6 +92,7 @@ public class MouseIteractor : MonoBehaviour
                 if (hits.Length == 0)
                 {
                     _trigger?.Diactivate();
+                    _trigger?.ManualOffOutline();
                     _trigger = null;
                 }
 
@@ -97,6 +108,11 @@ public class MouseIteractor : MonoBehaviour
                     break;
                 }
             }
+        }
+        else
+        {
+            _ntrigger = null;
+            _trigger = null;
         }
     }
 }
