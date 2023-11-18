@@ -28,19 +28,21 @@ public class MouseIteractor : MonoBehaviour
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
+                if(_trigger)
+                    _trigger.isOutline = false;
                 _trigger = null;
                 foreach (var hit in hits)
                 {
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
 
                     if (_trigger == null) continue;
+                    if (!_trigger.enabled) continue;
 
                     cursorText.SetText(_trigger.TodoString);
 
-                    if (_trigger.OutlineSize == 0) continue;
-                    if (_trigger.isOutline) continue;
-
-                    _trigger.ManualOnOutline();
+                    //if (_trigger.OutlineSize == 0) continue;
+                    //if (_trigger.isOutline) continue;
+                    //_trigger.isOutline = true;
 
                     break;
                 }
@@ -56,6 +58,7 @@ public class MouseIteractor : MonoBehaviour
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
 
                     if (_trigger == null) continue;
+                    if (!_trigger.enabled) continue;
 
                     _trigger.Activate();
                     break;
@@ -72,6 +75,7 @@ public class MouseIteractor : MonoBehaviour
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
 
                     if (_trigger == null) continue;
+                    if (!_trigger.enabled) continue;
 
                     _trigger.Diactivate();
                     _trigger = null;
@@ -86,13 +90,11 @@ public class MouseIteractor : MonoBehaviour
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 Debug.DrawRay(ray.origin, ray.direction * distance, Color.yellow);
 
-                if (_trigger == null) return;
-
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
-                if (hits.Length == 0)
+                if (hits.Length == 0 && _trigger != null)
                 {
                     _trigger?.Diactivate();
-                    _trigger?.ManualOffOutline();
+                    _trigger.isOutline = false;
                     _trigger = null;
                 }
 
@@ -101,6 +103,7 @@ public class MouseIteractor : MonoBehaviour
                     _ntrigger = hit.collider.gameObject.GetComponent<NothingMouseTrigger>();
 
                     if (_ntrigger == null) continue;
+                    if (!_ntrigger.enabled) continue;
 
                     _ntrigger.Activate();
                     _ntrigger.TwoSideTrigger.currentSide = _ntrigger.side;

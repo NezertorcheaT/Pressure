@@ -32,7 +32,7 @@ public abstract class MouseTrigger : MonoBehaviour
     {
         if (OutlineSize > 0 && outlines.Count > 0)
         {
-            StartCoroutine(c());
+            StartCoroutine(Main());
         }
     }
 
@@ -55,16 +55,21 @@ public abstract class MouseTrigger : MonoBehaviour
         Run();
     }
 
-    private IEnumerator c()
+    private IEnumerator Main()
     {
         for (;;)
         {
             yield return new WaitForSeconds(0.1f);
             if (!enabled) continue;
             if (!gameObject.activeSelf) continue;
-            if (!isOutline) continue;
-
-            ManualOffOutline();
+            if (isOutline)
+            {
+                OnOutline();
+            }
+            else
+            {
+                OffOutline();
+            }
         }
     }
 
@@ -73,28 +78,32 @@ public abstract class MouseTrigger : MonoBehaviour
         StopAllCoroutines();
     }
 
+    private void OnOutline() => SetOutlineSize(OutlineSize);
+
+    private void OffOutline() => SetOutlineSize(0);
+
+    private void SetOutlineSize(float size)
+    {
+        /*
+        foreach (var mesh in OutlineRenderers)
+        {
+            foreach (var material in mesh.materials)
+            {
+                if (!material.HasFloat(Outline)) continue;
+                material.SetFloat(Outline, size);
+            }
+        }*/
+    }
+
     public void ManualOnOutline()
     {
-        foreach (var mesh in OutlineRenderers)
-        {
-            foreach (var material in mesh.materials)
-            {
-                if (!material.HasFloat(Outline)) continue;
-                material.SetFloat(Outline, OutlineSize);
-            }
-        }
+        OnOutline();
         isOutline = true;
     }
+
     public void ManualOffOutline()
     {
-        foreach (var mesh in OutlineRenderers)
-        {
-            foreach (var material in mesh.materials)
-            {
-                if (!material.HasFloat(Outline)) continue;
-                material.SetFloat(Outline, 0);
-            }
-        }
+        OffOutline();
         isOutline = false;
     }
 

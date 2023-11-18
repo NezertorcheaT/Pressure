@@ -7,7 +7,6 @@ public class DiscordRPCInstaller : MonoInstaller
     public override void InstallBindings()
     {
         drpc.Initialize();
-        drpc.SetPresenceText("generating");
         Debug.Log("DiscordRPC Installed");
     }
 }

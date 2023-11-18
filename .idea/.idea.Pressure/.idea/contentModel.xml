@@ -534,13 +534,6 @@
         <e p="Prefabs" t="Include">
           <e p="Items" t="Include" />
         </e>
-        <e p="Samples" t="Include">
-          <e p="Shader Graph" t="Include">
-            <e p="12.1.9" t="Include">
-              <e p="Procedural Patterns" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Scenes" t="Include">
           <e p="MeshGenerations" t="Include" />
         </e>

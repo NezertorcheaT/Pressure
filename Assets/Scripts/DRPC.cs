@@ -9,6 +9,8 @@ public class DRPC : MonoBehaviour
     private DiscordRpcClient client;
 
     private RichPresence _presence;
+    [SerializeField] private string startDetails = "Level 1";
+    [SerializeField] private string startState = "Generating";
 
     public void SetPresenceText(string text)
     {
@@ -22,8 +24,8 @@ public class DRPC : MonoBehaviour
     {
         _presence = new RichPresence()
         {
-            Details = "Level 1",
-            State = "Generating",
+            Details = startDetails,
+            State = startState,
             Assets = new Assets()
             {
                 LargeImageKey = "https://cdn.discordapp.com/attachments/1065620552984821831/1172615797248643113/logo.png",
