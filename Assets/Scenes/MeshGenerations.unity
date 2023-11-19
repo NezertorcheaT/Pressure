@@ -617,6 +617,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5725113451870132360, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
   m_PrefabInstance: {fileID: 47793297}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &55363951
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 423856364}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+      propertyPath: m_Name
+      value: harpoon gun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+--- !u!4 &55363952 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4fb083f303e8d244d899509b1b94e5f3, type: 3}
+  m_PrefabInstance: {fileID: 55363951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &55684538
 GameObject:
   m_ObjectHideFlags: 0
@@ -5100,6 +5174,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &423856363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423856364}
+  - component: {fileID: 423856366}
+  - component: {fileID: 423856365}
+  m_Layer: 3
+  m_Name: HarpoonTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &423856364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423856363}
+  m_LocalRotation: {x: -0.1364751, y: 0.13647337, z: 0.6938114, w: 0.6938122}
+  m_LocalPosition: {x: -1.705, y: 2.731, z: 4.456}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 55363952}
+  m_Father: {fileID: 2104812336}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: -22.256, y: 0, z: 90}
+--- !u!114 &423856365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423856363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051527ec1fc8fa442957a7eecfaadba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  diactivationEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stillActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  isActivated: 0
+  isOutline: 0
+  todoText: Harpoon gun
+  outlines: []
+  outlineSize: 1.1
+  itemPrefab: {fileID: 6672754545323583507, guid: c50f2bc55cb57734189f887e8576b342, type: 3}
+--- !u!65 &423856366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423856363}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5360165, y: 3.065892, z: 1.628547}
+  m_Center: {x: 0.31309515, y: -0.29757118, z: -0.031707406}
 --- !u!1001 &433067911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14117,7 +14265,7 @@ MonoBehaviour:
     prefab: {fileID: 6502381502502679123, guid: cc09a25f1a284ee43a52ce828f282ac8, type: 3}
     normalOffset: 2
     normalRotate: 1
-  generate: 1
+  generate: 0
   allGenerationEnded:
     m_PersistentCalls:
       m_Calls:
@@ -28218,6 +28366,7 @@ Transform:
   - {fileID: 780837225}
   - {fileID: 634618576}
   - {fileID: 843833665}
+  - {fileID: 423856364}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -25,19 +25,8 @@
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/anglerfish.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/anglerfish.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/chair.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/chair.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/chair_low.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/chair_low.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/generator.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/generator.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/mainScene.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/mainScene.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/pomp.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/pomp.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/submarine.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/submarine.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DRPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DRPC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/DiscordRPCInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/DiscordRPCInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Trigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Trigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/VertexData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AqualungOxigen.cs" />
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Compute/PlanetMap.compute" />
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Compute/EditTexture.compute" />
@@ -102,7 +90,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemAdder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/UsableByItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableByItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Items.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableItem.cs" />
@@ -130,7 +117,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Trigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DRPC.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/DiscordRPCInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" />
       </list>
     </option>
   </component>
@@ -266,6 +255,7 @@
       <workItem from="1699703416311" duration="23957000" />
       <workItem from="1699814817394" duration="2437000" />
       <workItem from="1700305869380" duration="2607000" />
+      <workItem from="1700408348717" duration="4273000" />
     </task>
     <servers />
   </component>

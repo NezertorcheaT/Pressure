@@ -568,6 +568,7 @@
             <e p="TerrainGenerationInstaller.cs" t="Include" />
           </e>
           <e p="Items" t="Include">
+            <e p="HarpoonGunItem.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="ItemAdder.cs" t="Include" />
             <e p="Items.cs" t="Include" />

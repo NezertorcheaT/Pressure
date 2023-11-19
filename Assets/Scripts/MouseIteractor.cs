@@ -36,7 +36,7 @@ public class MouseIteractor : MonoBehaviour
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
 
                     if (_trigger == null) continue;
-                    if (!_trigger.enabled) continue;
+                    if (!_trigger.isActiveAndEnabled) continue;
 
                     cursorText.SetText(_trigger.TodoString);
 
@@ -58,7 +58,7 @@ public class MouseIteractor : MonoBehaviour
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
 
                     if (_trigger == null) continue;
-                    if (!_trigger.enabled) continue;
+                    if (!_trigger.isActiveAndEnabled) continue;
 
                     _trigger.Activate();
                     break;
@@ -75,7 +75,7 @@ public class MouseIteractor : MonoBehaviour
                     _trigger = hit.collider.gameObject.GetComponent<MouseTrigger>();
 
                     if (_trigger == null) continue;
-                    if (!_trigger.enabled) continue;
+                    if (!_trigger.isActiveAndEnabled) continue;
 
                     _trigger.Diactivate();
                     _trigger = null;
@@ -103,7 +103,7 @@ public class MouseIteractor : MonoBehaviour
                     _ntrigger = hit.collider.gameObject.GetComponent<NothingMouseTrigger>();
 
                     if (_ntrigger == null) continue;
-                    if (!_ntrigger.enabled) continue;
+                    if (!_ntrigger.isActiveAndEnabled) continue;
 
                     _ntrigger.Activate();
                     _ntrigger.TwoSideTrigger.currentSide = _ntrigger.side;
