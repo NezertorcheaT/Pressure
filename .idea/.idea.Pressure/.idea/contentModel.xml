@@ -556,6 +556,7 @@
           <e p="FirstPerson.cs" t="Include" />
           <e p="GenerationBounds.cs" t="Include" />
           <e p="GenerationBuildable.cs" t="Include" />
+          <e p="HarpoonBullet.cs" t="Include" />
           <e p="Installers" t="Include">
             <e p="BoidsInstaller.cs" t="Include" />
             <e p="DiscordRPCInstaller.cs" t="Include" />
