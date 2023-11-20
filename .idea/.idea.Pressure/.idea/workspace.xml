@@ -25,8 +25,7 @@
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/harpoon gun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/harpoon gun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Compute/PlanetMap.compute" />
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Compute/EditTexture.compute" />
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Compute/Includes/MarchTables.compute" />
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Compute/MarchingCubes.compute" />
@@ -121,6 +119,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HarpoonBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" />
       </list>
     </option>
   </component>
@@ -139,7 +138,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -257,7 +256,10 @@
       <workItem from="1699814817394" duration="2437000" />
       <workItem from="1700305869380" duration="2607000" />
       <workItem from="1700408348717" duration="4273000" />
-      <workItem from="1700426511874" duration="1403000" />
+      <workItem from="1700426511874" duration="2277000" />
+      <workItem from="1700487777526" duration="1414000" />
+      <workItem from="1700489621523" duration="18000" />
+      <workItem from="1700489693391" duration="1198000" />
     </task>
     <servers />
   </component>
@@ -282,6 +284,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="839" y="413" key="#Custom_Plugin_Repositories" timestamp="1700487900862">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state x="839" y="413" key="#Custom_Plugin_Repositories/0.0.1920.1034@0.0.1920.1034" timestamp="1700487900862" />
     <state x="708" y="342" key="#Notifications" timestamp="1693652678961">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
@@ -290,14 +296,10 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="727" y="241" key="RiderGenerateDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1693652715061" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1692617766888">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1700487912842">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1034@0.0.1920.1034" timestamp="1692617766888" />
-    <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog" timestamp="1691768793741">
-      <screen x="0" y="0" width="1920" height="1034" />
-    </state>
-    <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1691768793741" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1034@0.0.1920.1034" timestamp="1700487912842" />
     <state x="1061" y="180" width="701" height="801" key="find.popup" timestamp="1699716900747">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
