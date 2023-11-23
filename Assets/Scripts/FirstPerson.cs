@@ -21,6 +21,7 @@ public class FirstPerson : MonoBehaviour
     private float _xRotaion = 0;
     private bool _isCursorFree = true;
 
+    public bool CursorLocked => !(IsCursorFree && !IsWorking);
     public bool IsCursorFree
     {
         get => _isCursorFree;

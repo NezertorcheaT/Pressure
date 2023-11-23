@@ -1,4 +1,5 @@
 using UnityEngine;
+using Zenject;
 
 public class MouseIteractor : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class MouseIteractor : MonoBehaviour
         set => isWork = value;
     }
 
+    private FirstPerson pl;
+
+    [Inject]
+    private void Construct(FirstPerson pl) => this.pl = pl;
+
     private void Update()
     {
         cursorText.ClearText();
@@ -26,9 +32,12 @@ public class MouseIteractor : MonoBehaviour
         {
             if (showTips)
             {
-                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                var ray = pl.CursorLocked
+                    ? Camera.main.ScreenPointToRay(Input.mousePosition)
+                    : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
+
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
-                if(_trigger)
+                if (_trigger)
                     _trigger.isOutline = false;
                 _trigger = null;
                 foreach (var hit in hits)
@@ -50,7 +59,10 @@ public class MouseIteractor : MonoBehaviour
 
             if (Input.GetKeyDown(iteractionKey))
             {
-                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                var ray = pl.CursorLocked
+                    ? Camera.main.ScreenPointToRay(Input.mousePosition)
+                    : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
+
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
                 _trigger = null;
                 foreach (var hit in hits)
@@ -67,7 +79,10 @@ public class MouseIteractor : MonoBehaviour
 
             if (Input.GetKeyUp(iteractionKey))
             {
-                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                var ray = pl.CursorLocked
+                    ? Camera.main.ScreenPointToRay(Input.mousePosition)
+                    : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
+
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
                 _trigger = null;
                 foreach (var hit in hits)
@@ -87,7 +102,10 @@ public class MouseIteractor : MonoBehaviour
                 !Input.GetKeyUp(iteractionKey) &&
                 Input.GetKey(iteractionKey))
             {
-                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                var ray = pl.CursorLocked
+                    ? Camera.main.ScreenPointToRay(Input.mousePosition)
+                    : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
+
                 Debug.DrawRay(ray.origin, ray.direction * distance, Color.yellow);
 
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);

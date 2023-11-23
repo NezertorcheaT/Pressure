@@ -25,7 +25,26 @@
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PickaxePunch.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PickaxePunch.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chunks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chunks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Items.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Items.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vec.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vec.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/aqualung_clothes_albedo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/aqualung_clothes_albedo.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/aqualung_render_in.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/aqualung_render_in.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/aqualung_render_out.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/aqualung_render_out.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/harpoon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/harpoon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/monitors_render.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/monitors_render.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/pickaxe.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/pickaxe.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/pomp_render.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/pomp_render.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/wrench.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/wrench.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +73,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/ItemAdder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAB4CD49-4110-4705-846E-3433671ECD50/2d/9df02862/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@8495d61ceb/Runtime/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Ore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.9/ShaderLibrary/UnityInstancing.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F20F1EBC-8C81-4BDA-991D-5122AD38AB9B/2B/RichPresence.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HarpoonBullet.cs" root0="FORCE_HIGHLIGHTING" />
@@ -69,13 +89,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Compute/EditTexture.compute" />
-        <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Compute/Includes/MarchTables.compute" />
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Compute/MarchingCubes.compute" />
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Chunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraMoveTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Radar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScreen.cs" />
@@ -88,13 +105,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemAdder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/UsableByItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableByItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Items.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineHit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineHitSounds.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Vec.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WorldLight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LightOcculusion.cs" />
@@ -115,11 +128,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Trigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DRPC.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/DiscordRPCInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HarpoonBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Items.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Vec.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Ore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chunks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
       </list>
     </option>
   </component>
@@ -260,6 +280,8 @@
       <workItem from="1700487777526" duration="1414000" />
       <workItem from="1700489621523" duration="18000" />
       <workItem from="1700489693391" duration="1198000" />
+      <workItem from="1700668806810" duration="7581000" />
+      <workItem from="1700767774561" duration="3510000" />
     </task>
     <servers />
   </component>
@@ -292,14 +314,18 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="708" y="342" key="#Notifications/0.0.1920.1034@0.0.1920.1034" timestamp="1693652678961" />
-    <state x="727" y="241" key="RiderGenerateDialog" timestamp="1693652715061">
+    <state x="727" y="241" key="RiderGenerateDialog" timestamp="1700670555081">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="727" y="241" key="RiderGenerateDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1693652715061" />
+    <state x="727" y="241" key="RiderGenerateDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1700670555081" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1700487912842">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1034@0.0.1920.1034" timestamp="1700487912842" />
+    <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog" timestamp="1700771075309">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1700771075309" />
     <state x="1061" y="180" width="701" height="801" key="find.popup" timestamp="1699716900747">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
@@ -308,9 +334,9 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="616" y="239" key="run.anything.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1699727057562" />
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1692617263854">
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1700672251361">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1692617263854" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1700672251361" />
   </component>
 </project>

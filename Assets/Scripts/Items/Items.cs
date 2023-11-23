@@ -17,6 +17,8 @@ namespace Items
     {
         public GameObject gameObject { get; }
         public string ItemName { get; }
+        public Action OnPickUp { get; set; }
+        public Action OnRemove { get; set; }
     }
 
     public interface IUIItemPercent : IItem

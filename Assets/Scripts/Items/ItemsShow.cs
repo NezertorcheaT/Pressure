@@ -28,13 +28,16 @@ public class ItemsShow : MonoBehaviour
 
     public void AddItem(GameObject item)
     {
-        Items.Add(Instantiate(item.gameObject, spawnPos).GetComponent<IItem>());
+        var nowItem = Instantiate(item.gameObject, spawnPos).GetComponent<IItem>();
+        Items.Add(nowItem);
+        nowItem.OnPickUp?.Invoke();
         selection = Items.Count - 1;
         OnChange?.Invoke();
     }
 
     private void Pop(int i)
     {
+        Items[i].OnRemove?.Invoke();
         if (Items[i] != null)
             Destroy(Items[i].gameObject);
         Items.RemoveAt(i);
@@ -146,7 +149,7 @@ public class ItemsShow : MonoBehaviour
 
     private void UpdateSelector()
     {
-        OnSelectionChange.Invoke(Items[selection]);
+        OnSelectionChange?.Invoke(Items[selection]);
         for (var i = 0; i < Items.Count; i++)
         {
             if (Items[i] != null)

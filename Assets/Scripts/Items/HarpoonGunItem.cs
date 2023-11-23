@@ -5,15 +5,30 @@ namespace Items
 {
     public class HarpoonGunItem : MonoBehaviour, IUsableItem, IUIItemPercent
     {
-        public string ItemName => "Harpoon gun";
+        string IItem.ItemName => "Harpoon gun";
+
+        Action IItem.OnPickUp
+        {
+            get => _onPickUp;
+            set => _onPickUp = value;
+        }
+
+        Action IItem.OnRemove
+        {
+            get => _onRemove;
+            set => _onRemove = value;
+        }
+
         [SerializeField] private int ammo = 10;
         [SerializeField] private int maxAmmo = 10;
         [SerializeField] private Animator animator;
         [SerializeField] private Transform spawnPos;
         [SerializeField] private GameObject harpoonPrefab;
         private bool _canShoot = true;
+        private Action _onPickUp;
+        private Action _onRemove;
 
-        public void Use(Action removeThis)
+        void IUsableItem.Use(Action removeThis)
         {
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("shoot")) return;
             if (ammo <= 0)

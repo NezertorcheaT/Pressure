@@ -7,9 +7,23 @@ public class UpdateUsableItem : MonoBehaviour, IUpdateUsableItem, IUIItemPercent
     [SerializeField] private string itemName = "ogh";
     [SerializeField] private int maxUses = 1000;
     [SerializeField] private int uses = 0;
+    private Action _onPickUp;
+    private Action _onRemove;
     public string ItemName => itemName;
 
-    public void UpdateUse(Action removeThis)
+    Action IItem.OnPickUp
+    {
+        get => _onPickUp;
+        set => _onPickUp = value;
+    }
+
+    Action IItem.OnRemove
+    {
+        get => _onRemove;
+        set => _onRemove = value;
+    }
+
+    void IUpdateUsableItem.UpdateUse(Action removeThis)
     {
         uses++;
         percent = (float) uses / (float) maxUses;

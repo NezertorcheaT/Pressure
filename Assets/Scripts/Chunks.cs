@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Chunks : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject meshGeneratorPrefab;
-    [SerializeField]
-    private Vector3Int _size;
+    [SerializeField] private GameObject meshGeneratorPrefab;
+    [SerializeField] private Vector3Int _size;
     private List<GameObject> _chuncs;
 
     [ContextMenu("Update")]
@@ -37,7 +35,8 @@ public class Chunks : MonoBehaviour
                     VoxelData data = meshGenerator.GetComponent<VoxelData>();
                     data.UpdateBox();
 
-                    meshGenerator.transform.position = new Vector3(x * data.DataSize.x, y * data.DataSize.y, z * data.DataSize.z);
+                    meshGenerator.transform.position =
+                        new Vector3(x * data.DataSize.x, y * data.DataSize.y, z * data.DataSize.z);
 
                     data.UpdateBox();
                     generator.Update();
