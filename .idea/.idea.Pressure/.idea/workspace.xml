@@ -25,45 +25,11 @@
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimatedButtonTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimatedButtonTrigger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimationTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimationTrigger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AqualungDot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AqualungDot.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AqualungOxigen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AqualungOxigen.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMoveTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMoveTrigger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CollisionTeleport.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CollisionTeleport.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorMover.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorMover.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorText.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorText.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DebugButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DebugButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DragLineBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DragLineBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadingScreen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadingScreen.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NothingMouseTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NothingMouseTrigger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PressureCanvas.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PressureCanvas.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Radar.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Radar.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubmarineCamerasCanvas.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubmarineCamerasCanvas.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Trigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Trigger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TwoSidePushTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TwoSidePushTrigger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UISwitcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UISwitcher.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UISwitcherSliderName.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UISwitcherSliderName.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CursorMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CursorMover.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +64,7 @@
     <setting file="file://$PROJECT_DIR$/../../Editor/2021.3.17f1/Editor/Data/CGIncludes/AutoLight.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/ShaderLibrary/GlobalIllumination.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/105DA115-9EC9-496A-B931-0694C7B11DD2/10/adc0c86a/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/ControlsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.9/Runtime/ScriptableRendererData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F20F1EBC-8C81-4BDA-991D-5122AD38AB9B/4/DiscordRpcClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" root0="FORCE_HIGHLIGHTING" />
@@ -107,10 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Compute/MarchingCubes.compute" />
-        <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/GenTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Packages/Marching Cubes/Marching Cubes/Scripts/Chunk.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraMoveTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Radar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScreen.cs" />
@@ -155,9 +118,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chunks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ControlsInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/CursorMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IControls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PCControls.cs" />
       </list>
     </option>
   </component>
@@ -333,10 +300,10 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="708" y="342" key="#Notifications/0.0.1920.1034@0.0.1920.1034" timestamp="1693652678961" />
-    <state x="727" y="241" key="RiderGenerateDialog" timestamp="1700670555081">
+    <state x="727" y="241" key="RiderGenerateDialog" timestamp="1700842139405">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="727" y="241" key="RiderGenerateDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1700670555081" />
+    <state x="727" y="241" key="RiderGenerateDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1700842139405" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1700487912842">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
@@ -345,10 +312,10 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1700771075309" />
-    <state x="1061" y="180" width="701" height="801" key="find.popup" timestamp="1699716900747">
+    <state x="1061" y="180" width="701" height="801" key="find.popup" timestamp="1700846533036">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="1061" y="180" width="701" height="801" key="find.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1699716900747" />
+    <state x="1061" y="180" width="701" height="801" key="find.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1700846533036" />
     <state x="616" y="239" key="run.anything.popup" timestamp="1699727057562">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>

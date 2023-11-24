@@ -21,9 +21,14 @@ public class MouseIteractor : MonoBehaviour
     }
 
     private FirstPerson pl;
+    private IControls controls;
 
     [Inject]
-    private void Construct(FirstPerson pl) => this.pl = pl;
+    private void Construct(FirstPerson pl, IControls controls)
+    {
+        this.pl = pl;
+        this.controls = controls;
+    }
 
     private void Update()
     {
@@ -33,7 +38,7 @@ public class MouseIteractor : MonoBehaviour
             if (showTips)
             {
                 var ray = pl.CursorLocked
-                    ? Camera.main.ScreenPointToRay(Input.mousePosition)
+                    ? Camera.main.ScreenPointToRay(controls.MousePos)
                     : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
 
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
@@ -57,10 +62,10 @@ public class MouseIteractor : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(iteractionKey))
+            if (controls.UseKeyDown)
             {
                 var ray = pl.CursorLocked
-                    ? Camera.main.ScreenPointToRay(Input.mousePosition)
+                    ? Camera.main.ScreenPointToRay(controls.MousePos)
                     : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
 
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
@@ -77,10 +82,10 @@ public class MouseIteractor : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyUp(iteractionKey))
+            if (controls.UseKeyUp)
             {
                 var ray = pl.CursorLocked
-                    ? Camera.main.ScreenPointToRay(Input.mousePosition)
+                    ? Camera.main.ScreenPointToRay(controls.MousePos)
                     : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
 
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
@@ -98,12 +103,12 @@ public class MouseIteractor : MonoBehaviour
                 }
             }
 
-            if (!Input.GetKeyDown(iteractionKey) &&
-                !Input.GetKeyUp(iteractionKey) &&
-                Input.GetKey(iteractionKey))
+            if (!controls.UseKeyDown &&
+                !controls.UseKeyUp &&
+                controls.UseKey)
             {
                 var ray = pl.CursorLocked
-                    ? Camera.main.ScreenPointToRay(Input.mousePosition)
+                    ? Camera.main.ScreenPointToRay(controls.MousePos)
                     : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
 
                 Debug.DrawRay(ray.origin, ray.direction * distance, Color.yellow);

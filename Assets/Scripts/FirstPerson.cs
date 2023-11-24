@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Serialization;
+using Zenject;
 
 [RequireComponent(typeof(Rigidbody))]
 public class FirstPerson : MonoBehaviour
@@ -21,7 +22,13 @@ public class FirstPerson : MonoBehaviour
     private float _xRotaion = 0;
     private bool _isCursorFree = true;
 
+    private IControls controls;
+
+    [Inject]
+    private void Construct(IControls controls) => this.controls = controls;
+
     public bool CursorLocked => !(IsCursorFree && !IsWorking);
+
     public bool IsCursorFree
     {
         get => _isCursorFree;
@@ -34,7 +41,8 @@ public class FirstPerson : MonoBehaviour
         set
         {
             isWorking = value;
-            _xRotaion = Mathf.Clamp(cam.transform.localRotation.eulerAngles.x.NormalizeAngle(), -clampAngle, clampAngle);
+            _xRotaion = Mathf.Clamp(cam.transform.localRotation.eulerAngles.x.NormalizeAngle(), -clampAngle,
+                clampAngle);
         }
     }
 
@@ -53,7 +61,7 @@ public class FirstPerson : MonoBehaviour
 
     private void Update()
     {
-        if (IsWorking && isUnderWater && Input.GetKeyUp(KeyCode.F)) ToggleFlashLight();
+        if (IsWorking && isUnderWater && controls.FlashLightKey) ToggleFlashLight();
     }
 
     private void FixedUpdate()
@@ -67,15 +75,16 @@ public class FirstPerson : MonoBehaviour
         {
             _isCursorFree = false;
             _rb.velocity = Vector3.zero;
-            _xRotaion = Mathf.Clamp(cam.transform.localRotation.eulerAngles.x.NormalizeAngle(), -clampAngle, clampAngle);
+            _xRotaion = Mathf.Clamp(cam.transform.localRotation.eulerAngles.x.NormalizeAngle(), -clampAngle,
+                clampAngle);
             return;
         }
 
 
         _rb.constraints = RigidbodyConstraints.FreezeRotation;
-        var inputX = Input.GetAxisRaw("Horizontal");
-        var inputY = Input.GetAxisRaw("Vertical");
-        var inputJump = Input.GetKey(KeyCode.Space).x();
+        var inputX = controls.WASD.x;
+        var inputY = controls.WASD.y;
+        var inputJump = controls.JumpKey.x();
 
         Vector3 velocity;
         if (IsUnderWater)
@@ -88,9 +97,9 @@ public class FirstPerson : MonoBehaviour
             velocity = (transform.right * inputX + transform.forward * inputY).normalized * speed;
         }
 
-        var rotation = new Vector3(0, Input.GetAxisRaw("Mouse X"), 0) * sensitivity;
+        var rotation = new Vector3(0, controls.MouseAxis.x, 0) * sensitivity;
 
-        _xRotaion -= Input.GetAxisRaw("Mouse Y") * sensitivity;
+        _xRotaion -= controls.MouseAxis.y * sensitivity;
         _xRotaion = Mathf.Clamp(_xRotaion, -clampAngle, clampAngle);
         //_xRotaion = Mathf.Clamp(_xRotaion.NormalizeAngle(), -clampAngle, clampAngle);
         //_xRotaion = (_xRotaion).ModularClamp(-clampAngle, clampAngle);
@@ -120,11 +129,11 @@ public class FirstPerson : MonoBehaviour
 
     private void InternalLockUpdate()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (controls.EscKeyUp)
         {
             _isCursorFree = true;
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (controls.MouseButtonUp)
         {
             _isCursorFree = false;
         }

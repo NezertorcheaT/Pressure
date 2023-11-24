@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Items;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Zenject;
 
 public class ItemsShow : MonoBehaviour
 {
@@ -19,6 +20,12 @@ public class ItemsShow : MonoBehaviour
     public event Action<IItem> OnSelectionChange;
     public List<IItem> Items { get; private set; }
 
+    private IControls controls;
+    [Inject]
+    private void Construct(IControls controls)
+    {
+        this.controls = controls;
+    }
     public void AddItem(IItem item)
     {
         Items.Add(Instantiate(item.gameObject, spawnPos).GetComponent<IItem>());
@@ -114,9 +121,9 @@ public class ItemsShow : MonoBehaviour
         if (Items.Count == 1)
             return;
 
-        if (Input.GetAxis("Mouse ScrollWheel") != 0)
+        if (controls.MouseScrollWheel != 0)
         {
-            selection += +(int) (Input.GetAxis("Mouse ScrollWheel") * 10);
+            selection += +(int) (controls.MouseScrollWheel * 10);
 
             if (selection > Items.Count - 1) selection -= Items.Count;
             if (selection < 0) selection = Items.Count + selection;
@@ -124,9 +131,9 @@ public class ItemsShow : MonoBehaviour
             UpdateSelector();
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (controls.ItemUseKeyDown)
             UseItemOnSlot(selection);
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (controls.ItemUseKey)
             UseUpdateItemOnSlot(selection);
     }
 
