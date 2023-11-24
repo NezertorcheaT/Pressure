@@ -538,18 +538,8 @@
           <e p="MeshGenerations" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="AnimatedButtonTrigger.cs" t="Include" />
-          <e p="AnimationTrigger.cs" t="Include" />
-          <e p="AqualungDot.cs" t="Include" />
-          <e p="AqualungOxigen.cs" t="Include" />
           <e p="BackHachTeleportable.cs" t="Include" />
-          <e p="CameraMoveTrigger.cs" t="Include" />
           <e p="CameraPlane.cs" t="Include" />
-          <e p="CollisionTeleport.cs" t="Include" />
-          <e p="CursorMover.cs" t="Include" />
-          <e p="CursorText.cs" t="Include" />
-          <e p="DebugButton.cs" t="Include" />
-          <e p="DragLineBase.cs" t="Include" />
           <e p="DragRigidbody.cs" t="Include" />
           <e p="DRPC.cs" t="Include" />
           <e p="FirstPerson.cs" t="Include" />
@@ -580,23 +570,37 @@
             <e p="UpdateUsableItem.cs" t="Include" />
             <e p="UsableByItem.cs" t="Include" />
           </e>
-          <e p="LoadingScreen.cs" t="Include" />
           <e p="MouseIteractor.cs" t="Include" />
-          <e p="NothingMouseTrigger.cs" t="Include" />
-          <e p="PressureCanvas.cs" t="Include" />
-          <e p="Radar.cs" t="Include" />
           <e p="SubmarineCameras.cs" t="Include" />
-          <e p="SubmarineCamerasCanvas.cs" t="Include" />
           <e p="SubmarineHit.cs" t="Include" />
           <e p="SubmarineHitSounds.cs" t="Include" />
           <e p="SubmarineMovement.cs" t="Include" />
           <e p="Torpedo.cs" t="Include" />
           <e p="TorpedoChecker.cs" t="Include" />
           <e p="TorpedoSpawner.cs" t="Include" />
-          <e p="Trigger.cs" t="Include" />
-          <e p="TwoSidePushTrigger.cs" t="Include" />
-          <e p="UISwitcher.cs" t="Include" />
-          <e p="UISwitcherSliderName.cs" t="Include" />
+          <e p="Triggers" t="Include">
+            <e p="AnimatedButtonTrigger.cs" t="Include" />
+            <e p="AnimationTrigger.cs" t="Include" />
+            <e p="CameraMoveTrigger.cs" t="Include" />
+            <e p="CollisionTeleport.cs" t="Include" />
+            <e p="DebugButton.cs" t="Include" />
+            <e p="NothingMouseTrigger.cs" t="Include" />
+            <e p="Trigger.cs" t="Include" />
+            <e p="TwoSidePushTrigger.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="AqualungDot.cs" t="Include" />
+            <e p="AqualungOxigen.cs" t="Include" />
+            <e p="CursorMover.cs" t="Include" />
+            <e p="CursorText.cs" t="Include" />
+            <e p="DragLineBase.cs" t="Include" />
+            <e p="LoadingScreen.cs" t="Include" />
+            <e p="PressureCanvas.cs" t="Include" />
+            <e p="Radar.cs" t="Include" />
+            <e p="SubmarineCamerasCanvas.cs" t="Include" />
+            <e p="UISwitcher.cs" t="Include" />
+            <e p="UISwitcherSliderName.cs" t="Include" />
+          </e>
           <e p="Vec.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">

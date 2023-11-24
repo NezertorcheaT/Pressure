@@ -132,12 +132,11 @@ public class ItemsShow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (enbld)
-        {
-            transform.position = Vector3.Slerp(transform.position, itemsPos.position, Time.fixedDeltaTime * lerpSpeed);
-            transform.rotation =
-                Quaternion.Slerp(transform.rotation, itemsPos.rotation, Time.fixedDeltaTime * lerpSpeed);
-        }
+        if (!enbld) return;
+        
+        transform.position = Vector3.Slerp(transform.position, itemsPos.position, Time.fixedDeltaTime * lerpSpeed);
+        transform.rotation =
+            Quaternion.Slerp(transform.rotation, itemsPos.rotation, Time.fixedDeltaTime * lerpSpeed);
     }
 
     private void SetNormalPos()
