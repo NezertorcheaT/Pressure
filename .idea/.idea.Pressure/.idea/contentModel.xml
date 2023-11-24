@@ -545,7 +545,6 @@
           <e p="BackHachTeleportable.cs" t="Include" />
           <e p="CameraMoveTrigger.cs" t="Include" />
           <e p="CameraPlane.cs" t="Include" />
-          <e p="Chunks.cs" t="Include" />
           <e p="CollisionTeleport.cs" t="Include" />
           <e p="CursorMover.cs" t="Include" />
           <e p="CursorText.cs" t="Include" />
@@ -582,7 +581,6 @@
             <e p="UsableByItem.cs" t="Include" />
           </e>
           <e p="LoadingScreen.cs" t="Include" />
-          <e p="MeshGenerator.cs" t="Include" />
           <e p="MouseIteractor.cs" t="Include" />
           <e p="NothingMouseTrigger.cs" t="Include" />
           <e p="PressureCanvas.cs" t="Include" />
@@ -600,7 +598,6 @@
           <e p="UISwitcher.cs" t="Include" />
           <e p="UISwitcherSliderName.cs" t="Include" />
           <e p="Vec.cs" t="Include" />
-          <e p="VoxelData.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
           <e p="GPUVoronoiNoise2D.cginc" t="Include" />
