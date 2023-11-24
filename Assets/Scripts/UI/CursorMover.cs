@@ -1,3 +1,4 @@
+using Controls;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;

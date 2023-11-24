@@ -540,13 +540,17 @@
         <e p="Scripts" t="Include">
           <e p="BackHachTeleportable.cs" t="Include" />
           <e p="CameraPlane.cs" t="Include" />
+          <e p="Controls" t="Include">
+            <e p="IControls.cs" t="Include" />
+            <e p="PCControls.cs" t="Include" />
+            <e p="PS4Controls.cs" t="Include" />
+          </e>
           <e p="DragRigidbody.cs" t="Include" />
           <e p="DRPC.cs" t="Include" />
           <e p="FirstPerson.cs" t="Include" />
           <e p="GenerationBounds.cs" t="Include" />
           <e p="GenerationBuildable.cs" t="Include" />
           <e p="HarpoonBullet.cs" t="Include" />
-          <e p="IControls.cs" t="Include" />
           <e p="Installers" t="Include">
             <e p="BoidsInstaller.cs" t="Include" />
             <e p="ControlsInstaller.cs" t="Include" />
@@ -573,7 +577,6 @@
             <e p="UsableByItem.cs" t="Include" />
           </e>
           <e p="MouseIteractor.cs" t="Include" />
-          <e p="PCControls.cs" t="Include" />
           <e p="SubmarineCameras.cs" t="Include" />
           <e p="SubmarineHit.cs" t="Include" />
           <e p="SubmarineHitSounds.cs" t="Include" />
