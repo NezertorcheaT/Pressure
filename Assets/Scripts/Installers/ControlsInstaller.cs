@@ -18,11 +18,11 @@ namespace Installers
 
             serv = Input.GetJoystickNames().Contains("Wireless Controller") ? ps4 : pc;
 
-            if (!(serv is IControls controls))
-                throw new System.NullReferenceException();
+            if (serv is not IControls controls)
+                throw new System.NullReferenceException($"{serv.GetType().Name} does not realised from {nameof(IControls)}");
 
             Container.Bind<IControls>().FromInstance(controls).AsSingle().NonLazy();
-            Debug.Log("Controls Installed");
+            Debug.Log($"Controls ({controls.GetType().Name}) Installed");
         }
     }
 }
