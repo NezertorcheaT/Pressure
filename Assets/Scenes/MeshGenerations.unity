@@ -14337,22 +14337,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generations:
-  - process: 0
+  - process: 1
     count: 500
     prefab: {fileID: -217563284260400252, guid: 44a8c994c3e2b9c499b5f4fc57321d9f, type: 3}
     normalOffset: 0
     normalRotate: 1
-  - process: 0
+  - process: 1
     count: 500
     prefab: {fileID: 2549114025627095781, guid: 570c7e9aa02d8374e8052253312214a6, type: 3}
     normalOffset: 0
     normalRotate: 1
-  - process: 0
+  - process: 1
     count: 500
     prefab: {fileID: -5674086616591581984, guid: 605c7581adad1f246abc1eae1f7f81b0, type: 3}
     normalOffset: 0
     normalRotate: 1
-  - process: 0
+  - process: 1
     count: 1000
     prefab: {fileID: 7390583574570136846, guid: 0a312208b5ef3394abdcd106c2a39f78, type: 3}
     normalOffset: 0
@@ -14382,7 +14382,7 @@ MonoBehaviour:
     prefab: {fileID: 2549114025627095781, guid: fa089a92ac000794994c5637bce395bf, type: 3}
     normalOffset: 2
     normalRotate: 1
-  generate: 0
+  generate: 1
   allGenerationEnded:
     m_PersistentCalls:
       m_Calls:
