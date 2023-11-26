@@ -23,23 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Ore.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Ore.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/Boids/Scripts/Boid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/Boids/Scripts/Boid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Sack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Sack.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OreCristals.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OreCristals.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Torpedo Sea.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Torpedo Sea.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Items.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Items.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Ore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Ore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubmarineCameras.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SubmarineCameras.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +76,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableByItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineHit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineHitSounds.cs" />
@@ -141,6 +126,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/SackItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Packages/Boids/Scripts/Boid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineCameras.cs" />
       </list>
     </option>
   </component>
@@ -288,7 +274,7 @@
       <workItem from="1700995395955" duration="475000" />
       <workItem from="1701002340441" duration="4206000" />
       <workItem from="1701007042841" duration="168000" />
-      <workItem from="1701015795288" duration="6343000" />
+      <workItem from="1701015795288" duration="7427000" />
     </task>
     <servers />
   </component>

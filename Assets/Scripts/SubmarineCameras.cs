@@ -24,13 +24,11 @@ public class SubmarineCameras : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < cameras.Length; i++)
+        for (var i = 0; i < cameras.Length; i++)
         {
-            if (i != CurrentId)
-            {
-                cameras[i].gameObject.SetActive(false);
-                cameras[i].targetTexture = null;
-            }
+            if (i == CurrentId) continue;
+            cameras[i].gameObject.SetActive(false);
+            cameras[i].targetTexture = null;
         }
 
         cameras[CurrentId].gameObject.SetActive(true);
