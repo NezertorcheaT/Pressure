@@ -23,18 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controls/PCControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/PCControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controls/PS4Controls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/PS4Controls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DragRigidbody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DragRigidbody.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IControls.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/ControlsInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/ControlsInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PCControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/PCControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PCControls.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/PCControls.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CursorMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CursorMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,8 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ItemAdder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemsUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemsShow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
@@ -127,16 +126,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chunks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/CursorMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IControls.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PCControls.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controls/PCControls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ControlsInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DragRigidbody.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/CursorMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controls/PS4Controls.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controls/PCControls.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" />
       </list>
     </option>
   </component>
@@ -280,6 +281,7 @@
       <workItem from="1700668806810" duration="7581000" />
       <workItem from="1700767774561" duration="3510000" />
       <workItem from="1700840624644" duration="253000" />
+      <workItem from="1700984308040" duration="7404000" />
     </task>
     <servers />
   </component>
@@ -320,14 +322,14 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1034@0.0.1920.1034" timestamp="1700487912842" />
-    <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog" timestamp="1700771075309">
+    <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog" timestamp="1700991518851">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1700771075309" />
-    <state x="1061" y="180" width="701" height="801" key="find.popup" timestamp="1700846533036">
+    <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1700991518851" />
+    <state x="1061" y="180" width="701" height="801" key="find.popup" timestamp="1700987552159">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="1061" y="180" width="701" height="801" key="find.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1700846533036" />
+    <state x="1061" y="180" width="701" height="801" key="find.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1700987552159" />
     <state x="616" y="239" key="run.anything.popup" timestamp="1699727057562">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>

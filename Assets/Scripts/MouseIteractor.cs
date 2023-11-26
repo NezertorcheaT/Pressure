@@ -39,7 +39,7 @@ public class MouseIteractor : MonoBehaviour
             if (showTips)
             {
                 var ray = pl.CursorLocked
-                    ? Camera.main.ScreenPointToRay(controls.MousePos)
+                    ? Camera.main.ScreenPointToRay(controls.MousePos.Input)
                     : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
 
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
@@ -63,10 +63,10 @@ public class MouseIteractor : MonoBehaviour
                 }
             }
 
-            if (controls.UseKeyDown)
+            if (controls.UseKeyDown.Input)
             {
                 var ray = pl.CursorLocked
-                    ? Camera.main.ScreenPointToRay(controls.MousePos)
+                    ? Camera.main.ScreenPointToRay(controls.MousePos.Input)
                     : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
 
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
@@ -83,10 +83,10 @@ public class MouseIteractor : MonoBehaviour
                 }
             }
 
-            if (controls.UseKeyUp)
+            if (controls.UseKeyUp.Input)
             {
                 var ray = pl.CursorLocked
-                    ? Camera.main.ScreenPointToRay(controls.MousePos)
+                    ? Camera.main.ScreenPointToRay(controls.MousePos.Input)
                     : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
 
                 var hits = Physics.RaycastAll(ray, distance, iteractionLayer);
@@ -104,12 +104,12 @@ public class MouseIteractor : MonoBehaviour
                 }
             }
 
-            if (!controls.UseKeyDown &&
-                !controls.UseKeyUp &&
-                controls.UseKey)
+            if (!controls.UseKeyDown.Input &&
+                !controls.UseKeyUp.Input &&
+                controls.UseKey.Input)
             {
                 var ray = pl.CursorLocked
-                    ? Camera.main.ScreenPointToRay(controls.MousePos)
+                    ? Camera.main.ScreenPointToRay(controls.MousePos.Input)
                     : Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
 
                 Debug.DrawRay(ray.origin, ray.direction * distance, Color.yellow);

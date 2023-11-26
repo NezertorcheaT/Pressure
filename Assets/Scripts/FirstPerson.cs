@@ -62,7 +62,7 @@ public class FirstPerson : MonoBehaviour
 
     private void Update()
     {
-        if (IsWorking && isUnderWater && controls.FlashLightKey) ToggleFlashLight();
+        if (IsWorking && isUnderWater && controls.FlashLightKey.Input) ToggleFlashLight();
     }
 
     private void FixedUpdate()
@@ -83,9 +83,9 @@ public class FirstPerson : MonoBehaviour
 
 
         _rb.constraints = RigidbodyConstraints.FreezeRotation;
-        var inputX = controls.WASD.x;
-        var inputY = controls.WASD.y;
-        var inputJump = controls.JumpKey.x();
+        var inputX = controls.WASD.Input.x;
+        var inputY = controls.WASD.Input.y;
+        var inputJump = controls.JumpKey.Input.x();
 
         Vector3 velocity;
         if (IsUnderWater)
@@ -98,9 +98,9 @@ public class FirstPerson : MonoBehaviour
             velocity = (transform.right * inputX + transform.forward * inputY).normalized * speed;
         }
 
-        var rotation = new Vector3(0, controls.MouseAxis.x, 0) * sensitivity;
+        var rotation = new Vector3(0, controls.MouseAxis.Input.x, 0) * sensitivity;
 
-        _xRotaion -= controls.MouseAxis.y * sensitivity;
+        _xRotaion -= controls.MouseAxis.Input.y * sensitivity;
         _xRotaion = Mathf.Clamp(_xRotaion, -clampAngle, clampAngle);
         //_xRotaion = Mathf.Clamp(_xRotaion.NormalizeAngle(), -clampAngle, clampAngle);
         //_xRotaion = (_xRotaion).ModularClamp(-clampAngle, clampAngle);
@@ -130,11 +130,11 @@ public class FirstPerson : MonoBehaviour
 
     private void InternalLockUpdate()
     {
-        if (controls.EscKeyUp)
+        if (controls.EscKeyUp.Input)
         {
             _isCursorFree = true;
         }
-        else if (controls.MouseButtonUp)
+        else if (controls.MouseButtonUp.Input)
         {
             _isCursorFree = false;
         }

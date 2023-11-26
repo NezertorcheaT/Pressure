@@ -20,6 +20,6 @@ public class CursorMover : MonoBehaviour
         if (Cursor.lockState == CursorLockMode.Locked)
             cursorImage.transform.localPosition = new Vector3(0, 0, 0);
         else
-            cursorImage.transform.position = controls.MousePos;
+            cursorImage.transform.position = controls.MousePos.Input;
     }
 }

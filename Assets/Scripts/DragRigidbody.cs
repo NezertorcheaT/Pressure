@@ -1,7 +1,8 @@
+using Controls;
 using UnityEngine;
 using Zenject;
 
-// Script created by https://youtube.com/c/Boxply
+// Original script created by https://youtube.com/c/Boxply
 
 [RequireComponent(typeof(Rigidbody))]
 public class DragRigidbody : MonoBehaviour
@@ -14,26 +15,20 @@ public class DragRigidbody : MonoBehaviour
     private ConfigurableJoint _joint;
     private float _dragDepth;
     private Transform _hitTransform;
+    private IControls _controls;
 
     [Inject]
-    private void Construct(DragLine dragLine)
+    private void Construct(DragLine dragLine, IControls controls)
     {
-        this._dragLine = dragLine;
+        _dragLine = dragLine;
+        _controls = controls;
     }
 
-    private void OnMouseDown()
+    private void Update()
     {
-        HandleInputBegin(Input.mousePosition);
-    }
-
-    private void OnMouseUp()
-    {
-        HandleInputEnd();
-    }
-
-    private void OnMouseDrag()
-    {
-        HandleInput(Input.mousePosition);
+        if (_controls.UseKey.Input) HandleInput(_controls.MousePos.Input);
+        if (_controls.UseKeyDown.Input) HandleInputBegin(_controls.MousePos.Input);
+        if (_controls.UseKeyUp.Input) HandleInputEnd();
     }
 
     public void HandleInputBegin(Vector3 screenPosition)

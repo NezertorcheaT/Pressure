@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Controls;
 using Items;
@@ -22,11 +23,13 @@ public class ItemsShow : MonoBehaviour
     public List<IItem> Items { get; private set; }
 
     private IControls controls;
+
     [Inject]
     private void Construct(IControls controls)
     {
         this.controls = controls;
     }
+
     public void AddItem(IItem item)
     {
         Items.Add(Instantiate(item.gameObject, spawnPos).GetComponent<IItem>());
@@ -115,6 +118,7 @@ public class ItemsShow : MonoBehaviour
         OnChange += UpdateSelector;
         OnChange?.Invoke();
         SetNormalPos();
+        StartCoroutine(ScrollWheelUpdate());
     }
 
     private void Update()
@@ -122,9 +126,10 @@ public class ItemsShow : MonoBehaviour
         if (Items.Count == 1)
             return;
 
-        if (controls.MouseScrollWheel != 0)
+
+        if (controls.MouseScrollWheelDelay == 0 && controls.MouseScrollWheel.Input != 0)
         {
-            selection += +(int) (controls.MouseScrollWheel * 10);
+            selection += +(int) (controls.MouseScrollWheel.Input * 10);
 
             if (selection > Items.Count - 1) selection -= Items.Count;
             if (selection < 0) selection = Items.Count + selection;
@@ -132,16 +137,40 @@ public class ItemsShow : MonoBehaviour
             UpdateSelector();
         }
 
-        if (controls.ItemUseKeyDown)
+        if (controls.ItemUseKeyDown.Input)
             UseItemOnSlot(selection);
-        if (controls.ItemUseKey)
+        if (controls.ItemUseKey.Input)
             UseUpdateItemOnSlot(selection);
+    }
+
+    private IEnumerator ScrollWheelUpdate()
+    {
+        for (;;)
+        {
+            if (controls.MouseScrollWheelDelay == 0)
+            {
+                yield return new WaitForSeconds(1);
+                continue;
+            }
+
+            yield return new WaitForSeconds(controls.MouseScrollWheelDelay);
+            if (!isActiveAndEnabled) continue;
+            if (Items.Count == 1) continue;
+            if (controls.MouseScrollWheel.Input == 0) continue;
+
+            selection += +(int) (controls.MouseScrollWheel.Input * 10);
+
+            if (selection > Items.Count - 1) selection -= Items.Count;
+            if (selection < 0) selection = Items.Count + selection;
+
+            UpdateSelector();
+        }
     }
 
     private void FixedUpdate()
     {
         if (!enbld) return;
-        
+
         transform.position = Vector3.Slerp(transform.position, itemsPos.position, Time.fixedDeltaTime * lerpSpeed);
         transform.rotation =
             Quaternion.Slerp(transform.rotation, itemsPos.rotation, Time.fixedDeltaTime * lerpSpeed);
