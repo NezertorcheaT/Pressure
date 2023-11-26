@@ -5,21 +5,25 @@ Shader "Custom/Billboard"
         [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
         _BaseColor("Base Color", color) = (1,1,1,1)
         _Emmiter("Emmiter", Range(0,1)) = 0
+        _AlphaToMask("AlphaToMask", Range(0,1)) = 1
     }
     SubShader
     {
         Tags
         {
-            "RenderType"="Transparent" "Queue"="Transparent" "RenderPipeline" = "UniversalRenderPipeline"
+            "RenderType"="Transparent" "IgnoreProjector"="True" "Queue"="Transparent" "RenderPipeline" = "UniversalRenderPipeline"
         }
         LOD 100
         Blend SrcAlpha OneMinusSrcAlpha
         ColorMask RGB
         Lighting Off
+        
         Fog
         {
             Mode Off
         }
+
+        AlphaToMask [_AlphaToMask]
 
         Pass
         {
