@@ -571,7 +571,9 @@
             <e p="ItemsShow.cs" t="Include" />
             <e p="ItemsUI.cs" t="Include" />
             <e p="Ore.cs" t="Include" />
+            <e p="OreCristal.cs" t="Include" />
             <e p="PickaxeItem.cs" t="Include" />
+            <e p="SackItem.cs" t="Include" />
             <e p="UpdateUsableByItem.cs" t="Include" />
             <e p="UpdateUsableItem.cs" t="Include" />
             <e p="UsableByItem.cs" t="Include" />

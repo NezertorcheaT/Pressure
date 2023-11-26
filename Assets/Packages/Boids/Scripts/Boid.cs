@@ -85,6 +85,7 @@ public class Boid : MonoBehaviour
 
         cachedTransform.position += velocity * Time.deltaTime;
         cachedTransform.forward = dir;
+        
         position = cachedTransform.position;
         forward = dir;
     }

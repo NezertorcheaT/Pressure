@@ -14451,7 +14451,7 @@ MonoBehaviour:
     prefab: {fileID: 2549114025627095781, guid: fa089a92ac000794994c5637bce395bf, type: 3}
     normalOffset: 2
     normalRotate: 1
-  generate: 1
+  generate: 0
   allGenerationEnded:
     m_PersistentCalls:
       m_Calls:
@@ -16554,6 +16554,7 @@ MonoBehaviour:
   lerpSpeed: 20
   itemsPos: {fileID: 445580951}
   spawnPos: {fileID: 1050972475}
+  pl: {fileID: 156450639}
   enbld: 0
 --- !u!1001 &1200062328
 PrefabInstance:

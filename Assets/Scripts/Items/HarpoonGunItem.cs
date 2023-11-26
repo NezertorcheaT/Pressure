@@ -28,8 +28,9 @@ namespace Items
         private Action _onPickUp;
         private Action _onRemove;
 
-        void IUsableItem.Use(Action removeThis)
+        void IUsableItem.Use(Action removeThis, FirstPerson pl)
         {
+            if (!pl.IsUnderWater) return;
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("shoot")) return;
             if (ammo <= 0)
             {

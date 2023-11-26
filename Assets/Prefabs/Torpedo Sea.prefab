@@ -19,6 +19,14 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 1454128625, guid: 44dc54a11bfe46d4293bb40b44f06c43, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454128625, guid: 44dc54a11bfe46d4293bb40b44f06c43, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1454128627, guid: 44dc54a11bfe46d4293bb40b44f06c43, type: 3}
       propertyPath: lr
       value: 

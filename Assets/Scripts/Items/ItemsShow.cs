@@ -13,6 +13,7 @@ public class ItemsShow : MonoBehaviour
     [SerializeField] private float lerpSpeed = 1;
     [SerializeField] private Transform itemsPos;
     [SerializeField] private Transform spawnPos;
+    [SerializeField] private FirstPerson pl;
 
     [SerializeField, FormerlySerializedAs("Enabled")]
     private bool enbld;
@@ -69,7 +70,7 @@ public class ItemsShow : MonoBehaviour
         if ((Items[i] as IUpdateUsableItem) == null)
             return;
 
-        ((IUpdateUsableItem) Items[i]).UpdateUse(() => { Pop(i); });
+        ((IUpdateUsableItem) Items[i]).UpdateUse(() => { Pop(i); }, pl);
         OnChange?.Invoke();
     }
 
@@ -86,7 +87,7 @@ public class ItemsShow : MonoBehaviour
         if ((Items[i] as IUsableItem) == null)
             return;
 
-        ((IUsableItem) Items[i]).Use(() => { Pop(i); });
+        ((IUsableItem) Items[i]).Use(() => { Pop(i); }, pl);
         OnChange?.Invoke();
     }
 
