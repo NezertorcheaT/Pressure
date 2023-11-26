@@ -7,6 +7,7 @@ Shader "Custom/PSX Lit normal UV"
         _VertexJittering("Vertex Jittering", float) = 0.07
         _Emmiter("Emmiter", Range(0,1)) = 0
         _Cull("Cull", float) = 0
+        _AlphaToMask("AlphaToMask", float) = 1
         _Outline("Outline", Range(0,10)) = 0.1
         _OutlineColor("Outline Color", color) = (1,1,1,1)
     }
@@ -15,11 +16,19 @@ Shader "Custom/PSX Lit normal UV"
 
         Tags
         {
-            "RenderType"="Transparent" "Queue"="Transparent" "RenderPipeline" = "UniversalRenderPipeline"
+            "RenderType"="Transparent" "IgnoreProjector"="True" "Queue"="Transparent" "RenderPipeline" = "UniversalRenderPipeline"
         }
         LOD 100
         Blend SrcAlpha OneMinusSrcAlpha
+        ColorMask RGB
+        Lighting Off
+        
+        Fog
+        {
+            Mode Off
+        }
 
+        AlphaToMask [_AlphaToMask]
         Cull[_Cull]
 
         Pass
@@ -30,11 +39,6 @@ Shader "Custom/PSX Lit normal UV"
             #pragma vertex vert
             #pragma fragment frag
 
-            #pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
-            #pragma multi_compile _ _ADDITIONAL_LIGHT_SHADOWS
-            #pragma multi_compile _ _ADDITIONAL_LIGHT_CALCULATE_SHADOWS
-            #pragma multi_compile _ _SHADOWS_SOFT
-            #pragma multi_compile _ _MIXED_LIGHTING_SUBTRACTIVE
             #pragma shader_feature _ALPHATEST_ON
             #pragma shader_feature _RECEIVE_SHADOWS_ON
             #pragma shader_feature _ALPHAPREMULTIPLY_ON

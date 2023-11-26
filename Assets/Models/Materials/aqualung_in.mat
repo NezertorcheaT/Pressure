@@ -92,6 +92,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
+    - _AlphaToMask: 1
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -101,7 +102,7 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Emmiter: 1
+    - _Emmiter: 0
     - _EnvironmentReflections: 1
     - _Exposure: 1.5
     - _GlossMapScale: 0

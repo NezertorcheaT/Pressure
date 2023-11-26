@@ -610,6 +610,7 @@
           <e p="Vec.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
+          <e p="Billboard.shader" t="Include" />
           <e p="GPUVoronoiNoise2D.cginc" t="Include" />
           <e p="GPUVoronoiNoise3D.cginc" t="Include" />
           <e p="GPUVoronoiNoise4D.cginc" t="Include" />

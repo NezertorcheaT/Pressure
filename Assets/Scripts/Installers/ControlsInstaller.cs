@@ -16,10 +16,11 @@ namespace Installers
         {
             ScriptableObject serv;
 
-            logitech?.SetActive(false);
+            if (logitech) logitech.SetActive(false);
+
             if (Input.GetJoystickNames().Contains("Wireless Controller"))
             {
-                logitech?.SetActive(true);
+                if (logitech) logitech.SetActive(true);
                 serv = ps4;
             }
             else
