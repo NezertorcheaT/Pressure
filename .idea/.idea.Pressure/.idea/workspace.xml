@@ -25,18 +25,8 @@
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controls/PCControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/PCControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controls/PS4Controls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/PS4Controls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DragRigidbody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DragRigidbody.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/ControlsInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/ControlsInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MouseIteractor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CursorMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CursorMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +118,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IControls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PCControls.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ControlsInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DragRigidbody.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
@@ -138,6 +127,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controls/PCControls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ControlsInstaller.cs" />
       </list>
     </option>
   </component>
@@ -281,7 +271,8 @@
       <workItem from="1700668806810" duration="7581000" />
       <workItem from="1700767774561" duration="3510000" />
       <workItem from="1700840624644" duration="253000" />
-      <workItem from="1700984308040" duration="7404000" />
+      <workItem from="1700984308040" duration="8060000" />
+      <workItem from="1700995395955" duration="475000" />
     </task>
     <servers />
   </component>

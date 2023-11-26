@@ -10,12 +10,22 @@ namespace Installers
     {
         [SerializeField] private ScriptableObject pc;
         [SerializeField] private ScriptableObject ps4;
+        [SerializeField] private GameObject logitech;
 
         public override void InstallBindings()
         {
             ScriptableObject serv;
 
-            serv = Input.GetJoystickNames().Contains("Wireless Controller") ? ps4 : pc;
+            logitech?.SetActive(false);
+            if (Input.GetJoystickNames().Contains("Wireless Controller"))
+            {
+                logitech?.SetActive(true);
+                serv = ps4;
+            }
+            else
+            {
+                serv = pc;
+            }
 
             if (!(serv is IControls controls))
                 throw new System.NullReferenceException(
