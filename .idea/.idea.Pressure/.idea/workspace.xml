@@ -22,11 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubmarineCameras.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SubmarineCameras.cs" afterDir="false" />
-    </list>
+    <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -274,7 +270,7 @@
       <workItem from="1700995395955" duration="475000" />
       <workItem from="1701002340441" duration="4206000" />
       <workItem from="1701007042841" duration="168000" />
-      <workItem from="1701015795288" duration="7427000" />
+      <workItem from="1701015795288" duration="7779000" />
     </task>
     <servers />
   </component>
