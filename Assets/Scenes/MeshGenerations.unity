@@ -7202,7 +7202,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 301eac5d0af95c540b99857e77e63433, type: 2}
+  - {fileID: 2100000, guid: 77fb744ea226ea646b3f6394eb510b91, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10507,8 +10507,8 @@ MonoBehaviour:
   leftEngineLever: {fileID: 14420194}
   rightEngineLever: {fileID: 1770683998}
   yLever: {fileID: 395748811}
-  leftEngine: {fileID: 957721092}
-  rightEngine: {fileID: 2122850810}
+  leftEngine: {fileID: 0}
+  rightEngine: {fileID: 0}
   cabine: {fileID: 1351599699}
   ySpeed: 1
   engineSpeed: 1
@@ -11495,7 +11495,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1408632881}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -11594,7 +11594,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1408632881}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -13343,11 +13343,6 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7195388531942347339, guid: b712045934a326f42b3278fd22b27883, type: 3}
   m_PrefabInstance: {fileID: 955630279}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &957721092 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3916377247472339407, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
-  m_PrefabInstance: {fileID: 611048793}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &969493187 stripped
 GameObject:
@@ -16234,7 +16229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5725113451870132360, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.6643982
+      value: 0.353
       objectReference: {fileID: 0}
     - target: {fileID: 5725113451870132360, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16575,7 +16570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5725113451870132360, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.553589
+      value: -5.131
       objectReference: {fileID: 0}
     - target: {fileID: 5725113451870132360, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18958,11 +18953,6 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 024c9a8b32946084e8a2c7c3876f8695, type: 3}
   m_PrefabInstance: {fileID: 1936033324}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1408632881 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7258882875392569286, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
-  m_PrefabInstance: {fileID: 611048793}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1411939536
 GameObject:
   m_ObjectHideFlags: 0
@@ -20261,7 +20251,7 @@ PrefabInstance:
     - target: {fileID: -305091885687274788, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 301eac5d0af95c540b99857e77e63433, type: 2}
+      objectReference: {fileID: 2100000, guid: 77fb744ea226ea646b3f6394eb510b91, type: 2}
     - target: {fileID: -265208153340796341, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
       propertyPath: m_DynamicOccludee
       value: 0
@@ -24790,15 +24780,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5725113451870132360, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.055
+      value: 4.028
       objectReference: {fileID: 0}
     - target: {fileID: 5725113451870132360, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.10961914
+      value: -0.469
       objectReference: {fileID: 0}
     - target: {fileID: 5725113451870132360, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.6075745
+      value: -2.74
       objectReference: {fileID: 0}
     - target: {fileID: 5725113451870132360, guid: e6be1c5ce28304a42aafb2f18a35cbb6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26131,7 +26121,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 410031894}
-  m_RootOrder: 59
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
 --- !u!23 &1907302818
 MeshRenderer:
@@ -27779,7 +27769,7 @@ MonoBehaviour:
   isOutline: 0
   todoText: Go Up
   outlines:
-  - {fileID: 2100056887}
+  - {fileID: 0}
   outlineSize: 1.1
   target: {fileID: 1001708819}
   cam: {fileID: 1848938622}
@@ -28304,7 +28294,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1408632881}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -28934,11 +28924,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca34ca8b3f61f5d48b59074e3a5546c9, type: 3}
   m_PrefabInstance: {fileID: 986465734}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &2100056887 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4210965255248954314, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
-  m_PrefabInstance: {fileID: 1472367841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2104812334
 GameObject:
   m_ObjectHideFlags: 0
@@ -29113,11 +29098,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107925302}
   m_CullTransparentMesh: 1
---- !u!4 &2122850810 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 125294138718227734, guid: 065a7ce8e30f7f64c9033f38fe0da5bf, type: 3}
-  m_PrefabInstance: {fileID: 611048793}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2123253051
 GameObject:
   m_ObjectHideFlags: 0
