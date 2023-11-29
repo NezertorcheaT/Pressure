@@ -44,6 +44,9 @@ public class Radar : MonoBehaviour
 
     public void Toggle() => _enable = !_enable;
 
+    public void Off() => _enable = false;
+    public void On() => _enable = true;
+
     private void CalculateBounds()
     {
         _bounds = new Bounds();

@@ -607,6 +607,7 @@
             <e p="Radar.cs" t="Include" />
             <e p="SubmarineCamerasCanvas.cs" t="Include" />
             <e p="UISwitcher.cs" t="Include" />
+            <e p="UISwitcherSlide.cs" t="Include" />
             <e p="UISwitcherSliderName.cs" t="Include" />
           </e>
           <e p="Vec.cs" t="Include" />

@@ -11,9 +11,13 @@ public class UISwitcherSliderName : MonoBehaviour
     [SerializeField] private string left;
     [SerializeField] private string right;
 
-    private void UpdateText(int idx, string name)
+    private void UpdateText(int idx, GameObject current)
     {
-        text.text = left + name + right;
+        if (current.GetComponent<UISwitcherSlide>())
+        {
+            text.text = left + current.GetComponent<UISwitcherSlide>().ShowName + right;
+        }
+        text.text = left + current.name + right;
     }
 
     private void Subscribe() => switcher.OnSlideChanged += UpdateText;

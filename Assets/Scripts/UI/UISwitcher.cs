@@ -6,7 +6,7 @@ public class UISwitcher : MonoBehaviour
     [SerializeField] private MouseTrigger nextButton;
     [SerializeField] private MouseTrigger prevButton;
     [SerializeField] private Transform forSlides;
-    public event Action<int, string> OnSlideChanged;
+    public event Action<int, GameObject> OnSlideChanged;
 
     private void Start()
     {
@@ -35,14 +35,16 @@ public class UISwitcher : MonoBehaviour
         for (var i = 0; i < forSlides.childCount; i++)
         {
             forSlides.GetChild(i).gameObject.SetActive(false);
+            forSlides.GetChild(i).GetComponent<UISwitcherSlide>()?.onSlideDisable.Invoke();
         }
 
         var childIndex = (int) Mathf.Repeat(index, forSlides.childCount);
         var currentSlide = forSlides.GetChild(childIndex).gameObject;
 
         currentSlide.SetActive(true);
+        currentSlide.GetComponent<UISwitcherSlide>()?.onSlideEnable.Invoke();
 
-        OnSlideChanged?.Invoke(childIndex, currentSlide.name);
+        OnSlideChanged?.Invoke(childIndex, currentSlide);
     }
 
     private void Next()
