@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class UISwitcher : MonoBehaviour
 {
@@ -16,6 +18,8 @@ public class UISwitcher : MonoBehaviour
         prevButton.activationEvent.AddListener(Prev);
     }
 
+    private GameObject GetCurrent() => GetOnIndex(GetIndex());
+    private GameObject GetOnIndex(int i) => forSlides.GetChild(i).gameObject;
     private int GetIndex()
     {
         var n = 0;
@@ -39,7 +43,7 @@ public class UISwitcher : MonoBehaviour
         }
 
         var childIndex = (int) Mathf.Repeat(index, forSlides.childCount);
-        var currentSlide = forSlides.GetChild(childIndex).gameObject;
+        var currentSlide = GetOnIndex(childIndex);
 
         currentSlide.SetActive(true);
         currentSlide.GetComponent<UISwitcherSlide>()?.onSlideEnable.Invoke();
@@ -53,7 +57,8 @@ public class UISwitcher : MonoBehaviour
         if (forSlides.childCount == 1) ActivateOnIndex(0);
         else ActivateOnIndex(GetIndex() + 1);
     }
-
+    public void DisableActions() => GetCurrent().GetComponent<UISwitcherSlide>()?.onActionDisable.Invoke();
+    public void EnableActions() => GetCurrent().GetComponent<UISwitcherSlide>()?.onActionEnable.Invoke();
     private void Prev()
     {
         if (forSlides.childCount == 0) return;

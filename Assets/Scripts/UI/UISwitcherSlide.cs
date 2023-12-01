@@ -7,4 +7,6 @@ public class UISwitcherSlide : MonoBehaviour
     public string ShowName => _name;
     public UnityEvent onSlideEnable;
     public UnityEvent onSlideDisable;
+    public UnityEvent onActionDisable;
+    public UnityEvent onActionEnable;
 }
