@@ -1,4 +1,5 @@
 using System;
+using Items.Usables;
 using UnityEngine;
 
 namespace Items

@@ -570,14 +570,15 @@
             <e p="Items.cs" t="Include" />
             <e p="ItemsShow.cs" t="Include" />
             <e p="ItemsUI.cs" t="Include" />
-            <e p="Ore.cs" t="Include" />
-            <e p="OreCristal.cs" t="Include" />
             <e p="PickaxeItem.cs" t="Include" />
             <e p="SackItem.cs" t="Include" />
-            <e p="UpdateUsableByItem.cs" t="Include" />
             <e p="UpdateUsableItem.cs" t="Include" />
-            <e p="UsableByItem.cs" t="Include" />
-            <e p="Weldable.cs" t="Include" />
+            <e p="Usables" t="Include">
+              <e p="Ore.cs" t="Include" />
+              <e p="OreCristal.cs" t="Include" />
+              <e p="UsableByItem.cs" t="Include" />
+              <e p="Weldable.cs" t="Include" />
+            </e>
             <e p="WeldingMachineItem.cs" t="Include" />
           </e>
           <e p="MouseIteractor.cs" t="Include" />

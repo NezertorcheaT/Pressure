@@ -1,5 +1,6 @@
 ﻿using System;
 using Items;
+using Items.Usables;
 using UnityEngine;
 
 public class Item : MonoBehaviour, IUsableItem
