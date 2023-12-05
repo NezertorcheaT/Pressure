@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Zenject;
 
 namespace Items
 {
@@ -12,6 +13,7 @@ namespace Items
         private Action _onPickUp;
         private Action _onRemove;
         private int _capacity = 0;
+        private FirstPerson _pl;
         string IItem.ItemName => "Sack";
 
         Action IItem.OnPickUp
@@ -25,8 +27,13 @@ namespace Items
             get => _onRemove;
             set => _onRemove = value;
         }
+        [Inject]
+        private void Construct(FirstPerson pl)
+        {
+            _pl = pl;
+        }
 
-        void IUsableItem.Use(Action removeThis, FirstPerson pl)
+        void IUsableItem.Use(Action removeThis)
         {
             OreCristal trigger;
             var ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
@@ -45,7 +52,7 @@ namespace Items
             
             if (_capacity <= 0) return;
             
-            Instantiate(pl.IsUnderWater ? prefab : prefabIn, spawnPoint.position, Quaternion.identity, null);
+            Instantiate(_pl.IsUnderWater ? prefab : prefabIn, spawnPoint.position, Quaternion.identity, null);
             _capacity -= 1;
         }
 

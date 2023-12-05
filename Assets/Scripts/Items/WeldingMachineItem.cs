@@ -3,14 +3,12 @@ using UnityEngine;
 
 namespace Items
 {
-    public class PickaxeItem : MonoBehaviour, IUsableItem
+    public class WeldingMachineItem : MonoBehaviour, IUpdateUsableItem
     {
         [SerializeField] private Animator animator;
-        [SerializeField] private float mineWeight = 1;
-        [SerializeField] private float mineRadius = 1;
         private Action _onPickUp;
         private Action _onRemove;
-        string IItem.ItemName => "Pickaxe";
+        string IItem.ItemName => "Welding Machine";
 
         Action IItem.OnPickUp
         {
@@ -24,29 +22,30 @@ namespace Items
             set => _onRemove = value;
         }
 
-        void IUsableItem.Use(Action removeThis)
+        private void Update()
         {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
-                animator.Play("shoot");
+            animator.SetBool("doing", isUsing);
+        }
+
+        bool IUpdateUsableItem.Using
+        {
+            get => isUsing;
+            set => isUsing = value;
+        }
+
+        private bool isUsing = false;
+
+        void IUpdateUsableItem.UpdateUse(Action removeThis)
+        {
         }
 
         public void Hit()
         {
-            Ore trigger;
             var ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
             var hits = Physics.RaycastAll(ray, 5);
             foreach (var hit in hits)
             {
-                if (hit.collider.transform.parent)
-                {
-                    var terrain = hit.collider.transform.parent.GetComponent<GenTest>();
-                    if (terrain != null)
-                    {
-                        terrain.Terraform(hit.point, mineWeight, mineRadius);
-                    }
-                }
-
-                trigger = hit.collider.gameObject.GetComponent<Ore>();
+                var trigger = hit.collider.gameObject.GetComponent<Weldable>();
 
                 if (trigger == null) continue;
 

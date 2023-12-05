@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: f1d6fdf59d3f3734896998fd4df3cdaf
+guid: c3c38bd083e40d141b275ef69a090bd8
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: welding machine 1
-    second: {fileID: 2100000, guid: 9a145b0764ba72145933815ceeb206ce, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: welding machine 2
-    second: {fileID: 2100000, guid: 9a145b0764ba72145933815ceeb206ce, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

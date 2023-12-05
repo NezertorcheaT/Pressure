@@ -577,6 +577,8 @@
             <e p="UpdateUsableByItem.cs" t="Include" />
             <e p="UpdateUsableItem.cs" t="Include" />
             <e p="UsableByItem.cs" t="Include" />
+            <e p="Weldable.cs" t="Include" />
+            <e p="WeldingMachineItem.cs" t="Include" />
           </e>
           <e p="MouseIteractor.cs" t="Include" />
           <e p="SubmarineCameras.cs" t="Include" />

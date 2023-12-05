@@ -1,10 +1,17 @@
 ﻿using System;
 using UnityEngine;
+using Zenject;
 
 namespace Items
 {
     public class HarpoonGunItem : MonoBehaviour, IUsableItem, IUIItemPercent
     {
+        [Inject]
+        private void Construct(FirstPerson pl)
+        {
+            _pl = pl;
+        }
+
         string IItem.ItemName => "Harpoon gun";
 
         Action IItem.OnPickUp
@@ -27,10 +34,11 @@ namespace Items
         private bool _canShoot = true;
         private Action _onPickUp;
         private Action _onRemove;
+        private FirstPerson _pl;
 
-        void IUsableItem.Use(Action removeThis, FirstPerson pl)
+        void IUsableItem.Use(Action removeThis)
         {
-            if (!pl.IsUnderWater) return;
+            if (!_pl.IsUnderWater) return;
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("shoot")) return;
             if (ammo <= 0)
             {

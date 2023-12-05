@@ -5,12 +5,13 @@ namespace Items
 {
     public interface IUpdateUsableItem : IItem
     {
-        public void UpdateUse(Action removeThis, FirstPerson pl);
+        public void UpdateUse(Action removeThis);
+        public bool Using { get; set; }
     }
 
     public interface IUsableItem : IItem
     {
-        public void Use(Action removeThis, FirstPerson pl);
+        public void Use(Action removeThis);
     }
 
     public interface IItem

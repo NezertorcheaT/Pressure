@@ -13,7 +13,6 @@ public class ItemsShow : MonoBehaviour
     [SerializeField] private float lerpSpeed = 1;
     [SerializeField] private Transform itemsPos;
     [SerializeField] private Transform spawnPos;
-    [SerializeField] private FirstPerson pl;
 
     [SerializeField, FormerlySerializedAs("Enabled")]
     private bool enbld;
@@ -23,24 +22,26 @@ public class ItemsShow : MonoBehaviour
     public event Action<IItem> OnSelectionChange;
     public List<IItem> Items { get; private set; }
 
-    private IControls controls;
+    private IControls _controls;
+    private DiContainer _container;
 
     [Inject]
-    private void Construct(IControls controls)
+    private void Construct(IControls controls, DiContainer container)
     {
-        this.controls = controls;
+        _controls = controls;
+        _container = container;
     }
 
     public void AddItem(IItem item)
     {
-        Items.Add(Instantiate(item.gameObject, spawnPos).GetComponent<IItem>());
+        Items.Add(_container.InstantiatePrefab(item.gameObject, spawnPos).GetComponent<IItem>());
         selection = Items.Count - 1;
         OnChange?.Invoke();
     }
 
     public void AddItem(GameObject item)
     {
-        var nowItem = Instantiate(item.gameObject, spawnPos).GetComponent<IItem>();
+        var nowItem = _container.InstantiatePrefab(item.gameObject, spawnPos).GetComponent<IItem>();
         Items.Add(nowItem);
         nowItem.OnPickUp?.Invoke();
         selection = Items.Count - 1;
@@ -70,8 +71,16 @@ public class ItemsShow : MonoBehaviour
         if ((Items[i] as IUpdateUsableItem) == null)
             return;
 
-        ((IUpdateUsableItem) Items[i]).UpdateUse(() => { Pop(i); }, pl);
-        OnChange?.Invoke();
+        var itm = ((IUpdateUsableItem) Items[i]);
+
+        if (_controls.ItemUseKey.Input)
+        {
+            itm.Using = true;
+            itm.UpdateUse(() => { Pop(i); });
+            OnChange?.Invoke();
+        }
+        else
+            itm.Using = false;
     }
 
     public void UseItemOnSlot(int i)
@@ -87,7 +96,7 @@ public class ItemsShow : MonoBehaviour
         if ((Items[i] as IUsableItem) == null)
             return;
 
-        ((IUsableItem) Items[i]).Use(() => { Pop(i); }, pl);
+        ((IUsableItem) Items[i]).Use(() => { Pop(i); });
         OnChange?.Invoke();
     }
 
@@ -128,9 +137,9 @@ public class ItemsShow : MonoBehaviour
             return;
 
 
-        if (controls.MouseScrollWheelDelay == 0 && controls.MouseScrollWheel.Input != 0)
+        if (_controls.MouseScrollWheelDelay == 0 && _controls.MouseScrollWheel.Input != 0)
         {
-            selection += +(int) (controls.MouseScrollWheel.Input * 10);
+            selection += +(int) (_controls.MouseScrollWheel.Input * 10);
 
             if (selection > Items.Count - 1) selection -= Items.Count;
             if (selection < 0) selection = Items.Count + selection;
@@ -138,28 +147,27 @@ public class ItemsShow : MonoBehaviour
             UpdateSelector();
         }
 
-        if (controls.ItemUseKeyDown.Input)
+        if (_controls.ItemUseKeyDown.Input)
             UseItemOnSlot(selection);
-        if (controls.ItemUseKey.Input)
-            UseUpdateItemOnSlot(selection);
+        UseUpdateItemOnSlot(selection);
     }
 
     private IEnumerator ScrollWheelUpdate()
     {
         for (;;)
         {
-            if (controls.MouseScrollWheelDelay == 0)
+            if (_controls.MouseScrollWheelDelay == 0)
             {
                 yield return new WaitForSeconds(1);
                 continue;
             }
 
-            yield return new WaitForSeconds(controls.MouseScrollWheelDelay);
+            yield return new WaitForSeconds(_controls.MouseScrollWheelDelay);
             if (!isActiveAndEnabled) continue;
             if (Items.Count == 1) continue;
-            if (controls.MouseScrollWheel.Input == 0) continue;
+            if (_controls.MouseScrollWheel.Input == 0) continue;
 
-            selection += +(int) (controls.MouseScrollWheel.Input * 10);
+            selection += +(int) (_controls.MouseScrollWheel.Input * 10);
 
             if (selection > Items.Count - 1) selection -= Items.Count;
             if (selection < 0) selection = Items.Count + selection;

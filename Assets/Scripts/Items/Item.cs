@@ -21,7 +21,7 @@ public class Item : MonoBehaviour, IUsableItem
         set => _onRemove = value;
     }
 
-    void IUsableItem.Use(Action removeThis, FirstPerson pl)
+    void IUsableItem.Use(Action removeThis)
     {
         UsableByItem trigger;
         var ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));

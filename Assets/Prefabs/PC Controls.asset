@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useKey: 323
   itemUseKey: 101
-  flashLightKey: 102
   jumpKey: 32
+  flashLightKey: 102

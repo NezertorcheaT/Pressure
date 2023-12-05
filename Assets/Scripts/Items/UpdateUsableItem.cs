@@ -23,7 +23,9 @@ public class UpdateUsableItem : MonoBehaviour, IUpdateUsableItem, IUIItemPercent
         set => _onRemove = value;
     }
 
-    void IUpdateUsableItem.UpdateUse(Action removeThis, FirstPerson pl)
+    bool IUpdateUsableItem.Using { get; set; }
+
+    void IUpdateUsableItem.UpdateUse(Action removeThis)
     {
         uses++;
         percent = (float) uses / (float) maxUses;
