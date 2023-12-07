@@ -3802,7 +3802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &240695857
 Transform:
   m_ObjectHideFlags: 0
@@ -12167,6 +12167,7 @@ GameObject:
   - component: {fileID: 771293708}
   - component: {fileID: 771293709}
   - component: {fileID: 771293710}
+  - component: {fileID: 771293711}
   m_Layer: 6
   m_Name: Submarine
   m_TagString: Submarine
@@ -12315,6 +12316,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inSound: {fileID: 524224243}
   outSound: {fileID: 303481186}
+--- !u!114 &771293711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771293701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad10d9fbdec0f94ab7cb26431dc2359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalSubmarine: {fileID: 771293704}
+  roomSubmarine: {fileID: 2104812336}
+  weldableOutPrefab: {fileID: 4944826611481822203, guid: 942c398cef48a6344ac326891d1692dc, type: 3}
+  weldableInPrefab: {fileID: 4944826611481822203, guid: 942c398cef48a6344ac326891d1692dc, type: 3}
 --- !u!1001 &775424562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17110,7 +17127,6 @@ GameObject:
   - component: {fileID: 1049812834}
   - component: {fileID: 1049812835}
   - component: {fileID: 1049812836}
-  - component: {fileID: 1049812838}
   - component: {fileID: 1049812837}
   - component: {fileID: 1049812839}
   - component: {fileID: 1049812840}
@@ -17170,7 +17186,6 @@ MonoBehaviour:
   - {fileID: 1049812837}
   - {fileID: 1049812836}
   - {fileID: 1049812833}
-  - {fileID: 1049812838}
   - {fileID: 1049812834}
   _installerPrefabs: []
   _findSiblingMonoInstallers: 0
@@ -17235,6 +17250,7 @@ MonoBehaviour:
   submarineMovement: {fileID: 771293706}
   radar: {fileID: 771293708}
   submarineCameras: {fileID: 1384425187}
+  hit: {fileID: 771293709}
 --- !u!114 &1049812834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17385,19 +17401,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!114 &1049812838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049812828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe09a7e0b5214f5e8e65e77b92bdba4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hit: {fileID: 771293709}
 --- !u!114 &1049812839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23619,6 +23622,7 @@ GameObject:
   - component: {fileID: 1416534087}
   - component: {fileID: 1416534086}
   - component: {fileID: 1416534085}
+  - component: {fileID: 1416534090}
   m_Layer: 6
   m_Name: Colliders
   m_TagString: Submarine
@@ -23726,6 +23730,20 @@ CapsuleCollider:
   m_Height: 24.130157
   m_Direction: 2
   m_Center: {x: 0, y: 3.27, z: -1.1173611}
+--- !u!136 &1416534090
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416534082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.98637533
+  m_Height: 5.8560867
+  m_Direction: 2
+  m_Center: {x: -2.480072, y: -1.8084807, z: -10.562908}
 --- !u!1 &1426849176
 GameObject:
   m_ObjectHideFlags: 0

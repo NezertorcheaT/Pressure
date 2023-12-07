@@ -25,20 +25,16 @@
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Ore.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Ore.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/OreCristal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/OreCristal.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/SackItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/SackItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableByItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableByItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/UsableByItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/UsableByItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Weldable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Weldable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/WeldingMachineItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/WeldingMachineItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/OnHitInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/OnHitInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Usables/Weldable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Usables/Weldable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubmarineHit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SubmarineHit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubmarineHitSounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SubmarineHitSounds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +45,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@8495d61ceb/Runtime/Internal/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7B2A272E-5121-4E2F-91BB-C4FB4F28EFF8/b5/b0cf92d8/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7B2A272E-5121-4E2F-91BB-C4FB4F28EFF8/20/deda2d6f/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/BoidsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
@@ -90,11 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/TerrainGenerationInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/DragLineInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/BoidsInstaller.cs" />
-        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F20F1EBC-8C81-4BDA-991D-5122AD38AB9B/2B/RichPresence.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/Toon.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimatedButtonTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CursorText.cs" />
@@ -112,7 +104,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CursorMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controls/PS4Controls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controls/PCControls.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ControlsInstaller.cs" />
@@ -140,6 +131,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Usables/Ore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Usables/OreCristal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Usables/UsableByItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/OnHitInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineHitSounds.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineHit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineDamaging.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Usables/Weldable.cs" />
       </list>
     </option>
@@ -291,7 +288,8 @@
       <workItem from="1701015795288" duration="7779000" />
       <workItem from="1701288997644" duration="1583000" />
       <workItem from="1701791736188" duration="5930000" />
-      <workItem from="1701802085227" duration="524000" />
+      <workItem from="1701802085227" duration="2205000" />
+      <workItem from="1701974961185" duration="6038000" />
     </task>
     <servers />
   </component>

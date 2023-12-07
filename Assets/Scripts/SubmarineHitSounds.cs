@@ -9,21 +9,21 @@ public class SubmarineHitSounds : MonoBehaviour
     private SubmarineHit _onHit;
 
     [Inject]
-    private void Construct(SubmarineHit hit)
+    private void Construct(Submarine subm)
     {
-        _onHit = hit;
+        _onHit = subm.SubmarineHit;
     }
 
     private void Start()
     {
-        _onHit.OnHit += pos =>
+        _onHit.OnHit += cp =>
         {
-            inSound.transform.localPosition = pos;
+            inSound.transform.localPosition = cp.point;
             inSound.Play();
         };
-        _onHit.OnHit += pos =>
+        _onHit.OnHit += cp =>
         {
-            outSound.transform.localPosition = pos;
+            outSound.transform.localPosition = cp.point;
             outSound.Play();
         };
     }
