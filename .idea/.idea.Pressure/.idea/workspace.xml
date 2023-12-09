@@ -23,22 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OreCristal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OreCristal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OreCristalIn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OreCristalIn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeldingMachineDoing.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeldingMachineDoing.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeldingMachineIdle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeldingMachineIdle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Welding Machine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Welding Machine.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OreCristals.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OreCristals.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Torpedo Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Torpedo Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/GenerationBounds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationBounds.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/GenerationBounds.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationBuildable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/GenerationBuildable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationBuildable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/GenerationBuildable.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/SackItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/SackItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Usables/Ore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Usables/Ore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Triggers/CollisionTeleport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Triggers/CollisionTeleport.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Radar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Radar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/WeldingMachineItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/WeldingMachineItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +108,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Weldable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Items.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/WeldingMachineItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Usables/OreCristal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Usables/UsableByItem.cs" />
@@ -134,7 +128,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/Placers/RayCastGenerationPlacer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/Placers/PseudoVolumeGenerationPlacer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/HarpoonGunItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Usables/Ore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/SackItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DragRigidbody.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Triggers/CollisionTeleport.cs" />
@@ -142,6 +135,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Radar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SubmarineInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Usables/Ore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/WeldingMachineItem.cs" />
       </list>
     </option>
   </component>
@@ -294,7 +289,8 @@
       <workItem from="1701791736188" duration="5930000" />
       <workItem from="1701802085227" duration="2205000" />
       <workItem from="1701974961185" duration="6038000" />
-      <workItem from="1702108376154" duration="8360000" />
+      <workItem from="1702108376154" duration="8960000" />
+      <workItem from="1702147787794" duration="1348000" />
     </task>
     <servers />
   </component>

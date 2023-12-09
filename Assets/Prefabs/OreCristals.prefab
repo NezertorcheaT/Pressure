@@ -94,6 +94,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   orePrefab: {fileID: 8424964460720388799, guid: 8138731516723fd4583ab7ef4cc46552, type: 3}
+  particlePrefab: {fileID: 3043576850284768434, guid: 86eb0119a17e0d74cac4c30fc6bc4317, type: 3}
   maxOre: 8
 --- !u!1001 &6645837676978878836
 PrefabInstance:

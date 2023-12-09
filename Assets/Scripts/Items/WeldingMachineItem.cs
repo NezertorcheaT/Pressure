@@ -7,6 +7,7 @@ namespace Items
     public class WeldingMachineItem : MonoBehaviour, IUpdateUsableItem
     {
         [SerializeField] private Animator animator;
+        [SerializeField] private ParticleSystem ps;
         private Action _onPickUp;
         private Action _onRemove;
         string IItem.ItemName => "Welding Machine";
@@ -40,6 +41,14 @@ namespace Items
         {
         }
 
+        public void ParticlesPlay()
+        {
+            ps.Play();
+        }
+        public void ParticlesStop()
+        {
+            ps.Stop();
+        }
         public void Hit()
         {
             var ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
