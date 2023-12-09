@@ -1,5 +1,7 @@
 using System;
 using System.Threading.Tasks;
+using Generation;
+using Generation.Placers;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
@@ -15,15 +17,27 @@ namespace Installers
         [Space] [SerializeField] private GenerationBuildable[] generations;
         [SerializeField] private bool generate = true;
         [Space] [SerializeField] private UnityEvent allGenerationEnded;
-        private int _endedChunks = 0;
 
         private System.Diagnostics.Stopwatch ObjectPlacementTimer;
         private GenTest _terrain;
+        private int _iter;
 
         public override void InstallBindings()
         {
             _terrain = FindObjectOfType<GenTest>();
             PlaceObjects();
+        }
+
+        private async Task PlaceBuildable(GenerationBuildable buildable)
+        {
+            for (var i = 0; i < buildable.count; i++)
+            {
+                await ((IGenerationPlacer) buildable.placer).PlaceRandom(buildable, ImmerseTerrain,
+                    Container.InstantiatePrefab,
+                    Mathf.Sqrt(232.4562f * 232.4562f + 1.970166f * 1.970166f + 16.56459f * 16.56459f) * 2f);
+                _iter++;
+                OnObjectPlaced?.Invoke(ObjectPlacementTimer.ElapsedMilliseconds, _iter);
+            }
         }
 
         private async Task PlaceObjects()
@@ -39,17 +53,19 @@ namespace Installers
             ObjectPlacementTimer.Start();
             if (generate)
             {
-                var iter = 0;
                 foreach (var buildable in generations)
                 {
                     if (!buildable.process) continue;
-                    for (var i = 0; i < buildable.count; i++)
-                    {
-                        iter++;
-                        await PlaceRandom(buildable);
-                        OnObjectPlaced(ObjectPlacementTimer.ElapsedMilliseconds, iter);
-                    }
+                    PlaceBuildable(buildable);
                 }
+            }
+
+            for (;;)
+            {
+                if (_iter != MaxIterations)
+                    await Task.Delay(500);
+                else
+                    break;
             }
 
             allGenerationEnded.Invoke();
@@ -65,43 +81,6 @@ namespace Installers
             {
                 _terrain.Terraform(dot.Position, 15, dot.Diameter * 0.75f);
             }
-        }
-
-        private async Task PlaceRandom(GenerationBuildable buildable)
-        {
-            await Task.Delay(1);
-
-            var boundsSize = _terrain.boundsSize;
-            RaycastHit rh;
-            while (true)
-            {
-                var hit = Physics.RaycastAll(
-                    new Vector3(
-                        Random.Range(-boundsSize, boundsSize),
-                        Random.Range(-boundsSize, boundsSize),
-                        Random.Range(-boundsSize, boundsSize)
-                    ),
-                    new Vector3(
-                        Random.Range(-1.0f, 1.0f),
-                        Random.Range(-1.0f, 1.0f),
-                        Random.Range(-1.0f, 1.0f)
-                    ).normalized,
-                    boundsSize
-                );
-
-                var ind = Random.Range(1, hit.Length - 2);
-                if (hit.Length <= 3 || hit[ind].distance <= 0.1f ||
-                    hit[ind].collider.gameObject.CompareTag("Submarine")) continue;
-
-                rh = hit[ind];
-                break;
-            }
-
-            var gb = Container.InstantiatePrefab(buildable.prefab, rh.point + rh.normal * buildable.normalOffset,
-                buildable.normalRotate ? Quaternion.LookRotation(rh.normal) : Quaternion.identity,
-                null).GetComponent<GenerationBounds>();
-
-            if (buildable.prefab.Immerse) ImmerseTerrain(gb);
         }
     }
 }

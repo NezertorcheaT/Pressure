@@ -21,7 +21,13 @@ public class CollisionTeleport : MonoBehaviour
         {
             collision.transform.position = pos.position;
             collision.transform.rotation = pos.rotation;
+            
             var dr = collision.gameObject.GetComponent<DragRigidbody>();
+            if (dr != null)
+                dr.HandleInputEnd();
+            
+            if (!collision.transform.parent) return;
+            dr = collision.transform.parent.GetComponent<DragRigidbody>();
             if (dr != null)
                 dr.HandleInputEnd();
         }

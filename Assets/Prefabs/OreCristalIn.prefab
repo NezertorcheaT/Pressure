@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 5796464397985219985, guid: 8138731516723fd4583ab7ef4cc46552, type: 3}
+      propertyPath: force
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8424964460720388792, guid: 8138731516723fd4583ab7ef4cc46552, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -67,5 +71,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OreCristalIn
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2808870725287258242, guid: 8138731516723fd4583ab7ef4cc46552, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8138731516723fd4583ab7ef4cc46552, type: 3}

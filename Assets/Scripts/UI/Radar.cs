@@ -28,7 +28,7 @@ public class Radar : MonoBehaviour
 
     private Bounds _bounds;
     private float _angle;
-    private bool _enable;
+    private bool _enable = false;
     private Texture2D _texture;
 
     private void Start()
@@ -66,7 +66,7 @@ public class Radar : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!_enable) return;
+        if (!_enable) return;
         _angle = Mathf.Repeat(_angle + speed, 360);
         arrow.localRotation = Quaternion.Euler(0, 0, -_angle + 90);
         boat.localRotation = Quaternion.Euler(0, 0, origin.rotation.eulerAngles.y);

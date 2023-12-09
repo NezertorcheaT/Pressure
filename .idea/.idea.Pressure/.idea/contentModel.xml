@@ -548,8 +548,14 @@
           <e p="DragRigidbody.cs" t="Include" />
           <e p="DRPC.cs" t="Include" />
           <e p="FirstPerson.cs" t="Include" />
-          <e p="GenerationBounds.cs" t="Include" />
-          <e p="GenerationBuildable.cs" t="Include" />
+          <e p="Generation" t="Include">
+            <e p="GenerationBounds.cs" t="Include" />
+            <e p="GenerationBuildable.cs" t="Include" />
+            <e p="Placers" t="Include">
+              <e p="IGenerationPlacer.cs" t="Include" />
+              <e p="RayCastGenerationPlacer.cs" t="Include" />
+            </e>
+          </e>
           <e p="HarpoonBullet.cs" t="Include" />
           <e p="Installers" t="Include">
             <e p="BoidsInstaller.cs" t="Include" />

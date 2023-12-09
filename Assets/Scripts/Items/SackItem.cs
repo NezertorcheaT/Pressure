@@ -15,6 +15,7 @@ namespace Items
         private Action _onRemove;
         private int _capacity = 0;
         private FirstPerson _pl;
+        private DiContainer _container;
         string IItem.ItemName => "Sack";
 
         Action IItem.OnPickUp
@@ -28,18 +29,20 @@ namespace Items
             get => _onRemove;
             set => _onRemove = value;
         }
+
         [Inject]
-        private void Construct(FirstPerson pl)
+        private void Construct(FirstPerson pl, DiContainer container)
         {
             _pl = pl;
+            _container = container;
         }
 
         void IUsableItem.Use(Action removeThis)
         {
             OreCristal trigger;
             var ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
-            var hits = Physics.RaycastAll(ray, 5, 5);
-            
+            var hits = Physics.RaycastAll(ray, 5);
+
             foreach (var hit in hits)
             {
                 trigger = hit.collider.gameObject.GetComponent<OreCristal>();
@@ -50,10 +53,11 @@ namespace Items
                 _capacity += 1;
                 return;
             }
-            
+
             if (_capacity <= 0) return;
-            
-            Instantiate(_pl.IsUnderWater ? prefab : prefabIn, spawnPoint.position, Quaternion.identity, null);
+
+            _container.InstantiatePrefab(_pl.IsUnderWater ? prefab : prefabIn, spawnPoint.position, Quaternion.identity,
+                null);
             _capacity -= 1;
         }
 
