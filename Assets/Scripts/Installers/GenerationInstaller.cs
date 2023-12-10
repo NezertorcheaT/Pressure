@@ -59,6 +59,10 @@ namespace Installers
                     PlaceBuildable(buildable);
                 }
             }
+            else
+            {
+                _iter = MaxIterations;
+            }
 
             for (;;)
             {

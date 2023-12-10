@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028441, g: 0.22571439, b: 0.30692324, a: 1}
+  m_IndirectSpecularColor: {r: 0.1802849, g: 0.22571512, b: 0.30692422, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1252,21 +1252,21 @@ Camera:
   m_GameObject: {fileID: 398042414}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 16.82338
+  m_FocalLength: 20.78461
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 0.25
   far clip plane: 150
   field of view: 71
   orthographic: 0
@@ -1274,7 +1274,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1355,6 +1355,7 @@ GameObject:
   - component: {fileID: 575415010}
   - component: {fileID: 575415009}
   - component: {fileID: 575415008}
+  - component: {fileID: 575415011}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1399,7 +1400,6 @@ MonoBehaviour:
   camOrigin: {fileID: 814520081}
   isWorking: 1
   isUnderWater: 0
-  flashLight: {fileID: 794728971}
 --- !u!54 &575415009
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1430,6 +1430,20 @@ CapsuleCollider:
   m_Height: 2.1190276
   m_Direction: 1
   m_Center: {x: 0, y: 0.059513807, z: 0}
+--- !u!114 &575415011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575415006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0326cd5d476647d6afab8cae7f8c6d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashLight: {fileID: 794728971}
+  lightEnabled: 1
 --- !u!1 &704683819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,7 +1755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &794728969
 Transform:
   m_ObjectHideFlags: 0
@@ -1750,7 +1764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794728968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.453, y: 0.425, z: 0.582}
+  m_LocalPosition: {x: 0.172, y: -0.427, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1771,7 +1785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: -1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -1796,12 +1810,12 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
-    m_Resolution: -1
+    m_Resolution: 128
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -2029,7 +2043,7 @@ GameObject:
   - component: {fileID: 1065659860}
   - component: {fileID: 1065659859}
   m_Layer: 0
-  m_Name: "\u042B\u043B\u043D\u0438\u0449\u0447"
+  m_Name: Skybox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3592,7 +3606,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -3676,7 +3690,7 @@ MonoBehaviour:
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieSize: {x: 10, y: 10}
   m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1969232609
 GameObject:
@@ -4166,6 +4180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pc: {fileID: 11400000, guid: d437df9351cedda4d81eeefb68e2f78f, type: 2}
   ps4: {fileID: 11400000, guid: 2328a60b909dc3e44b3734edf4d62ca7, type: 2}
+  logitech: {fileID: 0}
 --- !u!1 &1990819664
 GameObject:
   m_ObjectHideFlags: 0

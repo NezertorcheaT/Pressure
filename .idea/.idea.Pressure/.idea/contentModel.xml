@@ -355,6 +355,20 @@
             </e>
             <e p="Settings" t="Include" />
           </e>
+          <e p="Cathoder" t="Include">
+            <e p="Assets" t="Include">
+              <e p="CRT Mesh" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+            <e p="Samples" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="Cathoder.shader" t="Include" />
+              <e p="CathoderBasic.shader" t="Include" />
+              <e p="CathoderSimple.shader" t="Include" />
+              <e p="StaticTexture.shader" t="Include" />
+            </e>
+            <e p="Shadow Masks" t="Include" />
+          </e>
           <e p="DiscordRPC" t="Include">
             <e p="Editor" t="Include">
               <e p="CharacterLimitAttributeDrawer.cs" t="Include" />
@@ -548,6 +562,7 @@
           <e p="DragRigidbody.cs" t="Include" />
           <e p="DRPC.cs" t="Include" />
           <e p="FirstPerson.cs" t="Include" />
+          <e p="FlashLight.cs" t="Include" />
           <e p="Generation" t="Include">
             <e p="GenerationBounds.cs" t="Include" />
             <e p="GenerationBuildable.cs" t="Include" />

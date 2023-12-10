@@ -16,9 +16,6 @@ public class FirstPerson : MonoBehaviour
     [SerializeField] private bool isWorking = false;
     [SerializeField] private bool isUnderWater = false;
 
-    [FormerlySerializedAs("FlashLight")] [SerializeField]
-    private Light flashLight;
-
     private Rigidbody _rb;
     private float _xRotaion = 0;
     private bool _isCursorFree = true;
@@ -58,11 +55,6 @@ public class FirstPerson : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
-    }
-
-    private void Update()
-    {
-        if (IsWorking && isUnderWater && controls.FlashLightKey.Input) ToggleFlashLight();
     }
 
     private void FixedUpdate()
@@ -117,10 +109,6 @@ public class FirstPerson : MonoBehaviour
             cam.transform.localRotation = Quaternion.Euler(_xRotaion, 0, 0);
         }
     }
-
-    public void ToggleFlashLight() => flashLight.gameObject.SetActive(!flashLight.gameObject.activeSelf);
-    public void OffFlashLight() => flashLight.gameObject.SetActive(false);
-    public void OnFlashLight() => flashLight.gameObject.SetActive(true);
 
     public void Teleport(Transform target)
     {
