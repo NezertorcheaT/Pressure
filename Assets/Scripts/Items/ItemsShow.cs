@@ -14,12 +14,27 @@ public class ItemsShow : MonoBehaviour
     [SerializeField] private Transform itemsPos;
     [SerializeField] private Transform spawnPos;
 
+    private bool enbld
+    {
+        get => _enbld;
+        set
+        {
+            _enbld = value;
+            if (value)
+                OnEnabledItem?.Invoke(Items[selection]);
+            else
+                OnDisabledItem?.Invoke(Items[selection]);
+        }
+    }
+
     [SerializeField, FormerlySerializedAs("Enabled")]
-    private bool enbld;
+    private bool _enbld;
 
     public bool IsWork => enbld;
     public event Action OnChange;
     public event Action<IItem> OnSelectionChange;
+    public event Action<IItem> OnEnabledItem;
+    public event Action<IItem> OnDisabledItem;
     public List<IItem> Items { get; private set; }
 
     private IControls _controls;
@@ -102,7 +117,7 @@ public class ItemsShow : MonoBehaviour
 
     public void ToggleEnabled()
     {
-        enbld.Toggle();
+        enbld = !enbld;
         UpdateSelector();
         SetNormalPos();
     }
@@ -133,8 +148,8 @@ public class ItemsShow : MonoBehaviour
 
     private void Update()
     {
-        if (Items.Count == 1)
-            return;
+        if (!enbld) return;
+        if (Items.Count == 1) return;
 
 
         if (_controls.MouseScrollWheelDelay == 0 && _controls.MouseScrollWheel.Input != 0)

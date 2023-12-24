@@ -23,21 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/target.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/target.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lamp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lamp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/LensDirt-28.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/LensDirt-28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/LensDirt-28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/LensDirt-28.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/dust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/dust.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controls/PCControls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ControlsInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/Billboard.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/OreCristal.cs" />
@@ -111,7 +100,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Weldable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Items.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/UpdateUsableItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Usables/OreCristal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Usables/UsableByItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controls/IControls.cs" />
@@ -145,6 +133,8 @@
         <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Packages/Cathoder/Shaders/Cathoder.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" />
       </list>
     </option>
   </component>
@@ -299,7 +289,8 @@
       <workItem from="1701974961185" duration="6038000" />
       <workItem from="1702108376154" duration="8960000" />
       <workItem from="1702147787794" duration="1348000" />
-      <workItem from="1702201321793" duration="11797000" />
+      <workItem from="1702201321793" duration="12400000" />
+      <workItem from="1703413068573" duration="2432000" />
     </task>
     <servers />
   </component>

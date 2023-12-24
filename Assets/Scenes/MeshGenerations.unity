@@ -25362,7 +25362,7 @@ MonoBehaviour:
   lerpSpeed: 20
   itemsPos: {fileID: 445580951}
   spawnPos: {fileID: 1050972475}
-  enbld: 0
+  _enbld: 0
 --- !u!1001 &1200062328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33767,7 +33767,7 @@ RectTransform:
   m_GameObject: {fileID: 1663317306}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1701894076}

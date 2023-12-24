@@ -11,6 +11,7 @@ public class ItemsUI : MonoBehaviour
     [SerializeField] private GameObject precentageOff;
     [SerializeField] private GameObject precentageMax;
     private ItemsShow _inventory;
+    private bool _percen;
 
     [Inject]
     private void Construct(ItemsShow inv)
@@ -21,28 +22,17 @@ public class ItemsUI : MonoBehaviour
 
     private void OnSelectionChange(IItem item)
     {
-        if (item != null)
-        {
-            textObj.text = item.ItemName;
-        }
-        else
-        {
-            textObj.text = "";
-        }
+        textObj.text = item != null ? item.ItemName : "";
 
-        if (item as IUIItemPercent != null)
+        precentageOff.SetActive(_inventory.IsWork && item is IUIItemPercent);
+        if (item is IUIItemPercent itemPercent)
         {
-            var prc = (item as IUIItemPercent).percent;
+            var prc = itemPercent.percent;
 
-            precentageOff.SetActive(true);
             precentageMax.SetActive(prc != 0);
-            
+
             precentage.transform.localScale =
                 new Vector3(prc, precentage.transform.localScale.y, precentage.transform.localScale.z);
-        }
-        else
-        {
-            precentageOff.SetActive(false);
         }
 
         textObj.gameObject.SetActive(_inventory.IsWork);
