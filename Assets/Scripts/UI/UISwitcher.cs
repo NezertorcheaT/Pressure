@@ -22,14 +22,13 @@ public class UISwitcher : MonoBehaviour
     private GameObject GetOnIndex(int i) => forSlides.GetChild(i).gameObject;
     private int GetIndex()
     {
-        var n = 0;
         for (var i = 0; i < forSlides.childCount; i++)
         {
             if (forSlides.GetChild(i).gameObject.activeSelf)
                 return i;
         }
 
-        return n;
+        return 0;
     }
 
     private void ActivateOnIndex(int index)
@@ -51,14 +50,15 @@ public class UISwitcher : MonoBehaviour
         OnSlideChanged?.Invoke(childIndex, currentSlide);
     }
 
+    public void DisableActions() => GetCurrent().GetComponent<UISwitcherSlide>()?.onActionDisable.Invoke();
+    public void EnableActions() => GetCurrent().GetComponent<UISwitcherSlide>()?.onActionEnable.Invoke();
+    
     private void Next()
     {
         if (forSlides.childCount == 0) return;
         if (forSlides.childCount == 1) ActivateOnIndex(0);
         else ActivateOnIndex(GetIndex() + 1);
     }
-    public void DisableActions() => GetCurrent().GetComponent<UISwitcherSlide>()?.onActionDisable.Invoke();
-    public void EnableActions() => GetCurrent().GetComponent<UISwitcherSlide>()?.onActionEnable.Invoke();
     private void Prev()
     {
         if (forSlides.childCount == 0) return;

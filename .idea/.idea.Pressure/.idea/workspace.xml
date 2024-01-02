@@ -25,9 +25,9 @@
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Loading.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Loading.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UISwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UISwitcher.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +63,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BackHachTeleportable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7B2A272E-5121-4E2F-91BB-C4FB4F28EFF8/7b/89169599/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Usables/Ore.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../Projects/Console Engine/Scene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/ItemAdder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAB4CD49-4110-4705-846E-3433671ECD50/2d/9df02862/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@8495d61ceb/Runtime/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -93,7 +92,6 @@
         <option value="$PROJECT_DIR$/Assets/Packages/Boids/Scripts/Boid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineCameras.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UISwitcherSlide.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UISwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UISwitcherSliderName.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/PickaxeItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
@@ -135,6 +133,7 @@
         <option value="$PROJECT_DIR$/Assets/Packages/Cathoder/Shaders/Cathoder.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UISwitcher.cs" />
       </list>
     </option>
   </component>
@@ -291,6 +290,8 @@
       <workItem from="1702147787794" duration="1348000" />
       <workItem from="1702201321793" duration="12400000" />
       <workItem from="1703413068573" duration="2432000" />
+      <workItem from="1703450780372" duration="130000" />
+      <workItem from="1704206188843" duration="1367000" />
     </task>
     <servers />
   </component>
