@@ -635,6 +635,9 @@
             <e p="UISwitcherSliderName.cs" t="Include" />
           </e>
           <e p="Vec.cs" t="Include" />
+          <e p="Volumetrics" t="Include">
+            <e p="ConeMeshGenerator.cs" t="Include" />
+          </e>
         </e>
         <e p="Shaders" t="Include">
           <e p="Billboard.shader" t="Include" />
