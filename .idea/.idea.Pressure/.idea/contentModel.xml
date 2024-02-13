@@ -329,6 +329,10 @@
             <e p="WeldingMachineItem.cs" t="Include" />
           </e>
           <e p="MouseIteractor.cs" t="Include" />
+          <e p="RenderPasses" t="Include">
+            <e p="VintageFeature.cs" t="Include" />
+            <e p="VintageRenderPass.cs" t="Include" />
+          </e>
           <e p="SubmarineCameras.cs" t="Include" />
           <e p="SubmarineDamaging.cs" t="Include" />
           <e p="SubmarineHit.cs" t="Include" />
@@ -373,6 +377,7 @@
           <e p="GPUVoronoiNoise4D.cginc" t="Include" />
           <e p="PSX normal uv.shader" t="Include" />
           <e p="PSX.shader" t="Include" />
+          <e p="VintageShader.shader" t="Include" />
           <e p="VoronoiNoise2D.shader" t="Include" />
           <e p="VoronoiNoise3D.shader" t="Include" />
           <e p="VoronoiNoise4D.shader" t="Include" />

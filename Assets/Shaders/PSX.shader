@@ -120,18 +120,6 @@ Shader "Custom/PSX Lit"
                 half4 full_color = float4(
                     max(min(pow(abs(diffuse_color * i.vertex_color), Exposure), diffuse_color), _Emmiter),
                     1) * color;
-                full_color = round(full_color * 64) / 64;
-
-                if (_Outline != 0)
-                {
-                    float alpha_outline = ceil(color.aaa - (1 - min(1 - color.aaa, 1 / _Outline) / (1 / _Outline)));
-                    alpha_outline = 1 - alpha_outline;
-                    float edge_normal = sqrt(dot(i.viewDir, i.normalWS)) > _Outline ? 1 : 0;
-                    float outlines = min(alpha_outline, edge_normal);
-                    //outlines = alphaOutline * edgeNormal;
-                    full_color = full_color * float4(outlines.xxx, 1);
-                    full_color = full_color + float4(1 - outlines.xxx, 1) * _OutlineColor;
-                }
                 full_color.a = color.a;
 
                 return full_color;

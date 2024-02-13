@@ -24,20 +24,13 @@
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/light.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/light.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/aqualung_hat.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/aqualung_hat.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PressureCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PressureCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/aqualung_hat.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AqualungOxigen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AqualungOxigen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/pressurePad.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/pressurePad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset_Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,9 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Suck.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/SuckItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Ore.cs" />
         <option value="$PROJECT_DIR$/Assets/Packages/Boids/Scripts/Boid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineCameras.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UISwitcherSlide.cs" />
@@ -136,8 +126,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Usables/Ore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/WeldingMachineItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FlashLight.cs" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GenerationInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Packages/Cathoder/Shaders/Cathoder.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
@@ -147,6 +135,11 @@
         <option value="$PROJECT_DIR$/../../../../Desktop/UnityUIExtensions/Editor/CUIImageEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AqualungOxigen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RenderPasses/VintageFeature.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RenderPasses/VintageRenderPass.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/VintageShader.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
       </list>
     </option>
   </component>
@@ -308,7 +301,8 @@
       <workItem from="1706444872872" duration="10114000" />
       <workItem from="1706463390740" duration="915000" />
       <workItem from="1707662843216" duration="302000" />
-      <workItem from="1707663307255" duration="5515000" />
+      <workItem from="1707663307255" duration="6341000" />
+      <workItem from="1707841369311" duration="3080000" />
     </task>
     <servers />
   </component>
