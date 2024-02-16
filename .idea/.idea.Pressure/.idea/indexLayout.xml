@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelUserStore">
-    <attachedFolders />
+    <attachedFolders>
+      <Path>../../../../Desktop/UIEffect-upm</Path>
+    </attachedFolders>
     <explicitIncludes>
       <Path>../../../../Desktop/UIEffect-upm</Path>
+      <Path>Assets</Path>
       <Path>Library/PackageCache/com.glairedaggers.retrotvfx@9ea13b0d33</Path>
       <Path>Library/PackageCache/com.svermeulen.extenject@8495d61ceb</Path>
       <Path>Library/PackageCache/com.unity.2d.animation@7.0.9</Path>

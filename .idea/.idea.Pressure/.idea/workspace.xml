@@ -23,14 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ae1ccb-2a3f-40e3-849e-4bd99cf4da52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pressure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/light.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/light.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGenerations.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PSX.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/New Universal Render Pipeline Asset_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Volumetrics/ConeMeshGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Volumetrics/ConeMeshGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/target.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/target.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/target.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/target.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +130,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsShow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemsUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UISwitcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Volumetrics/ConeMeshGenerator.cs" />
         <option value="$PROJECT_DIR$/../../../../Desktop/UnityUIExtensions/Editor/CUIImageEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AqualungOxigen.cs" />
@@ -140,6 +138,7 @@
         <option value="$PROJECT_DIR$/Assets/Shaders/VintageShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Shaders/PSX.shader" />
         <option value="$PROJECT_DIR$/Assets/Shaders/PSX normal uv.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Volumetrics/ConeMeshGenerator.cs" />
       </list>
     </option>
   </component>
@@ -303,6 +302,7 @@
       <workItem from="1707662843216" duration="302000" />
       <workItem from="1707663307255" duration="6341000" />
       <workItem from="1707841369311" duration="3080000" />
+      <workItem from="1708115772689" duration="5468000" />
     </task>
     <servers />
   </component>
@@ -331,10 +331,6 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="839" y="413" key="#Custom_Plugin_Repositories/0.0.1920.1034@0.0.1920.1034" timestamp="1700487900862" />
-    <state x="708" y="342" key="#Notifications" timestamp="1693652678961">
-      <screen x="0" y="0" width="1920" height="1034" />
-    </state>
-    <state x="708" y="342" key="#Notifications/0.0.1920.1034@0.0.1920.1034" timestamp="1693652678961" />
     <state x="727" y="241" key="RiderGenerateDialog" timestamp="1700842139405">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
@@ -355,9 +351,9 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="616" y="239" key="run.anything.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1701002588519" />
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1700672251361">
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1708116268785">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1700672251361" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1708116268785" />
   </component>
 </project>

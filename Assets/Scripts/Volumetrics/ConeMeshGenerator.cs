@@ -1,6 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using ModestTree;
 using UnityEngine;
 
 [ExecuteInEditMode, RequireComponent(typeof(Light))]
@@ -9,17 +9,32 @@ public class ConeMeshGenerator : MonoBehaviour
     [SerializeField, Min(3)] private int resolution;
     [SerializeField] private Material material;
     [SerializeField] private LayerMask castLayer;
+
+    [SerializeField] private AngleType angleType;
+
+    [Serializable]
+    private enum AngleType
+    {
+        Spot,
+        InnerSpot,
+        Average
+    }
+
     private Light coneLight;
     private MeshFilter meshFilter;
     private MeshRenderer meshRenderer;
     private GameObject meshGameObject;
+    private int selfInd;
 
     private void OnEnable()
     {
+        meshGameObject?.SetActive(true);
+        selfInd = GetComponents<ConeMeshGenerator>().IndexOf(this);
+
         coneLight = GetComponent<Light>();
 
-        var trm = transform.Find($"{gameObject.name} cone mesh");
-        meshGameObject = trm ? trm.gameObject : new GameObject($"{gameObject.name} cone mesh");
+        var trm = transform.Find($"{gameObject.name} cone mesh ({selfInd})");
+        meshGameObject = trm ? trm.gameObject : new GameObject($"{gameObject.name} cone mesh ({selfInd})");
         meshGameObject.layer = gameObject.layer;
 
         meshGameObject.transform.SetParent(transform);
@@ -51,12 +66,23 @@ public class ConeMeshGenerator : MonoBehaviour
         var uv = new List<Vector2>();
         var tris = new List<int>();
 
-        vertices.Add(Vector3.zero);
-        uv.Add(new Vector2(0.5f, 0));
-        for (var i = 0; i <= resolution; i++)
+        for (var i = 0; i < resolution * 2; i++)
         {
-            var angle = (coneLight.spotAngle + coneLight.innerSpotAngle) / 2f;
-            var dir = Quaternion.Euler(0, 0, 360f / resolution * i) * new Vector3(
+            float angle = coneLight.spotAngle;
+            switch (angleType)
+            {
+                case AngleType.Average:
+                    angle = (coneLight.spotAngle + coneLight.innerSpotAngle) / 2f;
+                    break;
+                case AngleType.InnerSpot:
+                    angle = coneLight.innerSpotAngle;
+                    break;
+                case AngleType.Spot:
+                    angle = coneLight.spotAngle;
+                    break;
+            }
+
+            var dir = Quaternion.Euler(0, 0, 360f / resolution * 2 * i) * new Vector3(
                 Mathf.Tan(angle / 2f * Mathf.Deg2Rad) * coneLight.range,
                 0,
                 coneLight.range
@@ -71,13 +97,21 @@ public class ConeMeshGenerator : MonoBehaviour
                     distance = rays[0].distance;
             }
 
+            vertices.Add(dir * coneLight.shadowNearPlane);
+            uv.Add(new Vector2(0.5f, coneLight.shadowNearPlane / coneLight.range));
+            //Debug.Log(uv.Last());
             vertices.Add(dir * distance);
-            //uv.Add(new Vector2(0.5f, distance / coneLight.range));
-            uv.Add(new Vector2(0.5f, 1));
+            uv.Add(new Vector2(0.5f, distance / coneLight.range));
+        }
 
-            tris.Add(0);
+        for (var i = 0; i < resolution; i += 2)
+        {
             tris.Add(i);
+            tris.Add(i + 3);
             tris.Add(i + 1);
+            tris.Add(i);
+            tris.Add(i + 3);
+            tris.Add(i + 2);
         }
 
         mesh.vertices = vertices.ToArray();
@@ -87,5 +121,16 @@ public class ConeMeshGenerator : MonoBehaviour
         mesh.name = "ass";
         meshFilter.mesh = mesh;
         meshFilter.sharedMesh = mesh;
+    }
+
+    private void OnDestroy()
+    {
+        if(meshGameObject)
+            DestroyImmediate(meshGameObject);
+    }
+
+    private void OnDisable()
+    {
+        meshGameObject.SetActive(false);
     }
 }
