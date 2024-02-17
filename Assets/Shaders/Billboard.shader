@@ -6,25 +6,29 @@ Shader "Custom/Billboard"
         _BaseColor("Base Color", color) = (1,1,1,1)
         _Emmiter("Emmiter", Range(0,1)) = 0
         _AlphaToMask("AlphaToMask", Range(0,1)) = 1
+        _Cull("Cull", float) = 0
     }
     SubShader
     {
         Tags
         {
-            "RenderType"="Transparent" "IgnoreProjector"="True" "Queue"="Transparent" "RenderPipeline" = "UniversalRenderPipeline"
+            "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent" "DisableBatching" = "True"
         }
+
         LOD 100
+        ZWrite Off
+
         Blend SrcAlpha OneMinusSrcAlpha
         ColorMask RGB
         Lighting Off
-        
+
         Fog
         {
             Mode Off
         }
 
         AlphaToMask [_AlphaToMask]
-
+        Cull [_Cull]
         Pass
         {
             HLSLPROGRAM
@@ -49,7 +53,7 @@ Shader "Custom/Billboard"
             struct v2f
             {
                 float4 vertex : SV_POSITION;
-                noperspective float2 uv : TEXCOORD0;
+                float2 uv : TEXCOORD0;
                 float4 vertex_color : COLOR;
             };
 
@@ -74,7 +78,7 @@ Shader "Custom/Billboard"
             half4 frag(v2f i) : SV_Target
             {
                 half4 col = tex2D(_BaseMap, i.uv);
-                return col * _BaseColor * i.vertex_color;
+                return col * _BaseColor;
             }
             ENDHLSL
         }
