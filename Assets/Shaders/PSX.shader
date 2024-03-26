@@ -82,7 +82,8 @@ Shader "Custom/PSX Lit"
                 o.uv = TRANSFORM_TEX(v.uv, _BaseMap);
                 o.vertex_color = v.vertex_color;
                 o.vertex = TransformWorldToHClip(o.positionWS);
-                o.vertex -= float4((o.vertex % _VertexJittering).xyz, 0);
+                if (_VertexJittering != 0)
+                    o.vertex -= float4((o.vertex % _VertexJittering).xyz, 0);
                 o.shadowCoord = TransformWorldToShadowCoord(o.positionWS);
 
                 OUTPUT_LIGHTMAP_UV(v.texcoord1, unity_LightmapST, o.lightmapUV);
@@ -111,7 +112,7 @@ Shader "Custom/PSX Lit"
                     half3 attenuated_light_color = light.color * cookieColor * light.distanceAttenuation;
                     diffuse_color += LightingLambert(attenuated_light_color, light.direction, i.normalWS);
                 }
-                
+
                 Light main_light = GetMainLight(i.shadowCoord);
                 real3 cookieColor = SampleMainLightCookie(i.positionWS);
                 half3 attenuated_light_color = main_light.color * cookieColor * (main_light.distanceAttenuation);

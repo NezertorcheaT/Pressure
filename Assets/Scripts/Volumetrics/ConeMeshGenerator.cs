@@ -109,9 +109,9 @@ public class ConeMeshGenerator : MonoBehaviour
             tris.Add(i);
             tris.Add(i + 3);
             tris.Add(i + 1);
-            tris.Add(i);
-            tris.Add(i + 3);
             tris.Add(i + 2);
+            tris.Add(i + 3);
+            tris.Add(i);
         }
 
         mesh.vertices = vertices.ToArray();

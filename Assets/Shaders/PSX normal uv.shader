@@ -82,7 +82,8 @@ Shader "Custom/PSX Lit normal UV"
                 o.uv = TRANSFORM_TEX(v.uv, _BaseMap);
                 o.vertex_color = v.vertex_color;
                 o.vertex = TransformWorldToHClip(o.positionWS);
-                o.vertex -= float4((o.vertex % _VertexJittering).xyz, 0);
+                if (_VertexJittering != 0)
+                    o.vertex -= float4((o.vertex % _VertexJittering).xyz, 0);
                 o.shadowCoord = TransformWorldToShadowCoord(o.positionWS);
 
                 OUTPUT_LIGHTMAP_UV(v.texcoord1, unity_LightmapST, o.lightmapUV);
